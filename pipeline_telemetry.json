@@ -1,0 +1,25 @@
+{
+  "initial_rows": 820,
+  "after_privacy_filter": 733,
+  "retained_rows": 733,
+  "suppressed_rows": 87,
+  "dropped_rows": 87,
+  "nulls_imputed": 0,
+  "execution_time_sec": 0.164345,
+  "scale_cols": [
+    "Compliance_Pct",
+    "Monthly_Call_Frequency",
+    "Sample_Velocity",
+    "Log_Baseline_Fills",
+    "Tot_30day_Fills",
+    "Tot_Drug_Cst",
+    "Tot_Clms"
+  ],
+  "feature_cols": [
+    "Compliance_Pct",
+    "Monthly_Call_Frequency",
+    "Sample_Velocity",
+    "Log_Baseline_Fills"
+  ],
+  "target_col": "Rx_Lift_Pct"
+}

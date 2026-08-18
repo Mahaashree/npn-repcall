@@ -1,0 +1,53 @@
+{
+  "data_version": "50d04f9bb2d2c294",
+  "generated_at": "2026-08-17T00:00:00Z",
+  "global_importance": [
+    {
+      "description": "Sample Velocity Effect",
+      "feature": "Sample Velocity",
+      "importance_pct": 43.96
+    },
+    {
+      "description": "Monthly Cadence",
+      "feature": "Monthly Call Frequency",
+      "importance_pct": 39.96
+    },
+    {
+      "description": "Historical Volume",
+      "feature": "Log Baseline Fills",
+      "importance_pct": 12.19
+    },
+    {
+      "description": "Feature Contribution",
+      "feature": "Compliance Pct",
+      "importance_pct": 2.94
+    },
+    {
+      "description": "Feature Contribution",
+      "feature": "HCP Tier",
+      "importance_pct": 0.95
+    }
+  ],
+  "shap_contributions": [
+    {
+      "feature": "Sample Velocity",
+      "shap_importance_pct": 46.46
+    },
+    {
+      "feature": "Monthly Call Frequency",
+      "shap_importance_pct": 44.47
+    },
+    {
+      "feature": "Log Baseline Fills",
+      "shap_importance_pct": 5.67
+    },
+    {
+      "feature": "Compliance Pct",
+      "shap_importance_pct": 2.76
+    },
+    {
+      "feature": "HCP Tier",
+      "shap_importance_pct": 0.65
+    }
+  ]
+}

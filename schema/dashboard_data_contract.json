@@ -1,0 +1,251 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Pharma Analytics Dashboard Data Contract",
+  "description": "Formal JSON Schema contract for all data files fetched by the Pharma Analytics Scorecard frontend.",
+  "type": "object",
+  "properties": {
+    "reps": {
+      "type": "array",
+      "description": "Complete list of sales reps from rep_master.csv (all reps, non-fixed sample size).",
+      "items": {
+        "type": "object",
+        "required": [
+          "rep_id",
+          "territory_id",
+          "compliance_pct",
+          "rx_lift_pct",
+          "samples",
+          "quadrant",
+          "trajectory_direction",
+          "sample_size_flag"
+        ],
+        "properties": {
+          "rep_id": {
+            "type": "string",
+            "pattern": "^REP-[0-9]{3,}$",
+            "description": "Unique identifier for the sales representative."
+          },
+          "territory_id": {
+            "type": "string",
+            "pattern": "^TERR-[0-9]{2,}$",
+            "description": "Territory code assigned to the rep."
+          },
+          "compliance_pct": {
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 200.0,
+            "description": "Mean call plan compliance percentage for the rep."
+          },
+          "rx_lift_pct": {
+            "type": "number",
+            "description": "Mean Rx volume lift percentage across assigned prescribers."
+          },
+          "samples": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Total prescription samples dropped by the rep."
+          },
+          "quadrant": {
+            "type": "string",
+            "enum": [
+              "Star Performers",
+              "Efficiency Risk",
+              "Unrealized Potential",
+              "Needs Intervention"
+            ],
+            "description": "Dominant performance quadrant assigned based on compliance and lift thresholds."
+          },
+          "trajectory_direction": {
+            "type": "string",
+            "enum": [
+              "improving",
+              "declining",
+              "stable"
+            ],
+            "description": "Short-term trend direction of rep performance."
+          },
+          "sample_size_flag": {
+            "type": "boolean",
+            "description": "True if prescriber sample size >= min_statistical_threshold (e.g. 30 HCPs)."
+          },
+          "prescriber_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "total_target_calls": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "total_actual_calls": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "coaching_priority": {
+            "type": "string",
+            "enum": [
+              "Urgent Coaching",
+              "Monitor",
+              "On Track"
+            ]
+          },
+          "calls_to_add": { "type": "number" },
+          "calls_to_free": { "type": "number" },
+          "net_call_delta": { "type": "number" },
+          "hcps_with_increase": { "type": "integer" },
+          "hcps_with_decrease": { "type": "integer" },
+          "reallocation_recommendation": { "type": "string" }
+        }
+      }
+    },
+
+    "ml_results": {
+      "type": "object",
+      "description": "Machine learning model tournament benchmarks and held-out test evaluation.",
+      "required": [
+        "best_model_summary",
+        "tournament_table"
+      ],
+      "properties": {
+        "best_model_summary": {
+          "type": "object",
+          "required": ["model_label", "test_r2", "test_mae", "test_rmse"],
+          "properties": {
+            "model_label": { "type": "string" },
+            "test_r2": { "type": "number" },
+            "test_mae": { "type": "number" },
+            "test_rmse": { "type": "number" },
+            "overfitting_gap": { "type": "number" },
+            "bootstrap_ci": { "type": "string" }
+          }
+        },
+        "tournament_table": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["rank", "model_label", "model_family", "test_r2", "overfitting_status"],
+            "properties": {
+              "rank": { "type": "integer", "minimum": 1 },
+              "model_label": { "type": "string" },
+              "model_family": { "type": "string" },
+              "in_sample_train_r2": { "type": "number" },
+              "cv_mean_r2": { "type": "number" },
+              "cv_std_r2": { "type": "number" },
+              "test_r2": { "type": "number" },
+              "test_mae": { "type": "number" },
+              "test_rmse": { "type": "number" },
+              "overfitting_gap": { "type": "number" },
+              "overfitting_status": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+    "attribution": {
+      "type": "object",
+      "description": "Global feature importance % and SHAP value contributions for driver attribution.",
+      "required": ["global_importance", "shap_contributions"],
+      "properties": {
+        "global_importance": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["feature", "importance_pct"],
+            "properties": {
+              "feature": { "type": "string" },
+              "importance_pct": { "type": "number" },
+              "description": { "type": "string" }
+            }
+          }
+        },
+        "shap_contributions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["feature", "shap_importance_pct"],
+            "properties": {
+              "feature": { "type": "string" },
+              "shap_importance_pct": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+
+    "scatter_points": {
+      "type": "array",
+      "description": "HCP-level records for compliance vs Rx lift scatter plot correlation.",
+      "items": {
+        "type": "object",
+        "required": ["npi", "physician_name", "compliance_pct", "rx_lift_pct", "quadrant"],
+        "properties": {
+          "npi": { "type": "string" },
+          "physician_name": { "type": "string" },
+          "specialty": { "type": "string" },
+          "city": { "type": "string" },
+          "state": { "type": "string" },
+          "brand_name": { "type": "string" },
+          "tot_30day_fills": { "type": "number" },
+          "post_campaign_fills": { "type": "number" },
+          "territory_id": { "type": "string" },
+          "rep_id": { "type": "string" },
+          "hcp_tier": { "type": "integer" },
+          "compliance_pct": { "type": "number" },
+          "rx_lift_pct": { "type": "number" },
+          "quadrant": {
+            "type": "string",
+            "enum": [
+              "Star Performers",
+              "Efficiency Risk",
+              "Unrealized Potential",
+              "Needs Intervention"
+            ]
+          }
+        }
+      }
+    },
+
+    "coaching_queue": {
+      "type": "array",
+      "description": "Prioritized daily task list of sales reps requiring coaching or intervention.",
+      "items": {
+        "type": "object",
+        "required": [
+          "task_id",
+          "rep_id",
+          "territory_id",
+          "priority",
+          "title",
+          "subtext",
+          "reason_code"
+        ],
+        "properties": {
+          "task_id": { "type": "string" },
+          "rep_id": { "type": "string" },
+          "territory_id": { "type": "string" },
+          "priority": {
+            "type": "string",
+            "enum": ["urgent", "monitor", "on_track"]
+          },
+          "title": { "type": "string" },
+          "subtext": { "type": "string" },
+          "reason_code": { "type": "string" }
+        }
+      }
+    },
+
+    "pipeline_telemetry": {
+      "type": "object",
+      "description": "Execution stats and telemetry data for pipeline inspector.",
+      "required": ["initial_rows", "after_privacy_filter", "retained_rows", "suppressed_rows"],
+      "properties": {
+        "initial_rows": { "type": "integer" },
+        "after_privacy_filter": { "type": "integer" },
+        "retained_rows": { "type": "integer" },
+        "suppressed_rows": { "type": "integer" },
+        "nulls_imputed": { "type": "integer" },
+        "execution_time_sec": { "type": "number" }
+      }
+    }
+  }
+}

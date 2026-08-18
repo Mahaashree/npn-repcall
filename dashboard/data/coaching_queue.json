@@ -1,0 +1,132 @@
+{
+  "data": [
+    {
+      "priority": "urgent",
+      "reason_code": "LOW_COMPLIANCE_INTERVENTION",
+      "rep_id": "REP-101",
+      "subtext": "TERR-01 \u2022 Needs Intervention (Compliance 72.9%)",
+      "task_id": "TASK-001",
+      "territory_id": "TERR-01",
+      "title": "Reach out to REP-101"
+    },
+    {
+      "priority": "urgent",
+      "reason_code": "LOW_COMPLIANCE_INTERVENTION",
+      "rep_id": "REP-102",
+      "subtext": "TERR-01 \u2022 Needs Intervention (Compliance 73.3%)",
+      "task_id": "TASK-002",
+      "territory_id": "TERR-01",
+      "title": "Reach out to REP-102"
+    },
+    {
+      "priority": "urgent",
+      "reason_code": "LOW_COMPLIANCE_INTERVENTION",
+      "rep_id": "REP-104",
+      "subtext": "TERR-02 \u2022 Needs Intervention (Compliance 70.1%)",
+      "task_id": "TASK-003",
+      "territory_id": "TERR-02",
+      "title": "Reach out to REP-104"
+    },
+    {
+      "priority": "urgent",
+      "reason_code": "LOW_COMPLIANCE_INTERVENTION",
+      "rep_id": "REP-107",
+      "subtext": "TERR-04 \u2022 Needs Intervention (Compliance 69.7%)",
+      "task_id": "TASK-004",
+      "territory_id": "TERR-04",
+      "title": "Reach out to REP-107"
+    },
+    {
+      "priority": "urgent",
+      "reason_code": "LOW_COMPLIANCE_INTERVENTION",
+      "rep_id": "REP-108",
+      "subtext": "TERR-04 \u2022 Needs Intervention (Compliance 63.5%)",
+      "task_id": "TASK-005",
+      "territory_id": "TERR-04",
+      "title": "Reach out to REP-108"
+    },
+    {
+      "priority": "urgent",
+      "reason_code": "LOW_COMPLIANCE_INTERVENTION",
+      "rep_id": "REP-109",
+      "subtext": "TERR-05 \u2022 Needs Intervention (Compliance 66.8%)",
+      "task_id": "TASK-006",
+      "territory_id": "TERR-05",
+      "title": "Reach out to REP-109"
+    },
+    {
+      "priority": "urgent",
+      "reason_code": "LOW_COMPLIANCE_INTERVENTION",
+      "rep_id": "REP-110",
+      "subtext": "TERR-05 \u2022 Needs Intervention (Compliance 67.1%)",
+      "task_id": "TASK-007",
+      "territory_id": "TERR-05",
+      "title": "Reach out to REP-110"
+    },
+    {
+      "priority": "urgent",
+      "reason_code": "LOW_COMPLIANCE_INTERVENTION",
+      "rep_id": "REP-113",
+      "subtext": "TERR-01 \u2022 Needs Intervention (Compliance 0.0%)",
+      "task_id": "TASK-008",
+      "territory_id": "TERR-01",
+      "title": "Reach out to REP-113"
+    },
+    {
+      "priority": "urgent",
+      "reason_code": "LOW_COMPLIANCE_INTERVENTION",
+      "rep_id": "REP-114",
+      "subtext": "TERR-03 \u2022 Needs Intervention (Compliance 0.0%)",
+      "task_id": "TASK-009",
+      "territory_id": "TERR-03",
+      "title": "Reach out to REP-114"
+    },
+    {
+      "priority": "monitor",
+      "reason_code": "LIFT_RESPONSE_MONITORING",
+      "rep_id": "REP-105",
+      "subtext": "TERR-03 \u2022 Needs Intervention (Rx Lift 3.95%)",
+      "task_id": "TASK-010",
+      "territory_id": "TERR-03",
+      "title": "Review Call Detail Quality for REP-105"
+    },
+    {
+      "priority": "monitor",
+      "reason_code": "LIFT_RESPONSE_MONITORING",
+      "rep_id": "REP-112",
+      "subtext": "TERR-06 \u2022 Unrealized Potential (Rx Lift 4.61%)",
+      "task_id": "TASK-011",
+      "territory_id": "TERR-06",
+      "title": "Review Call Detail Quality for REP-112"
+    },
+    {
+      "priority": "on_track",
+      "reason_code": "CAPACITY_EXPANSION",
+      "rep_id": "REP-103",
+      "subtext": "TERR-02 \u2022 Unrealized Potential (On Track)",
+      "task_id": "TASK-012",
+      "territory_id": "TERR-02",
+      "title": "Capacity Expansion Plan for REP-103"
+    },
+    {
+      "priority": "on_track",
+      "reason_code": "CAPACITY_EXPANSION",
+      "rep_id": "REP-106",
+      "subtext": "TERR-03 \u2022 Unrealized Potential (On Track)",
+      "task_id": "TASK-013",
+      "territory_id": "TERR-03",
+      "title": "Capacity Expansion Plan for REP-106"
+    },
+    {
+      "priority": "on_track",
+      "reason_code": "CAPACITY_EXPANSION",
+      "rep_id": "REP-111",
+      "subtext": "TERR-06 \u2022 Unrealized Potential (On Track)",
+      "task_id": "TASK-014",
+      "territory_id": "TERR-06",
+      "title": "Capacity Expansion Plan for REP-111"
+    }
+  ],
+  "data_version": "50d04f9bb2d2c294",
+  "generated_at": "2026-08-17T00:00:00Z"
+}

@@ -1,0 +1,821 @@
+npi,physician_name,specialty,city,state,brand_name,is_active
+1001000001,Dr. Richard White,Emergency Medicine,Philadelphia,PA,Fentora,True
+1001000002,Dr. Nancy Jackson,Pain Management,Boston,MA,Fentora,True
+1001000003,Dr. Carol Johnson,Pain Management,Philadelphia,PA,Subsys,True
+1001000004,Dr. Jessica Hernandez,Internal Medicine,Chicago,IL,Actiq,True
+1001000005,Dr. Rebecca Adams,Family Practice,Houston,TX,Subsys,True
+1001000006,Dr. Barbara Sanchez,Palliative Care,Jacksonville,FL,Abstral,True
+1001000007,Dr. Susan White,Anesthesiology,Houston,TX,Subsys,False
+1001000008,Dr. Stephanie Thompson,Pain Management,Miami,FL,Abstral,True
+1001000009,Dr. Melissa Scott,Neurology,Columbus,OH,Abstral,True
+1001000010,Dr. Karen Sanchez,Anesthesiology,Chicago,IL,Subsys,True
+1001000011,Dr. James Smith,Orthopedics,Columbus,OH,Subsys,True
+1001000012,Dr. Karen Campbell,Family Practice,New York,NY,Subsys,True
+1001000013,Dr. Betty Jones,Orthopedics,Houston,TX,Fentora,True
+1001000014,Dr. Deborah Campbell,Neurology,Phoenix,AZ,Subsys,False
+1001000015,Dr. Laura Campbell,Oncology,Charlotte,NC,Subsys,True
+1001000016,Dr. Patricia White,Internal Medicine,Seattle,WA,Subsys,True
+1001000017,Dr. Deborah Torres,Oncology,Columbus,OH,Lazanda,True
+1001000018,Dr. David Flores,Palliative Care,Austin,TX,Abstral,True
+1001000019,Dr. John Hall,Pain Management,Houston,TX,Abstral,True
+1001000020,Dr. Barbara King,Palliative Care,Boston,MA,Subsys,True
+1001000021,Dr. Carol Moore,Orthopedics,Philadelphia,PA,Abstral,True
+1001000022,Dr. Sarah Nelson,Pain Management,Miami,FL,Abstral,True
+1001000023,Dr. Jessica Flores,Pain Management,Denver,CO,Subsys,True
+1001000024,Dr. Sharon Thomas,Palliative Care,Los Angeles,CA,Abstral,True
+1001000025,Dr. Robert Miller,Oncology,Portland,OR,Subsys,True
+1001000026,Dr. Amanda Allen,Oncology,Austin,TX,Fentora,True
+1001000027,Dr. Elizabeth Gonzalez,Palliative Care,Los Angeles,CA,Fentora,True
+1001000028,Dr. Richard Flores,Neurology,Chicago,IL,Actiq,True
+1001000029,Dr. Betty Campbell,Pain Management,Denver,CO,Lazanda,True
+1001000030,Dr. Donna Johnson,Pain Management,Denver,CO,Abstral,True
+1001000031,Dr. Michelle Wright,Neurology,Jacksonville,FL,Subsys,True
+1001000032,Dr. Mary Robinson,Pain Management,Jacksonville,FL,Abstral,True
+1001000033,Dr. Stephanie White,Oncology,Miami,FL,Lazanda,True
+1001000034,Dr. Amanda Flores,Oncology,Austin,TX,Abstral,True
+1001000035,Dr. Thomas Wright,Oncology,Seattle,WA,Fentora,True
+1001000036,Dr. Thomas Ramirez,Family Practice,New York,NY,Abstral,True
+1001000037,Dr. Rebecca Flores,Palliative Care,Chicago,IL,Subsys,True
+1001000038,Dr. Ashley Ramirez,Pain Management,Portland,OR,Abstral,True
+1001000039,Dr. Barbara King,Internal Medicine,New York,NY,Abstral,True
+1001000040,Dr. Barbara Harris,Neurology,Austin,TX,Actiq,True
+1001000041,Dr. Margaret Campbell,Internal Medicine,Philadelphia,PA,Actiq,False
+1001000042,Dr. Amanda Adams,Anesthesiology,Philadelphia,PA,Actiq,True
+1001000043,Dr. Carol Torres,Internal Medicine,Atlanta,GA,Subsys,True
+1001000044,Dr. Nancy Taylor,Neurology,Detroit,MI,Actiq,True
+1001000045,Dr. Sarah Wright,Internal Medicine,Columbus,OH,Abstral,True
+1001000046,Dr. Susan Hernandez,Oncology,Charlotte,NC,Actiq,True
+1001000047,Dr. Jennifer Baker,Palliative Care,Los Angeles,CA,Actiq,True
+1001000048,Dr. Sandra Walker,Oncology,Seattle,WA,Abstral,True
+1001000049,Dr. Stephanie Harris,Family Practice,Nashville,TN,Subsys,True
+1001000050,Dr. Patricia Jackson,Pain Management,Boston,MA,Actiq,True
+1001000051,Dr. Robert Anderson,Pain Management,Columbus,OH,Fentora,True
+1001000052,Dr. Margaret Jackson,Internal Medicine,Denver,CO,Actiq,True
+1001000053,Dr. Robert Sanchez,Pain Management,Miami,FL,Abstral,True
+1001000054,Dr. Robert Martinez,Palliative Care,Columbus,OH,Fentora,True
+1001000055,Dr. Stephanie Johnson,Pain Management,Los Angeles,CA,Abstral,True
+1001000056,Dr. Barbara Hernandez,Pain Management,Houston,TX,Lazanda,True
+1001000057,Dr. Susan Thomas,Pain Management,Columbus,OH,Actiq,False
+1001000058,Dr. Susan Lopez,Orthopedics,Los Angeles,CA,Lazanda,True
+1001000059,Dr. Lisa Lee,Oncology,New York,NY,Subsys,True
+1001000060,Dr. Kathleen Hernandez,Emergency Medicine,Las Vegas,NV,Abstral,True
+1001000061,Dr. Deborah Sanchez,Family Practice,Columbus,OH,Abstral,False
+1001000062,Dr. Stephanie Anderson,Oncology,Los Angeles,CA,Abstral,True
+1001000063,Dr. David Jackson,Oncology,Philadelphia,PA,Subsys,True
+1001000064,Dr. Richard Martin,Psychiatry,Charlotte,NC,Subsys,True
+1001000065,Dr. Emily Wilson,Pain Management,Columbus,OH,Abstral,False
+1001000066,Dr. Joseph Robinson,Oncology,Philadelphia,PA,Fentora,False
+1001000067,Dr. William Allen,Oncology,Columbus,OH,Actiq,True
+1001000068,Dr. Ashley Perez,Pain Management,Austin,TX,Fentora,True
+1001000069,Dr. Mary White,Pain Management,Austin,TX,Subsys,True
+1001000070,Dr. Sarah Campbell,Oncology,Austin,TX,Abstral,True
+1001000071,Dr. Ashley Anderson,Neurology,Los Angeles,CA,Actiq,True
+1001000072,Dr. Michelle Hill,Pain Management,Baltimore,MD,Actiq,True
+1001000073,Dr. Margaret Anderson,Psychiatry,Boston,MA,Actiq,True
+1001000074,Dr. William White,Internal Medicine,Atlanta,GA,Abstral,False
+1001000075,Dr. Karen Flores,Palliative Care,Nashville,TN,Subsys,True
+1001000076,Dr. Mary Hernandez,Pain Management,Boston,MA,Abstral,True
+1001000077,Dr. Karen Walker,Pain Management,Boston,MA,Actiq,True
+1001000078,Dr. Patricia Williams,Oncology,Portland,OR,Actiq,True
+1001000079,Dr. Lisa Nelson,Oncology,Seattle,WA,Abstral,True
+1001000080,Dr. Ashley Scott,Palliative Care,Detroit,MI,Abstral,True
+1001000081,Dr. William Brown,Orthopedics,Portland,OR,Abstral,True
+1001000082,Dr. Donna Garcia,Oncology,Miami,FL,Actiq,True
+1001000083,Dr. Emily Thomas,Neurology,Atlanta,GA,Fentora,True
+1001000084,Dr. Charles Sanchez,Anesthesiology,Portland,OR,Subsys,False
+1001000085,Dr. Sharon Nguyen,Pain Management,Baltimore,MD,Subsys,True
+1001000086,Dr. Elizabeth Lopez,Pain Management,Baltimore,MD,Abstral,False
+1001000087,Dr. John Martinez,Family Practice,Austin,TX,Abstral,True
+1001000088,Dr. Michael Wright,Oncology,Phoenix,AZ,Actiq,False
+1001000089,Dr. William Hernandez,Family Practice,Houston,TX,Abstral,True
+1001000090,Dr. Elizabeth Nguyen,Palliative Care,Baltimore,MD,Subsys,True
+1001000091,Dr. Lisa Rodriguez,Pain Management,Austin,TX,Abstral,True
+1001000092,Dr. Betty Clark,Orthopedics,Philadelphia,PA,Fentora,True
+1001000093,Dr. Elizabeth Walker,Pain Management,New York,NY,Lazanda,False
+1001000094,Dr. Joseph Hernandez,Orthopedics,Chicago,IL,Subsys,True
+1001000095,Dr. Linda Lewis,Neurology,Miami,FL,Actiq,True
+1001000096,Dr. Dorothy Allen,Anesthesiology,New York,NY,Abstral,True
+1001000097,Dr. Ashley White,Palliative Care,Boston,MA,Fentora,True
+1001000098,Dr. Emily Martinez,Oncology,New York,NY,Actiq,True
+1001000099,Dr. Laura Wilson,Internal Medicine,Jacksonville,FL,Subsys,True
+1001000100,Dr. Karen Lewis,Pain Management,Jacksonville,FL,Subsys,False
+1001000101,Dr. Susan Scott,Pain Management,Phoenix,AZ,Subsys,True
+1001000102,Dr. Carol Sanchez,Family Practice,Columbus,OH,Abstral,True
+1001000103,Dr. Donna Brown,Pain Management,Los Angeles,CA,Actiq,True
+1001000104,Dr. Michelle Wilson,Oncology,Houston,TX,Fentora,True
+1001000105,Dr. Sarah Jones,Anesthesiology,Charlotte,NC,Subsys,True
+1001000106,Dr. Lisa Brown,Oncology,New York,NY,Subsys,True
+1001000107,Dr. Richard Brown,Palliative Care,Portland,OR,Actiq,True
+1001000108,Dr. Laura Wright,Oncology,Austin,TX,Subsys,True
+1001000109,Dr. Elizabeth Perez,Palliative Care,Seattle,WA,Fentora,True
+1001000110,Dr. Thomas Lewis,Neurology,New York,NY,Subsys,True
+1001000111,Dr. Michelle Hall,Anesthesiology,Phoenix,AZ,Subsys,True
+1001000112,Dr. Susan Torres,Psychiatry,Houston,TX,Subsys,True
+1001000113,Dr. Elizabeth Scott,Family Practice,Nashville,TN,Fentora,True
+1001000114,Dr. Susan Gonzalez,Pain Management,Phoenix,AZ,Abstral,True
+1001000115,Dr. James Walker,Emergency Medicine,Austin,TX,Subsys,True
+1001000116,Dr. Susan Mitchell,Palliative Care,Columbus,OH,Fentora,True
+1001000117,Dr. Sandra Anderson,Anesthesiology,Seattle,WA,Actiq,True
+1001000118,Dr. Melissa Thompson,Orthopedics,Miami,FL,Subsys,True
+1001000119,Dr. Michael Johnson,Palliative Care,Portland,OR,Fentora,True
+1001000120,Dr. Barbara Allen,Oncology,Philadelphia,PA,Subsys,True
+1001000121,Dr. Michelle Walker,Oncology,Columbus,OH,Subsys,True
+1001000122,Dr. Susan Walker,Oncology,Austin,TX,Subsys,False
+1001000123,Dr. Dorothy Ramirez,Oncology,Portland,OR,Lazanda,True
+1001000124,Dr. Betty Mitchell,Internal Medicine,Portland,OR,Fentora,True
+1001000125,Dr. James Rivera,Palliative Care,Phoenix,AZ,Actiq,True
+1001000126,Dr. Elizabeth Johnson,Pain Management,Seattle,WA,Actiq,True
+1001000127,Dr. Kathleen Nelson,Neurology,Nashville,TN,Subsys,True
+1001000128,Dr. Sandra Sanchez,Anesthesiology,Chicago,IL,Subsys,True
+1001000129,Dr. William Green,Oncology,Chicago,IL,Subsys,True
+1001000130,Dr. Kathleen Allen,Pain Management,Denver,CO,Actiq,False
+1001000131,Dr. Margaret Lewis,Oncology,Baltimore,MD,Subsys,True
+1001000132,Dr. Betty Young,Palliative Care,Houston,TX,Abstral,True
+1001000133,Dr. Kathleen Hill,Pain Management,Las Vegas,NV,Subsys,True
+1001000134,Dr. Jennifer Garcia,Pain Management,Los Angeles,CA,Subsys,True
+1001000135,Dr. Stephanie King,Oncology,Houston,TX,Fentora,True
+1001000136,Dr. Susan Nelson,Pain Management,Detroit,MI,Abstral,True
+1001000137,Dr. Charles Lewis,Family Practice,Atlanta,GA,Subsys,True
+1001000138,Dr. Lisa Flores,Neurology,Houston,TX,Abstral,True
+1001000139,Dr. Michael Sanchez,Pain Management,Houston,TX,Lazanda,True
+1001000140,Dr. Margaret Hall,Oncology,Phoenix,AZ,Lazanda,True
+1001000141,Dr. Barbara Smith,Pain Management,Miami,FL,Actiq,True
+1001000142,Dr. Linda Clark,Palliative Care,Portland,OR,Subsys,True
+1001000143,Dr. John Wilson,Pain Management,Atlanta,GA,Subsys,True
+1001000144,Dr. Lisa Miller,Family Practice,Charlotte,NC,Actiq,True
+1001000145,Dr. Dorothy Adams,Oncology,Austin,TX,Actiq,True
+1001000146,Dr. Karen Sanchez,Oncology,Detroit,MI,Actiq,False
+1001000147,Dr. Sarah Carter,Pain Management,Philadelphia,PA,Lazanda,True
+1001000148,Dr. William Rodriguez,Internal Medicine,Seattle,WA,Actiq,True
+1001000149,Dr. Melissa Rodriguez,Oncology,Denver,CO,Abstral,True
+1001000150,Dr. Emily Carter,Neurology,Seattle,WA,Fentora,True
+1001000151,Dr. Nancy Wilson,Pain Management,Houston,TX,Actiq,False
+1001000152,Dr. Richard Martinez,Internal Medicine,Detroit,MI,Actiq,True
+1001000153,Dr. Lisa Campbell,Pain Management,Portland,OR,Abstral,True
+1001000154,Dr. Kimberly Green,Pain Management,Portland,OR,Subsys,True
+1001000155,Dr. Patricia Jones,Emergency Medicine,Philadelphia,PA,Subsys,True
+1001000156,Dr. Lisa Perez,Pain Management,New York,NY,Subsys,True
+1001000157,Dr. Ashley Wright,Palliative Care,Houston,TX,Fentora,True
+1001000158,Dr. Lisa Hill,Family Practice,Jacksonville,FL,Subsys,True
+1001000159,Dr. David Taylor,Oncology,Houston,TX,Abstral,False
+1001000160,Dr. Dorothy Campbell,Internal Medicine,Nashville,TN,Fentora,True
+1001000161,Dr. Kathleen Campbell,Palliative Care,Detroit,MI,Abstral,True
+1001000162,Dr. James Adams,Oncology,Houston,TX,Abstral,True
+1001000163,Dr. Thomas Rivera,Internal Medicine,Austin,TX,Lazanda,True
+1001000164,Dr. Kathleen Harris,Oncology,Nashville,TN,Lazanda,True
+1001000165,Dr. Rebecca Flores,Palliative Care,Phoenix,AZ,Lazanda,True
+1001000166,Dr. Thomas Allen,Neurology,Houston,TX,Fentora,True
+1001000167,Dr. Deborah Davis,Oncology,Austin,TX,Subsys,True
+1001000168,Dr. Joseph Smith,Pain Management,Atlanta,GA,Fentora,True
+1001000169,Dr. Joseph Gonzalez,Palliative Care,Philadelphia,PA,Actiq,True
+1001000170,Dr. Amanda Smith,Anesthesiology,Austin,TX,Abstral,True
+1001000171,Dr. Nancy Clark,Pain Management,Phoenix,AZ,Abstral,True
+1001000172,Dr. Kimberly Jackson,Palliative Care,Chicago,IL,Subsys,True
+1001000173,Dr. Sarah Hernandez,Pain Management,Columbus,OH,Fentora,True
+1001000174,Dr. Sharon Hill,Internal Medicine,Denver,CO,Actiq,False
+1001000175,Dr. Jessica Nguyen,Neurology,Austin,TX,Lazanda,True
+1001000176,Dr. Richard Allen,Pain Management,Austin,TX,Subsys,True
+1001000177,Dr. Lisa Scott,Orthopedics,Phoenix,AZ,Actiq,True
+1001000178,Dr. Elizabeth Brown,Neurology,Austin,TX,Lazanda,False
+1001000179,Dr. Linda Sanchez,Neurology,Miami,FL,Fentora,True
+1001000180,Dr. James Perez,Pain Management,Charlotte,NC,Fentora,True
+1001000181,Dr. Robert Lee,Pain Management,Phoenix,AZ,Subsys,True
+1001000182,Dr. Linda Torres,Neurology,New York,NY,Subsys,True
+1001000183,Dr. Amanda Hernandez,Oncology,Austin,TX,Actiq,True
+1001000184,Dr. Dorothy Davis,Pain Management,Detroit,MI,Subsys,True
+1001000185,Dr. Lisa Anderson,Emergency Medicine,Philadelphia,PA,Subsys,True
+1001000186,Dr. James Gonzalez,Anesthesiology,Nashville,TN,Abstral,True
+1001000187,Dr. Ashley Robinson,Anesthesiology,Las Vegas,NV,Subsys,True
+1001000188,Dr. Carol Lee,Neurology,Atlanta,GA,Actiq,True
+1001000189,Dr. Jessica Taylor,Palliative Care,Las Vegas,NV,Fentora,True
+1001000190,Dr. Robert Wilson,Emergency Medicine,Seattle,WA,Subsys,True
+1001000191,Dr. Melissa Jackson,Pain Management,Houston,TX,Fentora,True
+1001000192,Dr. Richard Baker,Pain Management,Los Angeles,CA,Subsys,True
+1001000193,Dr. James Young,Pain Management,New York,NY,Actiq,True
+1001000194,Dr. Nancy Smith,Palliative Care,Las Vegas,NV,Subsys,True
+1001000195,Dr. Charles Wilson,Pain Management,Portland,OR,Subsys,True
+1001000196,Dr. Amanda Carter,Oncology,Portland,OR,Lazanda,True
+1001000197,Dr. John Smith,Palliative Care,Seattle,WA,Abstral,True
+1001000198,Dr. Linda Harris,Neurology,Las Vegas,NV,Fentora,True
+1001000199,Dr. Charles Walker,Internal Medicine,Jacksonville,FL,Subsys,True
+1001000200,Dr. Kathleen Rivera,Emergency Medicine,Los Angeles,CA,Lazanda,True
+1001000201,Dr. David Anderson,Palliative Care,Portland,OR,Subsys,True
+1001000202,Dr. Jessica Martinez,Palliative Care,Nashville,TN,Subsys,True
+1001000203,Dr. William Young,Oncology,Columbus,OH,Abstral,True
+1001000204,Dr. Charles Rodriguez,Orthopedics,Boston,MA,Actiq,True
+1001000205,Dr. Sandra Martin,Palliative Care,Phoenix,AZ,Subsys,True
+1001000206,Dr. Laura Nelson,Orthopedics,Portland,OR,Subsys,True
+1001000207,Dr. Carol Williams,Oncology,Charlotte,NC,Subsys,True
+1001000208,Dr. Sandra Ramirez,Oncology,Houston,TX,Subsys,True
+1001000209,Dr. Sandra Adams,Palliative Care,Miami,FL,Subsys,True
+1001000210,Dr. David Mitchell,Neurology,Detroit,MI,Actiq,True
+1001000211,Dr. Betty Rodriguez,Anesthesiology,Los Angeles,CA,Actiq,False
+1001000212,Dr. John Miller,Anesthesiology,Austin,TX,Actiq,True
+1001000213,Dr. Linda Sanchez,Oncology,Denver,CO,Subsys,True
+1001000214,Dr. Dorothy Moore,Orthopedics,Denver,CO,Subsys,False
+1001000215,Dr. Joseph Hill,Oncology,Seattle,WA,Actiq,False
+1001000216,Dr. Rebecca Harris,Palliative Care,Portland,OR,Subsys,True
+1001000217,Dr. Linda Wright,Pain Management,Seattle,WA,Abstral,True
+1001000218,Dr. Mary Walker,Internal Medicine,Chicago,IL,Subsys,True
+1001000219,Dr. Melissa Harris,Palliative Care,Phoenix,AZ,Subsys,True
+1001000220,Dr. Susan Scott,Pain Management,Las Vegas,NV,Subsys,False
+1001000221,Dr. Jennifer Carter,Oncology,Phoenix,AZ,Subsys,True
+1001000222,Dr. Dorothy Walker,Neurology,Austin,TX,Lazanda,True
+1001000223,Dr. Thomas Taylor,Palliative Care,Las Vegas,NV,Abstral,True
+1001000224,Dr. Richard King,Neurology,Nashville,TN,Fentora,True
+1001000225,Dr. Sarah Walker,Anesthesiology,Houston,TX,Actiq,True
+1001000226,Dr. Barbara Lopez,Orthopedics,Detroit,MI,Fentora,False
+1001000227,Dr. Richard Hall,Anesthesiology,Baltimore,MD,Fentora,True
+1001000228,Dr. Elizabeth Garcia,Neurology,Detroit,MI,Subsys,True
+1001000229,Dr. Kimberly Wright,Internal Medicine,Nashville,TN,Subsys,False
+1001000230,Dr. Laura Lee,Pain Management,Denver,CO,Abstral,True
+1001000231,Dr. John Hill,Pain Management,Portland,OR,Abstral,True
+1001000232,Dr. Lisa Thompson,Oncology,New York,NY,Abstral,True
+1001000233,Dr. Kimberly Jones,Pain Management,Charlotte,NC,Lazanda,True
+1001000234,Dr. Amanda Baker,Oncology,Seattle,WA,Actiq,True
+1001000235,Dr. Melissa Wilson,Neurology,Phoenix,AZ,Abstral,True
+1001000236,Dr. Emily Wright,Oncology,Baltimore,MD,Subsys,True
+1001000237,Dr. Richard Allen,Pain Management,Seattle,WA,Actiq,True
+1001000238,Dr. William Hall,Anesthesiology,Denver,CO,Abstral,False
+1001000239,Dr. David Walker,Family Practice,Atlanta,GA,Subsys,True
+1001000240,Dr. Sandra Hill,Internal Medicine,Boston,MA,Lazanda,True
+1001000241,Dr. Ashley Williams,Anesthesiology,Austin,TX,Lazanda,True
+1001000242,Dr. Kathleen Miller,Family Practice,Detroit,MI,Abstral,True
+1001000243,Dr. Linda Jones,Family Practice,Seattle,WA,Subsys,True
+1001000244,Dr. Elizabeth Torres,Neurology,Miami,FL,Subsys,True
+1001000245,Dr. Jennifer Sanchez,Internal Medicine,Portland,OR,Abstral,True
+1001000246,Dr. Linda Rodriguez,Internal Medicine,Chicago,IL,Actiq,True
+1001000247,Dr. Charles Johnson,Neurology,Portland,OR,Actiq,True
+1001000248,Dr. Patricia Lopez,Oncology,Phoenix,AZ,Lazanda,True
+1001000249,Dr. Melissa Hernandez,Orthopedics,Baltimore,MD,Fentora,True
+1001000250,Dr. David Nguyen,Palliative Care,Detroit,MI,Actiq,True
+1001000251,Dr. Kimberly Ramirez,Oncology,Chicago,IL,Abstral,True
+1001000252,Dr. Laura Mitchell,Family Practice,Denver,CO,Subsys,False
+1001000253,Dr. Sarah Perez,Oncology,Philadelphia,PA,Subsys,True
+1001000254,Dr. Elizabeth Campbell,Palliative Care,Boston,MA,Fentora,True
+1001000255,Dr. Sharon Ramirez,Neurology,Miami,FL,Fentora,True
+1001000256,Dr. Carol Thompson,Pain Management,Atlanta,GA,Actiq,True
+1001000257,Dr. Kimberly Adams,Palliative Care,Detroit,MI,Abstral,True
+1001000258,Dr. David Hernandez,Orthopedics,Austin,TX,Subsys,True
+1001000259,Dr. John King,Palliative Care,Los Angeles,CA,Lazanda,True
+1001000260,Dr. Michael Hill,Pain Management,Boston,MA,Abstral,True
+1001000261,Dr. Laura Campbell,Pain Management,Phoenix,AZ,Actiq,True
+1001000262,Dr. Ashley Hernandez,Oncology,Columbus,OH,Abstral,True
+1001000263,Dr. Susan Sanchez,Pain Management,Charlotte,NC,Fentora,True
+1001000264,Dr. Deborah Robinson,Family Practice,Denver,CO,Subsys,True
+1001000265,Dr. Susan Torres,Neurology,Phoenix,AZ,Abstral,True
+1001000266,Dr. Richard Wright,Pain Management,Jacksonville,FL,Lazanda,True
+1001000267,Dr. Emily King,Pain Management,New York,NY,Subsys,True
+1001000268,Dr. James Allen,Oncology,Phoenix,AZ,Actiq,True
+1001000269,Dr. Barbara Williams,Internal Medicine,Houston,TX,Subsys,True
+1001000270,Dr. Thomas Davis,Pain Management,Austin,TX,Fentora,True
+1001000271,Dr. Ashley Robinson,Pain Management,Seattle,WA,Subsys,True
+1001000272,Dr. David Ramirez,Family Practice,Seattle,WA,Abstral,True
+1001000273,Dr. Thomas Martinez,Emergency Medicine,Denver,CO,Actiq,True
+1001000274,Dr. Sharon Taylor,Palliative Care,Miami,FL,Subsys,True
+1001000275,Dr. Michelle Williams,Family Practice,Columbus,OH,Subsys,False
+1001000276,Dr. Deborah Miller,Pain Management,New York,NY,Fentora,False
+1001000277,Dr. Nancy Thomas,Oncology,Columbus,OH,Actiq,True
+1001000278,Dr. Thomas Garcia,Neurology,Denver,CO,Abstral,True
+1001000279,Dr. Kimberly Rodriguez,Pain Management,Denver,CO,Abstral,True
+1001000280,Dr. Laura Hernandez,Anesthesiology,New York,NY,Subsys,True
+1001000281,Dr. Laura Wright,Palliative Care,Baltimore,MD,Subsys,True
+1001000282,Dr. Karen Miller,Internal Medicine,Chicago,IL,Subsys,True
+1001000283,Dr. Lisa Lopez,Internal Medicine,Philadelphia,PA,Subsys,True
+1001000284,Dr. Carol Johnson,Orthopedics,Miami,FL,Actiq,True
+1001000285,Dr. Robert Jackson,Palliative Care,Phoenix,AZ,Subsys,True
+1001000286,Dr. Betty Miller,Anesthesiology,Atlanta,GA,Subsys,True
+1001000287,Dr. Stephanie Scott,Orthopedics,Denver,CO,Abstral,False
+1001000288,Dr. Michael Perez,Pain Management,Jacksonville,FL,Subsys,False
+1001000289,Dr. Betty Brown,Oncology,Phoenix,AZ,Fentora,True
+1001000290,Dr. Melissa Scott,Pain Management,Boston,MA,Abstral,True
+1001000291,Dr. Michelle Perez,Palliative Care,Las Vegas,NV,Subsys,True
+1001000292,Dr. Sandra Williams,Pain Management,Jacksonville,FL,Abstral,True
+1001000293,Dr. Michelle Rivera,Oncology,Chicago,IL,Fentora,True
+1001000294,Dr. Sharon Mitchell,Neurology,Philadelphia,PA,Abstral,True
+1001000295,Dr. Richard Smith,Neurology,Phoenix,AZ,Subsys,True
+1001000296,Dr. Melissa Scott,Oncology,Houston,TX,Abstral,True
+1001000297,Dr. Charles Torres,Oncology,Portland,OR,Subsys,False
+1001000298,Dr. Mary Sanchez,Oncology,Phoenix,AZ,Abstral,True
+1001000299,Dr. Patricia Davis,Pain Management,Charlotte,NC,Abstral,True
+1001000300,Dr. Michael Hall,Neurology,Austin,TX,Abstral,True
+1001000301,Dr. Jessica Carter,Oncology,Houston,TX,Subsys,True
+1001000302,Dr. Lisa Adams,Pain Management,Boston,MA,Actiq,True
+1001000303,Dr. Stephanie Mitchell,Palliative Care,Philadelphia,PA,Abstral,True
+1001000304,Dr. John Anderson,Anesthesiology,Portland,OR,Abstral,True
+1001000305,Dr. Betty Clark,Neurology,Houston,TX,Fentora,True
+1001000306,Dr. Karen Allen,Internal Medicine,Detroit,MI,Subsys,False
+1001000307,Dr. Carol Jones,Pain Management,Chicago,IL,Abstral,True
+1001000308,Dr. Robert Flores,Pain Management,Portland,OR,Abstral,True
+1001000309,Dr. Barbara Jackson,Palliative Care,Nashville,TN,Subsys,True
+1001000310,Dr. Linda Garcia,Pain Management,Jacksonville,FL,Abstral,True
+1001000311,Dr. Ashley Davis,Pain Management,Atlanta,GA,Abstral,True
+1001000312,Dr. Richard Adams,Oncology,Philadelphia,PA,Abstral,False
+1001000313,Dr. Sharon Harris,Pain Management,Detroit,MI,Actiq,True
+1001000314,Dr. Charles Young,Oncology,Columbus,OH,Subsys,True
+1001000315,Dr. Betty Sanchez,Anesthesiology,Austin,TX,Subsys,True
+1001000316,Dr. David Harris,Palliative Care,Portland,OR,Lazanda,True
+1001000317,Dr. Michelle Allen,Family Practice,Chicago,IL,Subsys,True
+1001000318,Dr. Michelle Johnson,Palliative Care,Chicago,IL,Fentora,True
+1001000319,Dr. Sarah Williams,Pain Management,Portland,OR,Actiq,True
+1001000320,Dr. William Campbell,Pain Management,Portland,OR,Abstral,True
+1001000321,Dr. Barbara Brown,Internal Medicine,Columbus,OH,Subsys,True
+1001000322,Dr. Deborah Flores,Oncology,Phoenix,AZ,Actiq,True
+1001000323,Dr. Sharon Rodriguez,Oncology,Jacksonville,FL,Actiq,True
+1001000324,Dr. Linda Johnson,Internal Medicine,Phoenix,AZ,Subsys,True
+1001000325,Dr. Sharon King,Anesthesiology,Phoenix,AZ,Subsys,True
+1001000326,Dr. Dorothy Taylor,Pain Management,Baltimore,MD,Subsys,True
+1001000327,Dr. Richard Nguyen,Family Practice,Las Vegas,NV,Subsys,True
+1001000328,Dr. Michelle Nelson,Neurology,Austin,TX,Subsys,True
+1001000329,Dr. Melissa Scott,Pain Management,Charlotte,NC,Fentora,True
+1001000330,Dr. Jessica Robinson,Palliative Care,Seattle,WA,Subsys,True
+1001000331,Dr. Charles Hill,Oncology,Phoenix,AZ,Subsys,True
+1001000332,Dr. Nancy Davis,Anesthesiology,Miami,FL,Abstral,True
+1001000333,Dr. Amanda Carter,Oncology,Detroit,MI,Fentora,True
+1001000334,Dr. Donna Lopez,Pain Management,Columbus,OH,Subsys,True
+1001000335,Dr. Elizabeth Adams,Pain Management,Chicago,IL,Subsys,True
+1001000336,Dr. Charles Anderson,Oncology,Houston,TX,Fentora,True
+1001000337,Dr. Deborah Davis,Pain Management,Miami,FL,Lazanda,True
+1001000338,Dr. Kimberly Jackson,Oncology,Baltimore,MD,Fentora,True
+1001000339,Dr. Sarah Johnson,Family Practice,Chicago,IL,Actiq,True
+1001000340,Dr. Margaret Adams,Pain Management,Portland,OR,Subsys,True
+1001000341,Dr. Thomas Hernandez,Palliative Care,Las Vegas,NV,Subsys,True
+1001000342,Dr. Sharon Rivera,Orthopedics,New York,NY,Abstral,True
+1001000343,Dr. Michael White,Palliative Care,Denver,CO,Abstral,True
+1001000344,Dr. James Thompson,Palliative Care,Las Vegas,NV,Fentora,False
+1001000345,Dr. Carol Lewis,Neurology,Los Angeles,CA,Subsys,True
+1001000346,Dr. Emily Johnson,Internal Medicine,Las Vegas,NV,Lazanda,True
+1001000347,Dr. Kathleen Thomas,Pain Management,Atlanta,GA,Lazanda,True
+1001000348,Dr. Dorothy Sanchez,Palliative Care,Jacksonville,FL,Abstral,True
+1001000349,Dr. Charles Lewis,Neurology,Baltimore,MD,Actiq,True
+1001000350,Dr. Margaret Perez,Palliative Care,Portland,OR,Actiq,True
+1001000351,Dr. Elizabeth Allen,Pain Management,Jacksonville,FL,Subsys,True
+1001000352,Dr. Linda Torres,Pain Management,Columbus,OH,Subsys,True
+1001000353,Dr. Rebecca Robinson,Oncology,Portland,OR,Fentora,True
+1001000354,Dr. Melissa Rivera,Oncology,Austin,TX,Subsys,True
+1001000355,Dr. Margaret Walker,Palliative Care,Austin,TX,Abstral,True
+1001000356,Dr. Jennifer Taylor,Internal Medicine,New York,NY,Actiq,True
+1001000357,Dr. Melissa Sanchez,Oncology,Phoenix,AZ,Fentora,True
+1001000358,Dr. Patricia Hernandez,Palliative Care,Boston,MA,Fentora,True
+1001000359,Dr. Betty Sanchez,Pain Management,Columbus,OH,Abstral,True
+1001000360,Dr. Mary Baker,Pain Management,Boston,MA,Lazanda,True
+1001000361,Dr. James Gonzalez,Internal Medicine,Denver,CO,Subsys,True
+1001000362,Dr. Charles Hernandez,Pain Management,Los Angeles,CA,Abstral,True
+1001000363,Dr. James Clark,Neurology,Phoenix,AZ,Subsys,True
+1001000364,Dr. Laura Hill,Family Practice,Nashville,TN,Subsys,True
+1001000365,Dr. Barbara Miller,Oncology,Detroit,MI,Actiq,True
+1001000366,Dr. William Lopez,Internal Medicine,Philadelphia,PA,Abstral,True
+1001000367,Dr. Lisa Allen,Pain Management,Seattle,WA,Abstral,True
+1001000368,Dr. Lisa Hill,Pain Management,Philadelphia,PA,Subsys,True
+1001000369,Dr. Deborah Wilson,Palliative Care,Charlotte,NC,Subsys,True
+1001000370,Dr. Thomas Robinson,Anesthesiology,New York,NY,Subsys,True
+1001000371,Dr. Michael Flores,Oncology,Charlotte,NC,Abstral,True
+1001000372,Dr. Stephanie Martin,Family Practice,Boston,MA,Subsys,True
+1001000373,Dr. Thomas Carter,Anesthesiology,Baltimore,MD,Fentora,True
+1001000374,Dr. Laura Mitchell,Orthopedics,Phoenix,AZ,Abstral,True
+1001000375,Dr. Margaret Torres,Oncology,Los Angeles,CA,Subsys,True
+1001000376,Dr. Kathleen Johnson,Internal Medicine,Portland,OR,Fentora,False
+1001000377,Dr. Donna Clark,Internal Medicine,Phoenix,AZ,Subsys,True
+1001000378,Dr. Barbara Hernandez,Neurology,Las Vegas,NV,Actiq,True
+1001000379,Dr. Sarah Rodriguez,Pain Management,Baltimore,MD,Actiq,True
+1001000380,Dr. Dorothy Thomas,Neurology,Austin,TX,Actiq,True
+1001000381,Dr. Melissa Sanchez,Palliative Care,Portland,OR,Subsys,True
+1001000382,Dr. Karen Lee,Neurology,Detroit,MI,Fentora,True
+1001000383,Dr. Deborah Johnson,Oncology,Los Angeles,CA,Subsys,True
+1001000384,Dr. Deborah Ramirez,Palliative Care,Boston,MA,Subsys,True
+1001000385,Dr. Sharon Rodriguez,Internal Medicine,Detroit,MI,Actiq,True
+1001000386,Dr. Lisa Smith,Family Practice,Charlotte,NC,Fentora,True
+1001000387,Dr. Sarah Young,Orthopedics,Detroit,MI,Actiq,True
+1001000388,Dr. John Brown,Anesthesiology,Houston,TX,Subsys,True
+1001000389,Dr. Sarah Harris,Pain Management,Miami,FL,Subsys,True
+1001000390,Dr. Sandra Perez,Palliative Care,Jacksonville,FL,Abstral,True
+1001000391,Dr. Susan White,Pain Management,Los Angeles,CA,Actiq,True
+1001000392,Dr. Dorothy Lewis,Neurology,Denver,CO,Abstral,True
+1001000393,Dr. Mary Clark,Palliative Care,New York,NY,Subsys,True
+1001000394,Dr. Stephanie Williams,Internal Medicine,Atlanta,GA,Abstral,True
+1001000395,Dr. Michelle Thompson,Oncology,Phoenix,AZ,Actiq,True
+1001000396,Dr. Susan Campbell,Pain Management,Denver,CO,Abstral,False
+1001000397,Dr. Sandra Hall,Anesthesiology,Seattle,WA,Subsys,True
+1001000398,Dr. Margaret Garcia,Neurology,Portland,OR,Subsys,True
+1001000399,Dr. Amanda Lopez,Palliative Care,New York,NY,Abstral,True
+1001000400,Dr. Kathleen Moore,Oncology,Las Vegas,NV,Abstral,True
+1001000401,Dr. Michael Flores,Pain Management,Denver,CO,Subsys,True
+1001000402,Dr. Patricia Perez,Oncology,New York,NY,Actiq,True
+1001000403,Dr. Karen King,Orthopedics,Houston,TX,Actiq,True
+1001000404,Dr. Elizabeth Perez,Palliative Care,Phoenix,AZ,Abstral,True
+1001000405,Dr. John Baker,Family Practice,Charlotte,NC,Actiq,True
+1001000406,Dr. David Gonzalez,Oncology,Atlanta,GA,Actiq,True
+1001000407,Dr. Lisa Brown,Family Practice,Philadelphia,PA,Subsys,True
+1001000408,Dr. Lisa Lee,Oncology,Portland,OR,Subsys,True
+1001000409,Dr. Kathleen Harris,Internal Medicine,Philadelphia,PA,Subsys,True
+1001000410,Dr. Kathleen Hill,Oncology,Seattle,WA,Fentora,True
+1001000411,Dr. Jennifer Gonzalez,Anesthesiology,Miami,FL,Fentora,True
+1001000412,Dr. James Young,Oncology,Seattle,WA,Actiq,True
+1001000413,Dr. Robert Moore,Oncology,Portland,OR,Subsys,True
+1001000414,Dr. Kathleen Martin,Oncology,Boston,MA,Abstral,True
+1001000415,Dr. Susan Scott,Internal Medicine,Atlanta,GA,Fentora,True
+1001000416,Dr. Kimberly Davis,Internal Medicine,Houston,TX,Subsys,True
+1001000417,Dr. Nancy Adams,Family Practice,Charlotte,NC,Abstral,True
+1001000418,Dr. Dorothy Hernandez,Family Practice,Boston,MA,Subsys,True
+1001000419,Dr. Emily Thompson,Neurology,Denver,CO,Lazanda,True
+1001000420,Dr. Richard Green,Neurology,Portland,OR,Lazanda,True
+1001000421,Dr. Richard Williams,Pain Management,Los Angeles,CA,Subsys,True
+1001000422,Dr. William Flores,Palliative Care,Los Angeles,CA,Lazanda,True
+1001000423,Dr. Sandra Baker,Orthopedics,Columbus,OH,Subsys,True
+1001000424,Dr. Margaret Torres,Pain Management,Phoenix,AZ,Actiq,True
+1001000425,Dr. Carol Baker,Pain Management,Phoenix,AZ,Abstral,True
+1001000426,Dr. James Gonzalez,Family Practice,Charlotte,NC,Actiq,True
+1001000427,Dr. James Hernandez,Oncology,Boston,MA,Abstral,True
+1001000428,Dr. Betty Young,Anesthesiology,Houston,TX,Abstral,True
+1001000429,Dr. Susan Lopez,Palliative Care,Chicago,IL,Abstral,True
+1001000430,Dr. Lisa Ramirez,Palliative Care,Portland,OR,Lazanda,True
+1001000431,Dr. Sandra Nguyen,Orthopedics,Portland,OR,Actiq,True
+1001000432,Dr. Karen Rodriguez,Palliative Care,Charlotte,NC,Abstral,False
+1001000433,Dr. Dorothy Carter,Pain Management,Baltimore,MD,Lazanda,True
+1001000434,Dr. Richard Rodriguez,Anesthesiology,Denver,CO,Subsys,True
+1001000435,Dr. Charles Baker,Pain Management,Seattle,WA,Subsys,False
+1001000436,Dr. James Martin,Pain Management,Las Vegas,NV,Actiq,True
+1001000437,Dr. William Nelson,Oncology,Detroit,MI,Actiq,True
+1001000438,Dr. Michelle Sanchez,Anesthesiology,Denver,CO,Actiq,True
+1001000439,Dr. Laura Jones,Family Practice,Portland,OR,Fentora,True
+1001000440,Dr. Laura Lopez,Neurology,Denver,CO,Subsys,True
+1001000441,Dr. William Nelson,Palliative Care,Jacksonville,FL,Actiq,True
+1001000442,Dr. Emily Anderson,Pain Management,Jacksonville,FL,Abstral,True
+1001000443,Dr. Stephanie Hall,Pain Management,Columbus,OH,Subsys,True
+1001000444,Dr. Donna Harris,Pain Management,Denver,CO,Actiq,False
+1001000445,Dr. Dorothy Hall,Orthopedics,Nashville,TN,Subsys,True
+1001000446,Dr. Michelle Harris,Oncology,Boston,MA,Abstral,True
+1001000447,Dr. Lisa Baker,Pain Management,Nashville,TN,Actiq,True
+1001000448,Dr. Susan Wilson,Pain Management,Denver,CO,Fentora,True
+1001000449,Dr. Deborah Smith,Neurology,Atlanta,GA,Subsys,True
+1001000450,Dr. Dorothy Ramirez,Pain Management,Nashville,TN,Actiq,True
+1001000451,Dr. William Baker,Pain Management,Denver,CO,Lazanda,True
+1001000452,Dr. Michelle Williams,Neurology,Atlanta,GA,Lazanda,True
+1001000453,Dr. Michael Sanchez,Pain Management,Charlotte,NC,Abstral,True
+1001000454,Dr. Donna Sanchez,Anesthesiology,Phoenix,AZ,Fentora,True
+1001000455,Dr. Jennifer Moore,Pain Management,Miami,FL,Abstral,True
+1001000456,Dr. William Jackson,Pain Management,Nashville,TN,Subsys,True
+1001000457,Dr. Stephanie Brown,Family Practice,Philadelphia,PA,Lazanda,True
+1001000458,Dr. Amanda Taylor,Family Practice,Houston,TX,Subsys,True
+1001000459,Dr. Stephanie Miller,Orthopedics,Austin,TX,Abstral,True
+1001000460,Dr. David Garcia,Pain Management,Boston,MA,Abstral,True
+1001000461,Dr. Deborah Baker,Orthopedics,Portland,OR,Abstral,False
+1001000462,Dr. Patricia Robinson,Palliative Care,Columbus,OH,Subsys,False
+1001000463,Dr. Kathleen Lewis,Pain Management,Miami,FL,Actiq,True
+1001000464,Dr. Deborah Campbell,Family Practice,New York,NY,Actiq,True
+1001000465,Dr. Margaret Robinson,Pain Management,Chicago,IL,Subsys,True
+1001000466,Dr. John Mitchell,Pain Management,Las Vegas,NV,Subsys,True
+1001000467,Dr. Rebecca Martinez,Oncology,New York,NY,Subsys,True
+1001000468,Dr. Melissa Harris,Emergency Medicine,Charlotte,NC,Lazanda,True
+1001000469,Dr. Thomas Gonzalez,Pain Management,Seattle,WA,Abstral,True
+1001000470,Dr. Lisa Robinson,Oncology,Detroit,MI,Actiq,True
+1001000471,Dr. Margaret Rodriguez,Family Practice,Baltimore,MD,Actiq,True
+1001000472,Dr. Emily Garcia,Pain Management,Miami,FL,Fentora,True
+1001000473,Dr. Sharon Jackson,Internal Medicine,Los Angeles,CA,Subsys,True
+1001000474,Dr. James Moore,Orthopedics,Columbus,OH,Fentora,True
+1001000475,Dr. Deborah Flores,Family Practice,New York,NY,Subsys,True
+1001000476,Dr. John Carter,Pain Management,Columbus,OH,Abstral,True
+1001000477,Dr. Melissa Hill,Palliative Care,Jacksonville,FL,Fentora,True
+1001000478,Dr. Robert Green,Neurology,Atlanta,GA,Actiq,True
+1001000479,Dr. Melissa Thomas,Family Practice,Columbus,OH,Abstral,True
+1001000480,Dr. Margaret Sanchez,Anesthesiology,Phoenix,AZ,Abstral,True
+1001000481,Dr. Linda Johnson,Oncology,Portland,OR,Actiq,True
+1001000482,Dr. Charles Thomas,Oncology,Seattle,WA,Abstral,False
+1001000483,Dr. Sarah Taylor,Oncology,Charlotte,NC,Actiq,True
+1001000484,Dr. Laura Mitchell,Family Practice,Philadelphia,PA,Fentora,True
+1001000485,Dr. Betty Taylor,Neurology,Phoenix,AZ,Abstral,False
+1001000486,Dr. Jessica Williams,Internal Medicine,Phoenix,AZ,Abstral,False
+1001000487,Dr. Melissa Scott,Pain Management,Denver,CO,Actiq,False
+1001000488,Dr. Margaret Torres,Anesthesiology,Nashville,TN,Fentora,True
+1001000489,Dr. Elizabeth Baker,Anesthesiology,Seattle,WA,Fentora,True
+1001000490,Dr. Susan Allen,Oncology,Miami,FL,Subsys,True
+1001000491,Dr. Dorothy Garcia,Oncology,Phoenix,AZ,Lazanda,True
+1001000492,Dr. Ashley Ramirez,Neurology,Miami,FL,Subsys,True
+1001000493,Dr. Lisa Taylor,Palliative Care,Chicago,IL,Abstral,False
+1001000494,Dr. Linda Allen,Oncology,Phoenix,AZ,Lazanda,True
+1001000495,Dr. Donna Lopez,Pain Management,Atlanta,GA,Subsys,True
+1001000496,Dr. Jennifer Clark,Pain Management,Phoenix,AZ,Fentora,True
+1001000497,Dr. Charles Davis,Oncology,Seattle,WA,Fentora,True
+1001000498,Dr. Stephanie Perez,Anesthesiology,Baltimore,MD,Abstral,True
+1001000499,Dr. Ashley Jones,Neurology,Miami,FL,Actiq,True
+1001000500,Dr. Stephanie Walker,Internal Medicine,Columbus,OH,Fentora,True
+1001000501,Dr. Sandra Campbell,Pain Management,Houston,TX,Subsys,True
+1001000502,Dr. David Johnson,Emergency Medicine,Portland,OR,Subsys,True
+1001000503,Dr. Michelle Rivera,Pain Management,Houston,TX,Subsys,True
+1001000504,Dr. David Johnson,Internal Medicine,Charlotte,NC,Fentora,True
+1001000505,Dr. Sharon Nelson,Palliative Care,Las Vegas,NV,Actiq,True
+1001000506,Dr. Richard Smith,Pain Management,Phoenix,AZ,Subsys,True
+1001000507,Dr. Laura Johnson,Palliative Care,Philadelphia,PA,Subsys,True
+1001000508,Dr. Mary Young,Anesthesiology,Las Vegas,NV,Actiq,True
+1001000509,Dr. Dorothy Hall,Anesthesiology,Columbus,OH,Subsys,True
+1001000510,Dr. Emily Allen,Pain Management,Detroit,MI,Abstral,True
+1001000511,Dr. Jessica Jones,Pain Management,Chicago,IL,Actiq,True
+1001000512,Dr. Elizabeth Ramirez,Palliative Care,Chicago,IL,Fentora,True
+1001000513,Dr. Richard Carter,Anesthesiology,Denver,CO,Fentora,True
+1001000514,Dr. Carol Robinson,Orthopedics,Phoenix,AZ,Subsys,True
+1001000515,Dr. Margaret Hernandez,Internal Medicine,Columbus,OH,Abstral,True
+1001000516,Dr. Jennifer Walker,Emergency Medicine,Atlanta,GA,Subsys,True
+1001000517,Dr. Thomas Walker,Pain Management,Atlanta,GA,Subsys,True
+1001000518,Dr. Betty Smith,Oncology,Boston,MA,Subsys,True
+1001000519,Dr. Stephanie Lee,Palliative Care,Baltimore,MD,Subsys,True
+1001000520,Dr. Nancy Jones,Orthopedics,Atlanta,GA,Subsys,True
+1001000521,Dr. Patricia Lee,Pain Management,Nashville,TN,Subsys,True
+1001000522,Dr. Betty Campbell,Anesthesiology,Miami,FL,Abstral,True
+1001000523,Dr. Elizabeth Rodriguez,Family Practice,Atlanta,GA,Actiq,True
+1001000524,Dr. Susan Nguyen,Anesthesiology,Miami,FL,Subsys,False
+1001000525,Dr. Melissa Hill,Anesthesiology,Las Vegas,NV,Subsys,True
+1001000526,Dr. Betty Robinson,Pain Management,Detroit,MI,Abstral,True
+1001000527,Dr. Susan Lewis,Pain Management,Phoenix,AZ,Subsys,True
+1001000528,Dr. Michelle Williams,Orthopedics,Nashville,TN,Subsys,True
+1001000529,Dr. Betty Carter,Oncology,Atlanta,GA,Abstral,True
+1001000530,Dr. Carol Martinez,Pain Management,Charlotte,NC,Abstral,True
+1001000531,Dr. Stephanie Rivera,Neurology,Atlanta,GA,Lazanda,True
+1001000532,Dr. Elizabeth Ramirez,Neurology,Jacksonville,FL,Actiq,True
+1001000533,Dr. Lisa Johnson,Palliative Care,Jacksonville,FL,Actiq,True
+1001000534,Dr. Michael Rivera,Palliative Care,Boston,MA,Fentora,True
+1001000535,Dr. Robert Martin,Family Practice,Portland,OR,Actiq,True
+1001000536,Dr. Thomas Torres,Pain Management,Detroit,MI,Subsys,True
+1001000537,Dr. Emily Hill,Pain Management,Portland,OR,Abstral,True
+1001000538,Dr. John Hall,Orthopedics,Phoenix,AZ,Abstral,True
+1001000539,Dr. Mary Rivera,Oncology,Boston,MA,Actiq,True
+1001000540,Dr. Emily Flores,Internal Medicine,Portland,OR,Abstral,True
+1001000541,Dr. Robert Ramirez,Internal Medicine,Jacksonville,FL,Lazanda,False
+1001000542,Dr. Joseph Perez,Emergency Medicine,Atlanta,GA,Actiq,True
+1001000543,Dr. Robert Jones,Pain Management,Baltimore,MD,Abstral,True
+1001000544,Dr. Margaret Clark,Oncology,Detroit,MI,Actiq,True
+1001000545,Dr. Kathleen Campbell,Pain Management,Seattle,WA,Lazanda,True
+1001000546,Dr. Barbara Anderson,Internal Medicine,Baltimore,MD,Lazanda,False
+1001000547,Dr. Ashley Torres,Anesthesiology,Charlotte,NC,Abstral,False
+1001000548,Dr. Melissa Mitchell,Oncology,Columbus,OH,Abstral,True
+1001000549,Dr. Melissa Sanchez,Palliative Care,Los Angeles,CA,Subsys,True
+1001000550,Dr. Nancy Jones,Pain Management,Atlanta,GA,Abstral,True
+1001000551,Dr. Linda Campbell,Pain Management,Seattle,WA,Subsys,False
+1001000552,Dr. Carol Jones,Orthopedics,Jacksonville,FL,Subsys,True
+1001000553,Dr. Patricia Jones,Palliative Care,Charlotte,NC,Abstral,True
+1001000554,Dr. Deborah Rodriguez,Pain Management,Columbus,OH,Lazanda,True
+1001000555,Dr. Jessica Hernandez,Family Practice,Columbus,OH,Abstral,True
+1001000556,Dr. Karen Moore,Oncology,Las Vegas,NV,Actiq,True
+1001000557,Dr. Sarah Jones,Oncology,Chicago,IL,Fentora,True
+1001000558,Dr. Robert Scott,Oncology,Charlotte,NC,Subsys,True
+1001000559,Dr. Stephanie Torres,Pain Management,Nashville,TN,Fentora,True
+1001000560,Dr. Patricia Clark,Palliative Care,Seattle,WA,Lazanda,True
+1001000561,Dr. Donna Carter,Pain Management,New York,NY,Fentora,True
+1001000562,Dr. Charles Nguyen,Internal Medicine,Las Vegas,NV,Abstral,True
+1001000563,Dr. Sharon King,Orthopedics,Portland,OR,Fentora,True
+1001000564,Dr. Rebecca Walker,Pain Management,Chicago,IL,Subsys,True
+1001000565,Dr. Karen Smith,Oncology,Las Vegas,NV,Lazanda,True
+1001000566,Dr. Mary King,Family Practice,Houston,TX,Actiq,True
+1001000567,Dr. Mary Perez,Oncology,Miami,FL,Lazanda,True
+1001000568,Dr. Jennifer Allen,Orthopedics,New York,NY,Actiq,True
+1001000569,Dr. Patricia Gonzalez,Anesthesiology,Los Angeles,CA,Lazanda,True
+1001000570,Dr. Stephanie Moore,Pain Management,Boston,MA,Subsys,True
+1001000571,Dr. Lisa Martin,Oncology,Los Angeles,CA,Lazanda,True
+1001000572,Dr. Thomas Campbell,Internal Medicine,Nashville,TN,Subsys,True
+1001000573,Dr. Susan Martin,Pain Management,Portland,OR,Actiq,True
+1001000574,Dr. Emily Moore,Neurology,Las Vegas,NV,Abstral,True
+1001000575,Dr. Sharon Martin,Oncology,Miami,FL,Lazanda,True
+1001000576,Dr. Karen Miller,Pain Management,Jacksonville,FL,Fentora,True
+1001000577,Dr. Laura Baker,Oncology,Miami,FL,Fentora,True
+1001000578,Dr. Jennifer Clark,Anesthesiology,Las Vegas,NV,Subsys,True
+1001000579,Dr. John Wright,Orthopedics,Nashville,TN,Subsys,True
+1001000580,Dr. Mary Sanchez,Pain Management,Las Vegas,NV,Actiq,True
+1001000581,Dr. James Rivera,Neurology,Miami,FL,Subsys,True
+1001000582,Dr. Susan Lee,Oncology,New York,NY,Subsys,True
+1001000583,Dr. Emily Moore,Pain Management,Seattle,WA,Abstral,True
+1001000584,Dr. Rebecca Carter,Palliative Care,Phoenix,AZ,Subsys,True
+1001000585,Dr. Thomas Baker,Neurology,Miami,FL,Abstral,True
+1001000586,Dr. Kimberly Thompson,Oncology,Nashville,TN,Abstral,True
+1001000587,Dr. Richard Davis,Palliative Care,Detroit,MI,Subsys,True
+1001000588,Dr. Karen Mitchell,Neurology,Charlotte,NC,Abstral,True
+1001000589,Dr. Amanda Davis,Pain Management,Philadelphia,PA,Actiq,True
+1001000590,Dr. Emily Flores,Anesthesiology,Seattle,WA,Fentora,True
+1001000591,Dr. Joseph Torres,Pain Management,Seattle,WA,Abstral,True
+1001000592,Dr. Donna Williams,Anesthesiology,Houston,TX,Fentora,True
+1001000593,Dr. Michelle Hernandez,Internal Medicine,Denver,CO,Subsys,True
+1001000594,Dr. Jennifer Lee,Pain Management,Phoenix,AZ,Subsys,True
+1001000595,Dr. Ashley Flores,Palliative Care,Miami,FL,Abstral,True
+1001000596,Dr. Thomas Young,Palliative Care,Denver,CO,Abstral,True
+1001000597,Dr. Jennifer Davis,Palliative Care,Baltimore,MD,Subsys,True
+1001000598,Dr. Ashley Green,Palliative Care,Miami,FL,Actiq,True
+1001000599,Dr. Richard Hill,Pain Management,Baltimore,MD,Abstral,False
+1001000600,Dr. Betty Thompson,Internal Medicine,New York,NY,Abstral,True
+1001000601,Dr. Kathleen Williams,Internal Medicine,Baltimore,MD,Actiq,True
+1001000602,Dr. Melissa Nguyen,Palliative Care,Detroit,MI,Fentora,False
+1001000603,Dr. Susan Jones,Emergency Medicine,Boston,MA,Abstral,True
+1001000604,Dr. Dorothy Mitchell,Pain Management,Seattle,WA,Abstral,False
+1001000605,Dr. Donna Martin,Neurology,Charlotte,NC,Subsys,False
+1001000606,Dr. Ashley Davis,Oncology,Charlotte,NC,Subsys,True
+1001000607,Dr. Ashley Miller,Orthopedics,Phoenix,AZ,Subsys,True
+1001000608,Dr. Patricia Green,Internal Medicine,Chicago,IL,Actiq,False
+1001000609,Dr. Ashley Carter,Pain Management,Nashville,TN,Actiq,True
+1001000610,Dr. Richard Nguyen,Anesthesiology,Austin,TX,Subsys,False
+1001000611,Dr. Karen Green,Pain Management,Charlotte,NC,Abstral,True
+1001000612,Dr. Nancy Flores,Anesthesiology,Nashville,TN,Subsys,True
+1001000613,Dr. Karen Baker,Pain Management,Boston,MA,Lazanda,True
+1001000614,Dr. Kimberly Moore,Oncology,Miami,FL,Actiq,True
+1001000615,Dr. Susan Nguyen,Anesthesiology,Chicago,IL,Subsys,True
+1001000616,Dr. Joseph Rivera,Oncology,Austin,TX,Actiq,True
+1001000617,Dr. Linda Martinez,Pain Management,Charlotte,NC,Subsys,True
+1001000618,Dr. Margaret Torres,Anesthesiology,Los Angeles,CA,Abstral,False
+1001000619,Dr. Donna Harris,Internal Medicine,Detroit,MI,Lazanda,True
+1001000620,Dr. Kimberly Nguyen,Pain Management,Portland,OR,Subsys,True
+1001000621,Dr. Carol Baker,Oncology,Las Vegas,NV,Fentora,True
+1001000622,Dr. Sharon Mitchell,Pain Management,Portland,OR,Abstral,True
+1001000623,Dr. John Hernandez,Pain Management,Los Angeles,CA,Lazanda,True
+1001000624,Dr. Michelle Baker,Oncology,Boston,MA,Abstral,False
+1001000625,Dr. William Carter,Internal Medicine,Charlotte,NC,Actiq,True
+1001000626,Dr. Michael Miller,Pain Management,New York,NY,Actiq,True
+1001000627,Dr. Jessica Ramirez,Anesthesiology,Baltimore,MD,Abstral,True
+1001000628,Dr. Sharon Harris,Anesthesiology,New York,NY,Subsys,True
+1001000629,Dr. Emily Torres,Pain Management,Columbus,OH,Subsys,True
+1001000630,Dr. Emily Jones,Oncology,New York,NY,Fentora,True
+1001000631,Dr. Laura Sanchez,Psychiatry,Las Vegas,NV,Abstral,False
+1001000632,Dr. Michelle Moore,Palliative Care,Detroit,MI,Abstral,True
+1001000633,Dr. Thomas Martinez,Pain Management,Austin,TX,Actiq,True
+1001000634,Dr. Barbara Nelson,Pain Management,Baltimore,MD,Actiq,True
+1001000635,Dr. Rebecca Flores,Oncology,Chicago,IL,Subsys,False
+1001000636,Dr. James Young,Oncology,Los Angeles,CA,Actiq,True
+1001000637,Dr. Michelle Adams,Neurology,Detroit,MI,Subsys,True
+1001000638,Dr. Richard Lewis,Anesthesiology,Austin,TX,Actiq,True
+1001000639,Dr. David Walker,Pain Management,Charlotte,NC,Fentora,True
+1001000640,Dr. Margaret Scott,Pain Management,Austin,TX,Abstral,True
+1001000641,Dr. Charles Taylor,Palliative Care,Denver,CO,Lazanda,True
+1001000642,Dr. Barbara Gonzalez,Oncology,Charlotte,NC,Subsys,True
+1001000643,Dr. Kathleen Hernandez,Neurology,Detroit,MI,Subsys,True
+1001000644,Dr. Betty Ramirez,Internal Medicine,Philadelphia,PA,Lazanda,True
+1001000645,Dr. Kimberly Moore,Internal Medicine,Austin,TX,Subsys,True
+1001000646,Dr. Donna Thomas,Oncology,Austin,TX,Fentora,True
+1001000647,Dr. Sarah Anderson,Pain Management,Denver,CO,Abstral,True
+1001000648,Dr. Jennifer Rodriguez,Neurology,New York,NY,Subsys,True
+1001000649,Dr. Mary Rodriguez,Pain Management,Las Vegas,NV,Actiq,True
+1001000650,Dr. Michael Green,Oncology,Miami,FL,Fentora,True
+1001000651,Dr. John Rodriguez,Anesthesiology,Detroit,MI,Fentora,False
+1001000652,Dr. Ashley Lee,Pain Management,Denver,CO,Subsys,True
+1001000653,Dr. Kimberly Adams,Palliative Care,Chicago,IL,Actiq,True
+1001000654,Dr. Mary Rodriguez,Pain Management,Chicago,IL,Abstral,True
+1001000655,Dr. Ashley Rivera,Neurology,Jacksonville,FL,Fentora,False
+1001000656,Dr. Richard Taylor,Internal Medicine,Philadelphia,PA,Subsys,True
+1001000657,Dr. Lisa Gonzalez,Oncology,Los Angeles,CA,Actiq,True
+1001000658,Dr. Melissa Torres,Pain Management,New York,NY,Subsys,True
+1001000659,Dr. John Garcia,Oncology,Los Angeles,CA,Subsys,True
+1001000660,Dr. Rebecca Rodriguez,Oncology,Seattle,WA,Actiq,True
+1001000661,Dr. Rebecca Nguyen,Anesthesiology,Columbus,OH,Fentora,True
+1001000662,Dr. Rebecca Jones,Oncology,Austin,TX,Subsys,False
+1001000663,Dr. Amanda Jones,Pain Management,Los Angeles,CA,Abstral,True
+1001000664,Dr. Mary Lee,Psychiatry,New York,NY,Subsys,True
+1001000665,Dr. William Gonzalez,Pain Management,Houston,TX,Subsys,True
+1001000666,Dr. Rebecca Wilson,Oncology,Jacksonville,FL,Fentora,True
+1001000667,Dr. Carol Davis,Pain Management,Columbus,OH,Abstral,True
+1001000668,Dr. Donna Williams,Pain Management,Chicago,IL,Actiq,True
+1001000669,Dr. James Robinson,Anesthesiology,New York,NY,Abstral,True
+1001000670,Dr. Sharon Smith,Palliative Care,Austin,TX,Abstral,True
+1001000671,Dr. Sarah Baker,Pain Management,Los Angeles,CA,Abstral,True
+1001000672,Dr. Jennifer Torres,Palliative Care,Denver,CO,Fentora,True
+1001000673,Dr. Michelle Sanchez,Internal Medicine,Nashville,TN,Fentora,True
+1001000674,Dr. Deborah Sanchez,Neurology,Baltimore,MD,Abstral,True
+1001000675,Dr. Barbara Adams,Oncology,Nashville,TN,Subsys,True
+1001000676,Dr. Rebecca Clark,Pain Management,Miami,FL,Actiq,False
+1001000677,Dr. Dorothy Robinson,Family Practice,Houston,TX,Actiq,True
+1001000678,Dr. Jessica Campbell,Oncology,Las Vegas,NV,Subsys,True
+1001000679,Dr. Nancy Hall,Palliative Care,Miami,FL,Subsys,True
+1001000680,Dr. Susan Torres,Anesthesiology,Charlotte,NC,Subsys,True
+1001000681,Dr. Rebecca Mitchell,Pain Management,Phoenix,AZ,Subsys,True
+1001000682,Dr. Joseph Carter,Pain Management,Boston,MA,Subsys,True
+1001000683,Dr. Laura King,Neurology,Charlotte,NC,Abstral,True
+1001000684,Dr. Carol Martinez,Emergency Medicine,New York,NY,Abstral,True
+1001000685,Dr. Carol Miller,Pain Management,Phoenix,AZ,Subsys,False
+1001000686,Dr. Joseph Allen,Anesthesiology,Las Vegas,NV,Subsys,True
+1001000687,Dr. William Taylor,Oncology,Seattle,WA,Subsys,True
+1001000688,Dr. Donna Flores,Pain Management,Columbus,OH,Abstral,True
+1001000689,Dr. Sarah Lee,Anesthesiology,Columbus,OH,Subsys,True
+1001000690,Dr. Carol Ramirez,Neurology,Portland,OR,Abstral,True
+1001000691,Dr. Rebecca Lopez,Pain Management,Miami,FL,Abstral,True
+1001000692,Dr. Emily Harris,Pain Management,Philadelphia,PA,Actiq,True
+1001000693,Dr. Michelle Anderson,Palliative Care,Phoenix,AZ,Subsys,True
+1001000694,Dr. Margaret Sanchez,Neurology,New York,NY,Subsys,True
+1001000695,Dr. Elizabeth Brown,Emergency Medicine,Las Vegas,NV,Actiq,True
+1001000696,Dr. Dorothy Walker,Neurology,New York,NY,Fentora,True
+1001000697,Dr. Jennifer Nguyen,Oncology,Atlanta,GA,Abstral,False
+1001000698,Dr. Laura Torres,Pain Management,Chicago,IL,Abstral,True
+1001000699,Dr. Mary Lee,Internal Medicine,Boston,MA,Abstral,True
+1001000700,Dr. Jennifer Baker,Oncology,Boston,MA,Abstral,True
+1001000701,Dr. Rebecca White,Pain Management,Nashville,TN,Abstral,True
+1001000702,Dr. Charles Martinez,Neurology,Jacksonville,FL,Abstral,True
+1001000703,Dr. Michelle Allen,Palliative Care,Boston,MA,Subsys,True
+1001000704,Dr. Rebecca Perez,Anesthesiology,New York,NY,Fentora,True
+1001000705,Dr. Barbara Carter,Pain Management,New York,NY,Abstral,True
+1001000706,Dr. Mary Rodriguez,Pain Management,Phoenix,AZ,Subsys,True
+1001000707,Dr. Melissa Ramirez,Family Practice,Detroit,MI,Lazanda,True
+1001000708,Dr. Sharon Green,Pain Management,Atlanta,GA,Subsys,True
+1001000709,Dr. Nancy Hall,Oncology,Jacksonville,FL,Fentora,True
+1001000710,Dr. Richard Moore,Oncology,Seattle,WA,Fentora,True
+1001000711,Dr. Deborah Nelson,Anesthesiology,Detroit,MI,Subsys,True
+1001000712,Dr. Jessica Martin,Oncology,Chicago,IL,Lazanda,True
+1001000713,Dr. Sharon Hernandez,Pain Management,Portland,OR,Subsys,False
+1001000714,Dr. Amanda Adams,Pain Management,Charlotte,NC,Subsys,True
+1001000715,Dr. Emily King,Oncology,Seattle,WA,Subsys,False
+1001000716,Dr. Deborah Perez,Internal Medicine,Las Vegas,NV,Fentora,True
+1001000717,Dr. Laura Brown,Oncology,Columbus,OH,Subsys,True
+1001000718,Dr. Susan Flores,Family Practice,Philadelphia,PA,Fentora,True
+1001000719,Dr. Laura Davis,Pain Management,Las Vegas,NV,Lazanda,False
+1001000720,Dr. Lisa Wilson,Emergency Medicine,Boston,MA,Actiq,True
+1001000721,Dr. Donna Thomas,Oncology,Columbus,OH,Actiq,True
+1001000722,Dr. Michael Nelson,Orthopedics,Miami,FL,Fentora,True
+1001000723,Dr. Lisa White,Neurology,Las Vegas,NV,Subsys,True
+1001000724,Dr. Jessica Gonzalez,Anesthesiology,Austin,TX,Abstral,False
+1001000725,Dr. Charles Johnson,Palliative Care,Denver,CO,Subsys,True
+1001000726,Dr. Susan Rodriguez,Pain Management,Seattle,WA,Actiq,True
+1001000727,Dr. Thomas Lopez,Palliative Care,Denver,CO,Fentora,True
+1001000728,Dr. Nancy Brown,Family Practice,Austin,TX,Subsys,True
+1001000729,Dr. Jessica Thomas,Pain Management,Chicago,IL,Subsys,True
+1001000730,Dr. Sharon Martinez,Palliative Care,Boston,MA,Fentora,True
+1001000731,Dr. Deborah Lopez,Palliative Care,Houston,TX,Subsys,True
+1001000732,Dr. Lisa Hernandez,Pain Management,Charlotte,NC,Subsys,True
+1001000733,Dr. Amanda Taylor,Pain Management,Boston,MA,Subsys,True
+1001000734,Dr. Carol Rodriguez,Pain Management,Las Vegas,NV,Subsys,True
+1001000735,Dr. Barbara Ramirez,Family Practice,Baltimore,MD,Subsys,True
+1001000736,Dr. Sandra Young,Oncology,Los Angeles,CA,Fentora,True
+1001000737,Dr. Barbara Miller,Internal Medicine,Miami,FL,Subsys,True
+1001000738,Dr. Kathleen Adams,Family Practice,Columbus,OH,Fentora,True
+1001000739,Dr. James Lee,Anesthesiology,Philadelphia,PA,Lazanda,True
+1001000740,Dr. Deborah Perez,Pain Management,Miami,FL,Abstral,True
+1001000741,Dr. John Perez,Pain Management,Detroit,MI,Subsys,True
+1001000742,Dr. Melissa Hernandez,Orthopedics,Phoenix,AZ,Subsys,True
+1001000743,Dr. Joseph Lee,Pain Management,Charlotte,NC,Actiq,True
+1001000744,Dr. Patricia Nguyen,Oncology,Atlanta,GA,Abstral,True
+1001000745,Dr. John Rivera,Neurology,Jacksonville,FL,Actiq,False
+1001000746,Dr. Betty Thompson,Oncology,Columbus,OH,Lazanda,True
+1001000747,Dr. Michelle Baker,Internal Medicine,Houston,TX,Actiq,True
+1001000748,Dr. Amanda Perez,Oncology,Baltimore,MD,Fentora,True
+1001000749,Dr. Donna Gonzalez,Neurology,Charlotte,NC,Subsys,True
+1001000750,Dr. Donna Jones,Internal Medicine,Houston,TX,Abstral,True
+1001000751,Dr. Karen Martinez,Oncology,Nashville,TN,Subsys,True
+1001000752,Dr. Linda Thomas,Pain Management,Baltimore,MD,Subsys,False
+1001000753,Dr. Margaret Young,Pain Management,Houston,TX,Abstral,False
+1001000754,Dr. Richard Martin,Pain Management,Baltimore,MD,Subsys,True
+1001000755,Dr. Elizabeth White,Palliative Care,Portland,OR,Subsys,True
+1001000756,Dr. Rebecca Young,Orthopedics,Seattle,WA,Abstral,True
+1001000757,Dr. Robert Mitchell,Family Practice,Las Vegas,NV,Abstral,True
+1001000758,Dr. Lisa Thompson,Pain Management,Columbus,OH,Fentora,True
+1001000759,Dr. Patricia Campbell,Anesthesiology,Miami,FL,Abstral,True
+1001000760,Dr. Rebecca Thomas,Oncology,Las Vegas,NV,Subsys,True
+1001000761,Dr. Patricia Johnson,Oncology,Detroit,MI,Subsys,True
+1001000762,Dr. James Scott,Oncology,Philadelphia,PA,Actiq,True
+1001000763,Dr. Sharon Moore,Oncology,Houston,TX,Fentora,True
+1001000764,Dr. Mary Walker,Pain Management,Chicago,IL,Abstral,True
+1001000765,Dr. Kimberly Carter,Neurology,Denver,CO,Abstral,True
+1001000766,Dr. Sarah Hernandez,Family Practice,Portland,OR,Lazanda,True
+1001000767,Dr. Elizabeth Sanchez,Neurology,Jacksonville,FL,Fentora,True
+1001000768,Dr. David White,Oncology,Philadelphia,PA,Actiq,True
+1001000769,Dr. Rebecca White,Family Practice,Miami,FL,Subsys,True
+1001000770,Dr. William Ramirez,Oncology,Columbus,OH,Subsys,True
+1001000771,Dr. Linda Martinez,Pain Management,Philadelphia,PA,Abstral,True
+1001000772,Dr. Carol Young,Neurology,Las Vegas,NV,Subsys,True
+1001000773,Dr. Sharon Taylor,Anesthesiology,Chicago,IL,Actiq,True
+1001000774,Dr. Karen Lewis,Anesthesiology,Austin,TX,Abstral,True
+1001000775,Dr. Donna Baker,Oncology,Jacksonville,FL,Subsys,True
+1001000776,Dr. Laura Martin,Pain Management,Philadelphia,PA,Subsys,True
+1001000777,Dr. Karen Wright,Oncology,Denver,CO,Fentora,True
+1001000778,Dr. John Mitchell,Pain Management,Philadelphia,PA,Actiq,False
+1001000779,Dr. Emily Brown,Pain Management,Seattle,WA,Abstral,True
+1001000780,Dr. Elizabeth Walker,Neurology,Portland,OR,Subsys,True
+1001000781,Dr. Susan Harris,Palliative Care,Charlotte,NC,Actiq,False
+1001000782,Dr. Ashley White,Pain Management,Seattle,WA,Lazanda,True
+1001000783,Dr. Carol Jackson,Oncology,Seattle,WA,Actiq,False
+1001000784,Dr. John Clark,Oncology,Las Vegas,NV,Abstral,False
+1001000785,Dr. Jessica Wilson,Neurology,Las Vegas,NV,Lazanda,True
+1001000786,Dr. Jessica Taylor,Oncology,Detroit,MI,Lazanda,True
+1001000787,Dr. Joseph Green,Palliative Care,Miami,FL,Abstral,True
+1001000788,Dr. Kathleen Walker,Internal Medicine,Austin,TX,Subsys,True
+1001000789,Dr. Carol Johnson,Internal Medicine,Houston,TX,Subsys,True
+1001000790,Dr. Carol Jones,Palliative Care,Phoenix,AZ,Subsys,False
+1001000791,Dr. Sandra Walker,Pain Management,Phoenix,AZ,Actiq,True
+1001000792,Dr. Ashley Flores,Pain Management,Baltimore,MD,Subsys,True
+1001000793,Dr. Jessica Jones,Pain Management,Boston,MA,Abstral,True
+1001000794,Dr. Ashley Adams,Pain Management,Denver,CO,Abstral,True
+1001000795,Dr. Margaret Carter,Pain Management,Miami,FL,Subsys,True
+1001000796,Dr. Kimberly Wilson,Pain Management,Denver,CO,Fentora,True
+1001000797,Dr. Rebecca Young,Pain Management,Denver,CO,Subsys,True
+1001000798,Dr. William Davis,Pain Management,Nashville,TN,Actiq,True
+1001000799,Dr. Dorothy Hall,Neurology,Atlanta,GA,Abstral,True
+1001000800,Dr. Lisa Hernandez,Oncology,New York,NY,Actiq,True
+1001000801,Dr. Sarah Johnson,Palliative Care,Miami,FL,Fentora,True
+1001000802,Dr. Amanda Hall,Internal Medicine,Houston,TX,Fentora,False
+1001000803,Dr. Linda Green,Oncology,Jacksonville,FL,Actiq,True
+1001000804,Dr. Linda Moore,Oncology,Houston,TX,Actiq,False
+1001000805,Dr. Nancy Clark,Palliative Care,Houston,TX,Abstral,True
+1001000806,Dr. Richard Scott,Oncology,Los Angeles,CA,Abstral,True
+1001000807,Dr. Richard Young,Anesthesiology,Charlotte,NC,Abstral,True
+1001000808,Dr. Amanda Sanchez,Pain Management,Denver,CO,Actiq,True
+1001000809,Dr. Barbara Hernandez,Internal Medicine,Columbus,OH,Abstral,True
+1001000810,Dr. Robert Wright,Oncology,Boston,MA,Abstral,False
+1001000811,Dr. Laura Carter,Oncology,Los Angeles,CA,Lazanda,True
+1001000812,Dr. Charles Walker,Neurology,Detroit,MI,Subsys,True
+1001000813,Dr. Michael Taylor,Anesthesiology,Los Angeles,CA,Fentora,False
+1001000814,Dr. Michael Nguyen,Pain Management,Philadelphia,PA,Actiq,True
+1001000815,Dr. Robert Rodriguez,Family Practice,Jacksonville,FL,Abstral,True
+1001000816,Dr. Laura Rivera,Palliative Care,Baltimore,MD,Lazanda,True
+1001000817,Dr. Emily Mitchell,Orthopedics,Baltimore,MD,Subsys,False
+1001000818,Dr. Lisa Smith,Pain Management,Boston,MA,Subsys,True
+1001000819,Dr. Nancy Clark,Neurology,Philadelphia,PA,Abstral,True
+1001000820,Dr. Sharon Walker,Palliative Care,Boston,MA,Fentora,False

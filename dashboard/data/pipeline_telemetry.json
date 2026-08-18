@@ -1,0 +1,10 @@
+{
+  "after_privacy_filter": 733,
+  "data_version": "50d04f9bb2d2c294",
+  "execution_time_sec": 0.164345,
+  "generated_at": "2026-08-17T00:00:00Z",
+  "initial_rows": 820,
+  "nulls_imputed": 0,
+  "retained_rows": 733,
+  "suppressed_rows": 87
+}

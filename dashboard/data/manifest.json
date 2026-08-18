@@ -1,0 +1,42 @@
+{
+  "data_version": "50d04f9bb2d2c294",
+  "files": [
+    {
+      "byte_size": 1174,
+      "filename": "attribution.json",
+      "row_count": 5,
+      "sha256": "0522315e2655420239fa19b77a99a5741ab164f43c6597c0f34eec92897ad57f"
+    },
+    {
+      "byte_size": 4232,
+      "filename": "coaching_queue.json",
+      "row_count": 14,
+      "sha256": "aa0e43fb320a467598302f8f8be98d42a6619f54ae66cc9a3fbe1d4d92c62647"
+    },
+    {
+      "byte_size": 1782,
+      "filename": "ml_results.json",
+      "row_count": 4,
+      "sha256": "420c5542df3e028de208ee22913a4904e740b13974534a87323a836021a1061a"
+    },
+    {
+      "byte_size": 241,
+      "filename": "pipeline_telemetry.json",
+      "row_count": 1,
+      "sha256": "73f68599e09ea831cdd9a796a5a5504c80dd011cebe9b1d4cf7273e336f936a8"
+    },
+    {
+      "byte_size": 9905,
+      "filename": "reps.json",
+      "row_count": 14,
+      "sha256": "18190cce7a20d72aac60063c14ed75cdcd1fa974da482a6c826ce7a8820615ee"
+    },
+    {
+      "byte_size": 326545,
+      "filename": "scatter_points.json",
+      "row_count": 733,
+      "sha256": "70d2861a1cc618d5c093832b34cd74994c0cb4f824a450df154c204154b05fa2"
+    }
+  ],
+  "generated_at": "2026-08-17T00:00:00Z"
+}

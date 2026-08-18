@@ -1,0 +1,15 @@
+rep_id,sales_rep_name,territory_id,is_active,hire_date
+REP-101,Alex Smith,TERR-01,True,2021-01-15
+REP-102,Jordan Lee,TERR-01,True,2021-03-20
+REP-103,Taylor Swift,TERR-02,True,2020-06-10
+REP-104,Morgan Freeman,TERR-02,True,2022-02-01
+REP-105,Chris Evans,TERR-03,True,2019-11-12
+REP-106,Pat Cummins,TERR-03,True,2021-08-05
+REP-107,Sam Wilson,TERR-04,True,2022-04-18
+REP-108,Robin Hood,TERR-04,True,2020-09-30
+REP-109,Casey Jones,TERR-05,True,2021-12-01
+REP-110,Riley Miller,TERR-05,True,2022-05-14
+REP-111,Jamie Oliver,TERR-06,True,2020-01-10
+REP-112,Avery Davis,TERR-06,True,2021-07-22
+REP-113,Drew Barrymore,TERR-01,False,2018-04-01
+REP-114,Logan Paul,TERR-03,False,2019-02-15

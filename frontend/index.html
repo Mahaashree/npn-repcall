@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Rep Call Plan Compliance & Effectiveness Scorecard — Pharma Analytics Platform combining statistical modeling, leakage-free ML, and territory optimization."
+    />
+    <title>Pharma Analytics — Rep Call Plan Compliance &amp; Effectiveness Scorecard</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230d9488' stroke-width='2.5'><circle cx='12' cy='12' r='10'/><path d='M12 8v8M8 12h8'/></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- LOADING OVERLAY -->
+    <div id="loading-overlay">
+      <div class="loader"></div>
+      <div class="loading-text">Initialising analytics pipeline…</div>
+    </div>
+
+    <!-- ARCHITECTURE MODAL -->
+    <div id="arch-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="arch-modal-title">
+      <div class="modal-box modal-lg">
+        <div class="modal-header">
+          <h2 class="modal-title" id="arch-modal-title">🖧 System Architecture — End-to-End Synthetic Data Pipeline</h2>
+          <button class="modal-close" id="arch-modal-close" aria-label="Close architecture modal">✕</button>
+        </div>
+        <div class="modal-body">
+          <p class="section-subtitle">
+            Fully synthetic HCP prescriber records — structure inspired by FDA TIRF REMS / Insys Authorized Rx Archive —
+            enriched with an exogenous synthetic CRM detailing layer. Zero real patient or physician data is used.
+          </p>
+          <div class="arch-flow">
+            <div class="arch-node">
+              <div class="arch-node-icon">🧪</div>
+              <div class="arch-node-title">Synthetic Data Engine</div>
+              <div class="arch-node-sub">
+                820 initial HCP records • FDA TIRF REMS structure • Causal Rx_Lift_Pct formula
+              </div>
+            </div>
+            <span class="arch-arrow">➔</span>
+            <div class="arch-node">
+              <div class="arch-node-icon">🔒</div>
+              <div class="arch-node-title">Privacy Filter &amp; Preprocessing</div>
+              <div class="arch-node-sub">
+                CMS small-cell suppression: Tot_Clms ≥ 11 • Z-Score Scaling • Feature Engineering
+              </div>
+            </div>
+            <span class="arch-arrow">➔</span>
+            <div class="arch-node">
+              <div class="arch-node-icon">⚙️</div>
+              <div class="arch-node-title">Analytics Engine &amp; 2×2 Matrix</div>
+              <div class="arch-node-sub">Pearson r • OLS Regression • Call Re-allocation</div>
+            </div>
+            <span class="arch-arrow">➔</span>
+            <div class="arch-node">
+              <div class="arch-node-icon">🤖</div>
+              <div class="arch-node-title">ML Suite (Ridge / OLS / RF / XGBoost)</div>
+              <div class="arch-node-sub">HCP-level • 5-Fold CV • Bootstrap CI • SHAP Explainability</div>
+            </div>
+            <span class="arch-arrow">➔</span>
+            <div class="arch-node">
+              <div class="arch-node-icon">📊</div>
+              <div class="arch-node-title">Manager Decision Engine</div>
+              <div class="arch-node-sub">Territory Re-allocation • What-If Sandbox • Rep Scorecards</div>
+            </div>
+            <span class="arch-arrow">➔</span>
+            <div class="arch-node">
+              <div class="arch-node-icon">🌐</div>
+              <div class="arch-node-title">Analytics Dashboard</div>
+              <div class="arch-node-sub">Real-time Filters • Interactive Charts • CSV Export</div>
+            </div>
+          </div>
+          <div style="margin-top: 2rem">
+            <h3 class="section-title">Pipeline Execution Telemetry</h3>
+            <div id="arch-telemetry-grid"></div>
+          </div>
+          <div
+            style="
+              margin-top: 1.5rem;
+              padding: 1rem;
+              background: var(--bg-card-2);
+              border-radius: var(--radius);
+              border: 1px solid var(--border);
+            "
+          >
+            <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.6">
+              <strong style="color: var(--primary-dark)">📋 Data Provenance:</strong> All HCP prescriber records are
+              100% synthetically generated. The column schema (Prscrbr_NPI, Physician_Name, Specialty, City, State,
+              Brand_Name, Tot_Clms, Tot_30day_Fills, Tot_Drug_Cst) is structurally inspired by the publicly available
+              FDA TIRF REMS / Insys Authorized Rx Archive. No real patient, physician, or prescription data is used or
+              derived. The CRM detailing layer is fully exogenous and synthetically assigned.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PIPELINE NODE MODAL -->
+    <div
+      id="pipeline-modal"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="pipeline-modal-title"
+    >
+      <div class="modal-box modal-md">
+        <div class="modal-header">
+          <h2 class="modal-title" id="pipeline-modal-title">Pipeline Stage</h2>
+          <button class="modal-close" id="pipeline-modal-close" aria-label="Close pipeline modal">✕</button>
+        </div>
+        <div class="modal-body">
+          <div id="pipeline-modal-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REP COACHING MODAL -->
+    <div id="rep-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="rep-modal-title">
+      <div class="modal-box modal-md">
+        <div class="modal-header">
+          <h2 class="modal-title" id="rep-modal-title">Rep Coaching Report</h2>
+          <button class="modal-close" id="rep-modal-close" aria-label="Close rep modal">✕</button>
+        </div>
+        <div class="modal-body">
+          <div id="rep-modal-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COACHING QUEUE FULL LIST MODAL -->
+    <div
+      id="coaching-modal"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="coaching-modal-title"
+    >
+      <div class="modal-box modal-lg">
+        <div class="modal-header">
+          <h2 class="modal-title" id="coaching-modal-title">📋 Full Prioritized Coaching Queue</h2>
+          <button class="modal-close" id="coaching-modal-close" aria-label="Close coaching queue modal">✕</button>
+        </div>
+        <div class="modal-body">
+          <div id="coaching-modal-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN APPLICATION LAYOUT -->
+    <div class="app-layout">
+      <!-- PERSISTENT LEFT SIDEBAR -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-logo">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 8v8M8 12h8"></path>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Pharma Analytics</span>
+            <span class="brand-sub">Scorecard Platform</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="#overview" class="nav-item active">
+            <span class="nav-icon">📊</span>
+            <span class="nav-label">Overview</span>
+          </a>
+          <a href="#matrix" class="nav-item">
+            <span class="nav-icon">⊞</span>
+            <span class="nav-label">Performance Matrix</span>
+          </a>
+          <a href="#reps" class="nav-item">
+            <span class="nav-icon">👤</span>
+            <span class="nav-label">Reps Scorecard</span>
+          </a>
+          <a href="#territories" class="nav-item">
+            <span class="nav-icon">🗺️</span>
+            <span class="nav-label">Territory Engine</span>
+          </a>
+          <a href="#prescribers" class="nav-item">
+            <span class="nav-icon">👥</span>
+            <span class="nav-label">Prescribers</span>
+          </a>
+          <a href="#coaching-queue" class="nav-item">
+            <span class="nav-icon">📋</span>
+            <span class="nav-label">Coaching Queue</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-user">
+          <div class="user-avatar">JD</div>
+          <div class="user-info">
+            <div class="user-name">John Doe</div>
+            <div class="user-role">Provider / Analyst ▾</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MOBILE SIDEBAR OVERLAY -->
+      <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+      <!-- MAIN VIEWPORT CONTENT -->
+      <div class="main-viewport">
+        <!-- TOP BAR -->
+        <header class="top-bar">
+          <div class="top-bar-left">
+            <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation menu">☰</button>
+            <div>
+              <h1 class="page-title">Dashboard</h1>
+              <p class="page-subtitle">Rep Call Plan Compliance &amp; Effectiveness Scorecard</p>
+            </div>
+          </div>
+
+          <div class="top-bar-right">
+            <div class="date-selector">
+              <span class="date-icon">📅</span>
+              <select class="date-select" id="date-select" aria-label="Select date range">
+                <option value="latest" id="manifest-date-option">Loading latest pipeline date…</option>
+              </select>
+            </div>
+            <button id="arch-btn" class="btn-primary" aria-haspopup="dialog">+ View Architecture</button>
+          </div>
+        </header>
+
+        <!-- DISCLOSURE & PIPELINE TELEMETRY BANNER -->
+        <div class="disclosure-banner">
+          <div class="banner-left">
+            <span class="cms-badge">
+              🧪 FULLY SYNTHETIC DATASET • Prescribing baseline synthesized from FDA TIRF REMS / Insys Rx Archive +
+              Exogenous CRM Detailing Layer
+            </span>
+          </div>
+          <div class="banner-right">
+            <span class="health-pill">
+              <span class="pulse-dot" aria-hidden="true"></span>
+              <span id="health-text">🟢 Pipeline Active • Synthetic Prescribers Loaded</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- 1. EXECUTIVE KPI HEADER -->
+        <section id="overview" class="card" aria-label="Executive KPI Summary">
+          <h2 class="section-title">📊 Executive KPI Summary &amp; Program Drivers</h2>
+          <p class="section-subtitle">
+            Overall compliance, campaign lift, statistical significance, and top attribution features
+          </p>
+          <div class="kpi-grid" id="kpi-grid" style="margin-top: 1rem"></div>
+
+          <!-- PROGRAM DRIVERS -->
+          <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border)">
+            <div class="panel-header">
+              <div>
+                <h3 class="panel-title">Program Drivers</h3>
+                <p class="panel-subtitle">Primary Driver Attribution (RF Importance %)</p>
+              </div>
+              <span class="panel-badge" id="program-drivers-badge">Live Timestamp</span>
+            </div>
+            <div class="stat-grid-6" id="stat-grid-attribution">
+              <div style="grid-column: span 3; text-align: center; color: var(--text-muted); padding: 1rem">
+                Loading attribution drivers…
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. 2x2 PERFORMANCE MATRIX & SCATTER -->
+        <section id="matrix" class="chart-matrix-grid" aria-label="2x2 Performance Matrix and Correlation">
+          <!-- SCATTER PLOT CARD -->
+          <div class="card scatter-section" aria-label="Call Plan Compliance vs Rx Lift Correlation">
+            <div class="scatter-header">
+              <div>
+                <h2 class="section-title">Call Plan Compliance % vs. Rx Lift % Correlation</h2>
+                <p class="section-subtitle">
+                  Quadrant-colored HCP records • Dashed teal line = OLS regression fit • Y-axis: Rx_Lift_Pct bounded
+                  [−3%, +18%]
+                </p>
+              </div>
+              <span class="equation-pill" id="equation-pill" aria-live="polite">Loading regression…</span>
+            </div>
+            <div class="chart-canvas-wrapper">
+              <canvas
+                id="scatter-chart"
+                role="img"
+                aria-label="Scatter plot of call compliance vs Rx lift percent"
+              ></canvas>
+            </div>
+          </div>
+
+          <!-- PERFORMANCE MATRIX CARD -->
+          <div class="card" aria-label="2x2 Rep Performance Matrix">
+            <div class="matrix-card-header">
+              <div>
+                <h2 class="section-title">⊞ Performance Matrix</h2>
+                <p class="section-subtitle">Compliance × Rx Lift Quadrants</p>
+              </div>
+              <span class="kpi-badge badge-cyan">🖱 Click Quadrant to Filter</span>
+            </div>
+            <div class="perf-matrix-grid" id="perf-matrix" role="group" aria-label="Performance quadrants"></div>
+          </div>
+        </section>
+
+        <!-- 3. REP SCORECARD TABLE -->
+        <section id="reps" class="card" aria-label="Rep Performance Scorecard">
+          <div class="table-toolbar">
+            <div>
+              <h2 class="section-title">👤 Sales Rep Performance Scorecard</h2>
+              <p class="section-subtitle">
+                Individual rep compliance rates, lift metrics, dominant quadrants, and coaching priorities
+              </p>
+            </div>
+            <div style="display: flex; gap: 0.75rem; align-items: center">
+              <span class="record-count" id="rep-record-count" aria-live="polite">Loading…</span>
+              <label
+                style="font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.3rem"
+                >Rows per page:
+                <select
+                  id="rep-page-size"
+                  class="filter-select"
+                  style="width: auto; padding: 0.2rem 0.5rem; font-size: 0.75rem"
+                >
+                  <option value="10">10</option>
+                  <option value="25" selected>25</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                </select>
+              </label>
+              <button id="export-rep-csv" class="export-btn" aria-label="Export rep scorecard to CSV">
+                ⬇ Export CSV
+              </button>
+            </div>
+          </div>
+          <div style="overflow-x: auto">
+            <table id="rep-table" class="data-table" aria-label="Rep Scorecard Table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th data-sort="sales_rep">Rep</th>
+                  <th data-sort="territory">Territory</th>
+                  <th data-sort="prescriber_count" class="text-right">HCPs</th>
+                  <th data-sort="total_target_calls" class="text-right">Target Calls</th>
+                  <th data-sort="total_actual_calls" class="text-right">Actual Calls</th>
+                  <th data-sort="mean_compliance_pct" class="text-right">Compliance %</th>
+                  <th data-sort="mean_rx_lift_pct" class="text-right">Rx Lift %</th>
+                  <th>Dominant Quadrant</th>
+                  <th>Coaching Priority</th>
+                  <th>Recommended Action</th>
+                </tr>
+              </thead>
+              <tbody id="rep-tbody">
+                <tr>
+                  <td colspan="11" style="text-align: center; padding: 2rem; color: var(--text-muted)">Loading…</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="rep-pagination" class="pagination" role="navigation" aria-label="Rep table pagination"></div>
+        </section>
+
+        <!-- 4. TERRITORY CALL PLAN RE-ALLOCATION ENGINE + ROLLUP SUMMARY -->
+        <section id="territories" class="card" aria-label="Territory Call Reallocation and Rollup Summary">
+          <h2 class="section-title">🗺️ Territory Call Plan Re-allocation Engine</h2>
+          <p class="section-subtitle">
+            Heuristic call shifts from over-serviced low-lift HCPs to high-growth prescribers.<br />
+            Formula:
+            <code style="background: var(--bg-card-2); padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.75rem"
+              >Reallocated_Calls = Target_Calls × (1 + (HCP Rx_Lift_Pct − Territory Mean Lift%) / 100)</code
+            >
+          </p>
+          <div class="table-toolbar" style="margin-top: 1rem">
+            <span class="record-count" id="manager-record-count" aria-live="polite">Loading…</span>
+          </div>
+          <div style="overflow-x: auto">
+            <table id="manager-table" class="data-table" aria-label="Territory Call Reallocation Table">
+              <thead>
+                <tr>
+                  <th>Sales Rep</th>
+                  <th>Territory</th>
+                  <th class="text-right">Calls to Add</th>
+                  <th class="text-right">Calls to Free</th>
+                  <th class="text-right">Net Delta</th>
+                  <th class="text-right">HCPs ↑</th>
+                  <th class="text-right">HCPs ↓</th>
+                  <th>Recommendation</th>
+                </tr>
+              </thead>
+              <tbody id="manager-tbody">
+                <tr>
+                  <td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-muted)">Loading…</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- DYNAMIC TERRITORY ROLLUP SUMMARY -->
+          <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border)">
+            <h3 class="section-title">🗺️ Territory Rollup Summary</h3>
+            <p class="section-subtitle">Aggregated performance across all territories derived from actual data</p>
+            <div style="overflow-x: auto; margin-top: 0.75rem">
+              <table id="territory-rollup-table" class="data-table" aria-label="Territory Rollup Table">
+                <thead>
+                  <tr>
+                    <th>Territory</th>
+                    <th class="text-right">Sales Reps</th>
+                    <th class="text-right">Total Prescribers</th>
+                    <th class="text-right">Mean Compliance %</th>
+                    <th class="text-right">Mean Rx Lift %</th>
+                    <th class="text-right">Calls Reallocated</th>
+                    <th>Dominant Territory Status</th>
+                  </tr>
+                </thead>
+                <tbody id="territory-rollup-tbody">
+                  <tr>
+                    <td colspan="7" style="text-align: center; padding: 1.5rem; color: var(--text-muted)">
+                      Loading territory rollups…
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. PRESCRIBERS DIRECTORY -->
+        <section id="prescribers" class="card" aria-label="Synthesized Prescribers Directory">
+          <div class="table-toolbar">
+            <div>
+              <h2 class="section-title">👥 Synthesized Prescribers Directory &amp; Monthly Rx</h2>
+              <p class="section-subtitle">
+                Search, filter, and inspect detailed HCP-level prescribing baseline and campaign lift
+              </p>
+            </div>
+            <div style="display: flex; gap: 0.75rem; align-items: center">
+              <span class="record-count" id="pres-record-count" aria-live="polite">Loading…</span>
+              <label
+                style="font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.3rem"
+                >Rows per page:
+                <select
+                  id="pres-page-size"
+                  class="filter-select"
+                  style="width: auto; padding: 0.2rem 0.5rem; font-size: 0.75rem"
+                >
+                  <option value="10">10</option>
+                  <option value="25" selected>25</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="250">250</option>
+                </select>
+              </label>
+              <button id="export-pres-csv" class="export-btn" aria-label="Export prescriber data to CSV">
+                ⬇ Export CSV
+              </button>
+            </div>
+          </div>
+
+          <!-- DYNAMIC FILTER SUITE -->
+          <div class="filter-grid" style="margin: 1rem 0">
+            <div class="filter-group">
+              <label class="filter-label" for="filter-specialty">Specialty 🩺</label>
+              <select id="filter-specialty" class="filter-select" aria-label="Filter by specialty">
+                <option value="">All Specialties</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label class="filter-label" for="filter-territory">Territory 🗺️</label>
+              <select id="filter-territory" class="filter-select" aria-label="Filter by territory">
+                <option value="">All Territories</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label class="filter-label" for="filter-rep">Sales Rep 👤</label>
+              <select id="filter-rep" class="filter-select" aria-label="Filter by sales rep">
+                <option value="">All Reps</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label class="filter-label" for="filter-tier">HCP Tier 🏷️</label>
+              <select id="filter-tier" class="filter-select" aria-label="Filter by HCP tier">
+                <option value="">All Tiers</option>
+                <option value="1">Tier 1 (High)</option>
+                <option value="2">Tier 2 (Medium)</option>
+                <option value="3">Tier 3 (Low)</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label class="filter-label" for="filter-search">Search 🔍</label>
+              <input
+                type="text"
+                id="filter-search"
+                class="filter-input"
+                placeholder="Physician Name or NPI…"
+                aria-label="Search by physician name or NPI"
+              />
+            </div>
+            <div class="filter-group">
+              <span class="filter-label" aria-hidden="true">&nbsp;</span>
+              <button id="reset-filters" class="reset-btn" aria-label="Reset all filters">↺ Reset Filters</button>
+            </div>
+          </div>
+
+          <div style="overflow-x: auto">
+            <table id="pres-table" class="data-table" aria-label="Synthesized Prescribers Table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Physician Name</th>
+                  <th>NPI</th>
+                  <th>Specialty</th>
+                  <th>City / State</th>
+                  <th>Brand</th>
+                  <th class="text-right">Baseline Fills (M1–M3)</th>
+                  <th class="text-right">Post-Camp. Fills (M4–M6)</th>
+                  <th class="text-right">Rx Lift %</th>
+                  <th class="text-right">Compliance %</th>
+                  <th>Sales Rep</th>
+                  <th>Territory</th>
+                  <th>Tier</th>
+                  <th>Quadrant</th>
+                </tr>
+              </thead>
+              <tbody id="pres-tbody">
+                <tr>
+                  <td colspan="14" style="text-align: center; padding: 2rem; color: var(--text-muted)">Loading…</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="pres-pagination" class="pagination" role="navigation" aria-label="Prescriber table pagination"></div>
+        </section>
+
+        <!-- 6. COACHING QUEUE -->
+        <section id="coaching-queue" class="card" aria-label="Coaching Queue Priorities">
+          <div class="panel-header">
+            <div>
+              <h2 class="section-title">📋 Today's Tasks — Coaching Queue Priorities</h2>
+              <p class="section-subtitle">Prioritized rep coaching tasks based on compliance gaps and trajectory</p>
+            </div>
+            <button class="btn-link" id="coaching-queue-view-all-btn">View All</button>
+          </div>
+          <div class="task-list" id="task-list-container" style="margin-top: 1rem">
+            <div style="text-align: center; color: var(--text-muted); padding: 1rem">Loading coaching tasks…</div>
+          </div>
+        </section>
+
+        <!-- DATA PIPELINE INSPECTOR -->
+        <section class="card" aria-label="Data Engineering Pipeline Inspector">
+          <p class="pipeline-title">⚡ Data Engineering Pipeline — Click any node to inspect execution stats</p>
+          <div class="pipeline-nodes" id="pipeline-nodes" role="list" aria-label="Pipeline stages"></div>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <script type="module" src="js/app.js"></script>
+    <script>
+      // Sidebar mobile toggle handler
+      const sidebar = document.getElementById('sidebar');
+      const backdrop = document.getElementById('sidebar-backdrop');
+      const toggleBtn = document.getElementById('sidebar-toggle');
+      if (toggleBtn && sidebar && backdrop) {
+        toggleBtn.addEventListener('click', () => {
+          sidebar.classList.toggle('open');
+          backdrop.classList.toggle('open');
+        });
+        backdrop.addEventListener('click', () => {
+          sidebar.classList.remove('open');
+          backdrop.classList.remove('open');
+        });
+      }
+    </script>
+  </body>
+</html>
