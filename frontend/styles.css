@@ -2038,6 +2038,47 @@ input[type='range'] {
   line-height: 1.5;
 }
 
+.dataset-error-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #b91c1c;
+  margin-bottom: 0.35rem;
+}
+
+.dataset-error-msg {
+  font-size: 0.78rem;
+  color: #991b1b;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.dataset-error-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.missing-col-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: var(--font);
+  white-space: nowrap;
+}
+.missing-col-chip::before {
+  content: '✕';
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
 .dataset-process-actions {
   display: flex;
   justify-content: center;

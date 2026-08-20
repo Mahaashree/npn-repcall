@@ -448,6 +448,80 @@ function holdoutOlsStats(comps, lifts) {
   };
 }
 
+// Pre-trained hybrid model metadata surfaced on custom uploads. Mirrors
+// src/models/artifacts/best_model_meta.json (hybrid = OLS Linear Regression).
+const PRETRAINED_HYBRID = {
+  model_label: 'OLS Linear Regression',
+  model_origin: 'Pre-trained Hybrid CMS model - applied to this upload, not re-fit from it',
+  test_r2: 0.097635,
+  test_mae: 2.200284,
+  test_rmse: 2.825056,
+  bootstrap_ci: '[0.0205, 0.1578]',
+  r2_definition: 'Repeated 5-fold CV pooled out-of-sample (model benchmark)',
+};
+
+export class PredictApiError extends Error {
+  constructor(message, code, payload) {
+    super(message);
+    this.name = 'PredictApiError';
+    this.code = code;
+    this.payload = payload || {};
+  }
+}
+
+/**
+ * POST the raw upload to /api/predict_custom (pre-trained model inference).
+ * Rejects with PredictApiError (carrying error.code + message/payload) for the
+ * API's specific validation responses such as MISSING_COLUMNS; a fetched-and-
+ * failed API request is always an explicit PredictApiError so the UI can show
+ * the specific reason. Network/abort failures are marked `err.network` so
+ * callers may fall back to legacy client-side synthesis when the endpoint is
+ * not running.
+ */
+export async function predictViaApi(rawText, { model = 'hybrid' } = {}) {
+  const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+  const timer = controller ? window.setTimeout(() => controller.abort(), 30000) : null;
+  try {
+    const form = new FormData();
+    form.append('file', new Blob([rawText], { type: 'text/csv' }), 'dataset.csv');
+    form.append('model', model);
+    const resp = await fetch('/api/predict_custom', {
+      method: 'POST',
+      body: form,
+      signal: controller ? controller.signal : undefined,
+    });
+    let data = null;
+    try { data = await resp.json(); } catch (_e) { data = null; }
+    if (!data || typeof data !== 'object') {
+      throw new PredictApiError(
+        `Predict API returned a non-JSON response (HTTP ${resp.status}). Verify the server is the predict-server, not a plain file server.`,
+        'API_NON_JSON'
+      );
+    }
+    if (!data.ok) {
+      const apiErr = new PredictApiError(
+        data.message || `Predict API error (${data.error || 'unknown'}).`,
+        data.error || 'API_ERROR',
+        data
+      );
+      if (Array.isArray(data.missing_columns)) apiErr.missing_columns = data.missing_columns;
+      throw apiErr;
+    }
+    return data;
+  } catch (err) {
+    if (err instanceof PredictApiError) throw err;
+    if (err && err.name === 'AbortError') {
+      const timeoutErr = new PredictApiError('Predict API timed out after 30s.', 'API_TIMEOUT');
+      throw timeoutErr;
+    }
+    const networkErr = new Error(`Predict API unavailable: ${err && err.message ? err.message : err}`);
+    networkErr.network = true;
+    throw networkErr;
+  } finally {
+    if (timer) window.clearTimeout(timer);
+  }
+}
+
 export async function processCustomDataset(fileOrText, fileName = 'custom_dataset.csv', progressCb = () => {}) {
   const t0 = performance.now();
   
@@ -491,9 +565,30 @@ export async function processCustomDataset(fileOrText, fileName = 'custom_datase
     detail: `Found ${existingHeaders.length} cols (${missingDomains.length} missing synthesized)`,
   });
 
+  // Fire the pre-trained model inference while the UI reads the file's shape.
+  // hybrid is the default model (no picker requested).
+  const predictPromise = predictViaApi(rawText, { model: 'hybrid' }).catch((err) => err);
+
   // STEP 2: AUTO-SYNTHESIS
   progressCb({ step: 'synthesize', status: 'active', progress: 45 });
   await new Promise((r) => setTimeout(r, 300));
+
+  const api = await predictPromise;
+  const apiError = api instanceof Error ? api : null;
+  if (apiError) {
+    if (!apiError.network) {
+      // API accepted the request and rejected the file: surface the specific
+      // reason (e.g. MISSING_COLUMNS) as a hard upload failure.
+      throw apiError;
+    }
+    // Endpoint unreachable (e.g. plain `python -m http.server`): continue the
+    // legacy fully-client-side flow so the app still works offline.
+    console.warn('predictViaApi unavailable; falling back to client-side synthesis.', apiError);
+  }
+  const apiResult = apiError ? null : api;
+  const predictedLift = apiResult && Array.isArray(apiResult.predicted_rx_lift_pct)
+    ? apiResult.predicted_rx_lift_pct
+    : null;
 
   const n = parsedRows.length || 100;
   const synthesizedRows = parsedRows.map((row, idx) => {
@@ -504,6 +599,12 @@ export async function processCustomDataset(fileOrText, fileName = 'custom_datase
       const foundKey = Object.keys(r).find((k) => k.toLowerCase() === key.toLowerCase());
       return foundKey && r[foundKey] !== '' && r[foundKey] !== undefined ? r[foundKey] : fallback;
     };
+
+    // Pre-trained model prediction for this row (original file order), when
+    // the API answered with a prediction per uploaded row.
+    const predicted = Array.isArray(predictedLift) && predictedLift.length === parsedRows.length
+      ? Number(predictedLift[idx])
+      : null;
 
     const npi = getVal('Prscrbr_NPI', getVal('npi', `${1001000001 + idx}`));
     const physician_name = getVal('Physician_Name', getVal('physician_name', `Dr. Prescriber ${idx + 1}`));
@@ -527,10 +628,13 @@ export async function processCustomDataset(fileOrText, fileName = 'custom_datase
     const actual_calls = parseInt(getVal('Actual_Calls', Math.max(0, Math.round(target_calls * (0.65 + Math.random() * 0.35)))), 10);
     const samples_dropped = parseInt(getVal('Samples_Dropped', Math.max(0, Math.round(actual_calls * (0.6 + Math.random() * 0.8)))), 10);
 
-    // Non-linear response function for Rx lift
+    // Non-linear response function for Rx lift (fallback only when the API
+    // did not provide a pre-trained-model prediction for this row)
     const call_eff = actual_calls > 0 ? (6.0 * Math.pow(actual_calls, 1.5)) / (Math.pow(4.0, 1.5) + Math.pow(actual_calls, 1.5)) : 0;
     const samp_eff = 1.2 * Math.sqrt(samples_dropped);
-    const rx_lift_pct = parseFloat(getVal('Rx_Lift_Pct', Math.max(-3.0, Math.min(18.0, 0.5 + call_eff + samp_eff + (Math.random() * 2.0 - 1.0)))));
+    const rx_lift_pct = predicted != null
+      ? predicted
+      : parseFloat(getVal('Rx_Lift_Pct', Math.max(-3.0, Math.min(18.0, 0.5 + call_eff + samp_eff + (Math.random() * 2.0 - 1.0)))));
     const post_campaign_fills = parseFloat(getVal('Post_Campaign_Fills', fillsRaw * (1.0 + rx_lift_pct / 100.0)));
 
     return {
@@ -818,14 +922,26 @@ export async function processCustomDataset(fileOrText, fileName = 'custom_datase
   const round6 = (v) => Math.round(v * 1e6) / 1e6;
 
   const ml = {
-    best_model_summary: {
-      model_label: 'OLS Regression (Compliance → Rx Lift)',
-      test_r2: round6(olsStats.r_squared),
-      test_mae: round6(olsStats.test_mae),
-      test_rmse: round6(olsStats.test_rmse),
-      overfitting_gap: round6(olsStats.overfitting_gap),
-      bootstrap_ci: 'N/A — custom upload (single OLS fit, no CV)',
-    },
+    best_model_summary: apiResult
+      ? {
+          model_label: PRETRAINED_HYBRID.model_label,
+          model_origin: PRETRAINED_HYBRID.model_origin,
+          test_r2: PRETRAINED_HYBRID.test_r2,
+          test_mae: PRETRAINED_HYBRID.test_mae,
+          test_rmse: PRETRAINED_HYBRID.test_rmse,
+          overfitting_gap: 0.07952,
+          bootstrap_ci: PRETRAINED_HYBRID.bootstrap_ci,
+          r2_definition: PRETRAINED_HYBRID.r2_definition,
+          applied_to_rows: finalHcps.length,
+        }
+      : {
+          model_label: 'OLS Regression (Compliance → Rx Lift)',
+          test_r2: round6(olsStats.r_squared),
+          test_mae: round6(olsStats.test_mae),
+          test_rmse: round6(olsStats.test_rmse),
+          overfitting_gap: round6(olsStats.overfitting_gap),
+          bootstrap_ci: 'N/A - client-side single OLS fit, no CV',
+        },
     // No ML model tournament is run on ad-hoc uploads: leave empty and clearly
     // labelled rather than fabricating benchmark rows.
     tournament_table: [],
@@ -838,14 +954,24 @@ export async function processCustomDataset(fileOrText, fileName = 'custom_datase
       ols_slope: round6(olsStats.slope),
       ols_intercept: round6(olsStats.intercept),
       ols_equation: `Rx_Lift_Pct = ${olsStats.slope.toFixed(4)} * Compliance_Pct + ${olsStats.intercept.toFixed(4)}`,
+      rx_lift_predicted_by: apiResult ? apiResult.model_label : 'client synthesis (fallback)',
     },
   };
 
-  const attribution = {
-    global_importance: [],
-    shap_contributions: [],
-    unavailable_reason: 'Tree-model driver attribution (Random Forest / SHAP feature importance) is not available for custom uploads.',
-  };
+  const attribution = apiResult
+    ? {
+        global_importance: Array.isArray(apiResult.feature_importance) ? apiResult.feature_importance : [],
+        shap_contributions: [],
+        unavailable_reason: null,
+        importance_method: apiResult.importance_method,
+        driver_label: apiResult.driver_label,
+        model_origin: apiResult.model_label,
+      }
+    : {
+        global_importance: [],
+        shap_contributions: [],
+        unavailable_reason: 'Predict API unreachable - driver attribution unavailable for this upload.',
+      };
 
   const elapsed = ((performance.now() - t0) / 1000).toFixed(3);
   const telemetry = {
@@ -871,7 +997,9 @@ export async function processCustomDataset(fileOrText, fileName = 'custom_datase
     step: 'ml',
     status: 'completed',
     progress: 100,
-    detail: `Completed in ${elapsed}s (OLS test R² = ${ml.best_model_summary.test_r2} on ${finalHcps.length} uploaded HCPs)`,
+    detail: apiResult
+      ? `Applied ${apiResult.model_label} to ${finalHcps.length} uploaded HCPs (${elapsed}s)`
+      : `Completed in ${elapsed}s (OLS test R² = ${ml.best_model_summary.test_r2} on ${finalHcps.length} uploaded HCPs)`,
   });
 
   return State.customData;

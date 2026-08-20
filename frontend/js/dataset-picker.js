@@ -138,15 +138,48 @@ function elStep(stepId, status, detail) {
   if (detailEl) detailEl.textContent = detail || STEPS[i].defaultDetail;
 }
 
-function renderError(message) {
+const ERROR_TITLES = {
+  MISSING_COLUMNS: 'Cannot map uploaded file to the trained model',
+  NON_NUMERIC_COLUMNS: 'Non-numeric values in required columns',
+  INVALID_FILLS: 'Volume validation failed',
+  INVALID_HCP_TIER: 'Invalid HCP tier values',
+  EMPTY_FILE: 'Uploaded file is empty',
+  INVALID_CSV: 'Could not read the uploaded file as CSV',
+  NO_FILE_UPLOADED: 'No file attached',
+  UNKNOWN_MODEL: 'Unknown model',
+  PAYLOAD_TOO_LARGE: 'Upload too large',
+  API_NON_JSON: 'Predict API unreachable',
+  API_TIMEOUT: 'Predict API timed out',
+};
+
+function escapeHtml(str) {
+  return String(str).replace(/[&<>"']/g, (c) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+  })[c]);
+}
+
+function renderError(err) {
   const { processError, processStatus, cancelBtn, doneView, stepsContainer } = els();
   running = false;
   confirming = false;
   if (doneView) doneView.hidden = true;
   if (stepsContainer) stepsContainer.hidden = false;
+
+  let html = '';
   if (processError) {
+    const titleEl = ERROR_TITLES[err && err.code] || 'Processing Failed';
+    const message = (err && (err.message || err)) || 'Unknown upload error';
+    let chips = '';
+    if (err && err.code === 'MISSING_COLUMNS' && Array.isArray(err.missing_columns) && err.missing_columns.length) {
+      chips = err.missing_columns
+        .map((c) => `<span class="missing-col-chip">${escapeHtml(c)}</span>`)
+        .join('');
+    }
     processError.hidden = false;
-    processError.textContent = message;
+    processError.innerHTML =
+      `<div class="dataset-error-title">${escapeHtml(titleEl)}</div>` +
+      `<div class="dataset-error-msg">${escapeHtml(message)}</div>` +
+      (chips ? `<div class="dataset-error-chips">${chips}</div>` : '');
   }
   if (processStatus) processStatus.textContent = 'Processing Failed';
   if (cancelBtn) cancelBtn.hidden = false;
@@ -222,7 +255,7 @@ async function startUpload(file) {
     return result;
   } catch (err) {
     console.error('Custom ingestion error:', err);
-    renderError(`Upload failed: ${err && err.message ? err.message : 'unknown error'}`);
+    renderError(err);
     throw err;
   }
 }
