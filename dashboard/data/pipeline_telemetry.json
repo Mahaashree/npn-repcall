@@ -1,11 +1,11 @@
 {
   "after_privacy_filter": 762,
-  "data_version": "c8fd673a58382fe6",
-  "execution_time_sec": 0.164309,
-  "generated_at": "2026-08-20T07:07:58Z",
+  "data_version": "4b1bd71ac576c3fd",
+  "execution_time_sec": 0.110659,
+  "generated_at": "2026-08-20T09:50:40Z",
   "hybrid": {
     "after_privacy_filter": 762,
-    "execution_time_sec": 0.164309,
+    "execution_time_sec": 0.110659,
     "initial_rows": 820,
     "nulls_imputed": 0,
     "retained_rows": 762,
@@ -17,7 +17,7 @@
   "suppressed_rows": 58,
   "synthetic": {
     "after_privacy_filter": 1227,
-    "execution_time_sec": 0.020751,
+    "execution_time_sec": 0.019319,
     "initial_rows": 1350,
     "nulls_imputed": 0,
     "retained_rows": 1227,

@@ -15,6 +15,7 @@ import {
   openRepModal,
   bindTabs,
   bindExports,
+  bindManagerFilters,
 } from './tables.js';
 import { populateFilters, renderPerformanceMatrix, setPerformanceMatrixMode, bindFilters } from './filters.js';
 import { bindModals, renderPipelineInspector, openModal, closeModal } from './modals.js';
@@ -358,6 +359,7 @@ async function init() {
     bindModals();
     bindFilters();
     bindExports();
+    bindManagerFilters();
     bindDatasetModeToggle();
 
     if (!window.location.hash) {

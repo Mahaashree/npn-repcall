@@ -29,7 +29,7 @@
       "Post_Campaign_Fills",
       "Rx_Lift_Pct"
     ],
-    "total_wall_time_sec": 6.3203
+    "total_wall_time_sec": 8.1623
   },
   "benchmarks": [
     {
@@ -158,7 +158,7 @@
           }
         ]
       },
-      "fit_time_sec": 2.1794
+      "fit_time_sec": 2.9801
     },
     {
       "model_label": "Ridge Regression (L2, a=1.0)",
@@ -286,7 +286,7 @@
           }
         ]
       },
-      "fit_time_sec": 1.1653
+      "fit_time_sec": 1.1326
     },
     {
       "model_label": "Random Forest Regressor",
@@ -414,7 +414,7 @@
           }
         ]
       },
-      "fit_time_sec": 1.0935
+      "fit_time_sec": 2.1974
     },
     {
       "model_label": "Gradient Boosting Regressor",
@@ -542,7 +542,7 @@
           }
         ]
       },
-      "fit_time_sec": 1.6605
+      "fit_time_sec": 1.6111
     }
   ],
   "tournament_table": [
@@ -561,7 +561,7 @@
       "bootstrap_ci_upper": 0.697949,
       "overfitting_gap": 0.048668,
       "overfitting_status": "Healthy generalisation",
-      "fit_time_sec": 1.0935
+      "fit_time_sec": 2.1974
     },
     {
       "rank": 2,
@@ -578,7 +578,7 @@
       "bootstrap_ci_upper": 0.68484,
       "overfitting_gap": 0.209906,
       "overfitting_status": "Moderate overfit",
-      "fit_time_sec": 1.6605
+      "fit_time_sec": 1.6111
     },
     {
       "rank": 3,
@@ -595,7 +595,7 @@
       "bootstrap_ci_upper": 0.642442,
       "overfitting_gap": 0.033641,
       "overfitting_status": "Healthy generalisation",
-      "fit_time_sec": 2.1794
+      "fit_time_sec": 2.9801
     },
     {
       "rank": 4,
@@ -612,7 +612,7 @@
       "bootstrap_ci_upper": 0.641854,
       "overfitting_gap": 0.034516,
       "overfitting_status": "Healthy generalisation",
-      "fit_time_sec": 1.1653
+      "fit_time_sec": 1.1326
     }
   ],
   "best_model_summary": {

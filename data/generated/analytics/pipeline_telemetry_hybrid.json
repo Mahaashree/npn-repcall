@@ -5,7 +5,7 @@
   "suppressed_rows": 58,
   "dropped_rows": 58,
   "nulls_imputed": 0,
-  "execution_time_sec": 0.164309,
+  "execution_time_sec": 0.110659,
   "scale_cols": [
     "Compliance_Pct",
     "Monthly_Call_Frequency",

@@ -18,7 +18,7 @@
     "bootstrap_ci": "[0.5220, 0.6979]",
     "status": "Healthy generalisation",
     "model_path": "/Users/mahaashreeanburaj/Downloads/cts(3 modes)/src/models/artifacts/best_hybrid.joblib",
-    "saved_at_utc": "2026-08-20T06:55:23+00:00"
+    "saved_at_utc": "2026-08-20T09:50:30+00:00"
   },
   "synthetic": {
     "model_label": "Random Forest Regressor",
@@ -39,6 +39,6 @@
     "bootstrap_ci": "[0.5069, 0.6727]",
     "status": "Healthy generalisation",
     "model_path": "/Users/mahaashreeanburaj/Downloads/cts(3 modes)/src/models/artifacts/best_synthetic.joblib",
-    "saved_at_utc": "2026-08-20T06:55:25+00:00"
+    "saved_at_utc": "2026-08-20T09:50:33+00:00"
   }
 }

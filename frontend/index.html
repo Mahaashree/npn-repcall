@@ -251,12 +251,6 @@
 
         <!-- DISCLOSURE & PIPELINE TELEMETRY BANNER -->
         <div class="disclosure-banner">
-          <div class="banner-left">
-            <span class="cms-badge">
-              🧪 FULLY SYNTHETIC DATASET • Prescribing baseline synthesized from FDA TIRF REMS / Insys Rx Archive +
-              Exogenous CRM Detailing Layer
-            </span>
-          </div>
           <div class="banner-right">
             <span class="health-pill">
               <span class="pulse-dot" aria-hidden="true"></span>
@@ -402,17 +396,78 @@
           <div class="table-toolbar" style="margin-top: 1rem">
             <span class="record-count" id="manager-record-count" aria-live="polite">Loading…</span>
           </div>
+
+          <!-- REALLOCATION EXECUTIVE SUMMARY (added above the detail table) -->
+          <div id="realloc-summary" style="margin-top: 1.25rem">
+            <h3 class="section-title">📈 Re-allocation Summary by Recommendation</h3>
+            <p class="section-subtitle" id="realloc-summary-subtitle">
+              Live rep-level recommendation buckets &amp; top call-plan movers (units: % of territory target call plan)
+            </p>
+            <div class="realloc-bucket-grid" id="realloc-bucket-cards">
+              <div style="grid-column: span 3; text-align: center; color: var(--text-muted); padding: 1rem">
+                Loading re-allocation buckets…
+              </div>
+            </div>
+            <div class="panel-header" style="margin-top: 1.25rem">
+              <div>
+                <h3 class="panel-title">Top Re-allocation Movers</h3>
+                <p class="panel-subtitle">
+                  Biggest % of target call-plan shifts — upside opportunity vs. capacity released
+                </p>
+              </div>
+              <span class="panel-badge" id="realloc-movers-badge">Live</span>
+            </div>
+            <div class="realloc-movers-grid" id="realloc-movers">
+              <div style="text-align: center; color: var(--text-muted); padding: 1rem; grid-column: span 2">
+                Computing top movers…
+              </div>
+            </div>
+          </div>
+
+          <!-- MANAGER TABLE FILTER SUITE (search + recommendation bucket) — scoped to the reallocation table below -->
+          <div class="filter-grid" style="margin: 1rem 0 0.25rem">
+            <div class="filter-group">
+              <label class="filter-label" for="manager-search">Search 🔍</label>
+              <input
+                type="text"
+                id="manager-search"
+                class="filter-input"
+                placeholder="Rep name, rep ID, or territory…"
+                aria-label="Search reallocation table by rep name, rep ID, or territory"
+              />
+            </div>
+            <div class="filter-group">
+              <label class="filter-label" for="manager-bucket">Recommendation 🧭</label>
+              <select id="manager-bucket" class="filter-select" aria-label="Filter by recommendation bucket">
+                <option value="">All Recommendations</option>
+                <option value="Expand high-lift prescriber visits">🚀 Expand high-lift prescriber visits</option>
+                <option value="Reallocate calls within territory (Balanced)">⚖️ Reallocate calls within territory (Balanced)</option>
+                <option value="Reallocate to higher-lift HCPs">🎯 Reallocate to higher-lift HCPs</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <span class="filter-label" aria-hidden="true">&nbsp;</span>
+              <button id="reset-manager-filters" class="reset-btn" aria-label="Reset reallocation table filters">↺ Reset Filters</button>
+            </div>
+            <div class="filter-group">
+              <span class="filter-label" aria-hidden="true">&nbsp;</span>
+              <button id="export-manager-csv" class="export-btn" aria-label="Export filtered reallocation plan to CSV">
+                ⬇ Export CSV
+              </button>
+            </div>
+          </div>
+
           <div style="overflow-x: auto">
             <table id="manager-table" class="data-table" aria-label="Territory Call Reallocation Table">
               <thead>
                 <tr>
                   <th>Sales Rep</th>
                   <th>Territory</th>
-                  <th class="text-right">Calls to Add</th>
-                  <th class="text-right">Calls to Free</th>
-                  <th class="text-right">Net Delta</th>
-                  <th class="text-right">HCPs ↑</th>
-                  <th class="text-right">HCPs ↓</th>
+                  <th class="text-right" title="% of target call plan to add: calls_to_add / total_target_calls × 100">Calls to Add <span class="unit-hint">(% target)</span></th>
+                  <th class="text-right" title="% of target call plan to free: calls_to_free / total_target_calls × 100">Calls to Free <span class="unit-hint">(% target)</span></th>
+                  <th class="text-right" title="Net = add − free, as % of target call plan">Net Delta <span class="unit-hint">(% target)</span></th>
+                  <th class="text-right" title="HCPs whose reallocated target is above plan">HCPs ↑</th>
+                  <th class="text-right" title="HCPs whose reallocated target is below plan">HCPs ↓</th>
                   <th>Recommendation</th>
                 </tr>
               </thead>

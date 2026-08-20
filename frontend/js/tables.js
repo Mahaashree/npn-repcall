@@ -4,6 +4,7 @@
  */
 
 import { State, fmt, clamp, normQuadrant, quadrantBadgeClass, quadrantColor } from './data-loader.js';
+import { debounce } from './filters.js';
 import { openModal } from './modals.js';
 
 export function renderKPIs() {
@@ -494,31 +495,167 @@ export function openRepModal(repId) {
   openModal('rep-modal');
 }
 
+const REALLOC_BUCKETS = {
+  'Expand high-lift prescriber visits': { icon: '🚀', cls: 'realloc-bucket-expand', key: 'expand' },
+  'Reallocate calls within territory (Balanced)': { icon: '⚖️', cls: 'realloc-bucket-balance', key: 'balance' },
+  'Reallocate to higher-lift HCPs': { icon: '🎯', cls: 'realloc-bucket-release', key: 'release' },
+};
+
+function pctOfTarget(v, total) {
+  return total > 0 ? (v / total) * 100 : 0;
+}
+
+export function renderReallocationSummary(activeReps = null) {
+  const bucketGrid = document.getElementById('realloc-bucket-cards');
+  const movers = document.getElementById('realloc-movers');
+  if (!bucketGrid || !movers) return;
+
+  const reps = activeReps ?? State.reps.filter((r) => r.is_active);
+  if (!reps.length) {
+    bucketGrid.innerHTML = '<div style="grid-column:span 3;text-align:center;color:var(--text-muted);padding:1rem">No re-allocation data available.</div>';
+    movers.innerHTML = '<div style="text-align:center;color:var(--text-muted);padding:1rem;grid-column:span 2">No active reps.</div>';
+    return;
+  }
+
+  const total = reps.length;
+  const legend = {
+    expand: { name: 'Expand high-lift prescriber visits', count: 0 },
+    balance: { name: 'Reallocate calls within territory (Balanced)', count: 0 },
+    release: { name: 'Reallocate to higher-lift HCPs', count: 0 },
+  };
+
+  reps.forEach((r) => {
+    const rec = r.reallocation_recommendation ?? 'Reallocate calls within territory (Balanced)';
+    const cfg = REALLOC_BUCKETS[rec];
+    const key = cfg ? cfg.key : 'balance';
+    legend[key].count++;
+  });
+
+  const order = ['expand', 'balance', 'release'];
+  bucketGrid.innerHTML = order
+    .map((key) => {
+      const b = legend[key];
+      const cfg = REALLOC_BUCKETS[b.name];
+      const share = ((b.count / total) * 100).toFixed(0);
+      return `
+      <div class="realloc-bucket-card ${cfg.cls}" role="group" aria-label="${b.name}">
+        <span class="realloc-bucket-icon">${cfg.icon}</span>
+        <div class="realloc-bucket-name">${b.name}</div>
+        <div class="realloc-bucket-count">${b.count}</div>
+        <div class="realloc-bucket-pct">${share}% of active reps</div>
+        <span class="realloc-bucket-share">${b.count} of ${total} reps</span>
+      </div>`;
+    })
+    .join('');
+
+  const moversSub = document.getElementById('realloc-summary-subtitle');
+  if (moversSub) {
+    moversSub.textContent = `Live rep-level recommendation buckets & top call-plan movers (${total} active reps) — units are % of territory target call plan`;
+  }
+
+  const withTotal = (r) => ({ r, totalTarget: r.total_target_calls ?? 0 });
+  const addPct = (r, totalTarget) => pctOfTarget(r.calls_to_add ?? 0, totalTarget);
+  const freePct = (r, totalTarget) => pctOfTarget(r.calls_to_free ?? 0, totalTarget);
+
+  const upsides = reps
+    .map(withTotal)
+    .filter(({ r }) => (r.calls_to_add ?? 0) > 0)
+    .sort((a, b) => addPct(b.r, b.totalTarget) - addPct(a.r, a.totalTarget))
+    .slice(0, 6);
+  const releases = reps
+    .map(withTotal)
+    .filter(({ r }) => (r.calls_to_free ?? 0) > 0)
+    .sort((a, b) => freePct(b.r, b.totalTarget) - freePct(a.r, a.totalTarget))
+    .slice(0, 6);
+
+  const recOf = (r) => r.reallocation_recommendation ?? 'Reallocate calls within territory (Balanced)';
+
+  const moverRow = (item, rank, direction) => {
+    const pct = direction === 'add' ? addPct(item.r, item.totalTarget) : freePct(item.r, item.totalTarget);
+    const raw = direction === 'add' ? item.r.calls_to_add ?? 0 : item.r.calls_to_free ?? 0;
+    return `
+      <div class="realloc-mover-row">
+        <span class="realloc-mover-rank">${rank}</span>
+        <div class="realloc-mover-body">
+          <div class="realloc-mover-name">${item.r.sales_rep_name || item.r.rep_id}</div>
+          <div class="realloc-mover-terr">${item.r.territory_id} · ${item.r.rep_id}</div>
+          <div class="realloc-mover-rec">${recOf(item.r)}</div>
+        </div>
+        <span class="realloc-mover-val ${direction}" title="${raw.toFixed(2)} target calls">${direction === 'add' ? '+' : '-'}${pct.toFixed(1)}%</span>
+      </div>`;
+  };
+
+  movers.innerHTML = `
+    <div class="realloc-movers-panel">
+      <div class="realloc-movers-title">🚀 Top Upside Opportunity (+add)</div>
+      ${upsides.length ? upsides.map((item, i) => moverRow(item, i + 1, 'add')).join('') : '<div style="font-size:0.75rem;color:var(--text-muted)">No upside movers.</div>'}
+    </div>
+    <div class="realloc-movers-panel">
+      <div class="realloc-movers-title">🔄 Top Capacity Release (−free)</div>
+      ${releases.length ? releases.map((item, i) => moverRow(item, i + 1, 'free')).join('') : '<div style="font-size:0.75rem;color:var(--text-muted)">No release movers.</div>'}
+    </div>`;
+
+  const moversBadge = document.getElementById('realloc-movers-badge');
+  if (moversBadge) moversBadge.textContent = `Top 6 × ${reps.length} active reps`;
+}
+
+export function getFilteredManagerReps() {
+  const activeReps = State.reps.filter((r) => r.is_active);
+  const search = (document.getElementById('manager-search')?.value ?? '').toLowerCase().trim();
+  const bucket = document.getElementById('manager-bucket')?.value ?? '';
+
+  if (!search && !bucket) return activeReps;
+
+  return activeReps.filter((r) => {
+    if (bucket) {
+      const rec = r.reallocation_recommendation ?? 'Reallocate calls within territory (Balanced)';
+      if (rec !== bucket) return false;
+    }
+    if (search) {
+      const name = (r.sales_rep_name ?? '').toLowerCase();
+      const id = (r.rep_id ?? '').toLowerCase();
+      const terr = (r.territory_id ?? '').toLowerCase();
+      if (!name.includes(search) && !id.includes(search) && !terr.includes(search)) return false;
+    }
+    return true;
+  });
+}
+
 export function renderManagerTab() {
   const activeReps = State.reps.filter((r) => r.is_active);
+  const filteredReps = getFilteredManagerReps();
+  const isFiltered = filteredReps.length !== activeReps.length;
   const tbody = document.getElementById('manager-tbody');
   if (tbody) {
     if (!activeReps.length) {
       tbody.innerHTML =
         '<tr><td colspan="8" style="text-align:center;padding:2rem;color:var(--text-muted)">No active territory reps.</td></tr>';
+    } else if (!filteredReps.length) {
+      tbody.innerHTML =
+        '<tr><td colspan="8" style="text-align:center;padding:2rem;color:var(--text-muted)">No reps match the current search / filter.</td></tr>';
     } else {
-      tbody.innerHTML = activeReps
+      tbody.innerHTML = filteredReps
         .map((r) => {
           const callsToAdd = r.calls_to_add ?? 0;
           const callsToFree = r.calls_to_free ?? 0;
           const delta = r.net_call_delta ?? callsToAdd - callsToFree;
+          const totalTarget = r.total_target_calls ?? 0;
+          const pctOf = (v) => (totalTarget > 0 ? (v / totalTarget) * 100 : 0);
+          const addPct = pctOf(callsToAdd);
+          const freePct = pctOf(callsToFree);
+          const deltaPct = pctOf(delta);
           const incHcps = r.hcps_with_increase ?? 0;
           const decHcps = r.hcps_with_decrease ?? 0;
-          const deltaColor = delta > 0 ? 'var(--green)' : delta < 0 ? 'var(--red)' : 'var(--text-muted)';
+          const deltaColor = deltaPct > 0 ? 'var(--green)' : deltaPct < 0 ? 'var(--red)' : 'var(--text-muted)';
           const rec = r.reallocation_recommendation ?? 'Reallocate calls within territory (Balanced)';
 
           return `
           <tr class="fade-in-up">
             <td><strong>${r.sales_rep_name || r.rep_id}</strong></td>
             <td><span class="kpi-badge badge-cyan">${r.territory_id}</span></td>
-            <td class="text-right" style="color:var(--green);font-weight:600">+${callsToAdd.toFixed(1)}</td>
-            <td class="text-right" style="color:var(--red);font-weight:600">-${callsToFree.toFixed(1)}</td>
-            <td class="text-right" style="color:${deltaColor};font-weight:700">${delta > 0 ? '+' : ''}${delta.toFixed(1)}</td>
+            <td class="text-right" style="color:var(--green);font-weight:600" title="${callsToAdd.toFixed(2)} calls of ${totalTarget} targets">+${addPct.toFixed(1)}%</td>
+            <td class="text-right" style="color:var(--red);font-weight:600" title="${callsToFree.toFixed(2)} calls of ${totalTarget} targets">-${freePct.toFixed(1)}%</td>
+            <td class="text-right" style="color:${deltaColor};font-weight:700" title="${delta >= 0 ? '+' : ''}${delta.toFixed(2)} calls net">${deltaPct > 0 ? '+' : ''}${deltaPct.toFixed(1)}%</td>
             <td class="text-right font-mono">${incHcps}</td>
             <td class="text-right font-mono">${decHcps}</td>
             <td style="color:var(--text-secondary);font-size:0.78rem">${rec}</td>
@@ -528,9 +665,17 @@ export function renderManagerTab() {
     }
   }
 
+  const uniqueTerritories = new Set(activeReps.map((r) => r.territory_id)).size;
   const mgrRecordCount = document.getElementById('manager-record-count');
-  if (mgrRecordCount) mgrRecordCount.textContent = `${activeReps.length} active rep territories`;
+  if (mgrRecordCount) {
+    if (isFiltered) {
+      mgrRecordCount.textContent = `Showing ${filteredReps.length} of ${activeReps.length} reps`;
+    } else {
+      mgrRecordCount.textContent = `${activeReps.length} active rep rows · ${uniqueTerritories} territories live`;
+    }
+  }
 
+  renderReallocationSummary(activeReps);
   renderTerritoryRollup();
 }
 
@@ -748,6 +893,37 @@ export function bindExports() {
       { key: '_quadrant', label: 'Quadrant' },
     ]);
   });
+
+  document.getElementById('export-manager-csv')?.addEventListener('click', () => {
+    exportCSV(getFilteredManagerReps(), 'reallocation_plan.csv', [
+      { key: 'rep_id', label: 'Rep ID' },
+      { key: 'sales_rep_name', label: 'Sales Rep Name' },
+      { key: 'territory_id', label: 'Territory' },
+      { key: 'total_target_calls', label: 'Target Calls' },
+      { key: 'calls_to_add', label: 'Calls to Add' },
+      { key: 'calls_to_free', label: 'Calls to Free' },
+      { key: 'net_call_delta', label: 'Net Call Delta' },
+      { key: 'hcps_with_increase', label: 'HCPs Up' },
+      { key: 'hcps_with_decrease', label: 'HCPs Down' },
+      { key: 'reallocation_recommendation', label: 'Recommendation' },
+    ]);
+  });
+}
+
+export function bindManagerFilters() {
+  const search = document.getElementById('manager-search');
+  const bucket = document.getElementById('manager-bucket');
+  const reset = document.getElementById('reset-manager-filters');
+  const rerender = () => renderManagerTab();
+  if (search) search.addEventListener('input', debounce(rerender, 280));
+  if (bucket) bucket.addEventListener('change', rerender);
+  if (reset) {
+    reset.addEventListener('click', () => {
+      if (search) search.value = '';
+      if (bucket) bucket.value = '';
+      rerender();
+    });
+  }
 }
 
 export function bindTabs() {
