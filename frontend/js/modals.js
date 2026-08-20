@@ -27,6 +27,7 @@ export function bindModals() {
     'pipeline-modal-close': 'pipeline-modal',
     'rep-modal-close': 'rep-modal',
     'coaching-modal-close': 'coaching-modal',
+    'dataset-modal-close': 'dataset-modal',
   };
   Object.entries(closeMap).forEach(([btnId, modalId]) => {
     document.getElementById(btnId)?.addEventListener('click', () => closeModal(modalId));
@@ -199,7 +200,7 @@ export function renderPipelineInspector() {
       detail: {
         title: '🤖 ML Benchmarking Suite (ml_models_suite.py)',
         stats: [
-          ['Models', 'Ridge, OLS, Random Forest, XGBoost'],
+          ['Models', 'OLS, Ridge, Random Forest, Gradient Boosting'],
           ['Best model', State.ml?.best_model_summary?.model_label ?? (isHybrid ? 'Random Forest' : 'XGBoost')],
           ['Best Test R²', State.ml?.best_model_summary?.test_r2?.toFixed(4) ?? (isHybrid ? '0.6052' : '0.5943')],
         ],

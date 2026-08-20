@@ -23,6 +23,7 @@ Run with the project venv (full ML stack):
 
 from __future__ import annotations
 
+import copy
 import json
 import pathlib
 import sys
@@ -36,7 +37,7 @@ import pandas as pd
 import seaborn as sns
 from scipy import stats as sp_stats
 from sklearn.metrics import r2_score
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import KFold, train_test_split
 
 # ---------------------------------------------------------------------------
 # Paths & configuration
@@ -126,16 +127,30 @@ def load_processed(mode: str) -> pd.DataFrame:
 
 def predicted_vs_actual_data(mode: str) -> tuple[np.ndarray, np.ndarray]:
     """
-    Reproduce the exact train/test partition from ml_models_suite (SEED=42,
-    test_size=0.20), score with the persisted best model, return (y_test, preds).
+    Return (y_true, preds) for the regression diagnostic.
+
+    - synthetic: the exact 20% held-out test split from ml_models_suite (SEED=42).
+    - hybrid: pooled out-of-sample predictions over a repeated 5-fold CV, so the
+      annotated R² matches the CV-pooled headline (~0.098) shown on the dashboard
+      instead of the noisy single 80-row holdout (which bounces around 0.0).
     """
     df = load_processed(mode)
     X, _, df_out = build_feature_matrix(df)
     y = df_out["Rx_Lift_Pct"].astype(float).values
-    _, X_test, _, y_test = train_test_split(X, y, test_size=0.20, random_state=SEED)
     model = joblib.load(ARTIFACTS_DIR / f"best_{mode}.joblib")
-    preds = model.predict(X_test)
-    return y_test, preds
+
+    if mode == "hybrid":
+        kf = KFold(n_splits=5, shuffle=True, random_state=SEED)
+        y_true, y_pred = [], []
+        for tr, te in kf.split(X):
+            m = copy.deepcopy(model)
+            m.fit(X[tr], y[tr])
+            y_true.append(y[te])
+            y_pred.append(m.predict(X[te]))
+        return np.concatenate(y_true), np.concatenate(y_pred)
+
+    _, X_test, _, y_test = train_test_split(X, y, test_size=0.20, random_state=SEED)
+    return y_test, model.predict(X_test)
 
 
 # ---------------------------------------------------------------------------
@@ -202,8 +217,8 @@ def chart_01() -> None:
 
     ax.set_xticks(x)
     ax.set_xticklabels([short_label(m) for m in models])
-    ax.set_ylabel("Test R² (held-out test set)")
-    ax.set_title("Model Comparison — Test R², Rx-Lift Regression")
+    ax.set_ylabel("Out-of-Sample R² (hybrid: repeated-CV pooled · synthetic: held-out test)")
+    ax.set_title("Model Comparison — Out-of-Sample R², Rx-Lift Regression")
     tidy_ax(ax, ymax=max(max(next(b["test_r2"] for b in benches[m]) for m in MODES) + 0.12, 0.75))
     ax.legend(loc="upper left", frameon=False)
     write_fig(fig, "01_model_comparison_r2.png")
@@ -301,7 +316,8 @@ def chart_04() -> None:
                 bbox=dict(boxstyle="round,pad=0.4", fc="white", ec=GRID))
         ax.set_xlabel("Actual Rx Lift (%)")
         ax.set_ylabel("Predicted Rx Lift (%)")
-        ax.set_title(f"{best_labels[mode]} — {mode.title()}\n(held-out test set)", fontsize=13)
+        sub = "pooled 5-fold out-of-sample" if mode == "hybrid" else "held-out test set (20%)"
+        ax.set_title(f"{best_labels[mode]} — {mode.title()}\n({sub})", fontsize=13)
         ax.legend(loc="lower right", frameon=False, fontsize=11)
 
     fig.suptitle("Predicted vs Actual Rx-Lift — regression diagnostic\n(regression analog of a confusion matrix)",

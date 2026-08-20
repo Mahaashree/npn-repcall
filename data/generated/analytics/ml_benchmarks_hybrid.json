@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "source_file": "/Users/mahaashreeanburaj/Downloads/cts(3 modes)/data/generated/processed/processed_data_hybrid.parquet",
+    "source_file": "/Users/mahaashreeanburaj/Downloads/cts-final-final/data/generated/processed/processed_data_hybrid.parquet",
     "target_variable": "Rx_Lift_Pct",
     "target_description": "Rx_Lift_Pct: campaign effect",
-    "n_samples": 762,
+    "n_samples": 400,
     "n_features": 7,
     "feature_names": [
       "Compliance_Pct_raw",
@@ -15,12 +15,12 @@
       "HCP_Tier"
     ],
     "partition": {
-      "train_rows": 456,
-      "train_pct": 59.8,
-      "val_rows": 153,
-      "val_pct": 20.1,
-      "test_rows": 153,
-      "test_pct": 20.1
+      "train_rows": 240,
+      "train_pct": 60.0,
+      "val_rows": 80,
+      "val_pct": 20.0,
+      "test_rows": 80,
+      "test_pct": 20.0
     },
     "cv_folds": 5,
     "bootstrap_iterations": 1000,
@@ -29,600 +29,608 @@
       "Post_Campaign_Fills",
       "Rx_Lift_Pct"
     ],
-    "total_wall_time_sec": 8.1623
+    "total_wall_time_sec": 5.7946
   },
   "benchmarks": [
     {
       "model_label": "OLS Linear Regression",
       "model_key": "OLS_LinearRegression",
       "model_family": "Linear",
-      "in_sample_train_r2": 0.579301,
+      "in_sample_train_r2": 0.177155,
       "intra_train_cv": {
         "folds": 5,
-        "mean_r2": 0.549049,
-        "std_r2": 0.079721,
+        "mean_r2": 0.112616,
+        "std_r2": 0.055066,
         "fold_scores": [
-          0.568138,
-          0.673944,
-          0.513958,
-          0.560382,
-          0.428824
+          0.162478,
+          0.152209,
+          0.020942,
+          0.076976,
+          0.150477
         ]
       },
-      "validation_r2": 0.563105,
-      "test_r2": 0.54566,
-      "test_mae": 1.538143,
-      "test_rmse": 1.958715,
+      "validation_r2": 0.10569,
+      "test_r2": 0.097635,
+      "test_mae": 2.200284,
+      "test_rmse": 2.825056,
       "bootstrap_95pct_ci_test_r2": {
-        "lower_bound": 0.433337,
-        "upper_bound": 0.642442,
+        "lower_bound": 0.020458,
+        "upper_bound": 0.157755,
         "n_iterations": 1000
       },
       "overfitting": {
-        "gap": 0.033641,
+        "gap": 0.07952,
         "assessment": "Healthy generalisation"
       },
       "feature_importance": {
         "global_importance_method": "abs_coefficient",
         "global_importance_pct": {
-          "Compliance_Pct_raw": 3.0266,
-          "Monthly_Call_Frequency_raw": 37.9244,
-          "Tier_Compliance_Interaction_raw": 11.4224,
-          "Sample_Call_Ratio_raw": 17.5636,
-          "Baseline_Volume_Saturation_raw": 13.1222,
-          "Log_Baseline_Fills_raw": 14.8844,
-          "HCP_Tier": 2.0564
+          "Compliance_Pct_raw": 19.0653,
+          "Monthly_Call_Frequency_raw": 38.1105,
+          "Tier_Compliance_Interaction_raw": 9.219,
+          "Sample_Call_Ratio_raw": 3.4973,
+          "Baseline_Volume_Saturation_raw": 18.3492,
+          "Log_Baseline_Fills_raw": 6.7966,
+          "HCP_Tier": 4.962
         },
         "global_importance_ranked": [
           {
             "rank": 1,
             "feature": "Monthly_Call_Frequency_raw",
-            "importance_pct": 37.9244
+            "importance_pct": 38.1105
           },
           {
             "rank": 2,
-            "feature": "Sample_Call_Ratio_raw",
-            "importance_pct": 17.5636
+            "feature": "Compliance_Pct_raw",
+            "importance_pct": 19.0653
           },
           {
             "rank": 3,
-            "feature": "Log_Baseline_Fills_raw",
-            "importance_pct": 14.8844
+            "feature": "Baseline_Volume_Saturation_raw",
+            "importance_pct": 18.3492
           },
           {
             "rank": 4,
-            "feature": "Baseline_Volume_Saturation_raw",
-            "importance_pct": 13.1222
+            "feature": "Tier_Compliance_Interaction_raw",
+            "importance_pct": 9.219
           },
           {
             "rank": 5,
-            "feature": "Tier_Compliance_Interaction_raw",
-            "importance_pct": 11.4224
+            "feature": "Log_Baseline_Fills_raw",
+            "importance_pct": 6.7966
           },
           {
             "rank": 6,
-            "feature": "Compliance_Pct_raw",
-            "importance_pct": 3.0266
+            "feature": "HCP_Tier",
+            "importance_pct": 4.962
           },
           {
             "rank": 7,
-            "feature": "HCP_Tier",
-            "importance_pct": 2.0564
+            "feature": "Sample_Call_Ratio_raw",
+            "importance_pct": 3.4973
           }
         ],
         "shap_method": "SHAP_LinearExplainer",
         "shap_importance_pct": {
-          "Compliance_Pct_raw": 3.0217,
-          "Monthly_Call_Frequency_raw": 38.1317,
-          "Tier_Compliance_Interaction_raw": 11.7732,
-          "Sample_Call_Ratio_raw": 19.2792,
-          "Baseline_Volume_Saturation_raw": 11.8025,
-          "Log_Baseline_Fills_raw": 14.3733,
-          "HCP_Tier": 1.6185
+          "Compliance_Pct_raw": 18.433,
+          "Monthly_Call_Frequency_raw": 36.2628,
+          "Tier_Compliance_Interaction_raw": 10.4342,
+          "Sample_Call_Ratio_raw": 3.8243,
+          "Baseline_Volume_Saturation_raw": 17.7933,
+          "Log_Baseline_Fills_raw": 8.7658,
+          "HCP_Tier": 4.4865
         },
         "shap_importance_ranked": [
           {
             "rank": 1,
             "feature": "Monthly_Call_Frequency_raw",
-            "shap_importance_pct": 38.1317
+            "shap_importance_pct": 36.2628
           },
           {
             "rank": 2,
-            "feature": "Sample_Call_Ratio_raw",
-            "shap_importance_pct": 19.2792
+            "feature": "Compliance_Pct_raw",
+            "shap_importance_pct": 18.433
           },
           {
             "rank": 3,
-            "feature": "Log_Baseline_Fills_raw",
-            "shap_importance_pct": 14.3733
+            "feature": "Baseline_Volume_Saturation_raw",
+            "shap_importance_pct": 17.7933
           },
           {
             "rank": 4,
-            "feature": "Baseline_Volume_Saturation_raw",
-            "shap_importance_pct": 11.8025
+            "feature": "Tier_Compliance_Interaction_raw",
+            "shap_importance_pct": 10.4342
           },
           {
             "rank": 5,
-            "feature": "Tier_Compliance_Interaction_raw",
-            "shap_importance_pct": 11.7732
+            "feature": "Log_Baseline_Fills_raw",
+            "shap_importance_pct": 8.7658
           },
           {
             "rank": 6,
-            "feature": "Compliance_Pct_raw",
-            "shap_importance_pct": 3.0217
+            "feature": "HCP_Tier",
+            "shap_importance_pct": 4.4865
           },
           {
             "rank": 7,
-            "feature": "HCP_Tier",
-            "shap_importance_pct": 1.6185
+            "feature": "Sample_Call_Ratio_raw",
+            "shap_importance_pct": 3.8243
           }
         ]
       },
-      "fit_time_sec": 2.9801
+      "fit_time_sec": 1.434,
+      "single_holdout_test_r2": -0.025313,
+      "test_r2_definition": "repeated_5-fold_CV_pooled_out-of-sample"
     },
     {
       "model_label": "Ridge Regression (L2, a=1.0)",
       "model_key": "Ridge_Regression",
       "model_family": "Linear",
-      "in_sample_train_r2": 0.579261,
+      "in_sample_train_r2": 0.177133,
       "intra_train_cv": {
         "folds": 5,
-        "mean_r2": 0.549379,
-        "std_r2": 0.078809,
+        "mean_r2": 0.113919,
+        "std_r2": 0.054986,
         "fold_scores": [
-          0.568056,
-          0.67323,
-          0.517146,
-          0.558439,
-          0.430026
+          0.165015,
+          0.151937,
+          0.021945,
+          0.07931,
+          0.151388
         ]
       },
-      "validation_r2": 0.564208,
-      "test_r2": 0.544745,
-      "test_mae": 1.539991,
-      "test_rmse": 1.960686,
+      "validation_r2": 0.108341,
+      "test_r2": 0.098667,
+      "test_mae": 2.198775,
+      "test_rmse": 2.823439,
       "bootstrap_95pct_ci_test_r2": {
-        "lower_bound": 0.432533,
-        "upper_bound": 0.641854,
+        "lower_bound": 0.021632,
+        "upper_bound": 0.158638,
         "n_iterations": 1000
       },
       "overfitting": {
-        "gap": 0.034516,
+        "gap": 0.078466,
         "assessment": "Healthy generalisation"
       },
       "feature_importance": {
         "global_importance_method": "abs_coefficient",
         "global_importance_pct": {
-          "Compliance_Pct_raw": 2.9761,
-          "Monthly_Call_Frequency_raw": 38.7937,
-          "Tier_Compliance_Interaction_raw": 11.1117,
-          "Sample_Call_Ratio_raw": 18.0294,
-          "Baseline_Volume_Saturation_raw": 12.7716,
-          "Log_Baseline_Fills_raw": 14.052,
-          "HCP_Tier": 2.2654
+          "Compliance_Pct_raw": 19.8276,
+          "Monthly_Call_Frequency_raw": 38.7826,
+          "Tier_Compliance_Interaction_raw": 8.5566,
+          "Sample_Call_Ratio_raw": 3.6713,
+          "Baseline_Volume_Saturation_raw": 18.7855,
+          "Log_Baseline_Fills_raw": 5.9572,
+          "HCP_Tier": 4.4193
         },
         "global_importance_ranked": [
           {
             "rank": 1,
             "feature": "Monthly_Call_Frequency_raw",
-            "importance_pct": 38.7937
+            "importance_pct": 38.7826
           },
           {
             "rank": 2,
-            "feature": "Sample_Call_Ratio_raw",
-            "importance_pct": 18.0294
+            "feature": "Compliance_Pct_raw",
+            "importance_pct": 19.8276
           },
           {
             "rank": 3,
-            "feature": "Log_Baseline_Fills_raw",
-            "importance_pct": 14.052
+            "feature": "Baseline_Volume_Saturation_raw",
+            "importance_pct": 18.7855
           },
           {
             "rank": 4,
-            "feature": "Baseline_Volume_Saturation_raw",
-            "importance_pct": 12.7716
+            "feature": "Tier_Compliance_Interaction_raw",
+            "importance_pct": 8.5566
           },
           {
             "rank": 5,
-            "feature": "Tier_Compliance_Interaction_raw",
-            "importance_pct": 11.1117
+            "feature": "Log_Baseline_Fills_raw",
+            "importance_pct": 5.9572
           },
           {
             "rank": 6,
-            "feature": "Compliance_Pct_raw",
-            "importance_pct": 2.9761
+            "feature": "HCP_Tier",
+            "importance_pct": 4.4193
           },
           {
             "rank": 7,
-            "feature": "HCP_Tier",
-            "importance_pct": 2.2654
+            "feature": "Sample_Call_Ratio_raw",
+            "importance_pct": 3.6713
           }
         ],
         "shap_method": "SHAP_LinearExplainer",
         "shap_importance_pct": {
-          "Compliance_Pct_raw": 2.9695,
-          "Monthly_Call_Frequency_raw": 38.9823,
-          "Tier_Compliance_Interaction_raw": 11.4461,
-          "Sample_Call_Ratio_raw": 19.7787,
-          "Baseline_Volume_Saturation_raw": 11.4802,
-          "Log_Baseline_Fills_raw": 13.5614,
-          "HCP_Tier": 1.7819
+          "Compliance_Pct_raw": 19.2342,
+          "Monthly_Call_Frequency_raw": 37.0257,
+          "Tier_Compliance_Interaction_raw": 9.7169,
+          "Sample_Call_Ratio_raw": 4.028,
+          "Baseline_Volume_Saturation_raw": 18.2773,
+          "Log_Baseline_Fills_raw": 7.7088,
+          "HCP_Tier": 4.0091
         },
         "shap_importance_ranked": [
           {
             "rank": 1,
             "feature": "Monthly_Call_Frequency_raw",
-            "shap_importance_pct": 38.9823
+            "shap_importance_pct": 37.0257
           },
           {
             "rank": 2,
-            "feature": "Sample_Call_Ratio_raw",
-            "shap_importance_pct": 19.7787
+            "feature": "Compliance_Pct_raw",
+            "shap_importance_pct": 19.2342
           },
           {
             "rank": 3,
-            "feature": "Log_Baseline_Fills_raw",
-            "shap_importance_pct": 13.5614
+            "feature": "Baseline_Volume_Saturation_raw",
+            "shap_importance_pct": 18.2773
           },
           {
             "rank": 4,
-            "feature": "Baseline_Volume_Saturation_raw",
-            "shap_importance_pct": 11.4802
+            "feature": "Tier_Compliance_Interaction_raw",
+            "shap_importance_pct": 9.7169
           },
           {
             "rank": 5,
-            "feature": "Tier_Compliance_Interaction_raw",
-            "shap_importance_pct": 11.4461
+            "feature": "Log_Baseline_Fills_raw",
+            "shap_importance_pct": 7.7088
           },
           {
             "rank": 6,
-            "feature": "Compliance_Pct_raw",
-            "shap_importance_pct": 2.9695
+            "feature": "Sample_Call_Ratio_raw",
+            "shap_importance_pct": 4.028
           },
           {
             "rank": 7,
             "feature": "HCP_Tier",
-            "shap_importance_pct": 1.7819
+            "shap_importance_pct": 4.0091
           }
         ]
       },
-      "fit_time_sec": 1.1326
+      "fit_time_sec": 0.6963,
+      "single_holdout_test_r2": -0.023638,
+      "test_r2_definition": "repeated_5-fold_CV_pooled_out-of-sample"
     },
     {
       "model_label": "Random Forest Regressor",
       "model_key": "RandomForest",
       "model_family": "Ensemble",
-      "in_sample_train_r2": 0.670205,
+      "in_sample_train_r2": 0.352332,
       "intra_train_cv": {
         "folds": 5,
-        "mean_r2": 0.555552,
-        "std_r2": 0.080372,
+        "mean_r2": 0.050004,
+        "std_r2": 0.084156,
         "fold_scores": [
-          0.604656,
-          0.685144,
-          0.533991,
-          0.488852,
-          0.465115
+          0.186976,
+          0.050986,
+          -0.077838,
+          0.056218,
+          0.033678
         ]
       },
-      "validation_r2": 0.538879,
-      "test_r2": 0.621537,
-      "test_mae": 1.412974,
-      "test_rmse": 1.78769,
+      "validation_r2": -0.048465,
+      "test_r2": 0.043349,
+      "test_mae": 2.259306,
+      "test_rmse": 2.908791,
       "bootstrap_95pct_ci_test_r2": {
-        "lower_bound": 0.522036,
-        "upper_bound": 0.697949,
+        "lower_bound": -0.04145,
+        "upper_bound": 0.109772,
         "n_iterations": 1000
       },
       "overfitting": {
-        "gap": 0.048668,
-        "assessment": "Healthy generalisation"
+        "gap": 0.308983,
+        "assessment": "Severe overfit"
       },
       "feature_importance": {
         "global_importance_method": "permutation",
         "global_importance_pct": {
-          "Compliance_Pct_raw": 1.9942,
-          "Monthly_Call_Frequency_raw": 62.6133,
-          "Tier_Compliance_Interaction_raw": 1.5223,
-          "Sample_Call_Ratio_raw": 31.5395,
-          "Baseline_Volume_Saturation_raw": 1.1528,
-          "Log_Baseline_Fills_raw": 1.127,
-          "HCP_Tier": 0.0509
+          "Compliance_Pct_raw": 20.2482,
+          "Monthly_Call_Frequency_raw": 29.4619,
+          "Tier_Compliance_Interaction_raw": 12.1893,
+          "Sample_Call_Ratio_raw": 14.5575,
+          "Baseline_Volume_Saturation_raw": 11.2311,
+          "Log_Baseline_Fills_raw": 10.6885,
+          "HCP_Tier": 1.6236
         },
         "global_importance_ranked": [
           {
             "rank": 1,
             "feature": "Monthly_Call_Frequency_raw",
-            "importance_pct": 62.6133
+            "importance_pct": 29.4619
           },
           {
             "rank": 2,
-            "feature": "Sample_Call_Ratio_raw",
-            "importance_pct": 31.5395
+            "feature": "Compliance_Pct_raw",
+            "importance_pct": 20.2482
           },
           {
             "rank": 3,
-            "feature": "Compliance_Pct_raw",
-            "importance_pct": 1.9942
+            "feature": "Sample_Call_Ratio_raw",
+            "importance_pct": 14.5575
           },
           {
             "rank": 4,
             "feature": "Tier_Compliance_Interaction_raw",
-            "importance_pct": 1.5223
+            "importance_pct": 12.1893
           },
           {
             "rank": 5,
             "feature": "Baseline_Volume_Saturation_raw",
-            "importance_pct": 1.1528
+            "importance_pct": 11.2311
           },
           {
             "rank": 6,
             "feature": "Log_Baseline_Fills_raw",
-            "importance_pct": 1.127
+            "importance_pct": 10.6885
           },
           {
             "rank": 7,
             "feature": "HCP_Tier",
-            "importance_pct": 0.0509
+            "importance_pct": 1.6236
           }
         ],
         "shap_method": "SHAP_TreeExplainer",
         "shap_importance_pct": {
-          "Compliance_Pct_raw": 1.9732,
-          "Monthly_Call_Frequency_raw": 58.3291,
-          "Tier_Compliance_Interaction_raw": 1.0328,
-          "Sample_Call_Ratio_raw": 37.0053,
-          "Baseline_Volume_Saturation_raw": 0.773,
-          "Log_Baseline_Fills_raw": 0.7893,
-          "HCP_Tier": 0.0973
+          "Compliance_Pct_raw": 27.521,
+          "Monthly_Call_Frequency_raw": 35.3845,
+          "Tier_Compliance_Interaction_raw": 7.0373,
+          "Sample_Call_Ratio_raw": 11.8954,
+          "Baseline_Volume_Saturation_raw": 8.5782,
+          "Log_Baseline_Fills_raw": 8.3184,
+          "HCP_Tier": 1.2652
         },
         "shap_importance_ranked": [
           {
             "rank": 1,
             "feature": "Monthly_Call_Frequency_raw",
-            "shap_importance_pct": 58.3291
+            "shap_importance_pct": 35.3845
           },
           {
             "rank": 2,
-            "feature": "Sample_Call_Ratio_raw",
-            "shap_importance_pct": 37.0053
+            "feature": "Compliance_Pct_raw",
+            "shap_importance_pct": 27.521
           },
           {
             "rank": 3,
-            "feature": "Compliance_Pct_raw",
-            "shap_importance_pct": 1.9732
+            "feature": "Sample_Call_Ratio_raw",
+            "shap_importance_pct": 11.8954
           },
           {
             "rank": 4,
-            "feature": "Tier_Compliance_Interaction_raw",
-            "shap_importance_pct": 1.0328
+            "feature": "Baseline_Volume_Saturation_raw",
+            "shap_importance_pct": 8.5782
           },
           {
             "rank": 5,
             "feature": "Log_Baseline_Fills_raw",
-            "shap_importance_pct": 0.7893
+            "shap_importance_pct": 8.3184
           },
           {
             "rank": 6,
-            "feature": "Baseline_Volume_Saturation_raw",
-            "shap_importance_pct": 0.773
+            "feature": "Tier_Compliance_Interaction_raw",
+            "shap_importance_pct": 7.0373
           },
           {
             "rank": 7,
             "feature": "HCP_Tier",
-            "shap_importance_pct": 0.0973
+            "shap_importance_pct": 1.2652
           }
         ]
       },
-      "fit_time_sec": 2.1974
+      "fit_time_sec": 1.1548,
+      "single_holdout_test_r2": -0.01394,
+      "test_r2_definition": "repeated_5-fold_CV_pooled_out-of-sample"
     },
     {
       "model_label": "Gradient Boosting Regressor",
       "model_key": "GradientBoosting",
       "model_family": "Gradient Boosting",
-      "in_sample_train_r2": 0.804542,
+      "in_sample_train_r2": 0.678074,
       "intra_train_cv": {
         "folds": 5,
-        "mean_r2": 0.528415,
-        "std_r2": 0.087425,
+        "mean_r2": -0.184374,
+        "std_r2": 0.16786,
         "fold_scores": [
-          0.560154,
-          0.671356,
-          0.462761,
-          0.531007,
-          0.416795
+          0.031978,
+          -0.150615,
+          -0.47102,
+          -0.237181,
+          -0.095033
         ]
       },
-      "validation_r2": 0.523678,
-      "test_r2": 0.594636,
-      "test_mae": 1.457177,
-      "test_rmse": 1.850135,
+      "validation_r2": -0.382514,
+      "test_r2": -0.105569,
+      "test_mae": 2.409229,
+      "test_rmse": 3.127006,
       "bootstrap_95pct_ci_test_r2": {
-        "lower_bound": 0.486507,
-        "upper_bound": 0.68484,
+        "lower_bound": -0.225694,
+        "upper_bound": -0.000579,
         "n_iterations": 1000
       },
       "overfitting": {
-        "gap": 0.209906,
-        "assessment": "Moderate overfit"
+        "gap": 0.783643,
+        "assessment": "Severe overfit"
       },
       "feature_importance": {
         "global_importance_method": "permutation",
         "global_importance_pct": {
-          "Compliance_Pct_raw": 3.5684,
-          "Monthly_Call_Frequency_raw": 50.2474,
-          "Tier_Compliance_Interaction_raw": 5.0934,
-          "Sample_Call_Ratio_raw": 29.0073,
-          "Baseline_Volume_Saturation_raw": 6.3604,
-          "Log_Baseline_Fills_raw": 5.639,
-          "HCP_Tier": 0.084
+          "Compliance_Pct_raw": 10.701,
+          "Monthly_Call_Frequency_raw": 15.2884,
+          "Tier_Compliance_Interaction_raw": 16.821,
+          "Sample_Call_Ratio_raw": 19.1996,
+          "Baseline_Volume_Saturation_raw": 16.5547,
+          "Log_Baseline_Fills_raw": 19.7038,
+          "HCP_Tier": 1.7314
         },
         "global_importance_ranked": [
           {
             "rank": 1,
-            "feature": "Monthly_Call_Frequency_raw",
-            "importance_pct": 50.2474
+            "feature": "Log_Baseline_Fills_raw",
+            "importance_pct": 19.7038
           },
           {
             "rank": 2,
             "feature": "Sample_Call_Ratio_raw",
-            "importance_pct": 29.0073
+            "importance_pct": 19.1996
           },
           {
             "rank": 3,
-            "feature": "Baseline_Volume_Saturation_raw",
-            "importance_pct": 6.3604
+            "feature": "Tier_Compliance_Interaction_raw",
+            "importance_pct": 16.821
           },
           {
             "rank": 4,
-            "feature": "Log_Baseline_Fills_raw",
-            "importance_pct": 5.639
+            "feature": "Baseline_Volume_Saturation_raw",
+            "importance_pct": 16.5547
           },
           {
             "rank": 5,
-            "feature": "Tier_Compliance_Interaction_raw",
-            "importance_pct": 5.0934
+            "feature": "Monthly_Call_Frequency_raw",
+            "importance_pct": 15.2884
           },
           {
             "rank": 6,
             "feature": "Compliance_Pct_raw",
-            "importance_pct": 3.5684
+            "importance_pct": 10.701
           },
           {
             "rank": 7,
             "feature": "HCP_Tier",
-            "importance_pct": 0.084
+            "importance_pct": 1.7314
           }
         ],
         "shap_method": "SHAP_TreeExplainer",
         "shap_importance_pct": {
-          "Compliance_Pct_raw": 2.7776,
-          "Monthly_Call_Frequency_raw": 50.6549,
-          "Tier_Compliance_Interaction_raw": 5.272,
-          "Sample_Call_Ratio_raw": 32.7786,
-          "Baseline_Volume_Saturation_raw": 4.6805,
-          "Log_Baseline_Fills_raw": 3.5918,
-          "HCP_Tier": 0.2446
+          "Compliance_Pct_raw": 14.3125,
+          "Monthly_Call_Frequency_raw": 23.1209,
+          "Tier_Compliance_Interaction_raw": 17.3466,
+          "Sample_Call_Ratio_raw": 17.3275,
+          "Baseline_Volume_Saturation_raw": 12.332,
+          "Log_Baseline_Fills_raw": 12.284,
+          "HCP_Tier": 3.2765
         },
         "shap_importance_ranked": [
           {
             "rank": 1,
             "feature": "Monthly_Call_Frequency_raw",
-            "shap_importance_pct": 50.6549
+            "shap_importance_pct": 23.1209
           },
           {
             "rank": 2,
-            "feature": "Sample_Call_Ratio_raw",
-            "shap_importance_pct": 32.7786
+            "feature": "Tier_Compliance_Interaction_raw",
+            "shap_importance_pct": 17.3466
           },
           {
             "rank": 3,
-            "feature": "Tier_Compliance_Interaction_raw",
-            "shap_importance_pct": 5.272
+            "feature": "Sample_Call_Ratio_raw",
+            "shap_importance_pct": 17.3275
           },
           {
             "rank": 4,
-            "feature": "Baseline_Volume_Saturation_raw",
-            "shap_importance_pct": 4.6805
+            "feature": "Compliance_Pct_raw",
+            "shap_importance_pct": 14.3125
           },
           {
             "rank": 5,
-            "feature": "Log_Baseline_Fills_raw",
-            "shap_importance_pct": 3.5918
+            "feature": "Baseline_Volume_Saturation_raw",
+            "shap_importance_pct": 12.332
           },
           {
             "rank": 6,
-            "feature": "Compliance_Pct_raw",
-            "shap_importance_pct": 2.7776
+            "feature": "Log_Baseline_Fills_raw",
+            "shap_importance_pct": 12.284
           },
           {
             "rank": 7,
             "feature": "HCP_Tier",
-            "shap_importance_pct": 0.2446
+            "shap_importance_pct": 3.2765
           }
         ]
       },
-      "fit_time_sec": 1.6111
+      "fit_time_sec": 0.8638,
+      "single_holdout_test_r2": -0.122302,
+      "test_r2_definition": "repeated_5-fold_CV_pooled_out-of-sample"
     }
   ],
   "tournament_table": [
     {
       "rank": 1,
-      "model_label": "Random Forest Regressor",
-      "model_family": "Ensemble",
-      "in_sample_train_r2": 0.670205,
-      "cv_mean_r2": 0.555552,
-      "cv_std_r2": 0.080372,
-      "validation_r2": 0.538879,
-      "test_r2": 0.621537,
-      "test_mae": 1.412974,
-      "test_rmse": 1.78769,
-      "bootstrap_ci_lower": 0.522036,
-      "bootstrap_ci_upper": 0.697949,
-      "overfitting_gap": 0.048668,
+      "model_label": "OLS Linear Regression",
+      "model_family": "Linear",
+      "in_sample_train_r2": 0.177155,
+      "cv_mean_r2": 0.112616,
+      "cv_std_r2": 0.055066,
+      "validation_r2": 0.10569,
+      "test_r2": 0.097635,
+      "test_mae": 2.200284,
+      "test_rmse": 2.825056,
+      "bootstrap_ci_lower": 0.020458,
+      "bootstrap_ci_upper": 0.157755,
+      "overfitting_gap": 0.07952,
       "overfitting_status": "Healthy generalisation",
-      "fit_time_sec": 2.1974
+      "fit_time_sec": 1.434
     },
     {
       "rank": 2,
-      "model_label": "Gradient Boosting Regressor",
-      "model_family": "Gradient Boosting",
-      "in_sample_train_r2": 0.804542,
-      "cv_mean_r2": 0.528415,
-      "cv_std_r2": 0.087425,
-      "validation_r2": 0.523678,
-      "test_r2": 0.594636,
-      "test_mae": 1.457177,
-      "test_rmse": 1.850135,
-      "bootstrap_ci_lower": 0.486507,
-      "bootstrap_ci_upper": 0.68484,
-      "overfitting_gap": 0.209906,
-      "overfitting_status": "Moderate overfit",
-      "fit_time_sec": 1.6111
+      "model_label": "Ridge Regression (L2, a=1.0)",
+      "model_family": "Linear",
+      "in_sample_train_r2": 0.177133,
+      "cv_mean_r2": 0.113919,
+      "cv_std_r2": 0.054986,
+      "validation_r2": 0.108341,
+      "test_r2": 0.098667,
+      "test_mae": 2.198775,
+      "test_rmse": 2.823439,
+      "bootstrap_ci_lower": 0.021632,
+      "bootstrap_ci_upper": 0.158638,
+      "overfitting_gap": 0.078466,
+      "overfitting_status": "Healthy generalisation",
+      "fit_time_sec": 0.6963
     },
     {
       "rank": 3,
-      "model_label": "OLS Linear Regression",
-      "model_family": "Linear",
-      "in_sample_train_r2": 0.579301,
-      "cv_mean_r2": 0.549049,
-      "cv_std_r2": 0.079721,
-      "validation_r2": 0.563105,
-      "test_r2": 0.54566,
-      "test_mae": 1.538143,
-      "test_rmse": 1.958715,
-      "bootstrap_ci_lower": 0.433337,
-      "bootstrap_ci_upper": 0.642442,
-      "overfitting_gap": 0.033641,
-      "overfitting_status": "Healthy generalisation",
-      "fit_time_sec": 2.9801
+      "model_label": "Random Forest Regressor",
+      "model_family": "Ensemble",
+      "in_sample_train_r2": 0.352332,
+      "cv_mean_r2": 0.050004,
+      "cv_std_r2": 0.084156,
+      "validation_r2": -0.048465,
+      "test_r2": 0.043349,
+      "test_mae": 2.259306,
+      "test_rmse": 2.908791,
+      "bootstrap_ci_lower": -0.04145,
+      "bootstrap_ci_upper": 0.109772,
+      "overfitting_gap": 0.308983,
+      "overfitting_status": "Severe overfit",
+      "fit_time_sec": 1.1548
     },
     {
       "rank": 4,
-      "model_label": "Ridge Regression (L2, a=1.0)",
-      "model_family": "Linear",
-      "in_sample_train_r2": 0.579261,
-      "cv_mean_r2": 0.549379,
-      "cv_std_r2": 0.078809,
-      "validation_r2": 0.564208,
-      "test_r2": 0.544745,
-      "test_mae": 1.539991,
-      "test_rmse": 1.960686,
-      "bootstrap_ci_lower": 0.432533,
-      "bootstrap_ci_upper": 0.641854,
-      "overfitting_gap": 0.034516,
-      "overfitting_status": "Healthy generalisation",
-      "fit_time_sec": 1.1326
+      "model_label": "Gradient Boosting Regressor",
+      "model_family": "Gradient Boosting",
+      "in_sample_train_r2": 0.678074,
+      "cv_mean_r2": -0.184374,
+      "cv_std_r2": 0.16786,
+      "validation_r2": -0.382514,
+      "test_r2": -0.105569,
+      "test_mae": 2.409229,
+      "test_rmse": 3.127006,
+      "bootstrap_ci_lower": -0.225694,
+      "bootstrap_ci_upper": -0.000579,
+      "overfitting_gap": 0.783643,
+      "overfitting_status": "Severe overfit",
+      "fit_time_sec": 0.8638
     }
   ],
   "best_model_summary": {
     "rank": 1,
-    "model_label": "Random Forest Regressor",
-    "test_r2": 0.621537,
-    "test_mae": 1.412974,
-    "test_rmse": 1.78769,
-    "bootstrap_ci": "[0.5220, 0.6979]",
-    "overfitting_gap": 0.048668,
+    "model_label": "OLS Linear Regression",
+    "test_r2": 0.097635,
+    "test_mae": 2.200284,
+    "test_rmse": 2.825056,
+    "bootstrap_ci": "[0.0205, 0.1578]",
+    "overfitting_gap": 0.07952,
     "status": "Healthy generalisation"
   }
 }

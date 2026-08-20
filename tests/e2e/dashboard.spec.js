@@ -187,16 +187,22 @@ test.describe('Pharma Analytics Dashboard E2E Contract & Scalability Test Suite'
     expect(pillCount).toBeGreaterThan(0);
   });
 
-  test('10. 3rd Dataset Mode (+ Custom Dataset) triggers non-blocking floating drawer', async ({ page }) => {
+  test('10. Dataset picker trigger opens the Choose Dataset modal with all three options', async ({ page }) => {
     await page.goto('/frontend/index.html');
-    await page.waitForSelector('#btn-mode-custom');
+    const trigger = page.locator('#dataset-picker-btn');
+    await expect(trigger).toBeVisible();
+    await expect(trigger).toContainText('Dataset:');
 
-    const customBtn = page.locator('#btn-mode-custom');
-    await expect(customBtn).toBeVisible();
+    const modal = page.locator('#dataset-modal');
+    await expect(modal).not.toHaveClass(/open/);
 
-    // Verify floating drawer exists in DOM
-    const drawer = page.locator('#ingestion-drawer');
-    await expect(drawer).toBeAttached();
+    await trigger.click();
+    await expect(modal).toHaveClass(/open/);
+
+    // Three first-class options: Synthetic, Hybrid CMS, Upload Dataset
+    await expect(page.locator('#dataset-opt-synthetic')).toBeVisible();
+    await expect(page.locator('#dataset-opt-hybrid')).toBeVisible();
+    await expect(page.locator('#dataset-upload-primary')).toBeVisible();
   });
 
   test('11. Dynamic dual-mode Performance Matrix toggles between Legacy (Compliance) and AI Driver-Weighted (CEI) views', async ({ page }) => {

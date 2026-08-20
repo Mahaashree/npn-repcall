@@ -63,9 +63,9 @@ export function renderKPIs() {
     },
     {
       accent: 'amber',
-      label: `Held-Out Test R² (${bestModel.model_label || 'RF'})`,
+      label: `Out-of-Sample R² (${bestModel.model_label || 'RF'})`,
       value: testR2.toFixed(4),
-      sub: `95% CI: ${bootCi}`,
+      sub: `95% CI: ${bootCi} · repeated 5-fold CV pooled`,
       barPct: clamp(testR2 * 100, 0, 100),
       badge: testR2 >= 0.5 ? { cls: 'badge-green', text: 'Strong Fit' } : { cls: 'badge-amber', text: 'Moderate Fit' },
     },

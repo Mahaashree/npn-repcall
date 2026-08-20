@@ -3,7 +3,7 @@
  * Orchestrates modular components across data loading, charts, tables, filters, modals, and sandbox.
  */
 
-import { State, loadAllData, setDatasetMode, processCustomDataset } from './data-loader.js';
+import { State, loadAllData, setDatasetMode } from './data-loader.js';
 import { renderScatter } from './charts.js';
 import {
   renderKPIs,
@@ -19,6 +19,8 @@ import {
 } from './tables.js';
 import { populateFilters, renderPerformanceMatrix, setPerformanceMatrixMode, bindFilters } from './filters.js';
 import { bindModals, renderPipelineInspector, openModal, closeModal } from './modals.js';
+import { initDatasetPicker } from './dataset-picker.js';
+import { getDatasetSelection, setDatasetSelection } from './dataset-store.js';
 
 // Expose modal and matrix mode functions on window for inline HTML onclick attributes
 window.openRepModal = openRepModal;
@@ -194,159 +196,68 @@ function renderPage() {
   document.getElementById('sidebar-backdrop')?.classList.remove('open');
 }
 
-function updateDrawerStep(stepId, status, detailText) {
-  const stepEl = document.getElementById(`step-${stepId}`);
-  const statusEl = document.getElementById(`step-${stepId}-status`);
-  const detailEl = document.getElementById(`step-${stepId}-detail`);
+/**
+ * Apply a dataset selection across the whole app: purge transient UI state,
+ * swap the active dataset in State, and re-render top-to-bottom.
+ */
+function applyDatasetMode(mode, filename) {
+  const sameMode = State.activeDatasetMode === mode;
 
-  if (stepEl) {
-    stepEl.classList.remove('pending', 'active', 'completed');
-    stepEl.classList.add(status);
+  // Selecting the currently-active built-in mode is a no-op for rendering.
+  if (sameMode && mode !== 'custom') return;
+
+  // 1. COMPLETE STATE PURGE
+  State.quadrantFilter = null;
+  State.sortKey = null;
+  State.sortDir = 'asc';
+  State.repPage = 1;
+  State.presPage = 1;
+  State.coachingPage = 1;
+
+  // Destroy active chart instances to prevent canvas memory leaks
+  if (State.scatterChart) {
+    try { State.scatterChart.destroy(); } catch (_) {}
+    State.scatterChart = null;
   }
-  if (statusEl) {
-    statusEl.textContent = status === 'completed' ? '✓ Complete' : status === 'active' ? 'In Progress…' : 'Pending';
+  if (State.importanceChart) {
+    try { State.importanceChart.destroy(); } catch (_) {}
+    State.importanceChart = null;
   }
-  if (detailEl && detailText) {
-    detailEl.textContent = detailText;
-  }
-}
-
-function bindDatasetModeToggle() {
-  const btnHybrid = document.getElementById('btn-mode-hybrid');
-  const btnSynth  = document.getElementById('btn-mode-synthetic');
-  const btnCustom = document.getElementById('btn-mode-custom');
-  const fileInput = document.getElementById('custom-file-input');
-  const drawer = document.getElementById('ingestion-drawer');
-  const drawerClose = document.getElementById('ingestion-drawer-close');
-  const progressFill = document.getElementById('ingestion-progress-fill');
-  const drawerTitle = document.getElementById('ingestion-drawer-status-title');
-  const spinner = document.getElementById('ingestion-spinner');
-  const filenameBadge = document.getElementById('ingestion-filename');
-
-  if (drawerClose && drawer) {
-    drawerClose.addEventListener('click', () => drawer.classList.remove('open'));
+  if (State.shapChart) {
+    try { State.shapChart.destroy(); } catch (_) {}
+    State.shapChart = null;
   }
 
-  const handleModeChange = (mode) => {
-    if (mode === 'custom' && !State.customData) {
-      // Trigger file selector if custom data hasn't been uploaded yet
-      fileInput?.click();
-      return;
-    }
-
-    if (State.activeDatasetMode === mode) return;
-
-    // 1. COMPLETE STATE PURGE
-    State.quadrantFilter = null;
-    State.sortKey = null;
-    State.sortDir = 'asc';
-    State.repPage = 1;
-    State.presPage = 1;
-    State.coachingPage = 1;
-
-    // Destroy active chart instances to prevent canvas memory leaks
-    if (State.scatterChart) {
-      try { State.scatterChart.destroy(); } catch (_) {}
-      State.scatterChart = null;
-    }
-    if (State.importanceChart) {
-      try { State.importanceChart.destroy(); } catch (_) {}
-      State.importanceChart = null;
-    }
-    if (State.shapChart) {
-      try { State.shapChart.destroy(); } catch (_) {}
-      State.shapChart = null;
-    }
-
-    // Reset UI filter form inputs
-    const filterIds = [
-      'filter-territory', 'filter-rep', 'filter-specialty',
-      'filter-tier', 'filter-search'
-    ];
-    filterIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) el.value = '';
-    });
-
-    btnHybrid?.classList.toggle('active', mode === 'hybrid');
-    btnSynth?.classList.toggle('active', mode === 'synthetic');
-    btnCustom?.classList.toggle('active', mode === 'custom');
-
-    // 2. SET ACTIVE MODE & REASSIGN STATE
-    setDatasetMode(mode);
-
-    // 3. TOP-TO-BOTTOM DOM RE-RENDER
-    refreshAllViews();
-  };
-
-  btnHybrid?.addEventListener('click', () => handleModeChange('hybrid'));
-  btnSynth?.addEventListener('click', () => handleModeChange('synthetic'));
-  btnCustom?.addEventListener('click', () => handleModeChange('custom'));
-
-  fileInput?.addEventListener('change', async (e) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    // Reset file input for future uploads
-    fileInput.value = '';
-
-    // Show non-blocking drawer in bottom-right corner
-    if (drawer) {
-      drawer.classList.add('open');
-    }
-    if (filenameBadge) {
-      filenameBadge.textContent = file.name;
-    }
-    if (drawerTitle) {
-      drawerTitle.textContent = 'Dynamic Dataset Ingestion';
-    }
-    if (spinner) {
-      spinner.classList.remove('done');
-    }
-
-    // Reset steps to pending
-    ['inspect', 'synthesize', 'features', 'ml'].forEach((s) => updateDrawerStep(s, 'pending'));
-    if (progressFill) progressFill.style.width = '5%';
-
-    try {
-      await processCustomDataset(file, file.name, (event) => {
-        if (progressFill && event.progress) {
-          progressFill.style.width = `${event.progress}%`;
-        }
-        if (event.step) {
-          updateDrawerStep(event.step, event.status, event.detail);
-        }
-      });
-
-      // Ingestion complete!
-      if (spinner) spinner.classList.add('done');
-      if (drawerTitle) drawerTitle.textContent = 'Ingestion Complete (Active)';
-      if (progressFill) progressFill.style.width = '100%';
-
-      if (btnCustom) {
-        btnCustom.textContent = '📁 Custom Dataset (Active)';
-        btnCustom.classList.add('active');
-        btnHybrid?.classList.remove('active');
-        btnSynth?.classList.remove('active');
-      }
-
-      setDatasetMode('custom');
-      refreshAllViews();
-
-      // Auto-minimize after 5 seconds
-      setTimeout(() => {
-        if (drawer) drawer.classList.remove('open');
-      }, 5000);
-    } catch (err) {
-      console.error('Custom ingestion error:', err);
-      if (drawerTitle) drawerTitle.textContent = 'Ingestion Failed';
-      alert(`Error during dataset ingestion: ${err.message}`);
-    }
+  // Reset UI filter form inputs
+  const filterIds = [
+    'filter-territory', 'filter-rep', 'filter-specialty',
+    'filter-tier', 'filter-search'
+  ];
+  filterIds.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.value = '';
   });
+
+  // 2. SET ACTIVE MODE & REASSIGN STATE
+  setDatasetMode(mode);
+
+  // 3. TOP-TO-BOTTOM DOM RE-RENDER
+  refreshAllViews();
 }
 
 async function init() {
   try {
+    // Restore any persisted dataset selection before the data layer resolves payloads.
+    // Uploaded datasets only exist in memory, so a persisted 'custom' mode gracefully
+    // falls back to Hybrid CMS on a fresh page load.
+    const storedSelection = getDatasetSelection();
+    if (storedSelection.mode === 'custom' && !State.customData) {
+      State.activeDatasetMode = 'hybrid';
+      setDatasetSelection({ mode: 'hybrid', filename: null });
+    } else {
+      State.activeDatasetMode = storedSelection.mode;
+    }
+
     const loaded = await loadAllData(renderSkeletons, renderErrorState);
     if (!loaded) return;
 
@@ -360,7 +271,7 @@ async function init() {
     bindFilters();
     bindExports();
     bindManagerFilters();
-    bindDatasetModeToggle();
+    initDatasetPicker({ onDatasetChange: applyDatasetMode });
 
     if (!window.location.hash) {
       window.history.replaceState(null, '', '#/overview');

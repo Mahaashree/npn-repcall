@@ -1,11 +1,11 @@
 {
-  "initial_rows": 820,
-  "after_privacy_filter": 762,
-  "retained_rows": 762,
-  "suppressed_rows": 58,
-  "dropped_rows": 58,
+  "initial_rows": 400,
+  "after_privacy_filter": 400,
+  "retained_rows": 400,
+  "suppressed_rows": 0,
+  "dropped_rows": 0,
   "nulls_imputed": 0,
-  "execution_time_sec": 0.110659,
+  "execution_time_sec": 0.696643,
   "scale_cols": [
     "Compliance_Pct",
     "Monthly_Call_Frequency",

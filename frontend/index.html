@@ -32,20 +32,22 @@
     <div id="arch-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="arch-modal-title">
       <div class="modal-box modal-lg">
         <div class="modal-header">
-          <h2 class="modal-title" id="arch-modal-title">🖧 System Architecture — End-to-End Synthetic Data Pipeline</h2>
+          <h2 class="modal-title" id="arch-modal-title">🖧 System Architecture — Dual-Mode HCP Analytics Pipeline</h2>
           <button class="modal-close" id="arch-modal-close" aria-label="Close architecture modal">✕</button>
         </div>
         <div class="modal-body">
           <p class="section-subtitle">
-            Fully synthetic HCP prescriber records — structure inspired by FDA TIRF REMS / Insys Authorized Rx Archive —
-            enriched with an exogenous synthetic CRM detailing layer. Zero real patient or physician data is used.
+            <strong>Hybrid mode</strong> consumes a real, de-identified prescriber-level slice from public CMS/IDR/Open Payments
+            aggregate records (<code>data/raw_hybrid/cms_crm_dataset.csv</code>) overlaid with an exogenous synthetic CRM detailing
+            layer. <strong>Synthetic mode</strong> generates fully statistical profiles with the same schema. No patient PII and no
+            per-patient prescribing records are used in either mode.
           </p>
           <div class="arch-flow">
             <div class="arch-node">
-              <div class="arch-node-icon">🧪</div>
-              <div class="arch-node-title">Synthetic Data Engine</div>
+              <div class="arch-node-icon">⚡</div>
+              <div class="arch-node-title">Hybrid Real-Data Engine</div>
               <div class="arch-node-sub">
-                <span id="arch-node-initial-records">820</span> initial HCP records • FDA TIRF REMS structure • Causal Rx_Lift_Pct formula
+                <span id="arch-node-initial-records">400</span> initial HCP records • Real CMS/IDR/Open-Payments slice • Synthetic CRM detailing overlay
               </div>
             </div>
             <span class="arch-arrow">➔</span>
@@ -65,7 +67,7 @@
             <span class="arch-arrow">➔</span>
             <div class="arch-node">
               <div class="arch-node-icon">🤖</div>
-              <div class="arch-node-title">ML Suite (Ridge / OLS / RF / XGBoost)</div>
+              <div class="arch-node-title">ML Suite (OLS / Ridge / RF / Gradient Boosting)</div>
               <div class="arch-node-sub">HCP-level • 5-Fold CV • Bootstrap CI • SHAP Explainability</div>
             </div>
             <span class="arch-arrow">➔</span>
@@ -95,11 +97,12 @@
             "
           >
             <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.6">
-              <strong style="color: var(--primary-dark)">📋 Data Provenance:</strong> All HCP prescriber records are
-              100% synthetically generated. The column schema (Prscrbr_NPI, Physician_Name, Specialty, City, State,
-              Brand_Name, Tot_Clms, Tot_30day_Fills, Tot_Drug_Cst) is structurally inspired by the publicly available
-              FDA TIRF REMS / Insys Authorized Rx Archive. No real patient, physician, or prescription data is used or
-              derived. The CRM detailing layer is fully exogenous and synthetically assigned.
+              <strong style="color: var(--primary-dark)">📋 Data Provenance:</strong> <strong>Hybrid mode</strong> loads a real,
+              de-identified prescriber-level slice (<code>data/raw_hybrid/cms_crm_dataset.csv</code>) assembled from public CMS
+              aggregate prior-prescriber, IDR, and Open Payments records — 400 HCPs, no patient PII, no per-patient prescribing
+              records — then overlays an exogenous synthetic CRM detailing layer (call/sample activity, sales-rep assignment).
+              <strong>Synthetic mode</strong> generates fully statistical profiles with the same schema. The causal Rx_Lift_Pct is
+              an engineered campaign-effect column in both modes. No real patient data is used or derived anywhere in the pipeline.
             </p>
           </div>
         </div>
@@ -153,6 +156,119 @@
         </div>
         <div class="modal-body">
           <div id="coaching-modal-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DATASET PICKER MODAL -->
+    <div
+      id="dataset-modal"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="dataset-modal-title"
+    >
+      <div class="modal-box modal-md">
+        <div class="modal-header">
+          <h2 class="modal-title" id="dataset-modal-title">🗂️ Choose Dataset</h2>
+          <button class="modal-close" id="dataset-modal-close" aria-label="Close dataset picker">✕</button>
+        </div>
+        <div class="modal-body">
+          <!-- PICKER VIEW -->
+          <div id="dataset-picker-view">
+            <p class="section-subtitle" style="margin-bottom: 1rem">
+              Pick a built-in data source or upload your own. Your selection applies across the whole app.
+            </p>
+            <div class="dataset-options">
+              <button class="dataset-option" id="dataset-opt-synthetic" type="button" title="Select Synthetic dataset">
+                <span class="dataset-option-icon" aria-hidden="true">🧪</span>
+                <span class="dataset-option-body">
+                  <span class="dataset-option-name">Synthetic</span>
+                  <span class="dataset-option-desc">Full synthetic HCP profiles (Beta, Gamma, Poisson distributions)</span>
+                </span>
+                <span class="dataset-option-check" aria-hidden="true">✓</span>
+              </button>
+              <button class="dataset-option" id="dataset-opt-hybrid" type="button" title="Select Hybrid CMS dataset">
+                <span class="dataset-option-icon" aria-hidden="true">⚡</span>
+                <span class="dataset-option-body">
+                  <span class="dataset-option-name">Hybrid CMS</span>
+                  <span class="dataset-option-desc">CMS Part D structure + Synthetic CRM detailing layer</span>
+                </span>
+                <span class="dataset-option-check" aria-hidden="true">✓</span>
+              </button>
+            </div>
+            <button class="dataset-upload-primary" id="dataset-upload-primary" type="button">
+              <span class="dataset-upload-icon" aria-hidden="true">⬆</span>
+              <span class="dataset-upload-body">
+                <span class="dataset-upload-name">Upload Dataset</span>
+                <span class="dataset-upload-desc">Use your own CSV, Parquet, or JSON file</span>
+              </span>
+            </button>
+            <div id="dataset-picker-error" class="dataset-picker-error" role="alert" hidden></div>
+            <input type="file" id="custom-file-input" accept=".csv,.parquet,.json,.txt" hidden />
+          </div>
+
+          <!-- PROCESSING VIEW -->
+          <div id="dataset-processing-view" hidden>
+            <div class="dataset-process-header">
+              <div class="dataset-process-file">
+                <span class="dataset-process-file-icon" aria-hidden="true">📄</span>
+                <span class="dataset-process-filename" id="dataset-process-filename"></span>
+              </div>
+              <span class="dataset-process-status-title" id="dataset-process-status-title">Processing Dataset</span>
+            </div>
+
+            <div class="dataset-process-progress" aria-hidden="true">
+              <div class="dataset-process-fill" id="dataset-process-fill" style="width: 0%"></div>
+            </div>
+
+            <div class="dataset-process-steps" id="dataset-process-steps">
+              <div class="dataset-step-item" id="dp-step-inspect">
+                <span class="step-icon" aria-hidden="true">🔍</span>
+                <span class="step-body">
+                  <span class="step-name">Column Inspection</span>
+                  <span class="step-status" id="dp-step-inspect-status">Pending</span>
+                  <span class="step-detail" id="dp-step-inspect-detail">Scanning required vs missing columns</span>
+                </span>
+              </div>
+              <div class="dataset-step-item" id="dp-step-synthesize">
+                <span class="step-icon" aria-hidden="true">🧪</span>
+                <span class="step-body">
+                  <span class="step-name">Auto-Synthesis</span>
+                  <span class="step-status" id="dp-step-synthesize-status">Pending</span>
+                  <span class="step-detail" id="dp-step-synthesize-detail">Gamma (fills), Poisson (samples), Normal (calls)</span>
+                </span>
+              </div>
+              <div class="dataset-step-item" id="dp-step-features">
+                <span class="step-icon" aria-hidden="true">⚙️</span>
+                <span class="step-body">
+                  <span class="step-name">Derived Features</span>
+                  <span class="step-status" id="dp-step-features-status">Pending</span>
+                  <span class="step-detail" id="dp-step-features-detail">Cadence &amp; Sample Ratio calculations</span>
+                </span>
+              </div>
+              <div class="dataset-step-item" id="dp-step-ml">
+                <span class="step-icon" aria-hidden="true">🤖</span>
+                <span class="step-body">
+                  <span class="step-name">ML Driver Attribution</span>
+                  <span class="step-status" id="dp-step-ml-status">Pending</span>
+                  <span class="step-detail" id="dp-step-ml-detail">RF &amp; XGBoost driver attribution &amp; lift</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="dataset-done-view" id="dataset-done-view" hidden>
+              <div class="dataset-done-check" aria-hidden="true">✓</div>
+              <div class="dataset-done-title">Processing Done!</div>
+              <div class="dataset-done-sub">Your dataset is ready and applied across the whole dashboard.</div>
+            </div>
+
+            <div class="dataset-process-error" id="dataset-process-error" role="alert" hidden></div>
+
+            <div class="dataset-process-actions">
+              <button class="dataset-cancel-btn" id="dataset-upload-cancel" type="button">Cancel</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -230,15 +346,17 @@
           </div>
 
           <div class="top-bar-right">
-            <div class="mode-switch-group">
-              <span class="mode-label">Dataset:</span>
-              <div class="mode-btn-toggle" role="group" aria-label="Dataset Mode Switcher">
-                <button class="mode-toggle-btn active" id="btn-mode-hybrid" data-mode="hybrid" title="Hybrid CMS Part D Rx Data + Conditioned CRM Calls">⚡ Hybrid CMS Mode</button>
-                <button class="mode-toggle-btn" id="btn-mode-synthetic" data-mode="synthetic" title="Full Synthetic CRM + Exogenous Rx Detailing Layer">🧪 Full Synthetic Mode</button>
-                <button class="mode-toggle-btn" id="btn-mode-custom" data-mode="custom" title="Upload Custom CSV, Parquet, or JSON Dataset">+ 📁 Custom Dataset</button>
-              </div>
-              <input type="file" id="custom-file-input" accept=".csv,.parquet,.json" style="display: none;" />
-            </div>
+            <button
+              class="dataset-picker-btn"
+              id="dataset-picker-btn"
+              type="button"
+              aria-haspopup="dialog"
+              aria-label="Change dataset source"
+              title="Choose a dataset source"
+            >
+              <span class="dataset-picker-icon" aria-hidden="true">🗂️</span>
+              <span class="dataset-picker-label" id="dataset-picker-label">Dataset: Hybrid CMS</span>
+            </button>
             <div class="date-selector">
               <span class="date-icon">📅</span>
               <select class="date-select" id="date-select" aria-label="Select date range">
@@ -634,57 +752,6 @@
           <p class="pipeline-title">⚡ Data Engineering Pipeline — Click any node to inspect execution stats</p>
           <div class="pipeline-nodes" id="pipeline-nodes" role="list" aria-label="Pipeline stages"></div>
         </section>
-      </div>
-    </div>
-
-    <!-- NON-BLOCKING DYNAMIC INGESTION FLOATING DRAWER -->
-    <div id="ingestion-drawer" class="ingestion-drawer" aria-live="polite">
-      <div class="ingestion-drawer-header">
-        <div class="ingestion-drawer-title">
-          <span class="ingestion-spinner" id="ingestion-spinner"></span>
-          <span id="ingestion-drawer-status-title">Dynamic Ingestion</span>
-        </div>
-        <button class="ingestion-drawer-close" id="ingestion-drawer-close" aria-label="Close ingestion drawer">✕</button>
-      </div>
-      <div class="ingestion-drawer-body">
-        <div class="ingestion-filename-badge" id="ingestion-filename">Custom Dataset</div>
-        <div class="ingestion-steps" id="ingestion-steps">
-          <div class="ingestion-step pending" id="step-inspect">
-            <span class="step-icon">🔍</span>
-            <div class="step-info">
-              <div class="step-name">Column Inspection</div>
-              <div class="step-detail" id="step-inspect-detail">Scanning required vs missing columns</div>
-            </div>
-            <span class="step-status" id="step-inspect-status">Pending</span>
-          </div>
-          <div class="ingestion-step pending" id="step-synthesize">
-            <span class="step-icon">🧪</span>
-            <div class="step-info">
-              <div class="step-name">Auto-Synthesis</div>
-              <div class="step-detail" id="step-synthesize-detail">Gamma (fills), Poisson (samples), Normal (calls)</div>
-            </div>
-            <span class="step-status" id="step-synthesize-status">Pending</span>
-          </div>
-          <div class="ingestion-step pending" id="step-features">
-            <span class="step-icon">⚙️</span>
-            <div class="step-info">
-              <div class="step-name">Derived Features</div>
-              <div class="step-detail" id="step-features-detail">Cadence &amp; Sample Ratio calculations</div>
-            </div>
-            <span class="step-status" id="step-features-status">Pending</span>
-          </div>
-          <div class="ingestion-step pending" id="step-ml">
-            <span class="step-icon">🤖</span>
-            <div class="step-info">
-              <div class="step-name">ML Driver Attribution</div>
-              <div class="step-detail" id="step-ml-detail">RF &amp; XGBoost driver attribution &amp; lift</div>
-            </div>
-            <span class="step-status" id="step-ml-status">Pending</span>
-          </div>
-        </div>
-        <div class="ingestion-progress-bar">
-          <div class="ingestion-progress-fill" id="ingestion-progress-fill" style="width: 0%"></div>
-        </div>
       </div>
     </div>
 

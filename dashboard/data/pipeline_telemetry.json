@@ -1,26 +1,26 @@
 {
-  "after_privacy_filter": 762,
-  "data_version": "4b1bd71ac576c3fd",
-  "execution_time_sec": 0.110659,
-  "generated_at": "2026-08-20T09:50:40Z",
+  "after_privacy_filter": 400,
+  "data_version": "52ce04e2b02fa307",
+  "execution_time_sec": 0.696643,
+  "generated_at": "2026-08-20T19:25:58Z",
   "hybrid": {
-    "after_privacy_filter": 762,
-    "execution_time_sec": 0.110659,
-    "initial_rows": 820,
+    "after_privacy_filter": 400,
+    "execution_time_sec": 0.696643,
+    "initial_rows": 400,
     "nulls_imputed": 0,
-    "retained_rows": 762,
-    "suppressed_rows": 58
+    "retained_rows": 400,
+    "suppressed_rows": 0
   },
-  "initial_rows": 820,
+  "initial_rows": 400,
   "nulls_imputed": 0,
-  "retained_rows": 762,
-  "suppressed_rows": 58,
+  "retained_rows": 400,
+  "suppressed_rows": 0,
   "synthetic": {
-    "after_privacy_filter": 1227,
-    "execution_time_sec": 0.019319,
+    "after_privacy_filter": 1215,
+    "execution_time_sec": 0.109405,
     "initial_rows": 1350,
     "nulls_imputed": 0,
-    "retained_rows": 1227,
-    "suppressed_rows": 123
+    "retained_rows": 1215,
+    "suppressed_rows": 135
   }
 }

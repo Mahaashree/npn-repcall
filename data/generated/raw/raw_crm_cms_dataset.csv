@@ -1,821 +1,401 @@
-Prscrbr_NPI,Physician_Name,Specialty,City,State,Brand_Name,Sales_Rep,Sales_Rep_Name,Territory,HCP_Tier,CMS_Volume_Decile,Target_Calls,Actual_Calls,Samples_Dropped,Tot_Clms,Tot_30day_Fills,Tot_Drug_Cst,Rx_Lift_Pct,Delta_Log_Fills,Post_Campaign_Fills,dataset_mode
-1001000001,Dr. Margaret Thomas,Pain Management,Portland,OR,Abstral,REP-H148,Harvey Sterling,TERR-H12,2,6,10,6,4,18,15.2276,20444.41,8.323,0.075201,16.495,hybrid
-1001000002,Dr. Mary Rivera,Pain Management,Miami,FL,Abstral,REP-H121,Helen Finch,TERR-H09,2,7,14,11,7,15,19.8443,48740.68,10.0425,0.091309,21.8371,hybrid
-1001000003,Dr. Richard Davis,Neurology,Denver,CO,Abstral,REP-H331,Hugh Thornton,TERR-H03,1,10,16,10,1,13,30.5171,63802.11,6.3293,0.05948,32.4486,hybrid
-1001000004,Dr. Emily Wilson,Pain Management,Detroit,MI,Abstral,REP-H167,Heather Hayes,TERR-H07,2,6,8,5,4,15,15.0563,16698.3,7.385,0.066958,16.1682,hybrid
-1001000005,Dr. Emily Young,Oncology,Philadelphia,PA,Fentora,REP-H360,Hattie Blackwood,TERR-H08,3,3,4,3,4,8,7.4206,18111.39,5.2987,0.045637,7.8138,hybrid
-1001000006,Dr. Richard Campbell,Oncology,Nashville,TN,Lazanda,REP-H210,Hope Bishop,TERR-H02,2,6,2,2,0,19,15.3798,20261.46,2.4569,0.022807,15.7576,hybrid
-1001000007,Dr. Rebecca Lopez,Psychiatry,Austin,TX,Lazanda,REP-H376,Hayden Whitman,TERR-H12,1,9,6,5,6,27,25.0922,55152.95,6.3768,0.059517,26.6923,hybrid
-1001000008,Dr. Sarah Nelson,Internal Medicine,Charlotte,NC,Subsys,REP-H245,Henry Conway,TERR-H01,2,5,7,4,0,17,14.3168,18700.22,4.0173,0.036862,14.8919,hybrid
-1001000009,Dr. Dorothy Mitchell,Pain Management,Los Angeles,CA,Fentora,REP-H169,Harrison Hayes,TERR-H09,2,6,13,11,6,20,16.0249,30733.35,9.3576,0.084415,17.5245,hybrid
-1001000010,Dr. Sarah Jackson,Internal Medicine,Columbus,OH,Actiq,REP-H188,Harvey Monroe,TERR-H04,2,7,13,9,6,20,18.2921,20406.2,6.5042,0.059843,19.4819,hybrid
-1001000011,Dr. John King,Pain Management,Atlanta,GA,Abstral,REP-H292,Hilary Gallagher,TERR-H12,3,3,5,2,3,27,8.2873,13541.47,4.7766,0.041739,8.6832,hybrid
-1001000012,Dr. Dorothy Campbell,Anesthesiology,Portland,OR,Abstral,REP-H345,Henry Blackwood,TERR-H05,2,6,10,3,0,13,16.0874,30650.55,-0.5816,-0.005491,15.9938,hybrid
-1001000013,Dr. Barbara Johnson,Neurology,Jacksonville,FL,Actiq,REP-H378,Hilda Whitman,TERR-H02,2,5,7,4,3,17,12.846,24204.23,3.1041,0.028393,13.2447,hybrid
-1001000014,Dr. John Thompson,Anesthesiology,Miami,FL,Subsys,REP-H333,Hector Thornton,TERR-H05,2,5,10,8,2,8,14.8102,21290.3,7.0794,0.06421,15.8587,hybrid
-1001000015,Dr. Sarah Torres,Orthopedics,Detroit,MI,Abstral,REP-H128,Harvey Finch,TERR-H04,3,3,5,4,3,29,7.683,10191.71,3.9181,0.034081,7.984,hybrid
-1001000016,Dr. Richard Harris,Orthopedics,Baltimore,MD,Actiq,REP-H294,Hazel Gallagher,TERR-H02,1,9,10,8,6,9,24.5136,37876.95,7.8675,0.07287,26.4422,hybrid
-1001000017,Dr. Karen Johnson,Pain Management,Charlotte,NC,Lazanda,REP-H204,Hannah Bishop,TERR-H08,3,2,5,4,5,19,4.2216,4562.57,6.0503,0.047757,4.477,hybrid
-1001000018,Dr. Kathleen Williams,Neurology,Houston,TX,Subsys,REP-H241,Helen Conway,TERR-H09,2,5,2,1,1,20,14.7812,35648.0,2.718,0.025139,15.1829,hybrid
-1001000019,Dr. Jennifer Anderson,Pain Management,Jacksonville,FL,Subsys,REP-H174,Hazel Hayes,TERR-H02,2,5,5,3,1,30,14.7589,16192.36,5.0099,0.045853,15.4983,hybrid
-1001000020,Dr. Nancy Moore,Pain Management,Austin,TX,Abstral,REP-H183,Howard Monroe,TERR-H11,2,7,15,8,1,15,20.6932,38005.31,6.6408,0.061421,22.0674,hybrid
-1001000021,Dr. Barbara Torres,Anesthesiology,Los Angeles,CA,Subsys,REP-H350,Hope Blackwood,TERR-H10,2,5,8,6,5,25,13.4731,20812.72,8.0744,0.072474,14.561,hybrid
-1001000022,Dr. David Robinson,Emergency Medicine,Charlotte,NC,Abstral,REP-H201,Helen Bishop,TERR-H05,1,9,7,6,3,11,25.9444,61178.37,1.6829,0.016074,26.3811,hybrid
-1001000023,Dr. Sharon Scott,Anesthesiology,Atlanta,GA,Subsys,REP-H223,Howard Sinclair,TERR-H03,3,2,4,3,1,23,4.5052,10132.07,5.2714,0.042234,4.7426,hybrid
-1001000024,Dr. Laura Carter,Oncology,Las Vegas,NV,Fentora,REP-H289,Harrison Gallagher,TERR-H09,2,4,8,6,1,13,10.4426,16612.1,3.6733,0.032973,10.8262,hybrid
-1001000025,Dr. Sarah Lewis,Palliative Care,Detroit,MI,Actiq,REP-H325,Henry Thornton,TERR-H09,2,4,8,7,6,13,10.611,21013.92,6.9588,0.061654,11.3493,hybrid
-1001000026,Dr. Barbara Lewis,Palliative Care,Charlotte,NC,Subsys,REP-H224,Hannah Sinclair,TERR-H04,2,6,10,8,8,21,16.7774,24275.68,11.2224,0.100669,18.6602,hybrid
-1001000027,Dr. Richard Williams,Oncology,Atlanta,GA,Abstral,REP-H125,Henry Finch,TERR-H01,2,5,8,6,1,21,14.3186,35915.58,4.2334,0.038807,14.9248,hybrid
-1001000028,Dr. Kathleen Garcia,Anesthesiology,Detroit,MI,Lazanda,REP-H383,Howard Carrington,TERR-H07,2,4,4,3,2,25,9.9511,14159.57,6.7709,0.059708,10.6248,hybrid
-1001000029,Dr. Elizabeth Gonzalez,Oncology,Chicago,IL,Abstral,REP-H272,Hilary Mercer,TERR-H04,2,7,15,14,5,11,18.4284,43311.68,7.0024,0.064307,19.7188,hybrid
-1001000030,Dr. Sarah Lee,Oncology,Austin,TX,Abstral,REP-H109,Harrison Vance,TERR-H09,2,4,11,10,5,19,9.6472,9453.97,5.7659,0.050924,10.2034,hybrid
-1001000031,Dr. Mary Anderson,Pain Management,Jacksonville,FL,Subsys,REP-H352,Hilary Blackwood,TERR-H12,2,7,16,14,14,12,18.4984,35196.58,12.9254,0.11567,20.8894,hybrid
-1001000032,Dr. Donna Williams,Pain Management,Jacksonville,FL,Abstral,REP-H255,Homer Conway,TERR-H11,2,7,9,6,0,20,18.2938,16315.98,4.7591,0.044136,19.1645,hybrid
-1001000033,Dr. Ashley Lee,Pain Management,Charlotte,NC,Subsys,REP-H276,Hayden Mercer,TERR-H08,1,10,15,11,7,27,28.3126,44011.95,10.4839,0.096457,31.2809,hybrid
-1001000034,Dr. Sarah Anderson,Pain Management,Houston,TX,Abstral,REP-H165,Henry Hayes,TERR-H05,2,4,3,1,0,13,9.2234,8253.2,0.491,0.00442,9.2687,hybrid
-1001000035,Dr. Mary Campbell,Pain Management,Seattle,WA,Abstral,REP-H286,Holly Gallagher,TERR-H06,2,5,10,8,7,28,12.7945,13504.99,11.791,0.103785,14.3031,hybrid
-1001000036,Dr. Richard Robinson,Pain Management,New York,NY,Subsys,REP-H253,Hector Conway,TERR-H09,2,4,5,5,0,15,9.932,21491.51,2.6474,0.023767,10.1949,hybrid
-1001000037,Dr. Jessica Nguyen,Palliative Care,Miami,FL,Abstral,REP-H320,Hattie Kensington,TERR-H04,1,10,11,8,9,23,29.0625,61256.59,8.1561,0.075893,31.4329,hybrid
-1001000038,Dr. Richard Campbell,Oncology,Los Angeles,CA,Fentora,REP-H149,Harrison Sterling,TERR-H01,2,6,9,5,3,19,16.1279,14621.14,6.5863,0.060171,17.1901,hybrid
-1001000039,Dr. Charles Thomas,Palliative Care,Portland,OR,Abstral,REP-H134,Hazel Finch,TERR-H10,3,3,6,3,0,17,7.1862,11786.17,1.2577,0.01098,7.2766,hybrid
-1001000040,Dr. Patricia Carter,Oncology,Portland,OR,Actiq,REP-H273,Hector Mercer,TERR-H05,2,5,12,10,7,11,12.5126,11119.85,7.488,0.06704,13.4496,hybrid
-1001000041,Dr. Barbara Williams,Pain Management,New York,NY,Abstral,REP-H228,Harvey Sinclair,TERR-H08,2,5,10,8,8,11,13.7868,13243.86,7.1406,0.064454,14.7712,hybrid
-1001000042,Dr. Jessica Lee,Internal Medicine,Austin,TX,Actiq,REP-H278,Hilda Mercer,TERR-H10,2,6,4,3,2,25,17.1043,23784.99,1.5832,0.014847,17.3751,hybrid
-1001000043,Dr. Kimberly Green,Neurology,New York,NY,Actiq,REP-H259,Holden Conway,TERR-H03,2,5,5,3,3,20,12.39,17714.98,3.5652,0.032457,12.8317,hybrid
-1001000044,Dr. Kathleen Walker,Pain Management,Jacksonville,FL,Fentora,REP-H138,Hilda Finch,TERR-H02,2,5,11,9,4,13,14.3363,20412.61,10.1604,0.090735,15.7929,hybrid
-1001000045,Dr. Kathleen Rivera,Pain Management,Denver,CO,Lazanda,REP-H288,Harvey Gallagher,TERR-H08,2,5,14,12,12,14,13.7638,19180.78,13.5294,0.118787,15.6259,hybrid
-1001000046,Dr. Stephanie Davis,Pain Management,Chicago,IL,Lazanda,REP-H225,Henry Sinclair,TERR-H05,1,9,13,8,5,29,25.034,55768.94,12.6148,0.114491,28.192,hybrid
-1001000047,Dr. Carol White,Pain Management,Las Vegas,NV,Subsys,REP-H159,Holden Sterling,TERR-H11,3,3,6,5,1,22,8.1192,16203.0,6.9649,0.060164,8.6847,hybrid
-1001000048,Dr. Charles Jackson,Pain Management,Chicago,IL,Abstral,REP-H388,Harvey Carrington,TERR-H12,2,5,6,6,2,16,12.2692,22032.08,6.8866,0.061731,13.1141,hybrid
-1001000049,Dr. Donna Lewis,Internal Medicine,Phoenix,AZ,Abstral,REP-H185,Henry Monroe,TERR-H01,2,7,7,6,4,25,19.3208,37636.48,5.0069,0.046507,20.2881,hybrid
-1001000050,Dr. Sharon Green,Neurology,Seattle,WA,Subsys,REP-H322,Harold Thornton,TERR-H06,2,4,5,3,2,19,10.0762,10129.7,4.0771,0.036419,10.487,hybrid
-1001000051,Dr. Emily Brown,Neurology,Portland,OR,Abstral,REP-H157,Hunter Sterling,TERR-H09,2,5,4,3,0,14,12.4755,22700.42,1.1074,0.0102,12.6137,hybrid
-1001000052,Dr. James White,Internal Medicine,Portland,OR,Abstral,REP-H353,Hector Blackwood,TERR-H01,2,5,2,2,3,11,12.3913,31160.43,2.2965,0.021027,12.6759,hybrid
-1001000053,Dr. Mary Hall,Pain Management,Denver,CO,Lazanda,REP-H107,Heather Vance,TERR-H07,3,3,2,1,1,15,6.5801,8098.2,2.6809,0.023006,6.7565,hybrid
-1001000054,Dr. Barbara Carter,Pain Management,New York,NY,Actiq,REP-H172,Hilary Hayes,TERR-H12,2,5,8,6,4,19,14.2818,23501.23,4.8061,0.043937,14.9682,hybrid
-1001000055,Dr. Sharon Perez,Oncology,Denver,CO,Actiq,REP-H295,Homer Gallagher,TERR-H03,3,3,2,1,2,14,7.3592,14191.44,6.2414,0.053491,7.8185,hybrid
-1001000056,Dr. Sharon Lee,Pain Management,Las Vegas,NV,Abstral,REP-H277,Hunter Mercer,TERR-H09,2,7,10,7,0,14,20.5515,23870.76,7.3464,0.067711,22.0613,hybrid
-1001000057,Dr. Michelle Miller,Palliative Care,Los Angeles,CA,Subsys,REP-H276,Hayden Mercer,TERR-H08,2,5,8,5,4,13,14.3787,16099.47,8.4904,0.07639,15.5995,hybrid
-1001000058,Dr. Carol King,Oncology,Atlanta,GA,Subsys,REP-H125,Henry Finch,TERR-H01,2,5,4,3,2,28,13.536,30413.72,3.2592,0.029898,13.9771,hybrid
-1001000059,Dr. Susan Scott,Oncology,Denver,CO,Abstral,REP-H269,Harrison Mercer,TERR-H01,1,9,12,10,8,19,26.1423,27330.56,12.0321,0.109651,29.2877,hybrid
-1001000060,Dr. David Wilson,Neurology,Phoenix,AZ,Actiq,REP-H162,Harold Hayes,TERR-H02,2,4,5,2,0,16,11.9207,18044.4,1.9684,0.017998,12.1554,hybrid
-1001000061,Dr. Margaret Walker,Neurology,Detroit,MI,Subsys,REP-H186,Holly Monroe,TERR-H02,1,10,7,5,2,30,29.778,62156.73,6.3134,0.05929,31.6581,hybrid
-1001000062,Dr. Melissa Brown,Oncology,New York,NY,Subsys,REP-H359,Holden Blackwood,TERR-H07,2,7,13,12,0,19,18.2475,35494.86,4.6787,0.0434,19.1012,hybrid
-1001000063,Dr. Sharon Harris,Orthopedics,New York,NY,Fentora,REP-H170,Hope Hayes,TERR-H10,2,5,4,2,1,20,13.8639,24724.15,3.3321,0.030606,14.3259,hybrid
-1001000064,Dr. Kimberly Walker,Internal Medicine,Charlotte,NC,Subsys,REP-H131,Hugh Finch,TERR-H07,3,2,2,1,0,27,5.3426,5536.57,2.0215,0.016885,5.4506,hybrid
-1001000065,Dr. Joseph White,Emergency Medicine,Portland,OR,Abstral,REP-H250,Hope Conway,TERR-H06,1,8,4,0,1,27,23.9887,48507.91,4.0258,0.037919,24.9545,hybrid
-1001000066,Dr. Nancy Allen,Neurology,Denver,CO,Abstral,REP-H147,Heather Sterling,TERR-H11,1,10,13,10,6,21,36.8262,66393.65,7.3694,0.069289,39.5401,hybrid
-1001000067,Dr. Charles Lewis,Oncology,Chicago,IL,Subsys,REP-H255,Homer Conway,TERR-H11,2,7,15,10,2,15,18.9942,17087.6,7.4846,0.068689,20.4158,hybrid
-1001000068,Dr. Emily Martin,Pain Management,Chicago,IL,Actiq,REP-H149,Harrison Sterling,TERR-H01,3,3,5,4,2,19,8.3294,14948.18,7.9327,0.068428,8.9901,hybrid
-1001000069,Dr. Amanda Adams,Pain Management,New York,NY,Abstral,REP-H293,Hector Gallagher,TERR-H01,2,4,7,4,1,20,11.9987,24658.68,6.4701,0.058008,12.775,hybrid
-1001000070,Dr. Ashley Green,Palliative Care,Detroit,MI,Subsys,REP-H171,Hugh Hayes,TERR-H11,2,6,15,10,5,18,16.4939,26634.45,7.7798,0.070785,17.7771,hybrid
-1001000071,Dr. Mary Campbell,Internal Medicine,New York,NY,Fentora,REP-H138,Hilda Finch,TERR-H02,2,5,4,3,0,31,12.1661,10534.25,1.0487,0.009644,12.2937,hybrid
-1001000072,Dr. Amanda King,Internal Medicine,Phoenix,AZ,Subsys,REP-H176,Hayden Hayes,TERR-H04,2,5,2,1,0,26,13.8174,33643.35,1.3697,0.012692,14.0067,hybrid
-1001000073,Dr. Thomas Torres,Oncology,Austin,TX,Abstral,REP-H143,Howard Sterling,TERR-H07,1,8,8,6,5,9,22.0401,21293.77,8.0413,0.074108,23.8125,hybrid
-1001000074,Dr. Thomas Carter,Neurology,Phoenix,AZ,Abstral,REP-H274,Hazel Mercer,TERR-H06,1,8,5,3,3,16,21.4626,34952.16,5.0362,0.046998,22.5435,hybrid
-1001000075,Dr. Lisa Campbell,Pain Management,Atlanta,GA,Subsys,REP-H118,Hilda Vance,TERR-H06,3,2,2,1,1,19,5.0607,11005.87,3.5947,0.029574,5.2426,hybrid
-1001000076,Dr. Margaret Adams,Pain Management,Portland,OR,Subsys,REP-H176,Hayden Hayes,TERR-H04,2,5,11,8,8,23,12.0627,12938.33,7.379,0.06592,12.9528,hybrid
-1001000077,Dr. Rebecca Harris,Oncology,Phoenix,AZ,Abstral,REP-H301,Helen Kensington,TERR-H09,2,4,6,5,3,13,10.3939,14897.11,5.3421,0.047582,10.9492,hybrid
-1001000078,Dr. Sharon Lopez,Palliative Care,Las Vegas,NV,Abstral,REP-H304,Hannah Kensington,TERR-H12,2,5,6,5,4,8,14.2406,32856.69,6.5135,0.059081,15.1682,hybrid
-1001000079,Dr. Patricia Jones,Pain Management,New York,NY,Abstral,REP-H222,Harold Sinclair,TERR-H02,1,8,16,10,2,18,23.7216,49232.79,6.9115,0.064213,25.3611,hybrid
-1001000080,Dr. John Miller,Palliative Care,Phoenix,AZ,Actiq,REP-H328,Harvey Thornton,TERR-H12,1,10,14,12,9,12,30.2409,65204.19,9.8631,0.091187,33.2236,hybrid
-1001000081,Dr. Donna Martin,Pain Management,Austin,TX,Lazanda,REP-H227,Heather Sinclair,TERR-H07,1,8,14,13,7,15,21.0846,37045.75,11.8097,0.106834,23.5746,hybrid
-1001000082,Dr. Nancy King,Palliative Care,Philadelphia,PA,Actiq,REP-H171,Hugh Hayes,TERR-H11,2,6,15,12,0,12,15.0258,32755.49,6.6725,0.060683,16.0284,hybrid
-1001000083,Dr. Betty Nguyen,Orthopedics,Nashville,TN,Abstral,REP-H319,Holden Kensington,TERR-H03,2,5,7,5,4,18,14.5877,33982.49,2.2444,0.020787,14.9151,hybrid
-1001000084,Dr. Barbara Allen,Emergency Medicine,Detroit,MI,Fentora,REP-H189,Harrison Monroe,TERR-H05,2,4,5,4,0,15,9.4863,18591.82,2.2351,0.020018,9.6984,hybrid
-1001000085,Dr. Betty King,Anesthesiology,Houston,TX,Subsys,REP-H332,Hilary Thornton,TERR-H04,1,9,14,12,11,18,24.8435,28288.28,6.6315,0.0618,26.491,hybrid
-1001000086,Dr. Michael Ramirez,Neurology,Miami,FL,Abstral,REP-H338,Hilda Thornton,TERR-H10,2,5,8,7,8,23,12.913,15542.89,6.7834,0.061056,13.789,hybrid
-1001000087,Dr. Kimberly Young,Oncology,Los Angeles,CA,Subsys,REP-H243,Howard Conway,TERR-H11,2,6,9,5,2,16,15.9251,30460.26,6.322,0.057783,16.9319,hybrid
-1001000088,Dr. Nancy Jackson,Family Practice,Miami,FL,Actiq,REP-H292,Hilary Gallagher,TERR-H12,2,4,2,1,1,19,9.7145,10621.72,2.0134,0.01809,9.9101,hybrid
-1001000089,Dr. Sarah Miller,Oncology,Miami,FL,Fentora,REP-H202,Harold Bishop,TERR-H06,2,7,10,8,0,16,19.67,36446.09,6.1352,0.056743,20.8768,hybrid
-1001000090,Dr. Deborah Wilson,Pain Management,Charlotte,NC,Abstral,REP-H343,Howard Blackwood,TERR-H03,1,9,16,11,4,11,26.0563,57226.71,7.3784,0.068646,27.9788,hybrid
-1001000091,Dr. Michelle Perez,Oncology,Charlotte,NC,Subsys,REP-H364,Hannah Whitman,TERR-H12,2,4,7,7,4,33,10.7382,15910.48,7.7833,0.068781,11.574,hybrid
-1001000092,Dr. Laura Baker,Oncology,Philadelphia,PA,Abstral,REP-H109,Harrison Vance,TERR-H09,2,4,7,4,5,15,11.2541,11992.63,6.2548,0.055854,11.958,hybrid
-1001000093,Dr. Donna Carter,Palliative Care,Charlotte,NC,Fentora,REP-H317,Hunter Kensington,TERR-H01,2,5,14,12,4,31,14.4226,34914.88,8.934,0.08024,15.7111,hybrid
-1001000094,Dr. Lisa Anderson,Family Practice,New York,NY,Subsys,REP-H277,Hunter Mercer,TERR-H09,2,5,5,4,0,16,13.8648,34657.24,1.9039,0.017602,14.1288,hybrid
-1001000095,Dr. Linda Sanchez,Pain Management,Seattle,WA,Abstral,REP-H302,Harold Kensington,TERR-H10,3,3,6,4,0,19,6.109,11864.41,0.6023,0.005162,6.1458,hybrid
-1001000096,Dr. Betty Perez,Pain Management,Charlotte,NC,Fentora,REP-H309,Harrison Kensington,TERR-H05,2,6,11,10,3,22,15.1685,15097.77,9.4513,0.084954,16.6021,hybrid
-1001000097,Dr. Linda Jackson,Pain Management,Los Angeles,CA,Actiq,REP-H319,Holden Kensington,TERR-H03,3,3,5,3,2,20,6.5192,9732.27,5.2669,0.044653,6.8625,hybrid
-1001000098,Dr. Lisa Taylor,Palliative Care,Columbus,OH,Subsys,REP-H122,Harold Finch,TERR-H10,2,5,6,4,3,31,13.7704,12092.05,3.6022,0.033032,14.2664,hybrid
-1001000099,Dr. Michelle Clark,Palliative Care,Houston,TX,Abstral,REP-H250,Hope Conway,TERR-H06,1,9,16,14,4,11,25.8277,23839.94,8.573,0.079305,28.0419,hybrid
-1001000100,Dr. Melissa Wright,Family Practice,Denver,CO,Actiq,REP-H352,Hilary Blackwood,TERR-H12,2,5,5,4,1,14,14.1398,27349.41,0.6255,0.005825,14.2282,hybrid
-1001000101,Dr. Susan Scott,Internal Medicine,Phoenix,AZ,Fentora,REP-H109,Harrison Vance,TERR-H09,2,6,8,6,4,13,17.7412,15919.05,5.4274,0.050102,18.7041,hybrid
-1001000102,Dr. Richard Nguyen,Pain Management,Boston,MA,Subsys,REP-H146,Holly Sterling,TERR-H10,2,6,7,4,2,18,15.4858,36266.57,4.0002,0.036887,16.1053,hybrid
-1001000103,Dr. Elizabeth Wilson,Orthopedics,New York,NY,Subsys,REP-H111,Hugh Vance,TERR-H11,2,7,4,2,3,16,20.0831,32205.6,5.8161,0.053922,21.2512,hybrid
-1001000104,Dr. Patricia Nelson,Anesthesiology,Las Vegas,NV,Subsys,REP-H367,Heather Whitman,TERR-H03,3,3,2,1,0,7,6.501,8576.91,2.7574,0.023617,6.6802,hybrid
-1001000105,Dr. Laura Torres,Pain Management,Seattle,WA,Lazanda,REP-H368,Harvey Whitman,TERR-H04,2,5,8,6,1,29,13.7894,31633.26,7.7482,0.069752,14.8578,hybrid
-1001000106,Dr. Thomas Wilson,Pain Management,Las Vegas,NV,Subsys,REP-H213,Hector Bishop,TERR-H05,2,4,6,5,6,21,10.2683,19417.39,9.0412,0.07917,11.1967,hybrid
-1001000107,Dr. Sharon Sanchez,Pain Management,Las Vegas,NV,Abstral,REP-H132,Hilary Finch,TERR-H08,1,9,16,11,12,18,24.5782,23847.76,8.1477,0.075378,26.5808,hybrid
-1001000108,Dr. Carol Hernandez,Family Practice,Nashville,TN,Lazanda,REP-H375,Homer Whitman,TERR-H11,2,5,8,7,2,16,13.6947,35089.56,6.9507,0.062766,14.6466,hybrid
-1001000109,Dr. Kimberly Lopez,Oncology,Seattle,WA,Abstral,REP-H257,Hunter Conway,TERR-H01,3,2,5,4,2,14,4.5178,11614.4,6.8434,0.054518,4.827,hybrid
-1001000110,Dr. Elizabeth Miller,Anesthesiology,Detroit,MI,Lazanda,REP-H151,Hugh Sterling,TERR-H03,2,5,6,5,0,25,14.1455,30479.53,2.5165,0.023231,14.5014,hybrid
-1001000111,Dr. William Ramirez,Pain Management,Portland,OR,Fentora,REP-H178,Hilda Hayes,TERR-H06,2,7,11,10,5,18,18.1442,24450.7,9.3899,0.085255,19.8479,hybrid
-1001000112,Dr. Charles Wilson,Orthopedics,Jacksonville,FL,Abstral,REP-H127,Heather Finch,TERR-H03,2,7,12,10,4,13,18.6506,24405.65,7.2425,0.06648,20.0014,hybrid
-1001000113,Dr. Patricia Brown,Pain Management,Charlotte,NC,Abstral,REP-H177,Hunter Hayes,TERR-H05,2,6,10,6,7,23,17.7592,17187.46,6.4531,0.059298,18.9052,hybrid
-1001000114,Dr. Susan Lewis,Anesthesiology,Las Vegas,NV,Abstral,REP-H139,Holden Finch,TERR-H03,1,9,15,13,11,11,24.7114,47175.94,8.7354,0.080618,26.8701,hybrid
-1001000115,Dr. Laura Wright,Internal Medicine,Seattle,WA,Subsys,REP-H133,Hector Finch,TERR-H09,2,5,4,3,0,18,12.2184,12746.17,3.9269,0.035655,12.6982,hybrid
-1001000116,Dr. Michelle Nelson,Oncology,Jacksonville,FL,Actiq,REP-H202,Harold Bishop,TERR-H06,2,7,11,8,0,28,19.8743,49172.48,6.2775,0.05805,21.1219,hybrid
-1001000117,Dr. Robert Perez,Family Practice,Philadelphia,PA,Abstral,REP-H206,Holly Bishop,TERR-H10,2,6,6,3,0,10,16.7081,33225.54,1.0485,0.009845,16.8833,hybrid
-1001000118,Dr. Joseph Torres,Anesthesiology,New York,NY,Subsys,REP-H237,Hunter Sinclair,TERR-H05,2,6,11,6,7,15,16.2036,26434.13,3.5927,0.033278,16.7857,hybrid
-1001000119,Dr. James Lopez,Anesthesiology,Detroit,MI,Abstral,REP-H329,Harrison Thornton,TERR-H01,1,8,15,13,9,22,21.1969,43061.69,9.297,0.08506,23.1676,hybrid
-1001000120,Dr. Karen Allen,Pain Management,Los Angeles,CA,Actiq,REP-H271,Hugh Mercer,TERR-H03,2,4,4,3,1,14,11.7098,27210.77,5.349,0.048106,12.3362,hybrid
-1001000121,Dr. Stephanie Torres,Family Practice,Philadelphia,PA,Actiq,REP-H342,Harold Blackwood,TERR-H02,2,6,8,6,5,15,17.61,23235.93,5.876,0.054111,18.6447,hybrid
-1001000122,Dr. Richard Carter,Internal Medicine,Chicago,IL,Subsys,REP-H280,Hattie Mercer,TERR-H12,2,7,6,5,4,32,19.1594,36803.87,3.8164,0.035629,19.8906,hybrid
-1001000123,Dr. Laura Clark,Pain Management,Phoenix,AZ,Abstral,REP-H296,Hayden Gallagher,TERR-H04,3,3,2,1,0,15,6.8827,5925.14,3.3373,0.028723,7.1124,hybrid
-1001000124,Dr. Stephanie Hill,Oncology,Portland,OR,Subsys,REP-H264,Hannah Mercer,TERR-H08,1,10,14,11,8,17,49.9271,57207.95,7.876,0.074378,53.8594,hybrid
-1001000125,Dr. Emily Harris,Palliative Care,Miami,FL,Subsys,REP-H113,Hector Vance,TERR-H01,1,9,11,6,6,15,24.1494,57526.31,10.042,0.092057,26.5744,hybrid
-1001000126,Dr. Laura Gonzalez,Pain Management,Boston,MA,Fentora,REP-H197,Hunter Monroe,TERR-H01,2,4,3,3,0,18,9.9738,13657.05,2.6815,0.024079,10.2412,hybrid
-1001000127,Dr. Mary Rodriguez,Palliative Care,Denver,CO,Subsys,REP-H269,Harrison Mercer,TERR-H01,3,3,5,4,5,30,8.9058,14267.74,3.5608,0.031511,9.2229,hybrid
-1001000128,Dr. Karen Baker,Pain Management,Philadelphia,PA,Actiq,REP-H261,Helen Mercer,TERR-H05,1,9,16,13,12,43,24.9212,25556.1,12.2585,0.111412,27.9762,hybrid
-1001000129,Dr. Margaret Jones,Pain Management,Philadelphia,PA,Abstral,REP-H370,Hope Whitman,TERR-H06,2,4,8,5,3,18,10.5101,19172.7,5.4776,0.048807,11.0858,hybrid
-1001000130,Dr. Nancy Wright,Internal Medicine,Austin,TX,Subsys,REP-H104,Hannah Vance,TERR-H04,2,4,7,6,0,18,9.1706,17774.71,2.5484,0.022718,9.4044,hybrid
-1001000131,Dr. Sarah Walker,Pain Management,Detroit,MI,Abstral,REP-H216,Hayden Bishop,TERR-H08,3,2,4,4,3,27,4.6632,8360.01,5.7237,0.046053,4.9301,hybrid
-1001000132,Dr. Stephanie Taylor,Anesthesiology,Las Vegas,NV,Fentora,REP-H371,Hugh Whitman,TERR-H07,3,3,3,2,1,23,6.9193,8647.22,5.497,0.046911,7.2997,hybrid
-1001000133,Dr. Sharon Torres,Palliative Care,Los Angeles,CA,Subsys,REP-H130,Hope Finch,TERR-H06,3,3,3,2,1,13,6.9572,10499.39,3.9236,0.03373,7.2302,hybrid
-1001000134,Dr. Sandra Rodriguez,Emergency Medicine,Atlanta,GA,Fentora,REP-H181,Helen Monroe,TERR-H09,2,6,2,1,2,17,17.0859,19063.98,1.0514,0.009884,17.2655,hybrid
-1001000135,Dr. Thomas Young,Internal Medicine,Austin,TX,Abstral,REP-H215,Homer Bishop,TERR-H07,3,3,2,1,0,11,6.9361,6229.5,-1.7036,-0.015001,6.8179,hybrid
-1001000136,Dr. Karen Scott,Pain Management,Columbus,OH,Lazanda,REP-H354,Hazel Blackwood,TERR-H02,2,4,7,6,0,11,11.7549,24340.79,5.9371,0.053272,12.4528,hybrid
-1001000137,Dr. Joseph Rivera,Pain Management,Las Vegas,NV,Subsys,REP-H351,Hugh Blackwood,TERR-H11,2,5,3,2,3,17,14.7445,27550.6,4.0941,0.037624,15.3482,hybrid
-1001000138,Dr. Nancy King,Oncology,Charlotte,NC,Abstral,REP-H224,Hannah Sinclair,TERR-H04,2,6,6,4,0,26,15.7186,23139.87,4.2213,0.038921,16.3821,hybrid
-1001000139,Dr. Patricia Gonzalez,Anesthesiology,Miami,FL,Lazanda,REP-H101,Helen Vance,TERR-H01,2,5,9,6,0,17,14.4649,18077.6,3.139,0.028938,14.9189,hybrid
-1001000140,Dr. Michelle Davis,Family Practice,Philadelphia,PA,Actiq,REP-H358,Hilda Blackwood,TERR-H06,3,3,2,2,2,32,7.9025,20013.75,3.0735,0.026917,8.1454,hybrid
-1001000141,Dr. Donna Thomas,Family Practice,Boston,MA,Subsys,REP-H170,Hope Hayes,TERR-H10,2,5,5,3,1,7,14.9901,37965.33,3.3358,0.030793,15.4901,hybrid
-1001000142,Dr. John Campbell,Pain Management,Charlotte,NC,Subsys,REP-H185,Henry Monroe,TERR-H01,2,6,11,6,3,22,15.7123,24251.09,8.21,0.074354,17.0023,hybrid
-1001000143,Dr. David Walker,Family Practice,Baltimore,MD,Abstral,REP-H230,Hope Sinclair,TERR-H10,2,6,8,5,6,10,17.2044,22256.46,4.7828,0.044209,18.0273,hybrid
-1001000144,Dr. Melissa King,Internal Medicine,Boston,MA,Lazanda,REP-H388,Harvey Carrington,TERR-H12,2,5,11,7,8,11,14.6251,16140.15,7.0995,0.064337,15.6634,hybrid
-1001000145,Dr. Sandra Smith,Palliative Care,Seattle,WA,Fentora,REP-H315,Homer Kensington,TERR-H11,3,3,4,3,0,13,8.8232,21111.38,2.5038,0.02224,9.0441,hybrid
-1001000146,Dr. Kathleen Allen,Anesthesiology,Miami,FL,Actiq,REP-H116,Hayden Vance,TERR-H04,3,3,7,5,1,25,8.1477,8449.02,5.1035,0.044453,8.5636,hybrid
-1001000147,Dr. Jennifer Garcia,Palliative Care,Atlanta,GA,Actiq,REP-H253,Hector Conway,TERR-H09,1,8,13,8,8,17,21.5677,39869.33,9.0835,0.083247,23.5268,hybrid
-1001000148,Dr. Susan Anderson,Oncology,Denver,CO,Subsys,REP-H186,Holly Monroe,TERR-H02,2,4,4,3,4,17,9.6571,19192.16,7.352,0.064496,10.3671,hybrid
-1001000149,Dr. Elizabeth Wilson,Neurology,Denver,CO,Subsys,REP-H125,Henry Finch,TERR-H01,2,5,6,4,0,17,12.3985,11860.64,1.0909,0.010044,12.5338,hybrid
-1001000150,Dr. Joseph Young,Pain Management,Los Angeles,CA,Fentora,REP-H207,Heather Bishop,TERR-H11,1,8,15,9,2,20,23.9249,21381.43,11.3686,0.103571,26.6448,hybrid
-1001000151,Dr. Patricia Flores,Pain Management,Columbus,OH,Fentora,REP-H327,Heather Thornton,TERR-H11,1,9,13,10,10,10,26.7665,45668.95,11.8995,0.108594,29.9516,hybrid
-1001000152,Dr. Sarah Hill,Oncology,Las Vegas,NV,Abstral,REP-H178,Hilda Hayes,TERR-H06,2,6,10,9,8,22,15.7474,15080.31,8.394,0.075968,17.0692,hybrid
-1001000153,Dr. William Young,Anesthesiology,Nashville,TN,Abstral,REP-H291,Hugh Gallagher,TERR-H11,3,3,10,7,3,28,7.1498,15742.38,5.6694,0.04854,7.5552,hybrid
-1001000154,Dr. David Nelson,Family Practice,Las Vegas,NV,Lazanda,REP-H174,Hazel Hayes,TERR-H02,2,7,8,5,2,16,19.6973,39987.13,4.2902,0.040018,20.5424,hybrid
-1001000155,Dr. James Lopez,Orthopedics,Boston,MA,Abstral,REP-H233,Hector Sinclair,TERR-H01,3,3,2,1,1,25,6.9462,15521.57,-1.3444,-0.011821,6.8528,hybrid
-1001000156,Dr. Deborah Flores,Oncology,Seattle,WA,Subsys,REP-H189,Harrison Monroe,TERR-H05,2,5,12,12,10,8,13.7898,18912.8,11.6828,0.103394,15.4008,hybrid
-1001000157,Dr. William Hall,Anesthesiology,Houston,TX,Fentora,REP-H103,Howard Vance,TERR-H03,2,4,4,3,0,23,10.4394,21592.56,4.7438,0.042381,10.9346,hybrid
-1001000158,Dr. Jennifer Rodriguez,Internal Medicine,Boston,MA,Lazanda,REP-H110,Hope Vance,TERR-H10,2,7,7,1,0,18,20.2251,51318.62,1.7873,0.016887,20.5866,hybrid
-1001000159,Dr. Kimberly Ramirez,Anesthesiology,Las Vegas,NV,Subsys,REP-H355,Homer Blackwood,TERR-H03,3,2,2,1,0,16,5.3068,6005.27,0.4579,0.003846,5.3311,hybrid
-1001000160,Dr. Linda Rodriguez,Internal Medicine,Houston,TX,Subsys,REP-H124,Hannah Finch,TERR-H12,2,4,7,3,2,10,10.8788,23478.88,3.6863,0.033203,11.2798,hybrid
-1001000161,Dr. Donna Green,Pain Management,Los Angeles,CA,Actiq,REP-H266,Holly Mercer,TERR-H10,3,3,2,2,2,17,8.6346,8952.89,3.3349,0.02945,8.9225,hybrid
-1001000162,Dr. Jessica Lewis,Oncology,Detroit,MI,Fentora,REP-H115,Homer Vance,TERR-H03,2,5,7,5,1,17,14.5562,27572.1,5.4839,0.05004,15.3544,hybrid
-1001000163,Dr. Lisa Nguyen,Oncology,Jacksonville,FL,Subsys,REP-H190,Hope Monroe,TERR-H06,1,8,15,10,9,24,22.3814,25109.64,10.2807,0.093863,24.6823,hybrid
-1001000164,Dr. Jennifer Baker,Anesthesiology,Houston,TX,Fentora,REP-H289,Harrison Gallagher,TERR-H09,1,9,11,7,6,33,24.4853,47011.92,8.3303,0.076993,26.525,hybrid
-1001000165,Dr. Lisa Clark,Oncology,Portland,OR,Subsys,REP-H211,Hugh Bishop,TERR-H03,2,5,7,4,4,12,12.0386,21016.92,7.5738,0.067592,12.9504,hybrid
-1001000166,Dr. Kathleen Lewis,Oncology,Las Vegas,NV,Subsys,REP-H282,Harold Gallagher,TERR-H02,2,5,9,7,1,16,13.3294,30751.11,6.4977,0.058686,14.1955,hybrid
-1001000167,Dr. Kimberly Robinson,Oncology,Los Angeles,CA,Subsys,REP-H121,Helen Finch,TERR-H09,1,10,15,12,7,16,31.5962,46691.7,7.2434,0.067857,33.8848,hybrid
-1001000168,Dr. Ashley Lopez,Palliative Care,Chicago,IL,Subsys,REP-H182,Harold Monroe,TERR-H10,2,5,5,5,1,18,12.6554,20968.16,6.6281,0.059615,13.4943,hybrid
-1001000169,Dr. Betty Smith,Family Practice,Denver,CO,Abstral,REP-H315,Homer Kensington,TERR-H11,2,7,2,2,0,20,18.6408,24966.15,3.1346,0.029316,19.2251,hybrid
-1001000170,Dr. David Perez,Oncology,Boston,MA,Subsys,REP-H132,Hilary Finch,TERR-H08,3,1,2,2,2,8,2.7693,3925.37,3.5559,0.025789,2.8677,hybrid
-1001000171,Dr. Susan Nelson,Pain Management,Phoenix,AZ,Subsys,REP-H126,Holly Finch,TERR-H02,2,4,8,4,0,22,10.6803,19725.68,4.2811,0.038399,11.1375,hybrid
-1001000172,Dr. Mary Flores,Family Practice,Miami,FL,Abstral,REP-H199,Holden Monroe,TERR-H03,3,3,3,2,3,15,8.9967,20739.19,5.1025,0.044898,9.4557,hybrid
-1001000173,Dr. Thomas Hernandez,Neurology,Portland,OR,Abstral,REP-H106,Holly Vance,TERR-H06,3,3,4,3,3,16,7.5634,12205.82,4.8587,0.042018,7.9309,hybrid
-1001000174,Dr. Nancy Sanchez,Anesthesiology,Phoenix,AZ,Actiq,REP-H112,Hilary Vance,TERR-H12,2,4,4,2,0,14,10.5758,21746.64,0.116,0.001059,10.5881,hybrid
-1001000175,Dr. Elizabeth Harris,Pain Management,Seattle,WA,Subsys,REP-H326,Holly Thornton,TERR-H10,2,4,8,5,1,25,9.4914,11807.23,4.466,0.039609,9.9153,hybrid
-1001000176,Dr. Betty Lewis,Neurology,Miami,FL,Lazanda,REP-H228,Harvey Sinclair,TERR-H08,2,4,3,2,2,23,9.6441,17925.37,5.8003,0.05122,10.2035,hybrid
-1001000177,Dr. David Torres,Pain Management,Boston,MA,Subsys,REP-H190,Hope Monroe,TERR-H06,2,7,13,10,5,8,18.9271,43655.95,11.4762,0.103461,21.0992,hybrid
-1001000178,Dr. Ashley Garcia,Internal Medicine,Chicago,IL,Fentora,REP-H316,Hayden Kensington,TERR-H12,1,8,6,5,6,20,21.92,23548.46,6.6625,0.061771,23.3804,hybrid
-1001000179,Dr. Emily Williams,Family Practice,Austin,TX,Subsys,REP-H185,Henry Monroe,TERR-H01,2,6,2,1,2,10,16.2696,36420.53,2.3293,0.021707,16.6486,hybrid
-1001000180,Dr. Robert Thompson,Pain Management,Las Vegas,NV,Abstral,REP-H115,Homer Vance,TERR-H03,2,4,7,6,3,13,10.9604,17733.16,9.0332,0.079531,11.9505,hybrid
-1001000181,Dr. Michael Nelson,Pain Management,Seattle,WA,Lazanda,REP-H299,Holden Gallagher,TERR-H07,2,5,4,3,3,40,12.5005,24197.6,4.0742,0.03703,13.0098,hybrid
-1001000182,Dr. Jessica Mitchell,Orthopedics,Detroit,MI,Subsys,REP-H128,Harvey Finch,TERR-H04,2,5,3,2,0,24,14.8236,18784.11,0.8726,0.008141,14.953,hybrid
-1001000183,Dr. Nancy Lopez,Palliative Care,Austin,TX,Lazanda,REP-H275,Homer Mercer,TERR-H07,3,3,5,4,2,19,7.9662,14261.77,6.9161,0.059633,8.5171,hybrid
-1001000184,Dr. Dorothy Johnson,Pain Management,Detroit,MI,Abstral,REP-H259,Holden Conway,TERR-H03,2,5,8,6,3,23,14.7593,18144.53,7.6456,0.069157,15.8877,hybrid
-1001000185,Dr. Jennifer Carter,Neurology,Houston,TX,Actiq,REP-H172,Hilary Hayes,TERR-H12,1,10,14,11,12,21,27.2902,55588.83,6.9386,0.064788,29.1837,hybrid
-1001000186,Dr. Margaret Martinez,Family Practice,Jacksonville,FL,Subsys,REP-H273,Hector Mercer,TERR-H05,2,7,7,3,4,21,19.6221,22509.92,1.1669,0.011042,19.851,hybrid
-1001000187,Dr. Ashley Moore,Palliative Care,Jacksonville,FL,Abstral,REP-H156,Hayden Sterling,TERR-H08,2,4,5,3,3,23,9.8039,19196.26,6.1108,0.053969,10.403,hybrid
-1001000188,Dr. Lisa Hall,Pain Management,Baltimore,MD,Abstral,REP-H311,Hugh Kensington,TERR-H07,1,8,8,4,1,14,21.1566,35306.62,4.218,0.039487,22.049,hybrid
-1001000189,Dr. Nancy Torres,Anesthesiology,Miami,FL,Subsys,REP-H230,Hope Sinclair,TERR-H10,2,4,2,1,0,15,10.5587,11560.85,2.5263,0.022815,10.8255,hybrid
-1001000190,Dr. Patricia Allen,Anesthesiology,Los Angeles,CA,Actiq,REP-H173,Hector Hayes,TERR-H01,1,8,13,8,1,20,21.5048,44153.88,5.9541,0.055336,22.7852,hybrid
-1001000191,Dr. Karen Garcia,Family Practice,Miami,FL,Subsys,REP-H308,Harvey Kensington,TERR-H04,2,4,8,6,2,15,11.1099,27198.63,1.5777,0.01437,11.2852,hybrid
-1001000192,Dr. Dorothy Nguyen,Neurology,Nashville,TN,Subsys,REP-H200,Hattie Monroe,TERR-H04,2,4,5,4,5,17,11.9846,12534.42,4.5508,0.041145,12.53,hybrid
-1001000193,Dr. Deborah Sanchez,Pain Management,Jacksonville,FL,Abstral,REP-H252,Hilary Conway,TERR-H08,2,4,6,4,5,22,10.0057,20677.44,5.3857,0.047803,10.5446,hybrid
-1001000194,Dr. Jessica Martinez,Oncology,Philadelphia,PA,Fentora,REP-H104,Hannah Vance,TERR-H04,2,5,14,10,6,14,12.0471,21480.6,7.3543,0.0657,12.9331,hybrid
-1001000195,Dr. Susan Wilson,Orthopedics,Charlotte,NC,Abstral,REP-H246,Holly Conway,TERR-H02,2,4,6,5,1,26,11.8829,16324.2,3.6383,0.033008,12.3152,hybrid
-1001000196,Dr. John Harris,Oncology,Boston,MA,Abstral,REP-H330,Hope Thornton,TERR-H02,3,2,4,3,1,24,4.5215,8942.67,5.6255,0.045037,4.7758,hybrid
-1001000197,Dr. Patricia Baker,Pain Management,Denver,CO,Subsys,REP-H313,Hector Kensington,TERR-H09,1,8,6,5,6,19,22.2043,44493.5,4.9751,0.046508,23.309,hybrid
-1001000198,Dr. Sharon Nelson,Oncology,Atlanta,GA,Actiq,REP-H199,Holden Monroe,TERR-H03,2,5,4,2,3,13,12.4412,27572.19,5.0301,0.045507,13.067,hybrid
-1001000199,Dr. Sandra Hernandez,Internal Medicine,Detroit,MI,Subsys,REP-H190,Hope Monroe,TERR-H06,2,7,3,2,0,23,19.0607,34898.73,1.2693,0.011988,19.3026,hybrid
-1001000200,Dr. Lisa Lewis,Oncology,Las Vegas,NV,Subsys,REP-H347,Heather Blackwood,TERR-H07,3,2,4,2,0,15,4.5435,9141.18,1.1857,0.009671,4.5973,hybrid
-1001000201,Dr. David Thomas,Palliative Care,Miami,FL,Abstral,REP-H377,Hunter Whitman,TERR-H01,2,7,9,6,7,18,19.3138,44030.34,8.3738,0.076606,20.9311,hybrid
-1001000202,Dr. Sharon Hill,Palliative Care,Columbus,OH,Subsys,REP-H307,Heather Kensington,TERR-H03,2,6,7,4,3,27,15.1616,36119.43,4.6623,0.042808,15.8684,hybrid
-1001000203,Dr. Jessica Clark,Internal Medicine,Las Vegas,NV,Actiq,REP-H166,Holly Hayes,TERR-H06,1,8,9,3,1,23,22.5881,32802.6,2.2956,0.021745,23.1067,hybrid
-1001000204,Dr. Patricia Clark,Neurology,Portland,OR,Actiq,REP-H288,Harvey Gallagher,TERR-H08,2,5,14,10,0,10,14.8546,34718.66,6.7271,0.061122,15.8539,hybrid
-1001000205,Dr. Jessica Nelson,Palliative Care,Atlanta,GA,Actiq,REP-H287,Heather Gallagher,TERR-H07,2,7,15,7,5,21,19.1664,31127.89,7.8312,0.071789,20.6673,hybrid
-1001000206,Dr. James Mitchell,Pain Management,Miami,FL,Abstral,REP-H228,Harvey Sinclair,TERR-H08,2,7,13,11,9,28,18.2125,17346.17,7.8448,0.071729,19.6413,hybrid
-1001000207,Dr. Sarah Allen,Family Practice,Boston,MA,Actiq,REP-H239,Holden Sinclair,TERR-H07,3,3,3,2,2,15,7.13,14291.98,4.0523,0.034922,7.4189,hybrid
-1001000208,Dr. Donna Hernandez,Neurology,Los Angeles,CA,Actiq,REP-H245,Henry Conway,TERR-H01,3,2,2,1,0,12,5.907,12228.65,-1.6556,-0.014261,5.8092,hybrid
-1001000209,Dr. Stephanie Jones,Pain Management,Phoenix,AZ,Actiq,REP-H148,Harvey Sterling,TERR-H12,2,4,11,8,4,21,10.9726,16121.81,9.6102,0.084411,12.0271,hybrid
-1001000210,Dr. Stephanie King,Anesthesiology,Phoenix,AZ,Abstral,REP-H160,Hattie Sterling,TERR-H12,2,7,6,4,3,15,18.3592,31106.7,8.9568,0.081526,20.0036,hybrid
-1001000211,Dr. Jessica Taylor,Orthopedics,Phoenix,AZ,Abstral,REP-H299,Holden Gallagher,TERR-H07,3,3,5,3,1,16,6.5183,16468.85,2.4314,0.020861,6.6768,hybrid
-1001000212,Dr. Amanda Gonzalez,Anesthesiology,Los Angeles,CA,Subsys,REP-H283,Howard Gallagher,TERR-H03,2,6,10,9,7,16,17.3384,35573.4,7.9493,0.072468,18.7167,hybrid
-1001000213,Dr. Melissa Anderson,Anesthesiology,Detroit,MI,Fentora,REP-H342,Harold Blackwood,TERR-H02,2,7,7,6,5,21,19.9545,27606.88,6.89,0.063549,21.3293,hybrid
-1001000214,Dr. Elizabeth Nguyen,Palliative Care,Miami,FL,Actiq,REP-H366,Holly Whitman,TERR-H02,2,5,13,7,7,17,12.8382,21597.72,8.5215,0.076088,13.9322,hybrid
-1001000215,Dr. Sarah Jones,Family Practice,Baltimore,MD,Fentora,REP-H156,Hayden Sterling,TERR-H08,2,5,6,5,1,21,14.7606,17963.78,3.0112,0.027811,15.205,hybrid
-1001000216,Dr. Carol Martin,Neurology,Detroit,MI,Subsys,REP-H302,Harold Kensington,TERR-H10,2,6,9,6,0,13,16.4132,38047.97,2.8955,0.026927,16.8885,hybrid
-1001000217,Dr. Linda Hill,Palliative Care,New York,NY,Fentora,REP-H219,Holden Bishop,TERR-H11,1,9,14,11,11,14,25.1113,53251.1,10.5608,0.096731,27.7632,hybrid
-1001000218,Dr. Michelle Campbell,Pain Management,Boston,MA,Fentora,REP-H220,Hattie Bishop,TERR-H12,2,6,8,6,0,17,16.1404,38987.4,2.2088,0.020586,16.4969,hybrid
-1001000219,Dr. Michael Lopez,Pain Management,Jacksonville,FL,Fentora,REP-H378,Hilda Whitman,TERR-H02,2,4,8,6,2,5,10.8529,27975.38,1.935,0.017562,11.0629,hybrid
-1001000220,Dr. Melissa Lee,Neurology,Las Vegas,NV,Subsys,REP-H236,Hayden Sinclair,TERR-H04,2,5,5,3,0,22,13.7892,20245.86,3.2772,0.030098,14.2411,hybrid
-1001000221,Dr. Richard Green,Anesthesiology,Seattle,WA,Abstral,REP-H144,Hannah Sterling,TERR-H08,2,7,16,12,4,21,19.5492,39327.53,4.5332,0.042222,20.4354,hybrid
-1001000222,Dr. Carol Green,Internal Medicine,Atlanta,GA,Abstral,REP-H349,Harrison Blackwood,TERR-H09,2,4,10,8,9,22,9.2309,10845.14,7.9236,0.069052,9.9624,hybrid
-1001000223,Dr. David Lee,Anesthesiology,Denver,CO,Abstral,REP-H360,Hattie Blackwood,TERR-H08,2,4,6,3,0,11,10.86,20952.7,3.1376,0.028326,11.2008,hybrid
-1001000224,Dr. Barbara Nelson,Internal Medicine,Baltimore,MD,Actiq,REP-H137,Hunter Finch,TERR-H01,2,4,6,5,5,15,10.8487,22747.09,5.0091,0.044843,11.3921,hybrid
-1001000225,Dr. Richard Nelson,Anesthesiology,Baltimore,MD,Subsys,REP-H370,Hope Whitman,TERR-H06,1,8,16,11,1,14,22.2671,25127.24,6.2974,0.058521,23.6693,hybrid
-1001000226,Dr. Sarah Thompson,Neurology,Los Angeles,CA,Subsys,REP-H154,Hazel Sterling,TERR-H06,2,4,4,2,0,23,10.9719,10827.31,2.0268,0.018405,11.1942,hybrid
-1001000227,Dr. Barbara Johnson,Oncology,Philadelphia,PA,Fentora,REP-H382,Harold Carrington,TERR-H06,2,4,5,2,2,16,10.8876,15269.1,5.1302,0.045916,11.4461,hybrid
-1001000228,Dr. Lisa Mitchell,Neurology,Charlotte,NC,Subsys,REP-H207,Heather Bishop,TERR-H11,2,6,9,3,2,16,15.625,20252.37,6.0987,0.055736,16.5779,hybrid
-1001000229,Dr. Thomas Hall,Pain Management,Columbus,OH,Subsys,REP-H225,Henry Sinclair,TERR-H05,2,4,2,2,2,5,10.6848,26763.82,3.224,0.029055,11.0293,hybrid
-1001000230,Dr. William Jackson,Pain Management,New York,NY,Actiq,REP-H285,Henry Gallagher,TERR-H05,2,7,16,10,4,26,18.3363,29117.24,8.6696,0.079007,19.926,hybrid
-1001000231,Dr. Elizabeth Hall,Oncology,Denver,CO,Actiq,REP-H312,Hilary Kensington,TERR-H08,3,2,6,4,2,12,5.3066,9486.73,3.9794,0.032936,5.5178,hybrid
-1001000232,Dr. Sarah Campbell,Orthopedics,Atlanta,GA,Fentora,REP-H231,Hugh Sinclair,TERR-H11,3,2,2,1,1,20,5.8048,12466.2,2.4469,0.020658,5.9469,hybrid
-1001000233,Dr. Deborah Perez,Pain Management,Denver,CO,Subsys,REP-H363,Howard Whitman,TERR-H11,2,4,7,5,1,19,10.4402,11400.22,8.5283,0.074949,11.3306,hybrid
-1001000234,Dr. Linda Ramirez,Anesthesiology,Houston,TX,Abstral,REP-H296,Hayden Gallagher,TERR-H04,2,5,5,2,1,19,14.9997,27676.07,3.1423,0.029033,15.471,hybrid
-1001000235,Dr. Richard Miller,Oncology,Denver,CO,Actiq,REP-H303,Howard Kensington,TERR-H11,1,9,16,7,1,27,25.2562,28826.62,4.846,0.04556,26.4802,hybrid
-1001000236,Dr. Stephanie Rivera,Family Practice,Seattle,WA,Actiq,REP-H305,Henry Kensington,TERR-H01,2,6,4,3,2,20,16.3079,36335.6,4.5242,0.041744,17.0457,hybrid
-1001000237,Dr. Jessica Lewis,Oncology,Philadelphia,PA,Subsys,REP-H386,Holly Carrington,TERR-H10,2,5,12,8,8,13,12.1369,20745.54,7.6645,0.068416,13.0671,hybrid
-1001000238,Dr. Barbara Brown,Pain Management,Atlanta,GA,Lazanda,REP-H101,Helen Vance,TERR-H01,2,6,7,5,3,17,15.0755,26585.46,6.7631,0.061494,16.0951,hybrid
-1001000239,Dr. Kathleen Campbell,Oncology,Miami,FL,Subsys,REP-H334,Hazel Thornton,TERR-H06,1,8,14,12,7,14,21.8462,19962.95,7.7602,0.071581,23.5416,hybrid
-1001000240,Dr. Robert White,Family Practice,Portland,OR,Abstral,REP-H196,Hayden Monroe,TERR-H12,2,5,5,4,1,11,13.4843,18615.92,3.3679,0.030872,13.9385,hybrid
-1001000241,Dr. Jessica Lopez,Oncology,Miami,FL,Abstral,REP-H197,Hunter Monroe,TERR-H01,2,5,9,5,6,22,14.628,12538.51,6.1002,0.055528,15.5204,hybrid
-1001000242,Dr. Carol Flores,Neurology,Chicago,IL,Subsys,REP-H112,Hilary Vance,TERR-H12,2,6,5,3,4,36,17.9107,27857.49,6.0158,0.055413,18.9881,hybrid
-1001000243,Dr. Robert Thompson,Family Practice,New York,NY,Fentora,REP-H238,Hilda Sinclair,TERR-H06,3,3,6,4,4,19,7.2089,16766.59,2.472,0.021476,7.3871,hybrid
-1001000244,Dr. Rebecca Harris,Oncology,New York,NY,Abstral,REP-H339,Holden Thornton,TERR-H11,2,5,8,6,5,18,13.0784,23643.45,7.8568,0.070446,14.1059,hybrid
-1001000245,Dr. Michelle Brown,Oncology,Chicago,IL,Subsys,REP-H314,Hazel Kensington,TERR-H10,2,6,10,6,0,23,17.4791,20357.4,2.2029,0.020623,17.8641,hybrid
-1001000246,Dr. Betty Mitchell,Palliative Care,Columbus,OH,Abstral,REP-H232,Hilary Sinclair,TERR-H12,3,3,2,2,1,15,6.8453,15197.47,3.3701,0.028981,7.076,hybrid
-1001000247,Dr. Sandra Baker,Neurology,Austin,TX,Subsys,REP-H119,Holden Vance,TERR-H07,2,4,3,3,1,28,9.4797,10770.83,2.7907,0.024931,9.7442,hybrid
-1001000248,Dr. Joseph Martin,Pain Management,Chicago,IL,Subsys,REP-H111,Hugh Vance,TERR-H11,2,6,9,5,5,11,16.9716,38150.27,8.2427,0.074959,18.3705,hybrid
-1001000249,Dr. Margaret Rivera,Pain Management,Houston,TX,Actiq,REP-H227,Heather Sinclair,TERR-H07,2,7,12,10,4,34,19.856,25166.69,10.0123,0.091049,21.8441,hybrid
-1001000250,Dr. Elizabeth Moore,Anesthesiology,Atlanta,GA,Fentora,REP-H243,Howard Conway,TERR-H11,1,8,14,7,4,32,21.5402,23947.48,5.3521,0.049882,22.6931,hybrid
-1001000251,Dr. Linda Perez,Pain Management,Seattle,WA,Fentora,REP-H136,Hayden Finch,TERR-H12,2,4,5,2,1,16,11.2775,17692.24,3.1443,0.028473,11.6321,hybrid
-1001000252,Dr. Karen Young,Pain Management,Austin,TX,Actiq,REP-H226,Holly Sinclair,TERR-H06,2,6,9,6,0,11,16.8771,22232.03,2.9729,0.02768,17.3789,hybrid
-1001000253,Dr. Michelle Rivera,Anesthesiology,Las Vegas,NV,Lazanda,REP-H271,Hugh Mercer,TERR-H03,2,5,6,4,5,15,13.6751,27959.95,7.0062,0.063245,14.6333,hybrid
-1001000254,Dr. Linda Jackson,Palliative Care,Las Vegas,NV,Lazanda,REP-H152,Hilary Sterling,TERR-H04,3,3,3,2,1,14,8.4077,18086.57,3.8495,0.033824,8.7314,hybrid
-1001000255,Dr. Emily Young,Anesthesiology,Phoenix,AZ,Fentora,REP-H105,Henry Vance,TERR-H05,2,4,6,5,0,26,11.4248,11411.71,5.3874,0.04835,12.0403,hybrid
-1001000256,Dr. Donna Baker,Family Practice,Jacksonville,FL,Actiq,REP-H201,Helen Bishop,TERR-H05,2,5,7,3,3,19,14.0944,12192.9,2.4377,0.022507,14.438,hybrid
-1001000257,Dr. Joseph Anderson,Anesthesiology,Charlotte,NC,Subsys,REP-H278,Hilda Mercer,TERR-H10,2,4,6,5,2,21,10.0871,23558.52,6.0171,0.053298,10.6941,hybrid
-1001000258,Dr. James Mitchell,Family Practice,Baltimore,MD,Fentora,REP-H227,Heather Sinclair,TERR-H07,2,4,8,4,1,9,11.6441,11741.91,1.9331,0.017646,11.8692,hybrid
-1001000259,Dr. Thomas Torres,Neurology,Las Vegas,NV,Abstral,REP-H362,Harold Whitman,TERR-H10,2,5,6,4,2,22,12.5013,30738.1,4.4598,0.040465,13.0588,hybrid
-1001000260,Dr. Betty Martinez,Pain Management,Detroit,MI,Fentora,REP-H195,Homer Monroe,TERR-H11,2,6,9,5,0,19,17.7826,28740.78,5.9256,0.054584,18.8363,hybrid
-1001000261,Dr. Robert Mitchell,Orthopedics,Columbus,OH,Subsys,REP-H253,Hector Conway,TERR-H09,2,7,6,3,0,17,19.9259,33585.12,1.6037,0.015155,20.2454,hybrid
-1001000262,Dr. Elizabeth Moore,Family Practice,New York,NY,Abstral,REP-H322,Harold Thornton,TERR-H06,2,7,11,8,0,17,18.0789,36584.75,4.2064,0.039085,18.8393,hybrid
-1001000263,Dr. Sandra Lewis,Pain Management,Miami,FL,Subsys,REP-H193,Hector Monroe,TERR-H09,1,10,16,14,6,16,30.6145,38122.92,8.4657,0.078792,33.2063,hybrid
-1001000264,Dr. John Walker,Pain Management,Miami,FL,Actiq,REP-H237,Hunter Sinclair,TERR-H05,3,3,2,2,1,19,8.9673,11980.61,4.106,0.036275,9.3355,hybrid
-1001000265,Dr. Richard Young,Palliative Care,Las Vegas,NV,Actiq,REP-H101,Helen Vance,TERR-H01,2,6,16,13,8,25,15.2392,31889.21,9.2065,0.082865,16.6422,hybrid
-1001000266,Dr. Nancy Rivera,Palliative Care,Baltimore,MD,Abstral,REP-H251,Hugh Conway,TERR-H07,2,6,11,6,1,16,15.4845,17578.38,5.7885,0.052946,16.3808,hybrid
-1001000267,Dr. Elizabeth Sanchez,Anesthesiology,Philadelphia,PA,Lazanda,REP-H164,Hannah Hayes,TERR-H04,1,9,16,12,4,17,26.6675,41763.55,8.4386,0.078198,28.9179,hybrid
-1001000268,Dr. William Walker,Pain Management,Baltimore,MD,Lazanda,REP-H128,Harvey Finch,TERR-H04,1,9,14,11,11,41,25.3053,43903.64,14.7165,0.132405,29.0294,hybrid
-1001000269,Dr. Laura Brown,Internal Medicine,Columbus,OH,Subsys,REP-H154,Hazel Sterling,TERR-H06,1,8,12,8,3,14,23.721,33996.38,5.0751,0.047549,24.9249,hybrid
-1001000270,Dr. Lisa Rodriguez,Neurology,Las Vegas,NV,Fentora,REP-H129,Harrison Finch,TERR-H05,2,6,6,4,2,10,17.9953,29513.05,6.2817,0.057806,19.1257,hybrid
-1001000271,Dr. Melissa Williams,Pain Management,Las Vegas,NV,Lazanda,REP-H183,Howard Monroe,TERR-H11,2,6,9,5,6,16,15.3958,23267.18,9.2229,0.083057,16.8157,hybrid
-1001000272,Dr. Kathleen Jackson,Pain Management,Denver,CO,Fentora,REP-H162,Harold Hayes,TERR-H02,3,3,2,2,2,19,6.954,8800.39,5.2675,0.045023,7.3203,hybrid
-1001000273,Dr. Dorothy Harris,Anesthesiology,Jacksonville,FL,Actiq,REP-H151,Hugh Sterling,TERR-H03,3,2,6,5,3,22,4.8468,7632.28,6.0429,0.048879,5.1397,hybrid
-1001000274,Dr. Barbara Hill,Palliative Care,Las Vegas,NV,Abstral,REP-H384,Hannah Carrington,TERR-H08,2,4,5,3,1,23,11.6756,18084.17,3.6211,0.03281,12.0984,hybrid
-1001000275,Dr. Margaret Gonzalez,Palliative Care,Baltimore,MD,Subsys,REP-H368,Harvey Whitman,TERR-H04,2,5,7,5,2,23,14.8935,17657.69,4.7899,0.043907,15.6069,hybrid
-1001000276,Dr. Michelle Martinez,Pain Management,Las Vegas,NV,Subsys,REP-H106,Holly Vance,TERR-H06,2,6,9,5,4,22,15.2451,24163.9,7.7825,0.07049,16.4316,hybrid
-1001000277,Dr. Michael Hernandez,Neurology,Miami,FL,Fentora,REP-H110,Hope Vance,TERR-H10,2,4,4,3,0,22,11.7352,25429.04,-0.0856,-0.00079,11.7252,hybrid
-1001000278,Dr. Thomas Brown,Pain Management,New York,NY,Abstral,REP-H239,Holden Sinclair,TERR-H07,2,7,14,10,1,15,20.8749,27406.57,8.0157,0.073708,22.5482,hybrid
-1001000279,Dr. Elizabeth Jackson,Anesthesiology,Denver,CO,Actiq,REP-H143,Howard Sterling,TERR-H07,2,6,3,2,2,28,17.262,38081.02,4.0226,0.037318,17.9564,hybrid
-1001000280,Dr. Elizabeth Moore,Emergency Medicine,Chicago,IL,Abstral,REP-H117,Hunter Vance,TERR-H05,1,10,11,9,8,15,28.2464,51731.02,3.1479,0.02995,29.1356,hybrid
-1001000281,Dr. Rebecca Thomas,Neurology,Detroit,MI,Abstral,REP-H102,Harold Vance,TERR-H02,1,8,11,9,2,17,21.0688,29792.77,3.4871,0.032749,21.8035,hybrid
-1001000282,Dr. Donna Davis,Pain Management,Atlanta,GA,Fentora,REP-H337,Hunter Thornton,TERR-H09,3,3,3,1,1,17,8.8128,20351.5,2.0203,0.017982,8.9908,hybrid
-1001000283,Dr. Nancy Wilson,Oncology,Detroit,MI,Subsys,REP-H373,Hector Whitman,TERR-H09,2,5,11,9,3,14,13.5572,33690.15,8.4102,0.075408,14.6974,hybrid
-1001000284,Dr. Carol Hall,Pain Management,Las Vegas,NV,Subsys,REP-H284,Hannah Gallagher,TERR-H04,2,7,13,7,6,21,20.1185,20149.43,8.3333,0.076393,21.7951,hybrid
-1001000285,Dr. Joseph Flores,Oncology,Austin,TX,Lazanda,REP-H213,Hector Bishop,TERR-H05,2,5,11,8,7,12,12.6447,16209.56,9.9402,0.088118,13.9016,hybrid
-1001000286,Dr. Mary Smith,Anesthesiology,Denver,CO,Subsys,REP-H184,Hannah Monroe,TERR-H12,2,4,7,6,1,22,10.7999,22236.29,5.3097,0.047453,11.3733,hybrid
-1001000287,Dr. John Thompson,Pain Management,Las Vegas,NV,Fentora,REP-H160,Hattie Sterling,TERR-H12,2,4,3,2,1,31,9.8986,11353.42,3.2368,0.028974,10.219,hybrid
-1001000288,Dr. Carol Hernandez,Palliative Care,Detroit,MI,Fentora,REP-H276,Hayden Mercer,TERR-H08,2,5,8,4,5,14,13.3441,14016.34,7.5895,0.068223,14.3568,hybrid
-1001000289,Dr. Jessica Hall,Neurology,Philadelphia,PA,Subsys,REP-H264,Hannah Mercer,TERR-H08,2,4,3,2,1,18,9.0293,18200.41,3.4937,0.030969,9.3447,hybrid
-1001000290,Dr. Nancy King,Oncology,Baltimore,MD,Abstral,REP-H293,Hector Gallagher,TERR-H01,3,3,3,2,0,11,7.7277,6820.72,2.5093,0.021974,7.9216,hybrid
-1001000291,Dr. James Smith,Pain Management,Los Angeles,CA,Fentora,REP-H118,Hilda Vance,TERR-H06,3,3,3,3,1,26,6.609,6544.21,3.9297,0.033563,6.8687,hybrid
-1001000292,Dr. Elizabeth Allen,Oncology,Jacksonville,FL,Abstral,REP-H129,Harrison Finch,TERR-H05,2,5,8,7,2,15,12.9551,23152.93,8.1111,0.072599,14.0059,hybrid
-1001000293,Dr. Rebecca Hill,Pain Management,Jacksonville,FL,Lazanda,REP-H381,Helen Carrington,TERR-H05,2,4,2,2,1,21,9.6552,11429.57,4.302,0.038241,10.0706,hybrid
-1001000294,Dr. David Moore,Palliative Care,Nashville,TN,Subsys,REP-H279,Holden Mercer,TERR-H11,1,9,14,10,8,14,26.1101,51443.52,8.5892,0.07948,28.3527,hybrid
-1001000295,Dr. Mary Nguyen,Pain Management,Jacksonville,FL,Abstral,REP-H348,Harvey Blackwood,TERR-H08,2,4,10,5,1,18,9.5472,21242.78,5.2061,0.046048,10.0442,hybrid
-1001000296,Dr. Sharon Nguyen,Anesthesiology,Austin,TX,Subsys,REP-H356,Hayden Blackwood,TERR-H04,2,6,12,7,6,18,16.5757,22116.97,11.0643,0.099255,18.4097,hybrid
-1001000297,Dr. John Hernandez,Palliative Care,Boston,MA,Fentora,REP-H166,Holly Hayes,TERR-H06,3,3,2,2,3,12,6.7593,7268.84,5.6253,0.047841,7.1396,hybrid
-1001000298,Dr. Jennifer Hernandez,Anesthesiology,Los Angeles,CA,Actiq,REP-H209,Harrison Bishop,TERR-H01,2,7,11,7,7,20,20.0157,27953.83,8.3974,0.07694,21.6965,hybrid
-1001000299,Dr. John Young,Pain Management,Atlanta,GA,Fentora,REP-H160,Hattie Sterling,TERR-H12,3,3,3,2,2,13,7.6806,10548.39,4.686,0.040625,8.0406,hybrid
-1001000300,Dr. John Sanchez,Anesthesiology,Chicago,IL,Actiq,REP-H294,Hazel Gallagher,TERR-H02,3,2,3,1,2,17,5.9484,5208.99,2.5752,0.021806,6.1015,hybrid
-1001000301,Dr. Charles Hernandez,Neurology,Philadelphia,PA,Fentora,REP-H297,Hunter Gallagher,TERR-H05,2,6,7,5,3,14,17.7128,29818.97,5.4707,0.050487,18.6818,hybrid
-1001000302,Dr. Carol Thompson,Family Practice,Philadelphia,PA,Actiq,REP-H299,Holden Gallagher,TERR-H07,2,6,9,7,0,16,17.1306,28055.91,3.5097,0.032623,17.7318,hybrid
-1001000303,Dr. Melissa Hill,Oncology,Baltimore,MD,Actiq,REP-H310,Hope Kensington,TERR-H06,1,10,16,10,1,13,46.7768,76591.82,4.6756,0.04476,48.9639,hybrid
-1001000304,Dr. Nancy Taylor,Neurology,Austin,TX,Abstral,REP-H194,Hazel Monroe,TERR-H10,1,8,13,11,6,13,22.0556,36073.67,9.8989,0.090476,24.2389,hybrid
-1001000305,Dr. Richard Lewis,Internal Medicine,Atlanta,GA,Subsys,REP-H247,Heather Conway,TERR-H03,1,8,11,9,2,20,22.3447,50721.82,3.4698,0.032672,23.12,hybrid
-1001000306,Dr. Charles Smith,Oncology,Las Vegas,NV,Subsys,REP-H135,Homer Finch,TERR-H11,1,9,12,5,3,24,25.6465,65234.35,6.5636,0.061258,27.3299,hybrid
-1001000307,Dr. Deborah Miller,Pain Management,Boston,MA,Subsys,REP-H260,Hattie Conway,TERR-H04,2,4,14,10,8,18,10.0624,13732.89,11.7281,0.101364,11.2426,hybrid
-1001000308,Dr. Lisa Baker,Pain Management,Los Angeles,CA,Fentora,REP-H343,Howard Blackwood,TERR-H03,2,6,5,3,3,18,17.2417,34790.58,5.3168,0.049031,18.1584,hybrid
-1001000309,Dr. Amanda Perez,Pain Management,Denver,CO,Fentora,REP-H111,Hugh Vance,TERR-H11,2,4,5,4,2,14,10.1271,9922.66,7.0999,0.062617,10.8461,hybrid
-1001000310,Dr. Deborah Jackson,Neurology,Nashville,TN,Subsys,REP-H234,Hazel Sinclair,TERR-H02,2,4,4,3,0,31,9.6005,15959.7,-0.5538,-0.005028,9.5473,hybrid
-1001000311,Dr. Lisa Lopez,Family Practice,Phoenix,AZ,Actiq,REP-H119,Holden Vance,TERR-H07,1,8,6,5,6,29,21.6695,26102.36,4.3025,0.040304,22.6018,hybrid
-1001000312,Dr. Sarah Nguyen,Pain Management,Portland,OR,Subsys,REP-H287,Heather Gallagher,TERR-H07,2,5,2,2,1,17,12.5732,32488.03,3.8061,0.03465,13.0517,hybrid
-1001000313,Dr. Michael Sanchez,Pain Management,Los Angeles,CA,Abstral,REP-H179,Holden Hayes,TERR-H07,3,3,3,2,2,22,8.5445,15311.02,3.3421,0.029481,8.8301,hybrid
-1001000314,Dr. Elizabeth Moore,Anesthesiology,Phoenix,AZ,Fentora,REP-H209,Harrison Bishop,TERR-H01,2,5,5,3,0,28,12.4942,14446.99,3.2416,0.029572,12.8992,hybrid
-1001000315,Dr. Nancy Hill,Pain Management,Baltimore,MD,Subsys,REP-H290,Hope Gallagher,TERR-H10,2,5,7,4,2,22,14.1937,34830.98,4.607,0.042138,14.8476,hybrid
-1001000316,Dr. Kathleen Rodriguez,Neurology,Philadelphia,PA,Subsys,REP-H363,Howard Whitman,TERR-H11,2,5,3,2,1,19,12.1505,25720.81,2.4053,0.021981,12.4427,hybrid
-1001000317,Dr. Jessica Taylor,Pain Management,Nashville,TN,Lazanda,REP-H249,Harrison Conway,TERR-H05,2,5,8,7,2,22,14.3541,21164.51,8.2348,0.074166,15.5361,hybrid
-1001000318,Dr. Sarah Miller,Palliative Care,Nashville,TN,Fentora,REP-H321,Helen Thornton,TERR-H05,2,4,6,3,4,13,11.1374,21013.49,2.9002,0.026265,11.4604,hybrid
-1001000319,Dr. William Clark,Pain Management,Atlanta,GA,Lazanda,REP-H131,Hugh Finch,TERR-H07,2,7,13,5,0,25,18.4789,46069.58,6.0166,0.055508,19.5907,hybrid
-1001000320,Dr. Stephanie Allen,Oncology,Houston,TX,Subsys,REP-H298,Hilda Gallagher,TERR-H06,2,7,9,7,4,21,19.7795,31696.77,11.2958,0.102125,22.0137,hybrid
-1001000321,Dr. Laura Wright,Family Practice,Houston,TX,Subsys,REP-H217,Hunter Bishop,TERR-H09,2,7,9,7,7,24,18.2359,41307.68,5.62,0.051907,19.2608,hybrid
-1001000322,Dr. Richard Nelson,Family Practice,Baltimore,MD,Subsys,REP-H323,Howard Thornton,TERR-H07,2,5,5,3,4,10,14.3913,24793.6,6.1007,0.055476,15.2693,hybrid
-1001000323,Dr. Linda Lee,Pain Management,Jacksonville,FL,Subsys,REP-H168,Harvey Hayes,TERR-H08,2,7,11,7,2,22,18.535,37752.81,6.7178,0.06179,19.7801,hybrid
-1001000324,Dr. Robert Allen,Oncology,Seattle,WA,Actiq,REP-H300,Hattie Gallagher,TERR-H08,2,4,7,6,2,16,9.9342,23898.92,4.4845,0.039935,10.3797,hybrid
-1001000325,Dr. Richard Flores,Oncology,Chicago,IL,Subsys,REP-H239,Holden Sinclair,TERR-H07,2,5,9,7,6,19,13.3635,23094.34,6.1488,0.055631,14.1852,hybrid
-1001000326,Dr. Emily Lewis,Palliative Care,Nashville,TN,Subsys,REP-H196,Hayden Monroe,TERR-H12,2,5,8,4,3,8,14.6405,32048.9,6.4274,0.058424,15.5815,hybrid
-1001000327,Dr. Sharon Jackson,Anesthesiology,Denver,CO,Abstral,REP-H290,Hope Gallagher,TERR-H10,2,5,6,5,1,30,14.2653,25715.97,5.9799,0.054376,15.1184,hybrid
-1001000328,Dr. Dorothy White,Family Practice,Houston,TX,Subsys,REP-H270,Hope Mercer,TERR-H02,2,6,5,4,0,20,16.803,40857.59,2.8448,0.026496,17.281,hybrid
-1001000329,Dr. Barbara Hill,Anesthesiology,Denver,CO,Lazanda,REP-H179,Holden Hayes,TERR-H07,2,5,14,10,0,22,14.5367,14926.58,4.7753,0.04371,15.2309,hybrid
-1001000330,Dr. Melissa Allen,Pain Management,Houston,TX,Actiq,REP-H341,Helen Blackwood,TERR-H01,2,4,7,6,2,13,11.1765,27934.71,7.7013,0.068302,12.0373,hybrid
-1001000331,Dr. Ashley Torres,Oncology,Nashville,TN,Subsys,REP-H188,Harvey Monroe,TERR-H04,2,5,13,7,5,22,12.6328,32733.86,6.8483,0.061527,13.498,hybrid
-1001000332,Dr. Michael Perez,Oncology,Las Vegas,NV,Subsys,REP-H312,Hilary Kensington,TERR-H08,2,5,5,3,1,11,13.6464,17915.06,5.6502,0.051306,14.4175,hybrid
-1001000333,Dr. Susan Williams,Palliative Care,Detroit,MI,Lazanda,REP-H234,Hazel Sinclair,TERR-H02,3,2,4,2,1,10,4.8061,5576.9,0.8244,0.006801,4.8458,hybrid
-1001000334,Dr. Patricia Harris,Palliative Care,Chicago,IL,Actiq,REP-H130,Hope Finch,TERR-H06,2,5,5,3,3,21,14.9903,23692.19,3.8287,0.035263,15.5643,hybrid
-1001000335,Dr. Sharon Torres,Neurology,Columbus,OH,Abstral,REP-H303,Howard Kensington,TERR-H11,2,5,9,5,2,26,12.456,24624.11,2.9378,0.026831,12.8219,hybrid
-1001000336,Dr. Carol Robinson,Palliative Care,Denver,CO,Subsys,REP-H221,Helen Sinclair,TERR-H01,2,7,11,7,4,27,20.4981,21160.95,6.6999,0.061925,21.8714,hybrid
-1001000337,Dr. Linda Lewis,Family Practice,Portland,OR,Abstral,REP-H301,Helen Kensington,TERR-H09,2,5,8,6,4,19,14.912,34021.6,2.2266,0.020652,15.244,hybrid
-1001000338,Dr. Mary Jackson,Oncology,Miami,FL,Fentora,REP-H285,Henry Gallagher,TERR-H05,2,7,10,8,6,15,18.4665,31530.96,11.0774,0.099921,20.5121,hybrid
-1001000339,Dr. Kathleen Carter,Pain Management,Phoenix,AZ,Actiq,REP-H184,Hannah Monroe,TERR-H12,3,3,7,4,0,24,8.7371,18076.36,2.3063,0.020483,8.9386,hybrid
-1001000340,Dr. Sharon Hall,Anesthesiology,Columbus,OH,Subsys,REP-H152,Hilary Sterling,TERR-H04,2,5,10,6,3,26,14.1083,16300.75,4.2519,0.038936,14.7082,hybrid
-1001000341,Dr. Margaret Wright,Pain Management,Jacksonville,FL,Actiq,REP-H214,Hazel Bishop,TERR-H06,2,4,4,3,2,16,11.9091,17499.98,6.2279,0.055864,12.6508,hybrid
-1001000342,Dr. Kathleen Flores,Internal Medicine,Houston,TX,Actiq,REP-H298,Hilda Gallagher,TERR-H06,2,4,2,1,2,9,10.3746,10767.48,1.6211,0.014677,10.5428,hybrid
-1001000343,Dr. Joseph Smith,Pain Management,Portland,OR,Fentora,REP-H324,Hannah Thornton,TERR-H08,2,5,9,7,6,19,13.9296,35643.33,9.0062,0.080685,15.1842,hybrid
-1001000344,Dr. Rebecca Lopez,Family Practice,Nashville,TN,Abstral,REP-H353,Hector Blackwood,TERR-H01,2,6,6,4,0,18,17.3913,23678.88,1.1249,0.010581,17.587,hybrid
-1001000345,Dr. Jennifer Sanchez,Pain Management,Nashville,TN,Subsys,REP-H235,Homer Sinclair,TERR-H03,2,5,8,5,4,9,14.899,33959.75,9.1824,0.082546,16.267,hybrid
-1001000346,Dr. Deborah Nelson,Neurology,Austin,TX,Abstral,REP-H243,Howard Conway,TERR-H11,1,9,12,7,8,16,25.4709,58799.49,6.8006,0.063385,27.203,hybrid
-1001000347,Dr. Deborah Martinez,Anesthesiology,Los Angeles,CA,Actiq,REP-H206,Holly Bishop,TERR-H10,2,6,11,8,9,14,17.8469,21540.18,10.3793,0.09375,19.6992,hybrid
-1001000348,Dr. Ashley Wilson,Pain Management,Los Angeles,CA,Abstral,REP-H229,Harrison Sinclair,TERR-H09,2,4,10,7,1,22,10.4685,22219.29,5.981,0.053156,11.0946,hybrid
-1001000349,Dr. Dorothy Thompson,Internal Medicine,Denver,CO,Actiq,REP-H262,Harold Mercer,TERR-H06,2,5,4,3,2,24,12.7392,13685.14,4.8253,0.043769,13.3539,hybrid
-1001000350,Dr. John Hernandez,Anesthesiology,Los Angeles,CA,Subsys,REP-H201,Helen Bishop,TERR-H05,2,5,5,4,0,33,14.6253,37578.78,5.4987,0.050188,15.4295,hybrid
-1001000351,Dr. Elizabeth Miller,Oncology,Seattle,WA,Lazanda,REP-H262,Harold Mercer,TERR-H06,2,4,9,6,5,17,9.2153,20643.58,8.0135,0.069797,9.9537,hybrid
-1001000352,Dr. Sarah Rivera,Pain Management,Los Angeles,CA,Subsys,REP-H350,Hope Blackwood,TERR-H10,2,6,6,5,6,19,15.4213,15875.85,9.1036,0.082034,16.8252,hybrid
-1001000353,Dr. Sandra Torres,Palliative Care,Nashville,TN,Actiq,REP-H180,Hattie Hayes,TERR-H08,1,8,11,8,7,15,23.4896,37779.29,9.0057,0.082851,25.605,hybrid
-1001000354,Dr. Stephanie Davis,Pain Management,Portland,OR,Abstral,REP-H371,Hugh Whitman,TERR-H07,3,2,2,1,0,12,5.7759,10241.69,0.5291,0.0045,5.8065,hybrid
-1001000355,Dr. Margaret Thomas,Pain Management,Chicago,IL,Lazanda,REP-H321,Helen Thornton,TERR-H05,2,4,2,2,2,14,11.802,19771.96,3.5806,0.032476,12.2246,hybrid
-1001000356,Dr. Jennifer White,Family Practice,Baltimore,MD,Fentora,REP-H308,Harvey Kensington,TERR-H04,3,3,8,6,1,23,7.5236,19522.98,2.5669,0.022405,7.7167,hybrid
-1001000357,Dr. Margaret Miller,Pain Management,Las Vegas,NV,Lazanda,REP-H277,Hunter Mercer,TERR-H09,3,3,7,4,1,28,8.2318,14465.76,4.0967,0.035878,8.5691,hybrid
-1001000358,Dr. Barbara Walker,Internal Medicine,Baltimore,MD,Fentora,REP-H261,Helen Mercer,TERR-H05,2,5,4,3,1,18,13.8591,14190.27,3.5415,0.032497,14.35,hybrid
-1001000359,Dr. Sandra Wright,Palliative Care,Detroit,MI,Subsys,REP-H179,Holden Hayes,TERR-H07,3,3,4,3,3,19,8.8103,21485.3,6.431,0.056148,9.3769,hybrid
-1001000360,Dr. Margaret Scott,Neurology,Detroit,MI,Subsys,REP-H218,Hilda Bishop,TERR-H10,2,5,2,1,2,27,14.9565,24330.71,2.8069,0.02597,15.3763,hybrid
-1001000361,Dr. Patricia Rivera,Palliative Care,New York,NY,Abstral,REP-H317,Hunter Kensington,TERR-H01,3,3,5,3,1,10,8.8866,10434.18,2.9347,0.026037,9.1474,hybrid
-1001000362,Dr. Betty Walker,Neurology,Charlotte,NC,Subsys,REP-H211,Hugh Bishop,TERR-H03,2,6,10,6,1,22,15.2438,28429.08,5.7048,0.052152,16.1135,hybrid
-1001000363,Dr. Thomas Walker,Internal Medicine,Phoenix,AZ,Abstral,REP-H315,Homer Kensington,TERR-H11,2,4,4,2,3,11,10.8164,14184.57,2.3889,0.021632,11.0748,hybrid
-1001000364,Dr. Mary Sanchez,Oncology,Boston,MA,Subsys,REP-H267,Heather Mercer,TERR-H11,2,4,5,2,3,24,10.5771,12280.19,8.1115,0.071491,11.4351,hybrid
-1001000365,Dr. Thomas Johnson,Palliative Care,Chicago,IL,Subsys,REP-H247,Heather Conway,TERR-H03,1,8,14,12,10,10,23.2432,58371.12,11.8171,0.107326,25.9898,hybrid
-1001000366,Dr. Susan Sanchez,Pain Management,Las Vegas,NV,Subsys,REP-H197,Hunter Monroe,TERR-H01,3,3,2,1,2,28,8.2326,17368.54,4.5263,0.039567,8.6053,hybrid
-1001000367,Dr. Linda Wright,Internal Medicine,Detroit,MI,Actiq,REP-H313,Hector Kensington,TERR-H09,2,6,6,3,1,19,15.0009,15498.81,2.2475,0.020851,15.338,hybrid
-1001000368,Dr. Jennifer Clark,Anesthesiology,Las Vegas,NV,Subsys,REP-H323,Howard Thornton,TERR-H07,1,8,16,15,4,24,21.6842,27649.15,7.7186,0.071188,23.3579,hybrid
-1001000369,Dr. Linda Brown,Anesthesiology,Charlotte,NC,Actiq,REP-H107,Heather Vance,TERR-H07,2,5,6,3,1,13,13.4528,15910.62,3.7652,0.034447,13.9593,hybrid
-1001000370,Dr. Nancy Robinson,Internal Medicine,Nashville,TN,Actiq,REP-H309,Harrison Kensington,TERR-H05,2,6,7,2,2,24,17.2828,39379.66,2.0182,0.018898,17.6316,hybrid
-1001000371,Dr. Melissa Torres,Anesthesiology,New York,NY,Actiq,REP-H328,Harvey Thornton,TERR-H12,2,5,7,6,6,13,12.9765,17666.31,6.903,0.062121,13.8722,hybrid
-1001000372,Dr. Michelle Hill,Neurology,Chicago,IL,Fentora,REP-H316,Hayden Kensington,TERR-H12,2,6,7,5,6,53,17.157,39445.13,6.9828,0.063897,18.355,hybrid
-1001000373,Dr. Melissa Flores,Palliative Care,Austin,TX,Subsys,REP-H178,Hilda Hayes,TERR-H06,2,6,10,9,8,20,17.0594,23009.54,7.7953,0.071051,18.3893,hybrid
-1001000374,Dr. Jennifer Torres,Neurology,Chicago,IL,Subsys,REP-H317,Hunter Kensington,TERR-H01,2,5,8,5,3,24,12.1829,21313.97,4.3582,0.039486,12.7139,hybrid
-1001000375,Dr. Dorothy Thomas,Orthopedics,Chicago,IL,Fentora,REP-H345,Henry Blackwood,TERR-H05,3,3,2,2,3,13,8.1446,16310.9,4.5076,0.039361,8.5117,hybrid
-1001000376,Dr. Sarah Ramirez,Palliative Care,Portland,OR,Abstral,REP-H379,Holden Whitman,TERR-H03,2,4,6,4,2,17,11.153,15495.81,6.9759,0.062053,11.931,hybrid
-1001000377,Dr. Donna Sanchez,Family Practice,Atlanta,GA,Abstral,REP-H140,Hattie Finch,TERR-H04,2,5,5,3,1,7,13.5311,32917.98,1.4143,0.013083,13.7224,hybrid
-1001000378,Dr. Nancy Lopez,Family Practice,Atlanta,GA,Subsys,REP-H159,Holden Sterling,TERR-H11,2,5,2,1,1,19,13.5755,28273.07,4.167,0.038077,14.1412,hybrid
-1001000379,Dr. Lisa Gonzalez,Pain Management,Denver,CO,Actiq,REP-H146,Holly Sterling,TERR-H10,2,7,10,6,6,12,20.6137,27482.54,9.4544,0.086333,22.5626,hybrid
-1001000380,Dr. Jessica Wright,Palliative Care,Charlotte,NC,Subsys,REP-H113,Hector Vance,TERR-H01,2,7,7,5,2,25,20.7355,39470.45,8.149,0.074867,22.4253,hybrid
-1001000381,Dr. Melissa Hernandez,Pain Management,Portland,OR,Subsys,REP-H102,Harold Vance,TERR-H02,3,3,10,9,1,28,8.3137,19980.58,5.2253,0.045588,8.7481,hybrid
-1001000382,Dr. Lisa Campbell,Pain Management,Seattle,WA,Subsys,REP-H172,Hilary Hayes,TERR-H12,2,6,15,7,2,15,17.0412,28212.31,3.4466,0.032037,17.6285,hybrid
-1001000383,Dr. Jessica Wilson,Anesthesiology,Jacksonville,FL,Subsys,REP-H274,Hazel Mercer,TERR-H06,2,7,9,6,5,22,20.0981,26434.06,7.8385,0.072013,21.6735,hybrid
-1001000384,Dr. Joseph Thomas,Palliative Care,Miami,FL,Actiq,REP-H331,Hugh Thornton,TERR-H03,3,3,3,2,1,17,7.0886,9362.26,3.8203,0.032932,7.3594,hybrid
-1001000385,Dr. William Clark,Anesthesiology,New York,NY,Lazanda,REP-H233,Hector Sinclair,TERR-H01,1,8,9,8,9,17,21.2827,34332.29,10.5566,0.096063,23.5294,hybrid
-1001000386,Dr. Joseph Young,Pain Management,Nashville,TN,Subsys,REP-H191,Hugh Monroe,TERR-H07,2,6,8,7,2,18,16.9152,37397.16,6.4952,0.059519,18.0139,hybrid
-1001000387,Dr. Michael Torres,Oncology,New York,NY,Abstral,REP-H267,Heather Mercer,TERR-H11,3,3,7,5,5,32,8.5958,21278.99,8.7146,0.075167,9.3449,hybrid
-1001000388,Dr. Kimberly King,Orthopedics,Portland,OR,Abstral,REP-H365,Henry Whitman,TERR-H01,2,5,8,6,6,20,14.5815,20934.95,7.4932,0.067773,15.6741,hybrid
-1001000389,Dr. Sarah Walker,Pain Management,Portland,OR,Abstral,REP-H237,Hunter Sinclair,TERR-H05,2,6,9,7,5,22,15.674,21982.65,6.7708,0.061704,16.7352,hybrid
-1001000390,Dr. Sandra Gonzalez,Palliative Care,Detroit,MI,Abstral,REP-H386,Holly Carrington,TERR-H10,2,4,7,5,6,23,11.6657,12988.77,4.6294,0.041755,12.2058,hybrid
-1001000391,Dr. Patricia Taylor,Oncology,Los Angeles,CA,Actiq,REP-H374,Hazel Whitman,TERR-H10,2,5,4,4,4,10,13.9312,26651.67,5.2208,0.047562,14.6585,hybrid
-1001000392,Dr. Patricia Robinson,Palliative Care,Jacksonville,FL,Actiq,REP-H209,Harrison Bishop,TERR-H01,2,4,3,3,0,14,10.26,9571.3,3.009,0.027049,10.5688,hybrid
-1001000393,Dr. Elizabeth Perez,Anesthesiology,Nashville,TN,Abstral,REP-H257,Hunter Conway,TERR-H01,2,4,2,1,0,15,9.7384,11408.85,-0.3406,-0.003094,9.7052,hybrid
-1001000394,Dr. Amanda Wilson,Orthopedics,Philadelphia,PA,Actiq,REP-H272,Hilary Mercer,TERR-H04,2,4,3,2,2,21,11.0409,20308.42,4.3842,0.039414,11.5249,hybrid
-1001000395,Dr. Susan Allen,Pain Management,Las Vegas,NV,Subsys,REP-H270,Hope Mercer,TERR-H02,1,8,16,10,7,13,22.5955,43940.54,9.4903,0.086986,24.7399,hybrid
-1001000396,Dr. Linda Hill,Anesthesiology,Columbus,OH,Abstral,REP-H261,Helen Mercer,TERR-H05,1,8,16,14,7,14,21.5146,25376.47,10.9326,0.099365,23.8667,hybrid
-1001000397,Dr. Jessica Davis,Palliative Care,Austin,TX,Abstral,REP-H330,Hope Thornton,TERR-H02,2,6,8,5,6,8,15.6307,37810.92,7.6249,0.069213,16.8226,hybrid
-1001000398,Dr. Jessica Martin,Neurology,Phoenix,AZ,Actiq,REP-H140,Hattie Finch,TERR-H04,2,5,8,6,0,17,14.9301,17621.81,1.8322,0.017027,15.2037,hybrid
-1001000399,Dr. William Martinez,Psychiatry,Seattle,WA,Subsys,REP-H176,Hayden Hayes,TERR-H04,2,4,2,1,2,10,9.0755,15907.51,2.846,0.025312,9.3338,hybrid
-1001000400,Dr. Charles Gonzalez,Oncology,Jacksonville,FL,Abstral,REP-H310,Hope Kensington,TERR-H06,2,6,12,9,10,14,15.0024,32999.02,9.3723,0.084218,16.4084,hybrid
-1001000401,Dr. Richard White,Palliative Care,Portland,OR,Abstral,REP-H198,Hilda Monroe,TERR-H02,1,9,8,5,0,14,25.6105,31805.59,5.7037,0.05344,27.0712,hybrid
-1001000402,Dr. Kathleen Brown,Pain Management,Miami,FL,Actiq,REP-H251,Hugh Conway,TERR-H07,1,8,14,9,5,17,21.8256,26074.77,5.3009,0.049444,22.9826,hybrid
-1001000403,Dr. Kimberly Miller,Palliative Care,Houston,TX,Abstral,REP-H193,Hector Monroe,TERR-H09,2,7,10,7,6,22,20.0319,45747.43,6.2953,0.058231,21.293,hybrid
-1001000404,Dr. Linda Torres,Internal Medicine,Charlotte,NC,Abstral,REP-H236,Hayden Sinclair,TERR-H04,2,4,2,1,1,18,10.597,15120.34,3.7237,0.03346,10.9916,hybrid
-1001000405,Dr. Barbara King,Anesthesiology,Los Angeles,CA,Lazanda,REP-H300,Hattie Gallagher,TERR-H08,2,6,11,6,3,19,15.5894,20192.31,7.6648,0.069552,16.7842,hybrid
-1001000406,Dr. Lisa Perez,Internal Medicine,Miami,FL,Abstral,REP-H326,Holly Thornton,TERR-H10,2,7,3,2,0,21,19.6932,45363.63,0.2749,0.002613,19.7473,hybrid
-1001000407,Dr. Dorothy Brown,Pain Management,Houston,TX,Lazanda,REP-H206,Holly Bishop,TERR-H10,3,3,7,5,2,23,8.6908,8035.01,7.6688,0.066512,9.3572,hybrid
-1001000408,Dr. Barbara Adams,Neurology,Miami,FL,Subsys,REP-H369,Harrison Whitman,TERR-H05,2,5,11,8,1,20,14.7998,38127.21,7.7314,0.069918,15.944,hybrid
-1001000409,Dr. Sharon Wright,Pain Management,Boston,MA,Lazanda,REP-H134,Hazel Finch,TERR-H10,2,4,3,2,0,32,11.3066,28671.33,-0.7267,-0.006698,11.2244,hybrid
-1001000410,Dr. Jennifer Green,Oncology,Atlanta,GA,Actiq,REP-H320,Hattie Kensington,TERR-H04,3,3,3,3,3,16,7.7203,13597.29,4.4259,0.038436,8.062,hybrid
-1001000411,Dr. Carol Jones,Psychiatry,Philadelphia,PA,Subsys,REP-H282,Harold Gallagher,TERR-H02,2,6,4,2,1,22,17.5195,22807.08,2.0057,0.018796,17.8709,hybrid
-1001000412,Dr. Carol Jones,Palliative Care,Nashville,TN,Abstral,REP-H122,Harold Finch,TERR-H10,3,2,2,2,0,17,4.5367,8682.3,3.3094,0.026756,4.6869,hybrid
-1001000413,Dr. Jennifer Torres,Anesthesiology,Boston,MA,Subsys,REP-H222,Harold Sinclair,TERR-H02,2,4,8,6,7,5,11.1708,14800.48,9.1507,0.080648,12.193,hybrid
-1001000414,Dr. Robert Johnson,Internal Medicine,Austin,TX,Subsys,REP-H286,Holly Gallagher,TERR-H06,2,5,5,4,5,15,14.5022,28217.02,6.4185,0.058311,15.433,hybrid
-1001000415,Dr. Charles Harris,Anesthesiology,New York,NY,Abstral,REP-H318,Hilda Kensington,TERR-H02,1,10,12,10,0,14,27.8765,69131.66,2.0842,0.019921,28.4575,hybrid
-1001000416,Dr. Melissa Hall,Oncology,Miami,FL,Subsys,REP-H304,Hannah Kensington,TERR-H12,1,9,10,5,1,17,25.4927,25817.17,4.8137,0.04528,26.7198,hybrid
-1001000417,Dr. Carol Lee,Anesthesiology,Columbus,OH,Subsys,REP-H382,Harold Carrington,TERR-H06,2,5,8,5,2,27,12.5663,26973.53,5.1581,0.046673,13.2145,hybrid
-1001000418,Dr. Joseph Wilson,Oncology,Denver,CO,Actiq,REP-H275,Homer Mercer,TERR-H07,2,5,9,7,8,16,14.3079,36578.09,8.5824,0.077163,15.5358,hybrid
-1001000419,Dr. Elizabeth Garcia,Palliative Care,Boston,MA,Lazanda,REP-H337,Hunter Thornton,TERR-H09,1,9,15,13,7,26,24.4903,62802.55,5.5582,0.052024,25.8515,hybrid
-1001000420,Dr. Amanda Miller,Oncology,Miami,FL,Subsys,REP-H316,Hayden Kensington,TERR-H12,3,3,2,1,1,21,8.5327,15941.66,4.0582,0.03568,8.879,hybrid
-1001000421,Dr. Carol Robinson,Neurology,Atlanta,GA,Subsys,REP-H294,Hazel Gallagher,TERR-H02,2,6,8,5,0,21,16.708,31602.97,2.5514,0.023788,17.1343,hybrid
-1001000422,Dr. Jennifer Scott,Palliative Care,Baltimore,MD,Subsys,REP-H341,Helen Blackwood,TERR-H01,2,7,13,11,4,31,19.757,27236.49,9.8044,0.08922,21.6941,hybrid
-1001000423,Dr. Jessica Jackson,Internal Medicine,Philadelphia,PA,Abstral,REP-H335,Homer Thornton,TERR-H07,1,8,10,7,6,21,21.6473,55149.1,8.8753,0.081427,23.5686,hybrid
-1001000424,Dr. Lisa Baker,Family Practice,New York,NY,Subsys,REP-H174,Hazel Hayes,TERR-H02,3,2,2,1,2,12,4.9571,11269.37,1.2563,0.0104,5.0194,hybrid
-1001000425,Dr. Sandra Nguyen,Oncology,Las Vegas,NV,Subsys,REP-H133,Hector Finch,TERR-H09,2,4,7,3,3,28,10.7587,11802.99,6.231,0.055445,11.4291,hybrid
-1001000426,Dr. Charles Clark,Neurology,Portland,OR,Abstral,REP-H379,Holden Whitman,TERR-H03,2,7,10,9,6,28,20.5494,49997.87,7.0493,0.065059,21.9979,hybrid
-1001000427,Dr. Laura Green,Pain Management,Charlotte,NC,Subsys,REP-H181,Helen Monroe,TERR-H09,2,4,6,5,4,19,11.5433,20647.2,7.2929,0.064958,12.3851,hybrid
-1001000428,Dr. Joseph Taylor,Anesthesiology,Houston,TX,Actiq,REP-H342,Harold Blackwood,TERR-H02,2,7,9,4,4,17,18.7529,47576.12,7.5287,0.069036,20.1648,hybrid
-1001000429,Dr. Amanda Torres,Pain Management,Chicago,IL,Subsys,REP-H123,Howard Finch,TERR-H11,3,3,6,4,3,11,8.6623,13117.16,5.6432,0.049353,9.1511,hybrid
-1001000430,Dr. Joseph Scott,Pain Management,Seattle,WA,Fentora,REP-H163,Howard Hayes,TERR-H03,2,4,3,1,2,19,9.4479,10200.39,2.0928,0.018748,9.6456,hybrid
-1001000431,Dr. Michelle Scott,Pain Management,Atlanta,GA,Abstral,REP-H153,Hector Sterling,TERR-H05,2,6,16,9,3,28,16.5906,33241.05,7.2063,0.065757,17.7862,hybrid
-1001000432,Dr. Michelle Gonzalez,Family Practice,Miami,FL,Abstral,REP-H376,Hayden Whitman,TERR-H12,2,5,6,4,3,12,13.8979,35706.68,3.2173,0.029572,14.345,hybrid
-1001000433,Dr. Thomas Scott,Family Practice,Nashville,TN,Subsys,REP-H366,Holly Whitman,TERR-H02,1,8,7,3,2,18,22.6975,40989.45,2.0393,0.019344,23.1604,hybrid
-1001000434,Dr. Sandra Mitchell,Pain Management,Denver,CO,Subsys,REP-H136,Hayden Finch,TERR-H12,1,8,11,9,9,21,21.7491,20274.06,8.9174,0.081814,23.6886,hybrid
-1001000435,Dr. Jessica Martinez,Pain Management,Chicago,IL,Actiq,REP-H245,Henry Conway,TERR-H01,1,8,13,10,1,24,21.3238,33430.82,3.3119,0.031146,22.03,hybrid
-1001000436,Dr. John Smith,Neurology,Miami,FL,Subsys,REP-H364,Hannah Whitman,TERR-H12,1,8,13,11,2,21,21.3403,40228.85,4.2821,0.04009,22.2541,hybrid
-1001000437,Dr. Thomas Wilson,Palliative Care,Charlotte,NC,Lazanda,REP-H252,Hilary Conway,TERR-H08,1,9,16,13,1,42,25.6773,48989.22,4.0244,0.038004,26.7106,hybrid
-1001000438,Dr. Melissa Martin,Psychiatry,Las Vegas,NV,Actiq,REP-H140,Hattie Finch,TERR-H04,2,4,5,2,1,24,10.4784,10480.27,2.4836,0.022419,10.7387,hybrid
-1001000439,Dr. Stephanie Walker,Anesthesiology,Denver,CO,Subsys,REP-H151,Hugh Sterling,TERR-H03,2,7,13,10,11,16,20.9103,37145.25,8.171,0.07509,22.6189,hybrid
-1001000440,Dr. Patricia Thompson,Internal Medicine,New York,NY,Subsys,REP-H263,Howard Mercer,TERR-H07,2,4,8,5,4,14,11.6992,15997.47,5.8012,0.052064,12.3779,hybrid
-1001000441,Dr. Dorothy Taylor,Palliative Care,Houston,TX,Subsys,REP-H343,Howard Blackwood,TERR-H03,2,6,9,5,1,36,16.319,33718.9,5.3432,0.04912,17.1909,hybrid
-1001000442,Dr. Barbara Miller,Orthopedics,Philadelphia,PA,Subsys,REP-H336,Hayden Thornton,TERR-H08,2,4,3,2,0,23,9.6302,8769.03,1.7558,0.015781,9.7993,hybrid
-1001000443,Dr. Susan Williams,Pain Management,Chicago,IL,Subsys,REP-H362,Harold Whitman,TERR-H10,3,2,3,2,0,19,4.4298,6971.64,0.9013,0.007326,4.4697,hybrid
-1001000444,Dr. Barbara Jackson,Oncology,Charlotte,NC,Subsys,REP-H233,Hector Sinclair,TERR-H01,2,6,15,11,8,20,17.0341,25075.63,8.6231,0.078302,18.503,hybrid
-1001000445,Dr. Michelle Smith,Oncology,Miami,FL,Subsys,REP-H105,Henry Vance,TERR-H05,3,3,5,3,2,16,6.5893,16550.02,4.3509,0.03708,6.876,hybrid
-1001000446,Dr. Melissa Moore,Family Practice,Los Angeles,CA,Subsys,REP-H173,Hector Hayes,TERR-H01,2,4,4,2,3,17,10.7329,27865.25,1.819,0.016502,10.9281,hybrid
-1001000447,Dr. Jennifer Moore,Pain Management,Nashville,TN,Abstral,REP-H215,Homer Bishop,TERR-H07,2,5,8,6,5,13,12.3436,23849.62,8.5258,0.075913,13.396,hybrid
-1001000448,Dr. Joseph Mitchell,Oncology,Detroit,MI,Actiq,REP-H193,Hector Monroe,TERR-H09,2,7,11,8,1,27,19.0651,23379.26,4.8168,0.044751,19.9835,hybrid
-1001000449,Dr. Karen Hall,Oncology,Las Vegas,NV,Abstral,REP-H212,Hilary Bishop,TERR-H04,1,10,16,12,13,16,36.2787,70372.68,11.2308,0.103725,40.353,hybrid
-1001000450,Dr. Nancy Garcia,Palliative Care,Columbus,OH,Subsys,REP-H385,Henry Carrington,TERR-H09,2,5,6,5,4,22,14.6414,19207.71,7.2347,0.065527,15.7007,hybrid
-1001000451,Dr. Dorothy Walker,Anesthesiology,Austin,TX,Subsys,REP-H208,Harvey Bishop,TERR-H12,2,5,6,4,3,17,12.5562,25144.17,7.7309,0.069159,13.5269,hybrid
-1001000452,Dr. David Jones,Pain Management,New York,NY,Subsys,REP-H258,Hilda Conway,TERR-H02,2,6,9,7,4,24,17.8438,34720.35,7.9238,0.072352,19.2577,hybrid
-1001000453,Dr. Linda Carter,Anesthesiology,Miami,FL,Abstral,REP-H204,Hannah Bishop,TERR-H08,2,4,8,6,2,15,11.2672,11300.79,6.8287,0.060832,12.0366,hybrid
-1001000454,Dr. Linda Thompson,Internal Medicine,Boston,MA,Abstral,REP-H305,Henry Kensington,TERR-H01,2,4,2,2,0,21,11.9444,30849.57,2.0171,0.018441,12.1853,hybrid
-1001000455,Dr. James Garcia,Pain Management,Jacksonville,FL,Fentora,REP-H297,Hunter Gallagher,TERR-H05,2,4,4,3,0,10,11.2566,12605.47,4.4977,0.040477,11.7629,hybrid
-1001000456,Dr. Lisa Allen,Pain Management,Nashville,TN,Abstral,REP-H314,Hazel Kensington,TERR-H10,1,8,16,12,11,14,23.1322,21790.0,13.9378,0.1254,26.3563,hybrid
-1001000457,Dr. Barbara Nguyen,Family Practice,Phoenix,AZ,Subsys,REP-H377,Hunter Whitman,TERR-H01,3,2,5,3,1,17,5.6455,10450.73,1.2794,0.01081,5.7178,hybrid
-1001000458,Dr. Lisa Gonzalez,Pain Management,Columbus,OH,Actiq,REP-H224,Hannah Sinclair,TERR-H04,2,4,4,3,0,15,11.1602,13074.09,3.9189,0.035335,11.5976,hybrid
-1001000459,Dr. Sandra Mitchell,Orthopedics,Nashville,TN,Fentora,REP-H248,Harvey Conway,TERR-H04,2,6,8,5,1,13,16.0911,23519.35,2.9856,0.027721,16.5715,hybrid
-1001000460,Dr. Betty Sanchez,Internal Medicine,New York,NY,Abstral,REP-H129,Harrison Finch,TERR-H05,2,6,2,1,2,21,16.0564,31336.36,2.3227,0.02163,16.4294,hybrid
-1001000461,Dr. Patricia Hill,Neurology,Seattle,WA,Lazanda,REP-H116,Hayden Vance,TERR-H04,2,6,9,7,3,25,17.8274,34826.22,8.3071,0.075718,19.3083,hybrid
-1001000462,Dr. Margaret Allen,Anesthesiology,Portland,OR,Subsys,REP-H200,Hattie Monroe,TERR-H04,1,10,16,5,1,12,29.1255,58408.43,7.2636,0.067869,31.2411,hybrid
-1001000463,Dr. Stephanie Davis,Anesthesiology,Baltimore,MD,Subsys,REP-H108,Harvey Vance,TERR-H08,1,10,16,12,8,25,28.2544,49680.12,9.0782,0.084046,30.8194,hybrid
-1001000464,Dr. Karen White,Oncology,Phoenix,AZ,Abstral,REP-H215,Homer Bishop,TERR-H07,2,6,13,10,11,18,15.5882,17953.61,7.6533,0.069451,16.7812,hybrid
-1001000465,Dr. Deborah Moore,Pain Management,Boston,MA,Abstral,REP-H194,Hazel Monroe,TERR-H10,2,4,5,2,3,23,11.581,29138.94,7.7432,0.068852,12.4778,hybrid
-1001000466,Dr. Thomas Garcia,Neurology,Philadelphia,PA,Subsys,REP-H103,Howard Vance,TERR-H03,2,5,9,6,2,19,12.2449,21246.43,5.4891,0.049501,12.9171,hybrid
-1001000467,Dr. Jessica Johnson,Oncology,Chicago,IL,Lazanda,REP-H361,Helen Whitman,TERR-H09,2,6,9,4,0,24,17.4847,19265.46,1.6808,0.015774,17.7786,hybrid
-1001000468,Dr. Linda Lopez,Pain Management,Las Vegas,NV,Fentora,REP-H216,Hayden Bishop,TERR-H08,2,4,5,3,3,17,11.6949,24693.91,6.4164,0.057429,12.4453,hybrid
-1001000469,Dr. Sandra Wright,Oncology,Las Vegas,NV,Fentora,REP-H236,Hayden Sinclair,TERR-H04,2,6,11,6,6,18,16.4388,18004.24,5.4511,0.050109,17.3349,hybrid
-1001000470,Dr. Linda Rodriguez,Pain Management,Nashville,TN,Fentora,REP-H126,Holly Finch,TERR-H02,3,2,6,5,6,20,5.4075,10024.23,10.2247,0.082768,5.9604,hybrid
-1001000471,Dr. Laura Martin,Oncology,Baltimore,MD,Abstral,REP-H301,Helen Kensington,TERR-H09,2,5,6,3,3,24,13.4482,14420.8,4.1093,0.037536,14.0009,hybrid
-1001000472,Dr. John Adams,Neurology,Houston,TX,Subsys,REP-H298,Hilda Gallagher,TERR-H06,2,4,6,4,0,16,9.2084,8977.6,3.4288,0.03046,9.5241,hybrid
-1001000473,Dr. Linda Anderson,Oncology,Austin,TX,Abstral,REP-H306,Holly Kensington,TERR-H02,2,4,9,7,8,21,11.2605,14622.29,6.4088,0.057193,11.9821,hybrid
-1001000474,Dr. Dorothy Allen,Neurology,Baltimore,MD,Subsys,REP-H266,Holly Mercer,TERR-H10,2,7,7,5,0,16,19.3125,33603.33,1.2156,0.011491,19.5472,hybrid
-1001000475,Dr. Betty Sanchez,Oncology,Denver,CO,Actiq,REP-H139,Holden Finch,TERR-H03,1,8,14,8,8,11,23.1658,41732.52,7.0844,0.065706,24.807,hybrid
-1001000476,Dr. Margaret Hill,Palliative Care,Chicago,IL,Subsys,REP-H192,Hilary Monroe,TERR-H08,1,8,7,4,4,21,22.7372,40079.82,6.8687,0.06372,24.299,hybrid
-1001000477,Dr. Stephanie Martin,Neurology,Nashville,TN,Lazanda,REP-H221,Helen Sinclair,TERR-H01,2,7,8,6,2,12,19.7024,34837.33,7.5517,0.069404,21.1903,hybrid
-1001000478,Dr. Emily Taylor,Pain Management,Detroit,MI,Fentora,REP-H252,Hilary Conway,TERR-H08,2,5,6,4,2,19,12.0087,15451.86,3.2625,0.029673,12.4005,hybrid
-1001000479,Dr. Robert Carter,Oncology,Denver,CO,Subsys,REP-H384,Hannah Carrington,TERR-H08,2,7,10,9,3,20,18.0357,24178.82,8.249,0.075252,19.5234,hybrid
-1001000480,Dr. Lisa Wright,Oncology,Jacksonville,FL,Subsys,REP-H131,Hugh Finch,TERR-H07,2,5,6,3,1,22,13.1272,15003.18,4.9923,0.045345,13.7825,hybrid
-1001000481,Dr. James Jones,Oncology,Austin,TX,Abstral,REP-H254,Hazel Conway,TERR-H10,2,6,4,4,2,29,16.8266,34842.73,3.9389,0.036505,17.4893,hybrid
-1001000482,Dr. Joseph Johnson,Oncology,Miami,FL,Lazanda,REP-H293,Hector Gallagher,TERR-H01,2,4,9,6,4,19,10.1881,25707.28,8.2836,0.072722,11.032,hybrid
-1001000483,Dr. Donna Nelson,Pain Management,Chicago,IL,Actiq,REP-H258,Hilda Conway,TERR-H02,2,5,11,6,4,18,14.1105,12363.83,9.2192,0.082585,15.4114,hybrid
-1001000484,Dr. Joseph Martin,Pain Management,Atlanta,GA,Subsys,REP-H149,Harrison Sterling,TERR-H01,2,7,11,8,7,15,20.014,30449.54,9.5396,0.086963,21.9232,hybrid
-1001000485,Dr. Dorothy Hernandez,Oncology,Miami,FL,Abstral,REP-H267,Heather Mercer,TERR-H11,2,5,5,4,4,11,13.9907,34472.99,7.055,0.063766,14.9777,hybrid
-1001000486,Dr. Joseph Nguyen,Anesthesiology,Los Angeles,CA,Fentora,REP-H177,Hunter Hayes,TERR-H05,2,6,6,4,4,19,17.1264,31303.31,3.6985,0.034348,17.7598,hybrid
-1001000487,Dr. Rebecca Thomas,Internal Medicine,Charlotte,NC,Abstral,REP-H337,Hunter Thornton,TERR-H09,1,10,10,5,5,29,35.302,74096.78,4.1607,0.039663,36.7708,hybrid
-1001000488,Dr. Laura Campbell,Internal Medicine,Las Vegas,NV,Fentora,REP-H171,Hugh Hayes,TERR-H11,3,2,3,1,1,17,5.6528,11569.5,1.5795,0.013331,5.7421,hybrid
-1001000489,Dr. Mary Lewis,Palliative Care,Detroit,MI,Actiq,REP-H232,Hilary Sinclair,TERR-H12,2,6,7,4,3,23,17.8489,31554.6,6.2582,0.057572,18.9659,hybrid
-1001000490,Dr. Melissa Johnson,Oncology,Jacksonville,FL,Subsys,REP-H120,Hattie Vance,TERR-H08,2,4,8,5,0,20,10.3908,19585.5,4.6693,0.041712,10.876,hybrid
-1001000491,Dr. Nancy Clark,Pain Management,Los Angeles,CA,Abstral,REP-H263,Howard Mercer,TERR-H07,2,7,8,4,3,16,19.3924,21603.94,5.2225,0.04847,20.4052,hybrid
-1001000492,Dr. Linda Martin,Palliative Care,Baltimore,MD,Fentora,REP-H117,Hunter Vance,TERR-H05,2,6,7,5,3,29,17.0243,40680.37,6.4012,0.058703,18.1141,hybrid
-1001000493,Dr. Betty Green,Oncology,Nashville,TN,Abstral,REP-H278,Hilda Mercer,TERR-H10,1,9,7,5,3,16,24.228,51026.52,5.6833,0.053143,25.6049,hybrid
-1001000494,Dr. Betty Young,Pain Management,Charlotte,NC,Actiq,REP-H387,Heather Carrington,TERR-H11,2,7,12,10,8,11,18.4681,29185.65,13.3819,0.119511,20.9394,hybrid
-1001000495,Dr. John Hill,Family Practice,New York,NY,Fentora,REP-H135,Homer Finch,TERR-H11,2,4,4,1,0,11,10.7803,23736.9,3.7926,0.034118,11.1891,hybrid
-1001000496,Dr. Lisa Hernandez,Palliative Care,Denver,CO,Lazanda,REP-H147,Heather Sterling,TERR-H11,2,7,9,5,4,17,20.2503,34956.24,5.4259,0.050414,21.3491,hybrid
-1001000497,Dr. David Perez,Palliative Care,Jacksonville,FL,Actiq,REP-H212,Hilary Bishop,TERR-H04,2,5,6,6,5,30,13.2265,14357.77,9.1609,0.081736,14.4382,hybrid
-1001000498,Dr. William Flores,Oncology,Baltimore,MD,Subsys,REP-H192,Hilary Monroe,TERR-H08,2,5,5,4,0,26,14.0058,15115.09,3.2007,0.029436,14.4541,hybrid
-1001000499,Dr. David Hall,Anesthesiology,Nashville,TN,Lazanda,REP-H164,Hannah Hayes,TERR-H04,2,6,4,2,2,19,15.3519,37165.1,2.0086,0.018682,15.6603,hybrid
-1001000500,Dr. Karen Smith,Pain Management,Chicago,IL,Lazanda,REP-H308,Harvey Kensington,TERR-H04,3,3,3,3,1,14,8.3338,19430.63,2.3933,0.021144,8.5333,hybrid
-1001000501,Dr. Barbara Miller,Anesthesiology,Houston,TX,Subsys,REP-H340,Hattie Thornton,TERR-H12,2,7,13,6,7,19,18.6733,42160.27,4.5021,0.041845,19.514,hybrid
-1001000502,Dr. Margaret Baker,Orthopedics,Houston,TX,Abstral,REP-H157,Hunter Sterling,TERR-H09,2,7,9,8,6,22,20.0669,45124.2,5.2771,0.049044,21.1258,hybrid
-1001000503,Dr. John Miller,Pain Management,Houston,TX,Abstral,REP-H222,Harold Sinclair,TERR-H02,2,4,10,9,8,17,9.998,25451.26,7.9152,0.069484,10.7893,hybrid
-1001000504,Dr. Thomas Smith,Anesthesiology,Houston,TX,Subsys,REP-H280,Hattie Mercer,TERR-H12,2,5,9,6,3,25,13.3136,30229.59,5.982,0.054148,14.11,hybrid
-1001000505,Dr. Stephanie Adams,Neurology,Atlanta,GA,Actiq,REP-H155,Homer Sterling,TERR-H07,2,5,4,3,3,17,13.8588,16186.61,5.5185,0.05019,14.6236,hybrid
-1001000506,Dr. Sarah Nguyen,Pain Management,Baltimore,MD,Actiq,REP-H156,Hayden Sterling,TERR-H08,2,6,12,9,5,27,15.9955,25794.05,9.5327,0.085919,17.5203,hybrid
-1001000507,Dr. Betty Harris,Oncology,Atlanta,GA,Fentora,REP-H246,Holly Conway,TERR-H02,1,10,16,10,9,18,28.2186,44138.2,8.5673,0.079496,30.6361,hybrid
-1001000508,Dr. Betty Smith,Neurology,Miami,FL,Abstral,REP-H230,Hope Sinclair,TERR-H10,2,5,6,5,2,20,14.6449,16057.43,3.1589,0.029141,15.1075,hybrid
-1001000509,Dr. Michael Gonzalez,Internal Medicine,Columbus,OH,Subsys,REP-H234,Hazel Sinclair,TERR-H02,1,10,10,8,0,16,41.1776,74619.7,0.9653,0.00938,41.5751,hybrid
-1001000510,Dr. Nancy Wilson,Oncology,Phoenix,AZ,Abstral,REP-H124,Hannah Finch,TERR-H12,2,5,5,5,6,25,13.3552,15126.66,7.5567,0.067942,14.3645,hybrid
-1001000511,Dr. Patricia Anderson,Oncology,Charlotte,NC,Actiq,REP-H313,Hector Kensington,TERR-H09,2,5,11,9,2,15,14.041,15941.38,4.7164,0.043086,14.7032,hybrid
-1001000512,Dr. Dorothy Robinson,Emergency Medicine,Detroit,MI,Actiq,REP-H143,Howard Sterling,TERR-H07,2,5,7,6,0,15,12.1809,31644.31,1.6097,0.014766,12.377,hybrid
-1001000513,Dr. Charles Lopez,Palliative Care,Charlotte,NC,Subsys,REP-H242,Harold Conway,TERR-H10,2,4,7,5,6,12,11.8599,18801.56,6.5139,0.058338,12.6324,hybrid
-1001000514,Dr. Donna Torres,Pain Management,Seattle,WA,Subsys,REP-H103,Howard Vance,TERR-H03,2,6,13,9,3,17,17.3033,26961.59,8.5153,0.077425,18.7767,hybrid
-1001000515,Dr. Barbara Wilson,Internal Medicine,Phoenix,AZ,Lazanda,REP-H155,Homer Sterling,TERR-H07,2,6,7,3,4,20,16.8057,17081.81,5.5262,0.050844,17.7344,hybrid
-1001000516,Dr. Elizabeth Mitchell,Family Practice,New York,NY,Lazanda,REP-H188,Harvey Monroe,TERR-H04,1,8,7,6,5,23,21.6336,40819.19,5.4417,0.050705,22.8109,hybrid
-1001000517,Dr. Emily Brown,Orthopedics,Philadelphia,PA,Subsys,REP-H369,Harrison Whitman,TERR-H05,3,2,2,2,2,12,5.5649,13505.1,2.0778,0.01746,5.6805,hybrid
-1001000518,Dr. Emily Martin,Pain Management,Denver,CO,Subsys,REP-H135,Homer Finch,TERR-H11,2,5,7,5,0,26,12.7943,21934.79,4.1758,0.037999,13.3286,hybrid
-1001000519,Dr. Elizabeth Davis,Pain Management,Charlotte,NC,Subsys,REP-H285,Henry Gallagher,TERR-H05,3,3,6,5,1,28,6.4859,7330.44,7.2585,0.06099,6.9567,hybrid
-1001000520,Dr. Sharon Hill,Emergency Medicine,Chicago,IL,Fentora,REP-H270,Hope Mercer,TERR-H02,2,5,3,2,1,11,13.2808,21740.6,1.5244,0.014077,13.4833,hybrid
-1001000521,Dr. Susan Harris,Orthopedics,Nashville,TN,Subsys,REP-H168,Harvey Hayes,TERR-H08,2,4,3,2,0,12,10.6629,27650.54,-1.2413,-0.011414,10.5306,hybrid
-1001000522,Dr. Carol Moore,Oncology,Las Vegas,NV,Abstral,REP-H374,Hazel Whitman,TERR-H10,2,5,8,7,3,18,13.8601,32569.35,7.8697,0.070832,14.9509,hybrid
-1001000523,Dr. John Adams,Anesthesiology,Nashville,TN,Abstral,REP-H335,Homer Thornton,TERR-H07,2,5,6,5,3,22,14.4135,28761.16,4.8118,0.044013,15.107,hybrid
-1001000524,Dr. Richard Wright,Oncology,Charlotte,NC,Abstral,REP-H169,Harrison Hayes,TERR-H09,2,6,12,8,5,29,15.6736,20737.51,10.2446,0.091943,17.2793,hybrid
-1001000525,Dr. William Wilson,Neurology,New York,NY,Subsys,REP-H247,Heather Conway,TERR-H03,3,3,3,2,0,22,8.7278,17709.6,1.2181,0.010869,8.8342,hybrid
-1001000526,Dr. Jennifer Hill,Pain Management,Nashville,TN,Fentora,REP-H347,Heather Blackwood,TERR-H07,1,10,12,7,7,24,29.033,27848.83,9.3405,0.086448,31.7448,hybrid
-1001000527,Dr. Lisa Allen,Oncology,New York,NY,Subsys,REP-H340,Hattie Thornton,TERR-H12,2,6,13,10,3,21,17.6913,16023.67,5.8924,0.054271,18.7337,hybrid
-1001000528,Dr. Elizabeth Young,Pain Management,Denver,CO,Subsys,REP-H304,Hannah Kensington,TERR-H12,2,4,9,8,9,15,11.6729,24353.21,11.5793,0.101343,13.0245,hybrid
-1001000529,Dr. Lisa Scott,Oncology,Boston,MA,Abstral,REP-H324,Hannah Thornton,TERR-H08,2,4,3,2,1,23,9.0119,9826.95,3.4578,0.03065,9.3236,hybrid
-1001000530,Dr. Lisa Moore,Oncology,Baltimore,MD,Abstral,REP-H204,Hannah Bishop,TERR-H08,3,3,8,5,5,17,7.1845,9742.58,7.1451,0.060832,7.6979,hybrid
-1001000531,Dr. Sarah Green,Family Practice,Columbus,OH,Actiq,REP-H164,Hannah Hayes,TERR-H04,2,7,7,5,0,21,19.8717,39835.34,2.9208,0.027429,20.4521,hybrid
-1001000532,Dr. Richard Rivera,Anesthesiology,Philadelphia,PA,Fentora,REP-H223,Howard Sinclair,TERR-H03,2,6,10,9,7,13,17.7946,38889.91,6.3502,0.058385,18.9246,hybrid
-1001000533,Dr. Donna Ramirez,Orthopedics,Philadelphia,PA,Abstral,REP-H286,Holly Gallagher,TERR-H06,2,5,5,3,3,13,13.6707,22272.84,4.9816,0.045376,14.3518,hybrid
-1001000534,Dr. Elizabeth Johnson,Oncology,Jacksonville,FL,Abstral,REP-H375,Homer Whitman,TERR-H11,2,4,4,3,0,9,10.4672,10486.04,3.8483,0.034524,10.87,hybrid
-1001000535,Dr. Patricia Anderson,Oncology,Phoenix,AZ,Fentora,REP-H108,Harvey Vance,TERR-H08,3,3,3,2,1,13,6.5818,13649.91,4.3896,0.037398,6.8707,hybrid
-1001000536,Dr. Richard Martinez,Pain Management,Columbus,OH,Subsys,REP-H155,Homer Sterling,TERR-H07,1,8,16,14,11,32,22.7341,54946.89,14.791,0.132499,26.0967,hybrid
-1001000537,Dr. James Davis,Anesthesiology,Chicago,IL,Subsys,REP-H312,Hilary Kensington,TERR-H08,2,5,7,6,5,16,13.5445,12165.65,8.9462,0.080022,14.7562,hybrid
-1001000538,Dr. Sarah Baker,Oncology,Los Angeles,CA,Abstral,REP-H356,Hayden Blackwood,TERR-H04,2,5,4,3,4,12,12.9979,15922.73,7.553,0.067784,13.9796,hybrid
-1001000539,Dr. Donna Davis,Pain Management,Las Vegas,NV,Actiq,REP-H297,Hunter Gallagher,TERR-H05,1,9,16,12,4,17,25.2061,32812.84,8.9386,0.082478,27.4592,hybrid
-1001000540,Dr. Carol Martinez,Orthopedics,Houston,TX,Fentora,REP-H300,Hattie Gallagher,TERR-H08,3,3,5,4,2,28,7.3485,14787.23,5.1316,0.044178,7.7256,hybrid
-1001000541,Dr. Stephanie Nelson,Pain Management,Denver,CO,Abstral,REP-H161,Helen Hayes,TERR-H01,2,6,11,7,7,27,15.3704,16751.47,12.4428,0.110492,17.2829,hybrid
-1001000542,Dr. Betty Anderson,Anesthesiology,Miami,FL,Lazanda,REP-H167,Heather Hayes,TERR-H07,2,7,9,8,5,15,20.6922,31006.23,7.5449,0.069499,22.2535,hybrid
-1001000543,Dr. Emily Wilson,Anesthesiology,Phoenix,AZ,Fentora,REP-H208,Harvey Bishop,TERR-H12,1,8,10,9,10,14,22.5492,23887.01,10.8708,0.099023,25.0004,hybrid
-1001000544,Dr. Emily Garcia,Pain Management,Nashville,TN,Subsys,REP-H191,Hugh Monroe,TERR-H07,1,8,16,10,10,19,21.5811,23109.8,12.9353,0.11656,24.3726,hybrid
-1001000545,Dr. Joseph Lee,Neurology,Los Angeles,CA,Abstral,REP-H311,Hugh Kensington,TERR-H07,2,7,4,4,2,16,18.9833,33638.82,4.1108,0.038308,19.7637,hybrid
-1001000546,Dr. Lisa Garcia,Oncology,Atlanta,GA,Abstral,REP-H139,Holden Finch,TERR-H03,1,8,16,13,7,31,23.3503,20570.73,8.5949,0.079199,25.3572,hybrid
-1001000547,Dr. Robert Perez,Neurology,Denver,CO,Subsys,REP-H220,Hattie Bishop,TERR-H12,2,4,5,2,2,9,9.5001,23526.34,3.412,0.030404,9.8242,hybrid
-1001000548,Dr. Karen Wright,Pain Management,Portland,OR,Actiq,REP-H136,Hayden Finch,TERR-H12,2,5,12,7,4,20,12.37,24249.47,10.4828,0.092568,13.6667,hybrid
-1001000549,Dr. Jennifer Perez,Emergency Medicine,Portland,OR,Fentora,REP-H306,Holly Kensington,TERR-H02,1,8,8,4,1,16,23.6719,49136.42,3.0881,0.029199,24.4029,hybrid
-1001000550,Dr. Robert Adams,Neurology,Miami,FL,Actiq,REP-H344,Hannah Blackwood,TERR-H04,2,5,4,3,3,21,12.3432,12687.0,5.846,0.052667,13.0648,hybrid
-1001000551,Dr. James Robinson,Pain Management,Austin,TX,Subsys,REP-H124,Hannah Finch,TERR-H12,2,6,5,2,1,20,15.7946,34494.77,2.0767,0.019343,16.1226,hybrid
-1001000552,Dr. Richard Mitchell,Psychiatry,Austin,TX,Subsys,REP-H372,Hilary Whitman,TERR-H08,2,6,2,1,0,21,17.8761,17104.74,-0.2385,-0.002261,17.8335,hybrid
-1001000553,Dr. Mary Thompson,Internal Medicine,Nashville,TN,Lazanda,REP-H365,Henry Whitman,TERR-H01,1,8,4,4,1,16,22.3724,56554.84,2.4313,0.023006,22.9163,hybrid
-1001000554,Dr. Sharon King,Pain Management,Denver,CO,Subsys,REP-H203,Howard Bishop,TERR-H07,2,4,6,5,0,22,9.8151,23935.26,2.2261,0.020001,10.0336,hybrid
-1001000555,Dr. Rebecca White,Oncology,Philadelphia,PA,Fentora,REP-H248,Harvey Conway,TERR-H04,2,7,11,8,5,8,19.5046,36911.16,6.1622,0.056963,20.7065,hybrid
-1001000556,Dr. Laura Mitchell,Pain Management,Austin,TX,Actiq,REP-H169,Harrison Hayes,TERR-H09,2,5,9,7,6,39,13.416,19712.47,10.359,0.092036,14.8057,hybrid
-1001000557,Dr. Amanda Nguyen,Palliative Care,Austin,TX,Fentora,REP-H145,Henry Sterling,TERR-H09,2,6,11,9,9,18,15.9622,33182.78,9.1094,0.082246,17.4163,hybrid
-1001000558,Dr. Kathleen Hernandez,Anesthesiology,Jacksonville,FL,Subsys,REP-H122,Harold Finch,TERR-H10,2,5,8,6,0,25,12.8189,16017.25,3.4765,0.03174,13.2645,hybrid
-1001000559,Dr. Betty Taylor,Pain Management,Boston,MA,Subsys,REP-H283,Howard Gallagher,TERR-H03,1,9,14,13,3,14,24.4732,31344.32,11.8802,0.108081,27.3807,hybrid
-1001000560,Dr. Sarah Hill,Pain Management,Miami,FL,Subsys,REP-H328,Harvey Thornton,TERR-H12,2,6,16,11,7,16,17.1237,38699.18,10.9554,0.098496,18.9996,hybrid
-1001000561,Dr. Jessica Allen,Orthopedics,Philadelphia,PA,Subsys,REP-H211,Hugh Bishop,TERR-H03,2,5,12,8,7,18,14.1371,31796.78,5.5998,0.050977,14.9287,hybrid
-1001000562,Dr. Lisa Carter,Palliative Care,Los Angeles,CA,Actiq,REP-H175,Homer Hayes,TERR-H03,1,8,15,12,9,19,22.2242,45051.79,9.1782,0.084185,24.264,hybrid
-1001000563,Dr. Kimberly Carter,Pain Management,Las Vegas,NV,Fentora,REP-H255,Homer Conway,TERR-H11,2,4,6,4,3,22,11.5133,12051.36,7.9072,0.070228,12.4237,hybrid
-1001000564,Dr. Kimberly Carter,Family Practice,Portland,OR,Lazanda,REP-H226,Holly Sinclair,TERR-H06,2,4,3,1,1,24,11.7602,15476.61,3.1103,0.028262,12.1259,hybrid
-1001000565,Dr. Donna Jackson,Psychiatry,Boston,MA,Subsys,REP-H161,Helen Hayes,TERR-H01,3,3,2,2,1,24,7.204,12416.29,2.8314,0.024559,7.408,hybrid
-1001000566,Dr. Laura Rivera,Anesthesiology,Detroit,MI,Subsys,REP-H177,Hunter Hayes,TERR-H05,2,4,5,2,1,16,11.6563,18992.27,1.7191,0.015709,11.8567,hybrid
-1001000567,Dr. Elizabeth Hall,Pain Management,Denver,CO,Actiq,REP-H319,Holden Kensington,TERR-H03,1,10,16,12,2,6,31.7311,79349.18,5.3101,0.050197,33.4161,hybrid
-1001000568,Dr. Kimberly Sanchez,Anesthesiology,Seattle,WA,Abstral,REP-H269,Harrison Mercer,TERR-H01,3,2,2,2,0,30,5.382,9357.83,1.0129,0.008506,5.4365,hybrid
-1001000569,Dr. Mary Ramirez,Oncology,New York,NY,Subsys,REP-H150,Hope Sterling,TERR-H02,2,7,13,12,9,22,19.8485,38938.94,10.8748,0.098516,22.007,hybrid
-1001000570,Dr. Susan Torres,Palliative Care,Boston,MA,Subsys,REP-H281,Helen Gallagher,TERR-H01,2,4,11,8,1,15,9.6064,10951.17,7.4917,0.065651,10.3261,hybrid
-1001000571,Dr. Jessica Torres,Family Practice,Atlanta,GA,Actiq,REP-H144,Hannah Sterling,TERR-H08,2,4,7,5,0,20,9.1672,12598.52,3.7817,0.033529,9.5139,hybrid
-1001000572,Dr. Donna Baker,Anesthesiology,Columbus,OH,Subsys,REP-H235,Homer Sinclair,TERR-H03,2,5,9,5,6,14,13.2322,29104.19,6.6856,0.060303,14.1168,hybrid
-1001000573,Dr. Laura Brown,Pain Management,Philadelphia,PA,Subsys,REP-H218,Hilda Bishop,TERR-H10,1,9,11,10,11,20,24.7343,64106.77,10.207,0.093585,27.2589,hybrid
-1001000574,Dr. Margaret Clark,Internal Medicine,Philadelphia,PA,Subsys,REP-H324,Hannah Thornton,TERR-H08,1,8,8,4,5,20,22.7801,23905.57,5.5779,0.052054,24.0508,hybrid
-1001000575,Dr. Joseph Hall,Internal Medicine,Boston,MA,Subsys,REP-H358,Hilda Blackwood,TERR-H06,1,8,6,4,5,28,22.8739,58047.44,4.712,0.044157,23.9517,hybrid
-1001000576,Dr. Melissa Hall,Pain Management,Atlanta,GA,Actiq,REP-H116,Hayden Vance,TERR-H04,2,7,15,13,0,25,20.2555,50036.69,6.9455,0.064089,21.6624,hybrid
-1001000577,Dr. Susan Harris,Anesthesiology,Phoenix,AZ,Abstral,REP-H133,Hector Finch,TERR-H09,2,7,13,8,1,10,20.7013,25824.53,4.4072,0.041181,21.6136,hybrid
-1001000578,Dr. Patricia Lewis,Pain Management,Seattle,WA,Lazanda,REP-H120,Hattie Vance,TERR-H08,2,7,12,10,0,24,20.8294,25095.66,4.8153,0.044923,21.8325,hybrid
-1001000579,Dr. Laura Lewis,Palliative Care,Philadelphia,PA,Subsys,REP-H170,Hope Hayes,TERR-H10,2,6,11,7,5,13,15.8505,18085.98,6.8512,0.062455,16.9365,hybrid
-1001000580,Dr. Jessica Wilson,Oncology,Seattle,WA,Abstral,REP-H291,Hugh Gallagher,TERR-H11,3,2,3,2,3,13,3.4482,2946.0,7.9003,0.059441,3.7207,hybrid
-1001000581,Dr. Michelle Rivera,Oncology,Detroit,MI,Lazanda,REP-H314,Hazel Kensington,TERR-H10,2,5,7,6,0,21,12.4474,18674.19,4.5755,0.04148,13.017,hybrid
-1001000582,Dr. Laura Nguyen,Pain Management,Seattle,WA,Subsys,REP-H291,Hugh Gallagher,TERR-H11,2,7,16,12,13,20,18.4759,22042.43,8.852,0.080634,20.1114,hybrid
-1001000583,Dr. Charles Robinson,Oncology,Columbus,OH,Abstral,REP-H123,Howard Finch,TERR-H11,1,8,14,6,3,16,21.8316,32642.64,6.0244,0.056007,23.1468,hybrid
-1001000584,Dr. Jessica Robinson,Pain Management,Philadelphia,PA,Lazanda,REP-H217,Hunter Bishop,TERR-H09,2,6,10,7,6,11,17.7592,36961.1,9.27,0.084119,19.4055,hybrid
-1001000585,Dr. Kimberly Anderson,Internal Medicine,Phoenix,AZ,Abstral,REP-H381,Helen Carrington,TERR-H05,3,3,2,2,0,33,6.1867,6253.31,1.4563,0.012459,6.2768,hybrid
-1001000586,Dr. Nancy Young,Oncology,Baltimore,MD,Abstral,REP-H302,Harold Kensington,TERR-H10,3,3,2,1,2,34,8.8528,8475.91,5.423,0.047576,9.3328,hybrid
-1001000587,Dr. James White,Pain Management,Boston,MA,Subsys,REP-H152,Hilary Sterling,TERR-H04,1,10,16,10,1,15,28.9739,56254.42,7.5478,0.070421,31.1608,hybrid
-1001000588,Dr. John Young,Anesthesiology,Nashville,TN,Subsys,REP-H113,Hector Vance,TERR-H01,3,3,7,5,0,22,7.6742,17131.02,3.7909,0.032989,7.9651,hybrid
-1001000589,Dr. Kimberly Hill,Pain Management,Nashville,TN,Subsys,REP-H274,Hazel Mercer,TERR-H06,2,4,9,7,1,18,9.0277,13203.98,7.8776,0.068518,9.7389,hybrid
-1001000590,Dr. Linda Anderson,Pain Management,Houston,TX,Subsys,REP-H107,Heather Vance,TERR-H07,2,5,9,6,7,13,13.2961,13816.54,10.9608,0.097073,14.7534,hybrid
-1001000591,Dr. Mary Lopez,Neurology,Miami,FL,Lazanda,REP-H231,Hugh Sinclair,TERR-H11,2,7,9,6,4,14,20.9674,39459.7,6.8004,0.062889,22.3933,hybrid
-1001000592,Dr. John Anderson,Anesthesiology,Boston,MA,Subsys,REP-H275,Homer Mercer,TERR-H07,3,3,3,2,3,6,6.0119,7052.34,5.277,0.044251,6.3292,hybrid
-1001000593,Dr. James Jones,Internal Medicine,Chicago,IL,Abstral,REP-H372,Hilary Whitman,TERR-H08,2,4,3,2,1,24,10.8484,13279.54,3.1665,0.02858,11.1919,hybrid
-1001000594,Dr. Kimberly Anderson,Oncology,Austin,TX,Actiq,REP-H335,Homer Thornton,TERR-H07,3,3,2,1,1,22,8.37,18775.79,1.1231,0.009983,8.464,hybrid
-1001000595,Dr. Melissa Clark,Oncology,Los Angeles,CA,Abstral,REP-H108,Harvey Vance,TERR-H08,2,5,11,8,4,18,14.0491,32672.25,8.6263,0.077452,15.261,hybrid
-1001000596,Dr. Barbara Johnson,Pain Management,Jacksonville,FL,Subsys,REP-H281,Helen Gallagher,TERR-H01,3,2,5,2,2,14,5.2772,9572.24,3.4977,0.028981,5.4618,hybrid
-1001000597,Dr. Betty Perez,Internal Medicine,Charlotte,NC,Fentora,REP-H238,Hilda Sinclair,TERR-H06,2,7,10,5,5,31,19.6763,38740.21,4.9034,0.045607,20.6411,hybrid
-1001000598,Dr. Kimberly Rivera,Anesthesiology,Houston,TX,Abstral,REP-H195,Homer Monroe,TERR-H11,2,6,8,4,4,20,16.9983,32680.57,6.3162,0.057942,18.072,hybrid
-1001000599,Dr. Michael Taylor,Palliative Care,Miami,FL,Fentora,REP-H127,Heather Finch,TERR-H03,2,4,8,6,7,15,9.1202,18055.82,6.0321,0.052935,9.6704,hybrid
-1001000600,Dr. Karen Torres,Anesthesiology,Portland,OR,Lazanda,REP-H150,Hope Sterling,TERR-H02,2,7,8,6,1,34,18.9029,21858.86,9.9048,0.089906,20.7751,hybrid
-1001000601,Dr. Charles Davis,Pain Management,New York,NY,Subsys,REP-H266,Holly Mercer,TERR-H10,2,7,11,6,3,20,20.7145,25363.78,9.5527,0.087212,22.6933,hybrid
-1001000602,Dr. Michael Taylor,Palliative Care,Las Vegas,NV,Abstral,REP-H295,Homer Gallagher,TERR-H03,2,4,7,5,1,12,10.0598,18525.64,5.0809,0.045179,10.5709,hybrid
-1001000603,Dr. Jessica Davis,Pain Management,Philadelphia,PA,Actiq,REP-H306,Holly Kensington,TERR-H02,2,4,7,6,7,17,10.3229,24274.33,7.1688,0.06331,11.063,hybrid
-1001000604,Dr. Ashley Rivera,Palliative Care,Denver,CO,Fentora,REP-H295,Homer Gallagher,TERR-H03,1,8,12,10,3,24,21.9294,56923.23,7.4594,0.068911,23.5652,hybrid
-1001000605,Dr. Susan Smith,Pain Management,Chicago,IL,Subsys,REP-H268,Harvey Mercer,TERR-H12,3,2,4,3,2,22,4.6981,5602.72,6.395,0.051384,4.9986,hybrid
-1001000606,Dr. Linda Hill,Orthopedics,Austin,TX,Subsys,REP-H338,Hilda Thornton,TERR-H10,1,10,13,12,10,18,34.3709,44097.0,8.1698,0.076394,37.1789,hybrid
-1001000607,Dr. Kimberly Campbell,Anesthesiology,Philadelphia,PA,Abstral,REP-H260,Hattie Conway,TERR-H04,2,5,10,8,5,21,14.8372,23895.97,7.7502,0.070093,15.9871,hybrid
-1001000608,Dr. Jessica Rodriguez,Family Practice,Los Angeles,CA,Fentora,REP-H329,Harrison Thornton,TERR-H01,2,5,3,2,3,15,12.5011,21190.46,3.8193,0.034754,12.9786,hybrid
-1001000609,Dr. Jennifer Garcia,Pain Management,Columbus,OH,Abstral,REP-H142,Harold Sterling,TERR-H06,2,7,11,3,1,12,19.4548,46670.34,5.9413,0.054969,20.6107,hybrid
-1001000610,Dr. Carol Jones,Oncology,Seattle,WA,Subsys,REP-H323,Howard Thornton,TERR-H07,2,4,10,7,2,8,11.7855,10162.9,8.6243,0.076496,12.802,hybrid
-1001000611,Dr. Laura White,Neurology,Nashville,TN,Subsys,REP-H117,Hunter Vance,TERR-H05,2,6,5,3,2,12,15.2404,15561.42,2.1927,0.020368,15.5745,hybrid
-1001000612,Dr. Nancy Rodriguez,Pain Management,Los Angeles,CA,Subsys,REP-H157,Hunter Sterling,TERR-H09,2,6,12,9,6,15,15.1684,14167.17,4.9353,0.045261,15.917,hybrid
-1001000613,Dr. Sarah Lewis,Internal Medicine,Portland,OR,Fentora,REP-H119,Holden Vance,TERR-H07,2,6,10,8,2,18,15.1433,22409.97,3.8843,0.035788,15.7315,hybrid
-1001000614,Dr. William Martin,Oncology,Nashville,TN,Subsys,REP-H114,Hazel Vance,TERR-H02,1,10,16,12,0,12,44.5755,59084.53,5.0713,0.048409,46.836,hybrid
-1001000615,Dr. Betty White,Oncology,Baltimore,MD,Lazanda,REP-H264,Hannah Mercer,TERR-H08,2,4,9,8,2,24,10.1352,9071.0,6.7273,0.05943,10.817,hybrid
-1001000616,Dr. Michelle Green,Anesthesiology,Philadelphia,PA,Subsys,REP-H322,Harold Thornton,TERR-H06,2,7,12,9,2,38,18.9924,42920.92,5.6942,0.052681,20.0739,hybrid
-1001000617,Dr. John Smith,Palliative Care,Nashville,TN,Abstral,REP-H351,Hugh Blackwood,TERR-H11,2,4,10,8,8,14,9.1461,18359.74,10.0962,0.087105,10.0695,hybrid
-1001000618,Dr. Melissa Thompson,Neurology,Chicago,IL,Subsys,REP-H199,Holden Monroe,TERR-H03,2,5,6,3,3,10,13.1097,26944.51,5.9935,0.054192,13.8954,hybrid
-1001000619,Dr. Kimberly Taylor,Pain Management,Baltimore,MD,Subsys,REP-H380,Hattie Whitman,TERR-H04,2,4,5,3,0,20,11.8581,21142.29,4.0721,0.036866,12.3409,hybrid
-1001000620,Dr. Nancy Mitchell,Pain Management,Baltimore,MD,Abstral,REP-H279,Holden Mercer,TERR-H11,2,5,6,5,2,8,13.0739,11739.67,3.7696,0.034418,13.5667,hybrid
-1001000621,Dr. Dorothy Wright,Neurology,Seattle,WA,Lazanda,REP-H320,Hattie Kensington,TERR-H04,2,4,4,2,3,14,10.1944,12177.49,2.0019,0.018066,10.3985,hybrid
-1001000622,Dr. Barbara Lee,Palliative Care,Los Angeles,CA,Abstral,REP-H242,Harold Conway,TERR-H10,2,4,5,3,2,25,10.2895,11007.54,2.9852,0.026844,10.5966,hybrid
-1001000623,Dr. Sandra Perez,Internal Medicine,Los Angeles,CA,Lazanda,REP-H383,Howard Carrington,TERR-H07,2,5,6,4,2,14,12.2444,22108.52,2.7281,0.024908,12.5784,hybrid
-1001000624,Dr. William Martin,Palliative Care,Austin,TX,Subsys,REP-H339,Holden Thornton,TERR-H11,3,3,6,3,4,14,8.8511,12076.35,3.9306,0.034707,9.199,hybrid
-1001000625,Dr. Kathleen Flores,Pain Management,Jacksonville,FL,Abstral,REP-H229,Harrison Sinclair,TERR-H09,2,6,11,10,7,14,15.8692,40782.72,9.1682,0.082729,17.3241,hybrid
-1001000626,Dr. Amanda Thompson,Pain Management,Seattle,WA,Subsys,REP-H192,Hilary Monroe,TERR-H08,2,5,12,5,2,18,14.4563,22395.64,7.1936,0.065115,15.4962,hybrid
-1001000627,Dr. Donna Allen,Anesthesiology,Las Vegas,NV,Subsys,REP-H207,Heather Bishop,TERR-H11,2,5,12,8,8,18,12.784,31027.06,7.9637,0.071259,13.8021,hybrid
-1001000628,Dr. Sandra Nguyen,Internal Medicine,Los Angeles,CA,Actiq,REP-H221,Helen Sinclair,TERR-H01,3,2,2,1,1,18,5.0886,8095.43,3.6534,0.030077,5.2745,hybrid
-1001000629,Dr. Joseph Rodriguez,Pain Management,Miami,FL,Lazanda,REP-H105,Henry Vance,TERR-H05,3,3,6,3,2,16,7.0905,14451.32,5.4937,0.047023,7.4801,hybrid
-1001000630,Dr. Margaret Johnson,Pain Management,Philadelphia,PA,Actiq,REP-H180,Hattie Hayes,TERR-H08,2,6,7,6,7,13,17.0291,28238.77,8.0488,0.073273,18.3997,hybrid
-1001000631,Dr. Robert White,Internal Medicine,Charlotte,NC,Subsys,REP-H279,Holden Mercer,TERR-H11,2,6,2,1,0,26,16.2202,23273.79,2.7724,0.025779,16.6699,hybrid
-1001000632,Dr. Robert White,Palliative Care,Charlotte,NC,Abstral,REP-H311,Hugh Kensington,TERR-H07,2,6,7,4,1,23,17.6478,43204.25,4.2095,0.039064,18.3907,hybrid
-1001000633,Dr. Nancy White,Pain Management,Denver,CO,Actiq,REP-H327,Heather Thornton,TERR-H11,2,6,13,7,1,35,17.1661,19541.19,8.907,0.080812,18.6951,hybrid
-1001000634,Dr. Amanda Lee,Internal Medicine,Columbus,OH,Abstral,REP-H220,Hattie Bishop,TERR-H12,2,6,7,5,1,13,16.1657,17646.2,0.6007,0.005641,16.2628,hybrid
-1001000635,Dr. Charles Johnson,Orthopedics,Philadelphia,PA,Subsys,REP-H246,Holly Conway,TERR-H02,3,3,7,6,4,29,7.3614,6434.49,4.0233,0.034808,7.6575,hybrid
-1001000636,Dr. Rebecca Carter,Oncology,Baltimore,MD,Subsys,REP-H318,Hilda Kensington,TERR-H02,2,5,7,6,6,15,12.7489,15788.09,5.4757,0.049527,13.447,hybrid
-1001000637,Dr. Karen Lewis,Internal Medicine,Atlanta,GA,Actiq,REP-H191,Hugh Monroe,TERR-H07,2,7,10,7,1,29,18.7076,30496.58,2.1814,0.020496,19.1157,hybrid
-1001000638,Dr. Nancy Thomas,Pain Management,Boston,MA,Abstral,REP-H341,Helen Blackwood,TERR-H01,3,3,6,5,4,24,7.0105,6006.72,7.905,0.066893,7.5647,hybrid
-1001000639,Dr. Margaret Lopez,Internal Medicine,Detroit,MI,Abstral,REP-H329,Harrison Thornton,TERR-H01,1,10,15,12,6,16,38.7994,59707.69,8.5983,0.080494,42.1355,hybrid
-1001000640,Dr. Robert Perez,Internal Medicine,Denver,CO,Subsys,REP-H141,Helen Sterling,TERR-H05,2,4,5,3,4,21,11.2367,24726.62,3.2944,0.029804,11.6069,hybrid
-1001000641,Dr. Robert Torres,Pain Management,Seattle,WA,Actiq,REP-H240,Hattie Sinclair,TERR-H08,3,3,7,6,7,8,8.3797,13259.84,8.5238,0.07339,9.094,hybrid
-1001000642,Dr. Margaret Allen,Palliative Care,Portland,OR,Actiq,REP-H250,Hope Conway,TERR-H06,1,9,14,10,3,20,26.9504,39360.12,8.4517,0.078343,29.2282,hybrid
-1001000643,Dr. Amanda Sanchez,Palliative Care,Philadelphia,PA,Abstral,REP-H325,Henry Thornton,TERR-H09,2,6,6,3,3,20,16.2407,31163.38,4.7944,0.044173,17.0194,hybrid
-1001000644,Dr. Betty Miller,Anesthesiology,Nashville,TN,Fentora,REP-H260,Hattie Conway,TERR-H04,1,10,16,13,8,15,27.0963,39089.81,9.6734,0.089193,29.7174,hybrid
-1001000645,Dr. Barbara Thomas,Pain Management,Chicago,IL,Fentora,REP-H168,Harvey Hayes,TERR-H08,2,7,15,8,7,18,20.6268,36290.99,8.547,0.078365,22.3897,hybrid
-1001000646,Dr. Margaret Taylor,Family Practice,Las Vegas,NV,Subsys,REP-H182,Harold Monroe,TERR-H10,3,3,2,1,0,8,8.7369,19313.46,1.548,0.013795,8.8721,hybrid
-1001000647,Dr. Donna Jones,Family Practice,Denver,CO,Subsys,REP-H307,Heather Kensington,TERR-H03,2,5,5,3,2,9,13.8426,20791.65,4.3421,0.039697,14.4437,hybrid
-1001000648,Dr. Charles Ramirez,Neurology,Seattle,WA,Subsys,REP-H205,Henry Bishop,TERR-H09,2,4,6,5,3,20,11.3865,10535.49,6.7219,0.059958,12.1519,hybrid
-1001000649,Dr. William Allen,Neurology,Portland,OR,Fentora,REP-H161,Helen Hayes,TERR-H01,2,6,7,6,6,14,15.9694,27156.52,5.3364,0.048999,16.8216,hybrid
-1001000650,Dr. Kimberly Hall,Pain Management,Phoenix,AZ,Subsys,REP-H183,Howard Monroe,TERR-H11,2,6,8,7,4,13,15.1655,29231.15,6.7306,0.061229,16.1862,hybrid
-1001000651,Dr. Donna Sanchez,Pain Management,Baltimore,MD,Subsys,REP-H210,Hope Bishop,TERR-H02,2,6,11,6,5,19,15.227,15492.3,8.2922,0.074933,16.4896,hybrid
-1001000652,Dr. Thomas Rodriguez,Neurology,Denver,CO,Actiq,REP-H258,Hilda Conway,TERR-H02,2,6,8,7,7,26,15.6106,22172.99,5.8134,0.053194,16.5181,hybrid
-1001000653,Dr. Margaret Garcia,Pain Management,Miami,FL,Abstral,REP-H115,Homer Vance,TERR-H03,2,5,3,2,0,20,14.3586,29567.95,2.4881,0.022994,14.7158,hybrid
-1001000654,Dr. Donna Carter,Family Practice,Denver,CO,Lazanda,REP-H165,Henry Hayes,TERR-H05,2,5,2,1,0,10,14.2937,30506.6,1.4884,0.013815,14.5064,hybrid
-1001000655,Dr. Susan Green,Pain Management,Las Vegas,NV,Fentora,REP-H167,Heather Hayes,TERR-H07,2,5,9,5,4,29,12.8716,30132.44,9.5943,0.085284,14.1066,hybrid
-1001000656,Dr. Ashley Jackson,Anesthesiology,Denver,CO,Fentora,REP-H159,Holden Sterling,TERR-H11,2,5,10,9,9,17,14.2064,15431.65,9.9622,0.088991,15.6216,hybrid
-1001000657,Dr. Robert Jackson,Anesthesiology,New York,NY,Fentora,REP-H114,Hazel Vance,TERR-H02,2,6,10,7,8,25,15.7162,24440.47,8.4516,0.076461,17.0445,hybrid
-1001000658,Dr. Susan Adams,Palliative Care,Portland,OR,Subsys,REP-H137,Hunter Finch,TERR-H01,3,3,4,4,2,15,8.1227,15295.61,4.9462,0.043098,8.5245,hybrid
-1001000659,Dr. Ashley Jones,Emergency Medicine,New York,NY,Lazanda,REP-H218,Hilda Bishop,TERR-H10,2,5,4,3,2,38,12.5074,30852.2,2.6524,0.024264,12.8391,hybrid
-1001000660,Dr. Kathleen Green,Orthopedics,Jacksonville,FL,Subsys,REP-H281,Helen Gallagher,TERR-H01,2,4,3,2,3,25,9.9956,24706.45,2.4786,0.022282,10.2434,hybrid
-1001000661,Dr. Richard Taylor,Oncology,Austin,TX,Fentora,REP-H326,Holly Thornton,TERR-H10,3,3,5,4,4,11,7.7652,12897.99,6.1041,0.052666,8.2392,hybrid
-1001000662,Dr. Sandra Lee,Oncology,Chicago,IL,Subsys,REP-H251,Hugh Conway,TERR-H07,2,6,10,9,6,17,17.0994,30817.06,8.2158,0.074754,18.5042,hybrid
-1001000663,Dr. Donna Lee,Palliative Care,Las Vegas,NV,Subsys,REP-H142,Harold Sterling,TERR-H06,2,5,12,11,7,24,14.2019,18022.44,9.518,0.085186,15.5536,hybrid
-1001000664,Dr. Deborah Brown,Family Practice,Nashville,TN,Lazanda,REP-H102,Harold Vance,TERR-H02,2,5,2,1,0,16,14.0272,15021.14,-0.3037,-0.002839,13.9846,hybrid
-1001000665,Dr. Michelle Lopez,Orthopedics,New York,NY,Abstral,REP-H110,Hope Vance,TERR-H10,2,4,6,3,4,9,9.7115,16438.26,5.7788,0.051066,10.2727,hybrid
-1001000666,Dr. Carol Allen,Oncology,Austin,TX,Actiq,REP-H361,Helen Whitman,TERR-H09,1,10,15,13,4,24,28.4547,43053.91,7.9487,0.073983,30.7165,hybrid
-1001000667,Dr. Linda Lewis,Oncology,Charlotte,NC,Abstral,REP-H244,Hannah Conway,TERR-H12,2,7,11,8,4,21,18.7032,43907.21,9.5256,0.086564,20.4848,hybrid
-1001000668,Dr. Jennifer Taylor,Internal Medicine,Columbus,OH,Subsys,REP-H290,Hope Gallagher,TERR-H10,2,6,4,3,3,23,15.4592,15500.1,2.6037,0.024161,15.8618,hybrid
-1001000669,Dr. Laura Jones,Family Practice,Nashville,TN,Actiq,REP-H194,Hazel Monroe,TERR-H10,1,9,5,4,4,14,26.2758,49847.72,3.9963,0.037775,27.3259,hybrid
-1001000670,Dr. Amanda Wright,Internal Medicine,Philadelphia,PA,Actiq,REP-H195,Homer Monroe,TERR-H11,1,10,11,8,0,14,29.553,72546.29,5.4214,0.051111,31.1552,hybrid
-1001000671,Dr. Carol Ramirez,Pain Management,Las Vegas,NV,Subsys,REP-H284,Hannah Gallagher,TERR-H04,2,4,5,4,4,18,9.3169,15354.88,5.2867,0.046638,9.8094,hybrid
-1001000672,Dr. Joseph Nelson,Pain Management,Miami,FL,Fentora,REP-H241,Helen Conway,TERR-H09,3,2,2,1,2,22,5.8094,11267.55,4.1867,0.035095,6.0526,hybrid
-1001000673,Dr. Susan Wilson,Oncology,Philadelphia,PA,Fentora,REP-H141,Helen Sterling,TERR-H05,2,5,10,6,7,17,14.8748,21617.44,6.3956,0.0582,15.8261,hybrid
-1001000674,Dr. Ashley Hill,Palliative Care,Charlotte,NC,Fentora,REP-H144,Hannah Sterling,TERR-H08,2,4,4,3,2,42,9.0697,12669.16,5.278,0.046443,9.5484,hybrid
-1001000675,Dr. Donna Rodriguez,Internal Medicine,Miami,FL,Fentora,REP-H145,Henry Sterling,TERR-H09,2,7,3,2,0,18,18.2989,19978.92,3.1371,0.029312,18.8729,hybrid
-1001000676,Dr. Rebecca Johnson,Neurology,Atlanta,GA,Subsys,REP-H162,Harold Hayes,TERR-H02,1,8,13,9,2,24,22.4371,29903.24,6.7289,0.062428,23.9468,hybrid
-1001000677,Dr. Joseph Thompson,Oncology,Los Angeles,CA,Actiq,REP-H268,Harvey Mercer,TERR-H12,2,6,11,5,3,15,17.8873,28789.1,6.6165,0.060777,19.0708,hybrid
-1001000678,Dr. William Young,Oncology,Jacksonville,FL,Fentora,REP-H138,Hilda Finch,TERR-H02,2,4,7,5,1,13,11.2617,14247.97,4.2018,0.037865,11.7348,hybrid
-1001000679,Dr. Betty Carter,Anesthesiology,Miami,FL,Abstral,REP-H153,Hector Sterling,TERR-H05,1,9,15,6,4,22,24.1578,37916.21,5.1951,0.048682,25.4129,hybrid
-1001000680,Dr. Sandra King,Family Practice,Charlotte,NC,Actiq,REP-H289,Harrison Gallagher,TERR-H09,2,4,4,3,0,20,9.7285,10185.3,-0.8597,-0.007826,9.6449,hybrid
-1001000681,Dr. Amanda Green,Pain Management,Nashville,TN,Actiq,REP-H242,Harold Conway,TERR-H10,2,5,13,9,8,14,13.5526,14166.98,9.7179,0.086638,14.8696,hybrid
-1001000682,Dr. Michelle Moore,Oncology,Houston,TX,Subsys,REP-H256,Hayden Conway,TERR-H12,2,4,6,5,4,6,10.0569,14646.8,9.1429,0.079883,10.9763,hybrid
-1001000683,Dr. Linda Miller,Anesthesiology,Seattle,WA,Actiq,REP-H357,Hunter Blackwood,TERR-H05,3,3,9,7,8,18,7.0062,16077.97,9.5934,0.080613,7.6783,hybrid
-1001000684,Dr. Thomas Jackson,Pain Management,Baltimore,MD,Abstral,REP-H137,Hunter Finch,TERR-H01,2,6,7,6,2,21,16.4842,22764.05,10.1572,0.09145,18.1585,hybrid
-1001000685,Dr. Mary Smith,Neurology,Columbus,OH,Abstral,REP-H348,Harvey Blackwood,TERR-H08,2,5,2,1,1,12,13.0314,17529.43,2.2686,0.02085,13.327,hybrid
-1001000686,Dr. Barbara Baker,Family Practice,Baltimore,MD,Subsys,REP-H226,Holly Sinclair,TERR-H06,2,5,7,4,3,11,13.818,34669.89,3.8736,0.035485,14.3532,hybrid
-1001000687,Dr. Susan Robinson,Orthopedics,New York,NY,Fentora,REP-H214,Hazel Bishop,TERR-H06,1,8,9,5,1,12,21.9074,42978.68,3.5031,0.032953,22.6749,hybrid
-1001000688,Dr. Emily Carter,Oncology,Denver,CO,Fentora,REP-H150,Hope Sterling,TERR-H02,2,5,9,6,1,13,13.5967,32775.4,6.8193,0.061585,14.5239,hybrid
-1001000689,Dr. Sarah Green,Pain Management,Jacksonville,FL,Subsys,REP-H200,Hattie Monroe,TERR-H04,2,5,13,11,11,12,12.3212,24451.12,14.8617,0.128798,14.1523,hybrid
-1001000690,Dr. Ashley Nelson,Anesthesiology,Los Angeles,CA,Abstral,REP-H367,Heather Whitman,TERR-H03,1,8,12,8,1,13,22.125,21354.46,7.2669,0.067216,23.7328,hybrid
-1001000691,Dr. Sarah Robinson,Palliative Care,Denver,CO,Actiq,REP-H318,Hilda Kensington,TERR-H02,1,9,16,10,4,14,24.7144,40692.94,6.2098,0.05797,26.2491,hybrid
-1001000692,Dr. Betty Harris,Internal Medicine,Charlotte,NC,Subsys,REP-H288,Harvey Gallagher,TERR-H08,1,10,15,13,8,15,34.8856,30783.88,9.9529,0.092357,38.3577,hybrid
-1001000693,Dr. Carol Nguyen,Neurology,Portland,OR,Lazanda,REP-H263,Howard Mercer,TERR-H07,2,6,5,4,5,17,15.121,24494.54,7.0228,0.063793,16.1829,hybrid
-1001000694,Dr. Betty Torres,Pain Management,Houston,TX,Actiq,REP-H132,Hilary Finch,TERR-H08,1,8,11,7,6,16,22.5717,47733.18,5.4231,0.050627,23.7958,hybrid
-1001000695,Dr. Elizabeth Martin,Family Practice,Jacksonville,FL,Lazanda,REP-H203,Howard Bishop,TERR-H07,2,6,7,5,4,11,16.1963,19184.25,3.1901,0.029603,16.713,hybrid
-1001000696,Dr. David Hall,Pain Management,Chicago,IL,Subsys,REP-H146,Holly Sterling,TERR-H10,2,5,8,6,3,19,14.7366,18977.63,7.4379,0.067334,15.8327,hybrid
-1001000697,Dr. Linda Rivera,Anesthesiology,Columbus,OH,Actiq,REP-H244,Hannah Conway,TERR-H12,2,4,5,2,2,14,11.2754,16296.86,2.8218,0.025589,11.5936,hybrid
-1001000698,Dr. Richard Wilson,Orthopedics,Atlanta,GA,Abstral,REP-H165,Henry Hayes,TERR-H05,1,8,7,6,0,3,21.3837,35455.32,3.0255,0.028494,22.0306,hybrid
-1001000699,Dr. John Thompson,Neurology,Los Angeles,CA,Fentora,REP-H145,Henry Sterling,TERR-H09,2,6,9,5,3,24,15.0598,27170.77,4.072,0.037474,15.6731,hybrid
-1001000700,Dr. Elizabeth Hall,Palliative Care,Denver,CO,Subsys,REP-H223,Howard Sinclair,TERR-H03,2,5,4,3,2,17,14.898,25987.06,4.7522,0.04357,15.606,hybrid
-1001000701,Dr. Patricia Mitchell,Pain Management,Los Angeles,CA,Subsys,REP-H287,Heather Gallagher,TERR-H07,2,7,13,9,3,34,19.7257,27696.39,7.7898,0.07152,21.2623,hybrid
-1001000702,Dr. Charles Davis,Internal Medicine,Houston,TX,Actiq,REP-H340,Hattie Thornton,TERR-H12,2,5,6,5,0,12,13.6583,23605.79,1.4524,0.013442,13.8567,hybrid
-1001000703,Dr. Richard Sanchez,Pain Management,Houston,TX,Actiq,REP-H272,Hilary Mercer,TERR-H04,2,7,12,8,4,23,18.6801,45687.22,9.5285,0.086585,20.4601,hybrid
-1001000704,Dr. Kimberly Allen,Orthopedics,Phoenix,AZ,Fentora,REP-H334,Hazel Thornton,TERR-H06,1,8,6,5,6,23,23.6086,20842.37,5.6058,0.052384,24.9321,hybrid
-1001000705,Dr. Ashley Clark,Pain Management,Phoenix,AZ,Fentora,REP-H120,Hattie Vance,TERR-H08,2,5,14,9,0,20,12.6257,11981.42,4.3196,0.039245,13.1711,hybrid
-1001000706,Dr. Barbara Hill,Internal Medicine,Phoenix,AZ,Abstral,REP-H141,Helen Sterling,TERR-H05,2,5,4,3,3,15,14.3218,20832.06,4.8543,0.044376,15.0171,hybrid
-1001000707,Dr. William Martin,Palliative Care,Charlotte,NC,Actiq,REP-H214,Hazel Bishop,TERR-H06,3,3,3,2,0,13,8.6479,13280.75,2.3161,0.020548,8.8482,hybrid
-1001000708,Dr. Sharon Robinson,Pain Management,Nashville,TN,Fentora,REP-H333,Hector Thornton,TERR-H05,2,5,8,6,3,17,12.7957,26360.83,6.7938,0.061108,13.665,hybrid
-1001000709,Dr. Sarah Brown,Family Practice,New York,NY,Subsys,REP-H173,Hector Hayes,TERR-H01,2,4,3,2,3,8,9.0837,14140.82,3.5049,0.031085,9.4021,hybrid
-1001000710,Dr. Kimberly Hernandez,Anesthesiology,Nashville,TN,Subsys,REP-H181,Helen Monroe,TERR-H09,2,6,7,6,1,19,17.1686,36214.91,4.6779,0.043255,17.9718,hybrid
-1001000711,Dr. Linda Young,Pain Management,Detroit,MI,Actiq,REP-H187,Heather Monroe,TERR-H03,2,7,4,3,3,14,18.6234,28227.23,8.0947,0.074014,20.1309,hybrid
-1001000712,Dr. Jessica Williams,Neurology,Charlotte,NC,Actiq,REP-H332,Hilary Thornton,TERR-H04,3,3,3,2,1,23,8.2276,21308.5,5.402,0.047042,8.6721,hybrid
-1001000713,Dr. Dorothy Ramirez,Neurology,Atlanta,GA,Subsys,REP-H354,Hazel Blackwood,TERR-H02,1,10,11,8,7,17,29.8424,74385.75,7.8618,0.073315,32.1885,hybrid
-1001000714,Dr. Linda Lewis,Palliative Care,Miami,FL,Subsys,REP-H385,Henry Carrington,TERR-H09,2,4,6,3,2,14,10.3664,12661.03,5.1606,0.045992,10.9014,hybrid
-1001000715,Dr. Sarah Flores,Emergency Medicine,New York,NY,Abstral,REP-H254,Hazel Conway,TERR-H10,2,5,7,5,4,27,12.5011,29491.94,2.6594,0.024326,12.8335,hybrid
-1001000716,Dr. Joseph Nguyen,Internal Medicine,Boston,MA,Subsys,REP-H282,Harold Gallagher,TERR-H02,2,5,6,5,1,18,12.312,28701.86,3.3058,0.030116,12.719,hybrid
-1001000717,Dr. Michael Gonzalez,Palliative Care,Los Angeles,CA,Fentora,REP-H112,Hilary Vance,TERR-H12,2,5,5,4,5,16,14.339,15967.51,7.3299,0.066275,15.39,hybrid
-1001000718,Dr. Ashley Hernandez,Orthopedics,Las Vegas,NV,Fentora,REP-H126,Holly Finch,TERR-H02,3,3,2,1,2,14,7.9129,16647.16,3.2308,0.028279,8.1686,hybrid
-1001000719,Dr. Laura Robinson,Pain Management,New York,NY,Lazanda,REP-H205,Henry Bishop,TERR-H09,2,6,10,7,7,14,15.585,18948.9,7.7839,0.070594,16.7981,hybrid
-1001000720,Dr. Amanda Gonzalez,Oncology,Baltimore,MD,Subsys,REP-H182,Harold Monroe,TERR-H10,2,5,3,2,3,23,12.2185,25976.19,5.9397,0.05345,12.9442,hybrid
-1001000721,Dr. Jennifer Thompson,Pain Management,Boston,MA,Abstral,REP-H357,Hunter Blackwood,TERR-H05,2,6,6,5,5,17,16.8106,43214.76,10.5419,0.094856,18.5828,hybrid
-1001000722,Dr. Sandra Garcia,Pain Management,Las Vegas,NV,Abstral,REP-H158,Hilda Sterling,TERR-H10,1,8,9,4,1,18,23.4893,29281.05,4.6913,0.044014,24.5913,hybrid
-1001000723,Dr. Barbara Green,Neurology,Miami,FL,Subsys,REP-H296,Hayden Gallagher,TERR-H04,1,10,16,10,7,15,31.284,70346.5,6.7987,0.063802,33.4108,hybrid
-1001000724,Dr. Jessica Hill,Neurology,Los Angeles,CA,Fentora,REP-H280,Hattie Mercer,TERR-H12,3,3,2,1,1,19,6.4981,12049.06,2.6896,0.023041,6.6729,hybrid
-1001000725,Dr. Sarah Brown,Emergency Medicine,Miami,FL,Subsys,REP-H325,Henry Thornton,TERR-H09,2,7,12,9,4,26,18.3592,42830.14,5.4013,0.049954,19.3509,hybrid
-1001000726,Dr. Donna Nelson,Neurology,Boston,MA,Abstral,REP-H240,Hattie Sinclair,TERR-H08,2,5,4,2,1,17,12.7797,16353.52,4.5112,0.040987,13.3563,hybrid
-1001000727,Dr. Michelle Williams,Oncology,Boston,MA,Lazanda,REP-H265,Henry Mercer,TERR-H09,2,4,9,6,7,8,9.2587,12469.83,8.219,0.071556,10.0196,hybrid
-1001000728,Dr. Lisa Lopez,Palliative Care,New York,NY,Actiq,REP-H163,Howard Hayes,TERR-H03,2,6,8,6,4,20,15.014,36563.62,9.0584,0.081513,16.3741,hybrid
-1001000729,Dr. Nancy Torres,Orthopedics,New York,NY,Abstral,REP-H198,Hilda Monroe,TERR-H02,1,9,12,7,3,16,25.5941,37630.83,6.6331,0.061882,27.2918,hybrid
-1001000730,Dr. Michael Thompson,Palliative Care,Austin,TX,Subsys,REP-H189,Harrison Monroe,TERR-H05,3,2,2,1,0,18,5.4637,12001.57,0.946,0.007965,5.5154,hybrid
-1001000731,Dr. Richard Baker,Orthopedics,Nashville,TN,Subsys,REP-H309,Harrison Kensington,TERR-H05,2,7,7,5,5,11,20.7056,43092.49,4.3336,0.040508,21.6029,hybrid
-1001000732,Dr. Betty Lopez,Neurology,Phoenix,AZ,Subsys,REP-H248,Harvey Conway,TERR-H04,1,9,10,7,4,24,24.9309,24064.9,4.5066,0.042415,26.0545,hybrid
-1001000733,Dr. Joseph Hernandez,Neurology,Phoenix,AZ,Subsys,REP-H349,Harrison Blackwood,TERR-H09,2,6,6,2,3,11,16.8693,40402.26,4.2389,0.039236,17.5843,hybrid
-1001000734,Dr. Joseph Rodriguez,Pain Management,Jacksonville,FL,Subsys,REP-H249,Harrison Conway,TERR-H05,2,4,6,4,2,21,10.3765,24563.63,7.1507,0.063183,11.1185,hybrid
-1001000735,Dr. John Perez,Oncology,Jacksonville,FL,Actiq,REP-H114,Hazel Vance,TERR-H02,2,6,4,3,1,21,17.2902,16329.9,5.224,0.048203,18.1934,hybrid
-1001000736,Dr. Sandra Gonzalez,Palliative Care,Boston,MA,Subsys,REP-H346,Holly Blackwood,TERR-H06,2,4,3,2,1,24,11.1182,17828.89,1.9712,0.017924,11.3373,hybrid
-1001000737,Dr. John Scott,Neurology,Portland,OR,Lazanda,REP-H205,Henry Bishop,TERR-H09,1,9,10,7,8,22,24.4377,60382.4,8.6592,0.079908,26.5538,hybrid
-1001000738,Dr. Sandra Johnson,Oncology,Austin,TX,Actiq,REP-H321,Helen Thornton,TERR-H05,2,6,6,3,1,12,16.7776,36985.19,4.2422,0.039255,17.4893,hybrid
-1001000739,Dr. Rebecca White,Pain Management,Seattle,WA,Actiq,REP-H187,Heather Monroe,TERR-H03,3,3,4,3,0,15,8.5587,14117.56,3.7999,0.033458,8.884,hybrid
-1001000740,Dr. Dorothy King,Pain Management,Atlanta,GA,Actiq,REP-H327,Heather Thornton,TERR-H11,2,6,11,6,7,17,16.4535,33838.33,9.8801,0.089054,18.0791,hybrid
-1001000741,Dr. Laura Nguyen,Anesthesiology,Denver,CO,Subsys,REP-H333,Hector Thornton,TERR-H05,2,4,4,3,4,14,9.0962,8885.52,2.3962,0.021359,9.3142,hybrid
-1001000742,Dr. Emily Lee,Oncology,Baltimore,MD,Fentora,REP-H153,Hector Sterling,TERR-H05,2,7,16,4,1,22,18.4549,46203.5,3.6984,0.034481,19.1375,hybrid
-1001000743,Dr. Thomas Jackson,Oncology,Jacksonville,FL,Subsys,REP-H121,Helen Finch,TERR-H09,2,6,13,6,6,12,15.6589,31609.92,9.0251,0.081426,17.0721,hybrid
-1001000744,Dr. Laura Miller,Pain Management,Boston,MA,Subsys,REP-H303,Howard Kensington,TERR-H11,2,5,13,11,3,14,14.0766,25306.25,5.4298,0.049454,14.841,hybrid
-1001000745,Dr. Michelle Wilson,Anesthesiology,Austin,TX,Abstral,REP-H216,Hayden Bishop,TERR-H08,1,8,9,7,4,15,21.1366,50889.69,4.8172,0.04497,22.1548,hybrid
-1001000746,Dr. Carol Baker,Pain Management,Los Angeles,CA,Subsys,REP-H262,Harold Mercer,TERR-H06,3,3,2,1,0,12,6.696,7427.0,1.6503,0.014256,6.8065,hybrid
-1001000747,Dr. John King,Pain Management,New York,NY,Abstral,REP-H310,Hope Kensington,TERR-H06,2,5,11,7,0,14,14.6019,15984.3,2.2398,0.020746,14.929,hybrid
-1001000748,Dr. Melissa Miller,Anesthesiology,New York,NY,Abstral,REP-H283,Howard Gallagher,TERR-H03,3,3,4,3,3,15,7.4858,7719.42,6.544,0.056124,7.9756,hybrid
-1001000749,Dr. Joseph Campbell,Oncology,Seattle,WA,Fentora,REP-H259,Holden Conway,TERR-H03,2,7,12,9,0,26,19.3686,34360.63,4.652,0.043286,20.2696,hybrid
-1001000750,Dr. Dorothy Sanchez,Orthopedics,Portland,OR,Subsys,REP-H163,Howard Hayes,TERR-H03,2,5,5,1,1,29,12.2473,23129.4,2.6889,0.024555,12.5766,hybrid
-1001000751,Dr. Thomas Flores,Internal Medicine,Denver,CO,Abstral,REP-H387,Heather Carrington,TERR-H11,1,8,12,11,3,21,21.8945,28065.33,5.2566,0.049047,23.0454,hybrid
-1001000752,Dr. Kimberly Rodriguez,Palliative Care,New York,NY,Actiq,REP-H355,Homer Blackwood,TERR-H03,2,4,9,6,5,12,10.136,19490.52,3.9614,0.035422,10.5375,hybrid
-1001000753,Dr. Sandra Davis,Oncology,Nashville,TN,Actiq,REP-H338,Hilda Thornton,TERR-H10,2,5,11,8,1,25,14.624,21988.93,8.7627,0.078829,15.9054,hybrid
-1001000754,Dr. Sarah Miller,Neurology,Austin,TX,Actiq,REP-H118,Hilda Vance,TERR-H06,2,5,3,3,4,25,12.4959,16249.43,4.5092,0.040903,13.0593,hybrid
-1001000755,Dr. Dorothy Hill,Pain Management,New York,NY,Abstral,REP-H187,Heather Monroe,TERR-H03,1,9,12,6,3,9,24.5608,55527.91,9.1817,0.084548,26.8159,hybrid
-1001000756,Dr. Karen Johnson,Family Practice,Miami,FL,Fentora,REP-H123,Howard Finch,TERR-H11,1,9,7,4,5,14,24.5927,38347.9,4.3861,0.041284,25.6714,hybrid
-1001000757,Dr. Patricia Rodriguez,Pain Management,Las Vegas,NV,Subsys,REP-H238,Hilda Sinclair,TERR-H06,2,5,15,11,7,27,14.8994,21069.74,9.5065,0.085339,16.3159,hybrid
-1001000758,Dr. Thomas Walker,Pain Management,Portland,OR,Lazanda,REP-H254,Hazel Conway,TERR-H10,1,9,12,9,10,13,25.9391,30567.82,7.4635,0.0694,27.8751,hybrid
-1001000759,Dr. Rebecca Ramirez,Pain Management,Detroit,MI,Fentora,REP-H104,Hannah Vance,TERR-H04,2,6,9,4,1,13,15.4142,32368.24,1.0876,0.010162,15.5819,hybrid
-1001000760,Dr. Joseph Hall,Pain Management,Atlanta,GA,Subsys,REP-H244,Hannah Conway,TERR-H12,2,4,5,4,5,11,11.6564,21325.27,9.0512,0.080068,12.7114,hybrid
-1001000761,Dr. Richard Walker,Pain Management,Chicago,IL,Fentora,REP-H180,Hattie Hayes,TERR-H08,2,7,15,8,7,14,18.2927,45935.55,7.84,0.071703,19.7269,hybrid
-1001000762,Dr. Sandra Wright,Pain Management,Columbus,OH,Abstral,REP-H256,Hayden Conway,TERR-H12,2,4,6,4,0,16,11.3071,27716.93,5.2258,0.046895,11.898,hybrid
-1001000763,Dr. James Carter,Orthopedics,Boston,MA,Actiq,REP-H148,Harvey Sterling,TERR-H12,1,8,4,2,0,13,21.608,36476.1,1.1498,0.010929,21.8564,hybrid
-1001000764,Dr. Barbara Sanchez,Internal Medicine,Philadelphia,PA,Fentora,REP-H212,Hilary Bishop,TERR-H04,2,5,6,4,2,22,14.4516,22823.41,3.2202,0.029674,14.917,hybrid
-1001000765,Dr. Michael Flores,Pain Management,Nashville,TN,Subsys,REP-H210,Hope Bishop,TERR-H02,2,5,8,6,3,13,14.2001,17064.2,3.8779,0.035587,14.7507,hybrid
-1001000766,Dr. William Martinez,Anesthesiology,Chicago,IL,Actiq,REP-H213,Hector Bishop,TERR-H05,2,7,6,4,4,18,18.9333,37955.58,6.4271,0.059256,20.1502,hybrid
-1001000767,Dr. Charles Lopez,Orthopedics,Philadelphia,PA,Actiq,REP-H330,Hope Thornton,TERR-H02,2,7,6,5,0,19,20.7943,23519.04,5.2597,0.048965,21.8881,hybrid
-1001000768,Dr. Jennifer Green,Pain Management,Baltimore,MD,Abstral,REP-H346,Holly Blackwood,TERR-H06,2,5,12,9,1,16,13.6586,33806.69,6.393,0.057862,14.5318,hybrid
-1001000769,Dr. Jennifer Sanchez,Oncology,Detroit,MI,Abstral,REP-H257,Hunter Conway,TERR-H01,1,8,9,4,0,21,22.9395,52262.59,5.2724,0.049287,24.149,hybrid
-1001000770,Dr. Robert Williams,Internal Medicine,Atlanta,GA,Subsys,REP-H373,Hector Whitman,TERR-H09,2,6,9,4,3,19,17.7349,45102.41,2.4401,0.022836,18.1676,hybrid
-1001000771,Dr. Linda Ramirez,Palliative Care,Baltimore,MD,Abstral,REP-H235,Homer Sinclair,TERR-H03,1,8,15,7,7,16,21.155,25406.23,8.5928,0.078857,22.9728,hybrid
-1001000772,Dr. Richard Hall,Oncology,Detroit,MI,Subsys,REP-H158,Hilda Sterling,TERR-H10,2,7,10,8,7,16,20.9584,31175.5,8.0234,0.073789,22.6399,hybrid
-1001000773,Dr. Emily Green,Family Practice,Houston,TX,Subsys,REP-H184,Hannah Monroe,TERR-H12,1,8,7,4,3,26,22.1532,24346.22,3.2315,0.030451,22.8691,hybrid
-1001000774,Dr. Lisa Carter,Pain Management,Jacksonville,FL,Subsys,REP-H305,Henry Kensington,TERR-H01,2,5,15,12,7,8,14.1313,23758.73,10.9952,0.097749,15.685,hybrid
-1001000775,Dr. Sharon Sanchez,Oncology,Miami,FL,Subsys,REP-H154,Hazel Sterling,TERR-H06,2,6,14,9,1,22,17.9997,46366.17,6.6046,0.060691,19.1885,hybrid
-1001000776,Dr. Joseph Lee,Anesthesiology,Portland,OR,Actiq,REP-H292,Hilary Gallagher,TERR-H12,2,4,2,1,1,17,10.8397,19949.72,1.5537,0.014125,11.0081,hybrid
-1001000777,Dr. Michael Hill,Palliative Care,Baltimore,MD,Subsys,REP-H339,Holden Thornton,TERR-H11,2,5,5,3,2,13,14.8517,14946.98,3.7215,0.034273,15.4044,hybrid
-1001000778,Dr. Michael Wright,Neurology,Miami,FL,Abstral,REP-H231,Hugh Sinclair,TERR-H11,3,3,4,2,1,27,8.7987,8574.51,3.5992,0.031808,9.1154,hybrid
-1001000779,Dr. Ashley Walker,Orthopedics,Seattle,WA,Abstral,REP-H217,Hunter Bishop,TERR-H09,2,4,4,3,4,15,11.5898,10854.74,4.8451,0.043637,12.1513,hybrid
-1001000780,Dr. Charles Nguyen,Anesthesiology,New York,NY,Actiq,REP-H265,Henry Mercer,TERR-H09,2,7,10,9,10,18,18.5233,19190.39,6.8201,0.0627,19.7866,hybrid
-1001000781,Dr. Melissa Anderson,Neurology,Philadelphia,PA,Fentora,REP-H219,Holden Bishop,TERR-H11,2,6,12,6,2,11,15.7168,25968.77,4.5368,0.041769,16.4298,hybrid
-1001000782,Dr. Deborah Flores,Anesthesiology,New York,NY,Fentora,REP-H134,Hazel Finch,TERR-H10,1,10,16,11,11,20,29.0695,40209.03,11.1591,0.102448,32.3134,hybrid
-1001000783,Dr. Sharon Robinson,Internal Medicine,Austin,TX,Subsys,REP-H175,Homer Hayes,TERR-H03,2,4,2,1,0,26,9.6405,17889.53,2.135,0.019159,9.8464,hybrid
-1001000784,Dr. Jessica Lopez,Neurology,Columbus,OH,Lazanda,REP-H229,Harrison Sinclair,TERR-H09,1,10,15,7,6,19,28.8577,52759.78,5.2715,0.049694,30.3789,hybrid
-1001000785,Dr. Linda Campbell,Anesthesiology,Houston,TX,Fentora,REP-H196,Hayden Monroe,TERR-H12,2,6,9,8,7,15,15.5681,27428.13,3.8839,0.035844,16.1727,hybrid
-1001000786,Dr. John Adams,Palliative Care,Los Angeles,CA,Abstral,REP-H130,Hope Finch,TERR-H06,2,7,11,11,8,20,19.3016,19162.77,8.8139,0.080471,21.0029,hybrid
-1001000787,Dr. John Flores,Palliative Care,Jacksonville,FL,Abstral,REP-H332,Hilary Thornton,TERR-H04,3,3,5,3,0,8,6.0334,9326.67,-0.2555,-0.002194,6.0179,hybrid
-1001000788,Dr. Laura Martin,Oncology,Los Angeles,CA,Actiq,REP-H284,Hannah Gallagher,TERR-H04,2,7,10,6,6,15,20.0629,45111.13,5.3047,0.049293,21.1271,hybrid
-1001000789,Dr. James King,Oncology,Austin,TX,Lazanda,REP-H331,Hugh Thornton,TERR-H03,3,3,5,2,1,11,6.1901,6186.38,3.8878,0.032923,6.4307,hybrid
-1001000790,Dr. Elizabeth Thompson,Pain Management,Baltimore,MD,Lazanda,REP-H166,Holly Hayes,TERR-H06,2,4,7,5,4,6,10.7806,15485.4,5.0011,0.044749,11.3198,hybrid
-1001000791,Dr. Deborah Lee,Neurology,Jacksonville,FL,Subsys,REP-H265,Henry Mercer,TERR-H09,2,7,11,9,9,13,20.4393,46264.19,7.2018,0.066404,21.9113,hybrid
-1001000792,Dr. Jennifer Thompson,Pain Management,New York,NY,Fentora,REP-H256,Hayden Conway,TERR-H12,3,3,9,8,2,19,8.8292,10441.5,9.7322,0.083809,9.6885,hybrid
-1001000793,Dr. John Garcia,Family Practice,Columbus,OH,Subsys,REP-H336,Hayden Thornton,TERR-H08,2,5,4,2,0,19,14.1112,18115.32,2.0362,0.018836,14.3985,hybrid
-1001000794,Dr. Elizabeth Taylor,Internal Medicine,Houston,TX,Abstral,REP-H106,Holly Vance,TERR-H06,2,6,6,4,2,29,17.2008,32960.6,5.9461,0.054672,18.2236,hybrid
-1001000795,Dr. Sandra Lee,Internal Medicine,Denver,CO,Subsys,REP-H175,Homer Hayes,TERR-H03,3,3,7,4,0,10,8.5353,20090.89,4.2342,0.037201,8.8967,hybrid
-1001000796,Dr. Robert Green,Oncology,Austin,TX,Subsys,REP-H142,Harold Sterling,TERR-H06,2,5,6,4,4,16,12.7176,32729.74,6.9875,0.062769,13.6062,hybrid
-1001000797,Dr. William Ramirez,Oncology,Charlotte,NC,Subsys,REP-H219,Holden Bishop,TERR-H11,2,4,6,4,4,27,9.1295,9156.58,6.2434,0.054744,9.6995,hybrid
-1001000798,Dr. Kathleen Martinez,Pain Management,Seattle,WA,Abstral,REP-H198,Hilda Monroe,TERR-H02,3,3,6,5,6,17,7.926,8255.57,8.1721,0.070053,8.5738,hybrid
-1001000799,Dr. Elizabeth Martin,Anesthesiology,Denver,CO,Abstral,REP-H307,Heather Kensington,TERR-H03,2,4,5,3,3,32,9.1261,18962.18,6.01,0.052749,9.6745,hybrid
-1001000800,Dr. Sarah Wright,Pain Management,Chicago,IL,Subsys,REP-H268,Harvey Mercer,TERR-H12,2,4,8,5,0,19,10.1478,17856.08,6.2458,0.055298,10.7816,hybrid
-1001000801,Dr. Betty Nelson,Family Practice,Austin,TX,Subsys,REP-H232,Hilary Sinclair,TERR-H12,2,5,3,2,0,16,13.7078,24425.35,3.5146,0.032231,14.1896,hybrid
-1001000802,Dr. Amanda Young,Pain Management,Nashville,TN,Subsys,REP-H158,Hilda Sterling,TERR-H10,2,7,10,8,1,7,20.6025,34080.26,8.1324,0.074698,22.278,hybrid
-1001000803,Dr. Mary Robinson,Internal Medicine,Los Angeles,CA,Subsys,REP-H203,Howard Bishop,TERR-H07,2,5,4,2,3,21,13.0501,19155.16,2.9232,0.026789,13.4316,hybrid
-1001000804,Dr. Joseph Rodriguez,Internal Medicine,Nashville,TN,Actiq,REP-H208,Harvey Bishop,TERR-H12,2,5,5,5,1,12,13.2597,23147.42,5.3912,0.048915,13.9746,hybrid
-1001000805,Dr. Jennifer White,Anesthesiology,Los Angeles,CA,Abstral,REP-H249,Harrison Conway,TERR-H05,3,3,4,2,2,15,7.6081,16892.4,3.5934,0.031266,7.8815,hybrid
-1001000806,Dr. Michael Nguyen,Anesthesiology,New York,NY,Subsys,REP-H127,Heather Finch,TERR-H03,2,6,14,11,3,13,15.9165,15631.09,6.6552,0.060736,16.9757,hybrid
-1001000807,Dr. Linda Allen,Internal Medicine,Denver,CO,Abstral,REP-H334,Hazel Thornton,TERR-H06,2,4,6,4,5,17,11.415,18209.72,4.5621,0.04109,11.9358,hybrid
-1001000808,Dr. James Carter,Pain Management,New York,NY,Subsys,REP-H147,Heather Sterling,TERR-H11,2,5,7,5,1,22,12.2467,25061.12,4.2014,0.038107,12.7612,hybrid
-1001000809,Dr. Karen Moore,Palliative Care,Nashville,TN,Abstral,REP-H240,Hattie Sinclair,TERR-H08,2,7,13,8,2,11,20.3442,38816.53,5.5348,0.051411,21.4702,hybrid
-1001000810,Dr. Michael Martin,Orthopedics,Charlotte,NC,Fentora,REP-H225,Henry Sinclair,TERR-H05,1,10,13,10,4,19,31.7341,41348.62,8.19,0.076404,34.3331,hybrid
-1001000811,Dr. Michelle Anderson,Oncology,Miami,FL,Actiq,REP-H359,Holden Blackwood,TERR-H07,2,5,10,5,6,26,13.4177,27489.26,6.9225,0.062433,14.3465,hybrid
-1001000812,Dr. Michael Robinson,Palliative Care,Atlanta,GA,Abstral,REP-H202,Harold Bishop,TERR-H06,2,6,8,7,2,12,15.369,22242.28,4.5162,0.041529,16.0631,hybrid
-1001000813,Dr. Joseph King,Anesthesiology,Austin,TX,Abstral,REP-H273,Hector Mercer,TERR-H05,2,4,5,3,3,13,10.3794,18364.9,3.6044,0.032348,10.7535,hybrid
-1001000814,Dr. Ashley Ramirez,Anesthesiology,New York,NY,Abstral,REP-H344,Hannah Blackwood,TERR-H04,3,3,7,5,2,38,8.1774,19640.19,5.9232,0.051432,8.6618,hybrid
-1001000815,Dr. Donna Smith,Anesthesiology,Houston,TX,Fentora,REP-H271,Hugh Mercer,TERR-H03,1,10,11,8,9,23,27.3556,28819.58,9.3062,0.085976,29.9013,hybrid
-1001000816,Dr. Michelle Harris,Family Practice,Nashville,TN,Subsys,REP-H336,Hayden Thornton,TERR-H08,2,6,9,6,2,10,16.9946,23595.42,5.009,0.046221,17.8458,hybrid
-1001000817,Dr. David Nelson,Palliative Care,Boston,MA,Lazanda,REP-H186,Holly Monroe,TERR-H02,1,8,12,10,3,18,22.2181,46824.42,9.3823,0.085978,24.3026,hybrid
-1001000818,Dr. Charles Jackson,Palliative Care,Philadelphia,PA,Abstral,REP-H344,Hannah Blackwood,TERR-H04,2,5,5,3,1,23,13.1017,26628.23,5.7344,0.051907,13.853,hybrid
-1001000819,Dr. William Wright,Oncology,Boston,MA,Abstral,REP-H380,Hattie Whitman,TERR-H04,3,3,11,10,0,16,8.0038,14047.16,4.195,0.036612,8.3396,hybrid
-1001000820,Dr. James Rodriguez,Oncology,Columbus,OH,Actiq,REP-H241,Helen Conway,TERR-H09,2,5,9,8,2,21,13.9996,27681.08,8.1649,0.073441,15.1427,hybrid
+Prscrbr_NPI,Physician_Name,Specialty,City,State,Brand_Name,Sales_Rep,Sales_Rep_Name,Territory,HCP_Tier,Target_Calls,Actual_Calls,Samples_Dropped,Tot_Clms,Tot_30day_Fills,Tot_Drug_Cst,Rx_Lift_Pct,Delta_Log_Fills,Post_Campaign_Fills,dataset_mode
+1003000126,Dr. Ardalan Enkeshafi,Internal Medicine,Bethesda,MD,Abrysvo,REP-101,Alex Morgan,TERR-01,1,8,7,11,20,20.0,5994.01,3.5,0.03278982282299081,20.7,hybrid
+1003000126,Dr. Ardalan Enkeshafi,Internal Medicine,Bethesda,MD,Boostrix Tdap,REP-102,Brandon Hayes,TERR-01,2,4,4,6,12,12.0,648.26,3.33,0.030305349495328926,12.4,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Acetaminophen-Codeine,REP-103,Claire Vance,TERR-02,1,8,5,10,24,24.0,362.48,2.5,0.02371652661731627,24.6,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Amitriptyline Hcl,REP-104,Derek Sterling,TERR-02,2,4,2,2,47,47.0,271.17,-1.06,-0.01047129986729578,46.5,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Baclofen,REP-105,Elena Rostova,TERR-03,1,8,9,24,47,47.0,333.35,5.96,0.05669534367654494,49.8,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Belbuca,REP-106,Fiona Gallagher,TERR-03,1,8,10,22,12,12.0,4388.84,0.83,0.007662872745568983,12.1,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Celecoxib,REP-107,Garrett Vance,TERR-04,2,4,3,4,18,22.0,132.21,10.0,0.09134977858822779,24.2,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Cyclobenzaprine Hcl,REP-108,Hannah Abbott,TERR-04,1,8,11,23,45,47.0,399.69,7.87,0.0742567706064925,50.7,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Dantrolene Sodium,REP-109,Ian Malcolm,TERR-05,3,2,1,2,23,23.0,587.02,-3.48,-0.03390155167568132,22.2,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Diclofenac Sodium,REP-110,Julia Roberts,TERR-05,2,4,4,7,47,51.7,1236.33,7.74,0.07315875518639015,55.7,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Duloxetine Hcl,REP-111,Kevin Bacon,TERR-06,3,2,3,9,26,28.0,188.16,3.93,0.037229341768355795,29.1,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Gabapentin,REP-112,Laura Croft,TERR-06,2,4,2,6,293,386.0,4512.22,0.49,0.004897548131920004,387.9,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Hydrocodone-Acetaminophen,REP-101,Alex Morgan,TERR-01,1,8,6,11,340,340.0,6027.31,-0.68,-0.0067677174597911005,337.7,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Lidocaine,REP-102,Brandon Hayes,TERR-01,1,8,10,19,30,32.0,2934.97,5.31,0.05023212548633316,33.7,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Meloxicam,REP-103,Claire Vance,TERR-02,2,4,2,4,41,55.0,86.73,1.45,0.014184634991956102,55.8,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Methocarbamol,REP-104,Derek Sterling,TERR-02,2,4,4,11,21,23.0,256.34,0.43,0.004158010148663571,23.1,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Methylprednisolone,REP-105,Elena Rostova,TERR-03,1,8,6,12,20,20.0,127.08,1.5,0.014184634991956546,20.3,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Morphine Sulfate Er,REP-106,Fiona Gallagher,TERR-03,2,4,4,10,47,47.0,678.42,-1.7,-0.016807118316381597,46.2,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Movantik,REP-107,Garrett Vance,TERR-04,2,4,2,3,45,47.0,18910.97,-0.64,-0.006269613013595521,46.7,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Nortriptyline Hcl,REP-108,Hannah Abbott,TERR-04,2,4,4,13,17,19.0,110.96,1.05,0.009950330853168321,19.2,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Oxycodone Hcl,REP-109,Ian Malcolm,TERR-05,3,2,1,3,61,61.0,696.96,1.8,0.017586384502076058,62.1,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Oxycodone-Acetaminophen,REP-110,Julia Roberts,TERR-05,2,4,4,6,267,267.0,5344.44,3.52,0.03447352736987419,276.4,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Pregabalin,REP-111,Kevin Bacon,TERR-06,3,2,2,3,111,127.0,3540.32,0.16,0.0015612805669524832,127.2,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Tizanidine Hcl,REP-112,Laura Croft,TERR-06,3,2,1,1,142,160.0,1082.66,5.06,0.04908589092007176,168.1,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Tramadol Hcl,REP-101,Alex Morgan,TERR-01,2,4,3,6,101,101.0,530.12,3.47,0.03373813963185057,104.5,hybrid
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,Trazodone Hcl,REP-102,Brandon Hayes,TERR-01,1,8,9,11,13,13.0,47.78,-0.77,-0.007168489478612372,12.9,hybrid
+1003000167,Dr. Julio Escobar,Dentist,Dayton,NV,Amoxicillin,REP-103,Claire Vance,TERR-02,1,8,7,17,47,47.0,102.79,11.06,0.10285738543970746,52.2,hybrid
+1003000167,Dr. Julio Escobar,Dentist,Dayton,NV,Dexamethasone,REP-104,Derek Sterling,TERR-02,3,2,1,2,13,13.0,22.43,6.15,0.055569851154810834,13.8,hybrid
+1003000423,Dr. Jennifer Velotta,Obstetrics & Gynecology,Mentor,OH,Clobetasol Propionate,REP-105,Elena Rostova,TERR-03,2,4,4,5,18,19.4,479.42,1.55,0.01459879942115272,19.7,hybrid
+1003000423,Dr. Jennifer Velotta,Obstetrics & Gynecology,Mentor,OH,Estradiol,REP-106,Fiona Gallagher,TERR-03,2,4,5,14,42,142.4,3240.27,3.86,0.037637011524443764,147.9,hybrid
+1003000423,Dr. Jennifer Velotta,Obstetrics & Gynecology,Mentor,OH,Nitrofurantoin Mono-Macro,REP-107,Garrett Vance,TERR-04,2,4,4,10,13,15.0,175.27,4.0,0.03681397312271617,15.6,hybrid
+1003000480,Dr. Kevin Rothchild,General Surgery,Aurora,CO,Omeprazole,REP-108,Hannah Abbott,TERR-04,2,4,3,7,13,38.3,652.8,4.44,0.04234754782909267,40.0,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Albuterol Sulfate Hfa,REP-109,Ian Malcolm,TERR-05,2,4,3,7,90,105.3,2518.44,-3.8,-0.038355612390320815,101.3,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Alendronate Sodium,REP-110,Julia Roberts,TERR-05,2,4,4,7,94,222.9,1018.27,2.69,0.026444908164426906,228.9,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Alfuzosin Hcl Er,REP-111,Kevin Bacon,TERR-06,3,2,2,6,16,16.0,119.55,2.5,0.023256862164267034,16.4,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Allopurinol,REP-112,Laura Croft,TERR-06,3,2,0,0,65,165.0,765.11,1.94,0.019093658815578785,168.2,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Alprazolam,REP-101,Alex Morgan,TERR-01,2,4,3,5,36,53.0,156.46,0.19,0.0018501392881611345,53.1,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Amitriptyline Hcl,REP-102,Brandon Hayes,TERR-01,1,8,7,17,12,36.0,303.17,1.39,0.013423020332140823,36.5,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Amlodipine Besylate,REP-103,Claire Vance,TERR-02,2,4,1,2,474,1175.3,2990.89,-0.74,-0.007423558986435985,1166.6,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Amoxicillin-Clavulanate Potass,REP-104,Derek Sterling,TERR-02,2,4,1,1,18,18.0,121.93,1.11,0.01047129986729578,18.2,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Aripiprazole,REP-105,Elena Rostova,TERR-03,1,8,10,23,30,53.0,3012.27,7.36,0.06973333801467518,56.9,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Atenolol,REP-106,Fiona Gallagher,TERR-03,2,4,5,12,17,51.0,66.86,9.41,0.08829260714567821,55.8,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Atorvastatin Calcium,REP-107,Garrett Vance,TERR-04,1,8,4,10,451,1154.7,4970.46,4.82,0.04707049456545054,1210.4,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Azelastine Hcl,REP-108,Hannah Abbott,TERR-04,2,4,5,16,13,17.7,237.34,5.65,0.05209511188340166,18.7,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Basaglar Kwikpen U-100,REP-109,Ian Malcolm,TERR-05,2,4,3,6,11,11.4,4957.39,-4.39,-0.04115807249350745,10.9,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Bupropion Hcl Sr,REP-110,Julia Roberts,TERR-05,2,4,5,11,19,33.0,414.79,1.82,0.017493157447517227,33.6,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Bupropion Xl,REP-111,Kevin Bacon,TERR-06,2,4,4,13,105,215.0,2358.41,0.23,0.0023121397583789616,215.5,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Buspirone Hcl,REP-112,Laura Croft,TERR-06,3,2,2,4,25,55.7,514.21,1.44,0.0140107370695981,56.5,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Butalbital-Acetaminophen-Caffe,REP-101,Alex Morgan,TERR-01,1,8,7,12,13,14.0,350.54,5.0,0.04561051125205218,14.7,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Calcitriol,REP-102,Brandon Hayes,TERR-01,1,8,8,24,12,12.0,312.33,5.0,0.04512043528046972,12.6,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Carvedilol,REP-103,Claire Vance,TERR-02,2,4,3,6,49,107.0,387.58,2.9,0.02829946952136453,110.1,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Celecoxib,REP-104,Derek Sterling,TERR-02,2,4,1,1,14,22.0,106.34,6.36,0.05908891637000657,23.4,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Chlorhexidine Gluconate,REP-105,Elena Rostova,TERR-03,2,4,4,10,20,20.0,205.09,4.5,0.04196419909903204,20.9,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Citalopram Hbr,REP-106,Fiona Gallagher,TERR-03,1,8,11,32,32,68.7,123.33,1.02,0.009992945397518938,69.4,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Clonazepam,REP-107,Garrett Vance,TERR-04,2,4,2,4,30,38.0,277.11,5.79,0.054876610225834455,40.2,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Clonidine Hcl,REP-108,Hannah Abbott,TERR-04,2,4,4,8,18,43.2,72.27,4.17,0.03991660740544267,45.0,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Clopidogrel,REP-109,Ian Malcolm,TERR-05,3,2,2,6,79,185.0,1183.79,4.27,0.04159588853540441,192.9,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Diazepam,REP-110,Julia Roberts,TERR-05,2,4,3,9,11,13.0,49.66,3.08,0.0281708769666964,13.4,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Dicyclomine Hcl,REP-111,Kevin Bacon,TERR-06,2,4,5,16,13,29.0,555.22,2.41,0.023065272930995917,29.7,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Digoxin,REP-112,Laura Croft,TERR-06,2,4,3,10,12,14.0,2133.66,2.86,0.026317308317373556,14.4,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Diltiazem 24hr Er (Cd),REP-101,Alex Morgan,TERR-01,1,8,9,20,12,14.0,225.19,9.29,0.08311490671050681,15.3,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Divalproex Sodium Er,REP-102,Brandon Hayes,TERR-01,2,4,4,5,12,12.0,382.04,0.0,0.0,12.0,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Dofetilide,REP-103,Claire Vance,TERR-02,2,4,2,4,12,12.0,1100.52,4.17,0.03774032798284699,12.5,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Donepezil Hcl,REP-104,Derek Sterling,TERR-02,1,8,7,20,15,29.0,263.01,0.34,0.0033277900926744763,29.1,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Doxazosin Mesylate,REP-105,Elena Rostova,TERR-03,1,8,8,17,14,36.0,393.77,2.78,0.02666824708216131,37.0,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Doxycycline Hyclate,REP-106,Fiona Gallagher,TERR-03,2,4,4,9,37,37.0,233.38,5.68,0.05379017458613777,39.1,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Duloxetine Hcl,REP-107,Garrett Vance,TERR-04,2,4,1,2,61,133.2,1155.74,-0.45,-0.00448096343503579,132.6,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Eliquis,REP-108,Hannah Abbott,TERR-04,1,8,8,26,138,223.0,126538.49,5.74,0.055569851154810834,235.8,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Enalapril Maleate,REP-109,Ian Malcolm,TERR-05,2,4,2,2,17,49.0,507.71,4.08,0.03922071315328157,51.0,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Escitalopram Oxalate,REP-110,Julia Roberts,TERR-05,2,4,3,4,68,184.9,1029.6,3.35,0.032807175047112835,191.1,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Eszopiclone,REP-111,Kevin Bacon,TERR-06,2,4,6,9,12,12.0,88.36,4.17,0.03774032798284699,12.5,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Ezetimibe,REP-112,Laura Croft,TERR-06,2,4,3,6,24,58.0,492.59,2.41,0.023451661035049476,59.4,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Famotidine,REP-101,Alex Morgan,TERR-01,2,4,3,6,144,332.4,1574.86,7.55,0.07258568972298107,357.5,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Fenofibrate,REP-102,Brandon Hayes,TERR-01,1,8,7,12,28,64.0,727.1,1.56,0.015267472130788384,65.0,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Finasteride,REP-103,Claire Vance,TERR-02,2,4,1,1,35,103.6,802.04,4.54,0.043952843551670284,108.3,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Fluticasone Propionate,REP-104,Derek Sterling,TERR-02,2,4,1,3,57,111.6,699.66,-1.52,-0.015212821349268602,109.9,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Fluticasone-Salmeterol,REP-105,Elena Rostova,TERR-03,2,4,5,7,52,62.0,5181.6,2.42,0.023530497410193973,63.5,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Fosinopril Sodium,REP-106,Fiona Gallagher,TERR-03,2,4,4,11,18,45.5,199.84,-0.44,-0.004310351501122245,45.3,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Furosemide,REP-107,Garrett Vance,TERR-04,2,4,2,5,76,169.0,433.34,0.53,0.0052801530712836,169.9,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Gabapentin,REP-108,Hannah Abbott,TERR-04,2,4,4,10,194,322.1,2554.6,2.08,0.020524537295045775,328.8,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Glimepiride,REP-109,Ian Malcolm,TERR-05,2,4,1,1,24,52.0,204.05,4.42,0.042480994976167086,54.3,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Glipizide,REP-110,Julia Roberts,TERR-05,2,4,4,13,90,204.0,1131.7,4.12,0.04015835972924453,212.4,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Glycopyrrolate,REP-111,Kevin Bacon,TERR-06,3,2,2,5,12,12.2,846.73,11.48,0.10080469912196577,13.6,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Hydrochlorothiazide,REP-112,Laura Croft,TERR-06,2,4,4,9,212,534.9,764.54,4.36,0.04255961441879563,558.2,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Hydrocodone-Acetaminophen,REP-101,Alex Morgan,TERR-01,1,8,10,34,34,34.0,835.79,4.12,0.03922071315328157,35.4,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Ipratropium Bromide,REP-102,Brandon Hayes,TERR-01,1,8,9,28,13,21.8,429.5,3.67,0.03448617607116944,22.6,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Irbesartan,REP-103,Claire Vance,TERR-02,2,4,3,5,23,45.0,541.08,4.44,0.04255961441879608,47.0,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Isosorbide Mononitrate Er,REP-104,Derek Sterling,TERR-02,2,4,2,6,19,32.0,34.33,2.5,0.023953241022492744,32.8,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Januvia,REP-105,Elena Rostova,TERR-03,1,8,10,14,19,33.0,17629.38,3.94,0.03752243932308952,34.3,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Jardiance,REP-106,Fiona Gallagher,TERR-03,2,4,4,4,31,65.0,37157.23,6.15,0.05884050002293417,69.0,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Klor-Con M20,REP-107,Garrett Vance,TERR-04,2,4,2,4,28,83.7,699.43,0.72,0.007058852839624485,84.3,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Lamotrigine,REP-108,Hannah Abbott,TERR-04,2,4,3,5,20,20.3,208.26,7.88,0.07242983784481449,21.9,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Levothyroxine Sodium,REP-109,Ian Malcolm,TERR-05,2,4,4,10,430,831.4,3333.23,2.12,0.020923254964883675,849.0,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Lisinopril,REP-110,Julia Roberts,TERR-05,2,4,4,10,381,927.5,3548.32,1.66,0.01644984753813805,942.9,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Lisinopril-Hydrochlorothiazide,REP-111,Kevin Bacon,TERR-06,2,4,2,4,36,107.3,667.83,-1.58,-0.015821642275200887,105.6,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Loperamide,REP-112,Laura Croft,TERR-06,3,2,1,1,12,16.1,210.76,0.62,0.005830920310792909,16.2,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Lorazepam,REP-101,Alex Morgan,TERR-01,1,8,9,25,62,70.5,392.53,4.54,0.043782642438809916,73.7,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Losartan Potassium,REP-102,Brandon Hayes,TERR-01,1,8,9,22,247,557.9,2872.59,2.96,0.02909488484179512,574.4,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Meclizine Hcl,REP-103,Claire Vance,TERR-02,3,2,1,3,12,12.0,41.84,5.0,0.04512043528046972,12.6,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Meloxicam,REP-104,Derek Sterling,TERR-02,2,4,2,2,39,77.0,154.58,0.13,0.0012812301560485295,77.1,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Memantine Hcl,REP-105,Elena Rostova,TERR-03,2,4,3,5,11,13.0,262.96,3.08,0.0281708769666964,13.4,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Metformin Hcl,REP-106,Fiona Gallagher,TERR-03,1,8,9,24,150,359.0,1399.29,3.96,0.038686382389833796,373.2,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Metformin Hcl Er,REP-107,Garrett Vance,TERR-04,2,4,3,6,55,145.0,1066.82,8.83,0.08403892710469929,157.8,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Methocarbamol,REP-108,Hannah Abbott,TERR-04,2,4,3,4,18,18.0,135.61,5.56,0.05129329438755059,19.0,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Metoprolol Succinate,REP-109,Ian Malcolm,TERR-05,3,2,1,2,195,463.3,3844.16,1.34,0.013265063999559068,469.5,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Metoprolol Tartrate,REP-110,Julia Roberts,TERR-05,2,4,5,11,173,452.5,1132.31,9.26,0.08837024750006783,494.4,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Mirtazapine,REP-111,Kevin Bacon,TERR-06,3,2,2,6,34,56.3,329.27,-0.71,-0.007005282588409045,55.9,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Montelukast Sodium,REP-112,Laura Croft,TERR-06,2,4,2,5,27,77.0,267.03,5.97,0.05730085383734096,81.6,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Myrbetriq,REP-101,Alex Morgan,TERR-01,2,4,5,16,27,29.0,12856.04,4.48,0.04242071588395202,30.3,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Nebivolol Hcl,REP-102,Brandon Hayes,TERR-01,1,8,10,14,24,38.0,2204.81,1.84,0.017789541563498545,38.7,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Olmesartan Medoxomil,REP-103,Claire Vance,TERR-02,2,4,2,6,54,122.3,660.51,3.11,0.03035376802511003,126.1,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Omeprazole,REP-104,Derek Sterling,TERR-02,1,8,2,6,126,263.4,1359.64,-1.75,-0.01755100374103158,258.8,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Ondansetron Odt,REP-105,Elena Rostova,TERR-03,1,8,7,10,15,15.0,104.9,8.0,0.07232066157962613,16.2,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Oxybutynin Chloride Er,REP-106,Fiona Gallagher,TERR-03,2,4,6,17,21,45.0,1001.27,-1.78,-0.017544309650909362,44.2,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Oxycodone-Acetaminophen,REP-107,Garrett Vance,TERR-04,2,4,1,2,13,13.0,207.62,-0.77,-0.007168489478612372,12.9,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Pantoprazole Sodium,REP-108,Hannah Abbott,TERR-04,1,8,5,11,167,295.2,2398.21,2.64,0.025992799572523317,303.0,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Paroxetine Hcl,REP-109,Ian Malcolm,TERR-05,3,2,1,1,17,31.0,283.58,-0.97,-0.009419221916491693,30.7,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Paxlovid,REP-110,Julia Roberts,TERR-05,3,2,2,6,12,12.0,1429.4,5.0,0.04512043528046972,12.6,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Potassium Chloride,REP-111,Kevin Bacon,TERR-06,2,4,4,10,71,119.0,1442.91,2.77,0.02712866738825248,122.3,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Pramipexole Dihydrochloride,REP-112,Laura Croft,TERR-06,3,2,1,2,11,27.0,84.62,1.48,0.014184634991956546,27.4,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Pravastatin Sodium,REP-101,Alex Morgan,TERR-01,1,8,11,36,244,676.0,4155.84,7.13,0.06877620596842071,724.2,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Prednisone,REP-102,Brandon Hayes,TERR-01,1,8,10,19,24,27.0,111.03,7.41,0.06899287148695166,29.0,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Pregabalin,REP-103,Claire Vance,TERR-02,2,4,4,7,31,55.0,383.26,2.73,0.026433257068155136,56.5,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Quetiapine Fumarate,REP-104,Derek Sterling,TERR-02,3,2,1,2,24,46.0,401.76,-1.52,-0.015005640617870242,45.3,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Ropinirole Hcl,REP-105,Elena Rostova,TERR-03,1,8,8,9,39,65.4,510.95,3.98,0.038409448114871125,68.0,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Rosuvastatin Calcium,REP-106,Fiona Gallagher,TERR-03,2,4,4,13,139,348.3,3058.04,2.01,0.01984192079900371,355.3,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Rybelsus,REP-107,Garrett Vance,TERR-04,1,8,2,5,16,38.0,33295.05,6.05,0.057300853837340515,40.3,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Sertraline Hcl,REP-108,Hannah Abbott,TERR-04,1,8,5,11,117,255.5,948.21,2.04,0.020070144925275812,260.7,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Simvastatin,REP-109,Ian Malcolm,TERR-05,3,2,2,6,188,503.9,2406.59,3.39,0.033307198017769046,521.0,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Spiriva Handihaler,REP-110,Julia Roberts,TERR-05,2,4,4,13,11,29.0,13855.12,3.45,0.03278982282299081,30.0,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Spironolactone,REP-111,Kevin Bacon,TERR-06,2,4,3,9,20,59.0,281.89,-0.68,-0.006688988150796327,58.6,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Stiolto Respimat,REP-112,Laura Croft,TERR-06,3,2,2,6,17,26.0,11756.24,2.69,0.025595547188963508,26.7,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Sucralfate,REP-101,Alex Morgan,TERR-01,1,8,8,24,13,15.0,538.81,5.33,0.04879016416943216,15.8,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Sulfamethoxazole-Trimethoprim,REP-102,Brandon Hayes,TERR-01,2,4,4,12,13,13.0,34.64,5.38,0.04879016416943216,13.7,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Symbicort,REP-103,Claire Vance,TERR-02,2,4,3,4,11,21.0,4214.56,0.95,0.009049835519917782,21.2,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Synthroid,REP-104,Derek Sterling,TERR-02,2,4,1,1,35,71.0,2305.05,-1.13,-0.01117330059812538,70.2,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Tamsulosin Hcl,REP-105,Elena Rostova,TERR-03,2,4,3,6,86,202.0,1511.36,3.17,0.03104031939464935,208.4,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Tizanidine Hcl,REP-106,Fiona Gallagher,TERR-03,2,4,4,5,14,16.0,75.68,2.5,0.023256862164267034,16.4,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Topiramate,REP-107,Garrett Vance,TERR-04,1,8,8,25,20,38.0,168.85,5.53,0.05244647537254288,40.1,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Torsemide,REP-108,Hannah Abbott,TERR-04,2,4,4,8,28,42.0,164.25,2.86,0.027524673390090015,43.2,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Tradjenta,REP-109,Ian Malcolm,TERR-05,3,2,1,2,16,16.0,8396.91,-0.62,-0.005899722127188145,15.9,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Tramadol Hcl,REP-110,Julia Roberts,TERR-05,2,4,4,12,19,19.0,62.43,4.21,0.03922071315328157,19.8,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Tramadol Hcl Er,REP-111,Kevin Bacon,TERR-06,3,2,2,3,11,11.0,289.65,2.73,0.0246926125903717,11.3,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Tramadol Hcl-Acetaminophen,REP-112,Laura Croft,TERR-06,2,4,3,8,12,12.0,108.96,5.0,0.04512043528046972,12.6,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Trazodone Hcl,REP-101,Alex Morgan,TERR-01,1,8,6,9,78,160.0,1832.81,3.25,0.031787517436884904,165.2,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Trelegy Ellipta,REP-102,Brandon Hayes,TERR-01,1,8,6,15,11,15.0,8635.9,-0.67,-0.006269613013595077,14.9,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Triamcinolone Acetonide,REP-103,Claire Vance,TERR-02,2,4,4,8,19,21.0,99.48,3.81,0.03571808260207909,21.8,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Ultra-Fine Mini Pen Needle,REP-104,Derek Sterling,TERR-02,1,8,3,7,15,15.0,985.68,0.0,0.0,15.0,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Valsartan,REP-105,Elena Rostova,TERR-03,1,8,9,15,73,175.9,2438.77,3.98,0.038807530444535665,182.9,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Valsartan-Hydrochlorothiazide,REP-106,Fiona Gallagher,TERR-03,1,8,8,18,19,57.0,1797.04,4.21,0.040546094394350085,59.4,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Venlafaxine Hcl,REP-107,Garrett Vance,TERR-04,2,4,3,10,12,24.0,384.61,3.33,0.03149866705937132,24.8,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Venlafaxine Hcl Er,REP-108,Hannah Abbott,TERR-04,2,4,4,9,59,149.0,836.53,3.42,0.03343477608623768,154.1,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Warfarin Sodium,REP-109,Ian Malcolm,TERR-05,2,4,2,6,23,59.6,147.17,2.18,0.021225286615281114,60.9,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Wixela Inhub,REP-110,Julia Roberts,TERR-05,3,2,2,4,13,19.0,1237.77,5.79,0.05354076692802989,20.1,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Xarelto,REP-111,Kevin Bacon,TERR-06,2,4,5,15,19,45.0,24157.49,-0.44,-0.004357305368956066,44.8,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Zolpidem Tartrate,REP-112,Laura Croft,TERR-06,2,4,3,6,37,63.0,483.61,3.65,0.03530681383214507,65.3,hybrid
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,Zolpidem Tartrate Er,REP-101,Alex Morgan,TERR-01,1,8,11,30,13,13.0,70.33,6.15,0.055569851154810834,13.8,hybrid
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,Alfuzosin Hcl Er,REP-102,Brandon Hayes,TERR-01,1,8,9,28,14,42.0,281.97,3.81,0.03653374333245596,43.6,hybrid
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,Amoxicillin-Clavulanate Potass,REP-103,Claire Vance,TERR-02,3,2,1,2,181,183.0,2286.08,-1.2,-0.012028575865607571,180.8,hybrid
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,Cephalexin,REP-104,Derek Sterling,TERR-02,2,4,2,6,33,83.7,411.45,-0.6,-0.005920680409727375,83.2,hybrid
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,Ciprofloxacin Hcl,REP-105,Elena Rostova,TERR-03,2,4,4,13,71,71.0,190.78,2.25,0.02197890671877545,72.6,hybrid
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,Estradiol,REP-106,Fiona Gallagher,TERR-03,2,4,4,6,17,34.6,931.36,-0.29,-0.002812941376614919,34.5,hybrid
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,Finasteride,REP-107,Garrett Vance,TERR-04,2,4,2,6,190,525.2,3093.34,3.26,0.03198028495128469,542.3,hybrid
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,Gemtesa,REP-108,Hannah Abbott,TERR-04,2,4,5,7,166,286.0,135545.4,2.48,0.024437629800328153,293.1,hybrid
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,Hydrocodone-Acetaminophen,REP-109,Ian Malcolm,TERR-05,3,2,1,3,307,307.0,1638.42,0.62,0.006149881820128655,308.9,hybrid
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,Myrbetriq,REP-110,Julia Roberts,TERR-05,2,4,4,12,16,26.0,11354.96,11.92,0.10868830575050081,29.1,hybrid
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,Nitrofurantoin Mono-Macro,REP-111,Kevin Bacon,TERR-06,3,2,2,3,11,11.0,129.89,0.91,0.008298802814695083,11.1,hybrid
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,Orgovyx,REP-112,Laura Croft,TERR-06,2,4,3,10,15,15.0,39310.21,8.0,0.07232066157962613,16.2,hybrid
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,Oxybutynin Chloride,REP-101,Alex Morgan,TERR-01,2,4,4,13,12,16.0,73.88,2.5,0.023256862164267034,16.4,hybrid
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,Oxybutynin Chloride Er,REP-102,Brandon Hayes,TERR-01,1,8,9,14,64,128.7,1277.95,1.4,0.013782760295421248,130.5,hybrid
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,Oxycodone-Acetaminophen,REP-103,Claire Vance,TERR-02,2,4,1,3,14,14.0,84.99,2.14,0.019802627296179764,14.3,hybrid
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,Solifenacin Succinate,REP-104,Derek Sterling,TERR-02,2,4,2,4,95,175.7,3076.56,1.54,0.015164570299044833,178.4,hybrid
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,Sulfamethoxazole-Trimethoprim,REP-105,Elena Rostova,TERR-03,2,4,2,5,72,73.0,115.26,4.25,0.04103818736511311,76.1,hybrid
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,Tamsulosin Hcl,REP-106,Fiona Gallagher,TERR-03,1,8,6,17,519,1270.6,6490.04,4.86,0.047456121147312125,1332.4,hybrid
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,Tramadol Hcl,REP-107,Garrett Vance,TERR-04,2,4,3,3,31,31.0,87.59,7.42,0.06940945137216747,33.3,hybrid
+1003000720,Dr. Otniel Hernandez,Nurse Practitioner,Fort Myers,FL,Albuterol Sulfate Hfa,REP-108,Hannah Abbott,TERR-04,2,4,3,7,11,11.3,288.45,4.42,0.03984590854719938,11.8,hybrid
+1003000720,Dr. Otniel Hernandez,Nurse Practitioner,Fort Myers,FL,Methylprednisolone,REP-109,Ian Malcolm,TERR-05,2,4,3,4,15,15.0,116.02,-3.33,-0.03174869831458027,14.5,hybrid
+1003000738,Dr. Juliette Zumwalt,Physician Assistant,Houston,TX,Meloxicam,REP-110,Julia Roberts,TERR-05,2,4,4,10,27,27.0,40.49,4.81,0.04538300584781796,28.3,hybrid
+1003000746,Dr. Mike Gallegos,Pharmacist,Placitas,NM,Abrysvo,REP-111,Kevin Bacon,TERR-06,2,4,4,5,30,30.0,8830.52,-0.33,-0.003231020581446753,29.9,hybrid
+1003000746,Dr. Mike Gallegos,Pharmacist,Placitas,NM,Shingrix,REP-112,Laura Croft,TERR-06,3,2,2,2,25,25.0,5200.07,0.0,0.0,25.0,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Acyclovir,REP-101,Alex Morgan,TERR-01,1,8,10,12,19,19.0,210.85,8.42,0.07696104113612856,20.6,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Albuterol Sulfate Hfa,REP-102,Brandon Hayes,TERR-01,2,4,3,9,218,242.9,4672.7,7.45,0.07158619853922232,261.0,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Alendronate Sodium,REP-103,Claire Vance,TERR-02,1,8,2,4,31,87.0,128.15,2.76,0.026907452919924246,89.4,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Allopurinol,REP-104,Derek Sterling,TERR-02,1,8,2,4,36,105.0,322.73,-1.81,-0.018087118491143528,103.1,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Alprazolam,REP-105,Elena Rostova,TERR-03,2,4,5,15,55,57.0,156.98,8.42,0.0795120629277335,61.8,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Amitriptyline Hcl,REP-106,Fiona Gallagher,TERR-03,2,4,7,24,14,18.0,57.64,6.67,0.06124362524071891,19.2,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Amlodipine Besylate,REP-107,Garrett Vance,TERR-04,1,8,5,6,230,572.0,987.4,2.53,0.02499052930357415,586.5,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Anoro Ellipta,REP-108,Hannah Abbott,TERR-04,2,4,2,4,30,30.0,14146.66,1.67,0.016000341346440905,30.5,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Arnuity Ellipta,REP-109,Ian Malcolm,TERR-05,2,4,2,6,11,11.0,2566.93,2.73,0.0246926125903717,11.3,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Atenolol,REP-110,Julia Roberts,TERR-05,2,4,3,7,40,120.0,212.67,5.08,0.04918363259866698,126.1,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Atorvastatin Calcium,REP-111,Kevin Bacon,TERR-06,3,2,3,4,667,1532.9,4027.94,0.44,0.004358439164802164,1539.6,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Azithromycin,REP-112,Laura Croft,TERR-06,3,2,1,2,53,53.0,151.3,0.38,0.003696861881326008,53.2,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Baclofen,REP-101,Alex Morgan,TERR-01,1,8,10,16,25,25.0,80.6,6.0,0.05608946665104364,26.5,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Belsomra,REP-102,Brandon Hayes,TERR-01,1,8,10,23,12,12.0,5224.92,0.83,0.007662872745568983,12.1,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Benazepril Hcl,REP-103,Claire Vance,TERR-02,1,8,6,19,21,39.4,53.71,6.6,0.06237033072645781,42.0,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Breo Ellipta,REP-104,Derek Sterling,TERR-02,2,4,3,7,40,60.0,23639.61,4.0,0.03858999726986845,62.4,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Breyna,REP-105,Elena Rostova,TERR-03,2,4,4,13,11,19.1,1305.08,7.85,0.07197349962508914,20.6,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Breztri Aerosphere,REP-106,Fiona Gallagher,TERR-03,1,8,10,32,14,18.0,11254.7,4.44,0.04124295853404947,18.8,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Budesonide-Formoterol Fumarate,REP-107,Garrett Vance,TERR-04,2,4,3,5,14,16.0,1065.45,3.12,0.028987536873252395,16.5,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Bumetanide,REP-108,Hannah Abbott,TERR-04,2,4,4,10,24,24.0,172.42,4.58,0.04305948946044724,25.1,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Bupropion Hcl Sr,REP-109,Ian Malcolm,TERR-05,2,4,1,2,14,24.0,148.94,2.5,0.02371652661731627,24.6,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Bupropion Xl,REP-110,Julia Roberts,TERR-05,3,2,2,3,24,40.0,352.33,2.75,0.026475673984027726,41.1,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Buspirone Hcl,REP-111,Kevin Bacon,TERR-06,2,4,5,10,98,129.0,693.37,3.57,0.034772966755045154,133.6,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Carvedilol,REP-112,Laura Croft,TERR-06,3,2,1,1,61,111.0,183.93,3.6,0.03509131981127034,115.0,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Celecoxib,REP-101,Alex Morgan,TERR-01,1,8,5,13,24,48.0,615.88,8.75,0.08223809823697215,52.2,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Cephalexin,REP-102,Brandon Hayes,TERR-01,1,8,8,16,19,19.0,55.61,-0.53,-0.005012541823544048,18.9,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Chlorthalidone,REP-103,Claire Vance,TERR-02,2,4,3,8,13,39.0,131.44,3.08,0.029558802241544502,40.2,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Ciprofloxacin Hcl,REP-104,Derek Sterling,TERR-02,3,2,1,3,13,13.0,56.99,3.85,0.03509131981127034,13.5,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Citalopram Hbr,REP-105,Elena Rostova,TERR-03,1,8,8,10,70,168.0,256.72,7.5,0.07190775124411974,180.6,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Clonazepam,REP-106,Fiona Gallagher,TERR-03,1,8,7,8,52,52.0,191.92,1.54,0.014981553615616594,52.8,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Clonidine Hcl,REP-107,Garrett Vance,TERR-04,1,8,5,13,57,107.0,209.72,6.54,0.06280090123903026,114.0,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Clopidogrel,REP-108,Hannah Abbott,TERR-04,2,4,3,4,87,179.2,665.21,7.42,0.07121016729559937,192.5,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Clotrimazole-Betamethasone,REP-109,Ian Malcolm,TERR-05,2,4,4,4,16,16.0,212.98,2.5,0.023256862164267034,16.4,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Cyclobenzaprine Hcl,REP-110,Julia Roberts,TERR-05,3,2,2,4,45,49.0,36.9,4.69,0.044973365642731356,51.3,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Dextroamphetamine-Amphetamine,REP-111,Kevin Bacon,TERR-06,2,4,4,7,23,23.0,509.06,4.35,0.04082199452025481,24.0,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Diclofenac Sodium,REP-112,Laura Croft,TERR-06,3,2,1,2,29,43.0,75.99,6.51,0.061693569005340176,45.8,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Dicyclomine Hcl,REP-101,Alex Morgan,TERR-01,1,8,10,20,22,24.0,225.76,7.08,0.06578774053800318,25.7,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Digoxin,REP-102,Brandon Hayes,TERR-01,2,4,4,8,16,16.0,130.73,-0.62,-0.005899722127188145,15.9,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Diltiazem 24hr Er (Cd),REP-103,Claire Vance,TERR-02,2,4,2,5,26,42.0,1363.45,4.29,0.04100802372737711,43.8,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Donepezil Hcl,REP-104,Derek Sterling,TERR-02,1,8,5,12,13,15.0,48.67,0.0,0.0,15.0,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Duloxetine Hcl,REP-105,Elena Rostova,TERR-03,1,8,11,17,23,35.0,196.15,6.29,0.05931657715641947,37.2,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Eliquis,REP-106,Fiona Gallagher,TERR-03,2,4,5,6,102,146.0,82462.93,4.25,0.04131167052775453,152.2,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Escitalopram Oxalate,REP-107,Garrett Vance,TERR-04,2,4,2,2,112,260.0,950.48,3.85,0.037598413557007326,270.0,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Esomeprazole Magnesium,REP-108,Hannah Abbott,TERR-04,2,4,3,10,35,90.0,444.08,0.11,0.00109829774906256,90.1,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Ezetimibe,REP-109,Ian Malcolm,TERR-05,2,4,4,5,21,59.0,235.47,-0.34,-0.0033389012655140604,58.8,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Famotidine,REP-110,Julia Roberts,TERR-05,2,4,4,9,28,60.3,213.22,1.99,0.019386713800190414,61.5,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Fenofibrate,REP-111,Kevin Bacon,TERR-06,2,4,4,8,69,153.9,1852.43,1.62,0.016010588560479988,156.4,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Fluconazole,REP-112,Laura Croft,TERR-06,3,2,1,1,35,35.0,127.66,-3.14,-0.031032109247728368,33.9,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Fluoxetine Hcl,REP-101,Alex Morgan,TERR-01,2,4,3,10,32,82.0,116.33,7.93,0.07539801748421127,88.5,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Fluticasone Propionate,REP-102,Brandon Hayes,TERR-01,2,4,6,8,75,138.0,1111.49,1.88,0.01853224812892762,140.6,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Fluticasone-Salmeterol,REP-103,Claire Vance,TERR-02,2,4,3,7,34,48.0,2561.17,0.0,0.0,48.0,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Furosemide,REP-104,Derek Sterling,TERR-02,3,2,1,1,116,176.0,332.91,3.35,0.032789822822991255,181.9,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Gabapentin,REP-105,Elena Rostova,TERR-03,2,4,5,9,227,323.0,1945.94,5.05,0.04908406571453128,339.3,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Glimepiride,REP-106,Fiona Gallagher,TERR-03,1,8,10,29,43,103.0,225.03,8.93,0.08476526662771011,112.2,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Glipizide Er,REP-107,Garrett Vance,TERR-04,1,8,2,3,16,24.0,155.23,-2.5,-0.024292692569044316,23.4,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Hydralazine Hcl,REP-108,Hannah Abbott,TERR-04,2,4,3,9,40,86.0,472.03,3.37,0.032789822822991255,88.9,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Hydrochlorothiazide,REP-109,Ian Malcolm,TERR-05,2,4,2,5,85,205.0,127.64,0.83,0.008218562092485726,206.7,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Hydrocodone-Acetaminophen,REP-110,Julia Roberts,TERR-05,3,2,3,6,43,43.0,689.44,0.7,0.006795043132828749,43.3,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Hydroxyzine Hcl,REP-111,Kevin Bacon,TERR-06,2,4,5,15,36,48.0,186.74,1.04,0.010152371464018373,48.5,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Ibuprofen,REP-112,Laura Croft,TERR-06,2,4,3,4,21,21.0,51.25,2.86,0.026907452919924246,21.6,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Isosorbide Mononitrate Er,REP-101,Alex Morgan,TERR-01,2,4,3,8,29,45.0,110.26,7.56,0.07130902770478187,48.4,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Janumet,REP-102,Brandon Hayes,TERR-01,1,8,10,33,12,12.0,6764.28,3.33,0.030305349495328926,12.4,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Januvia,REP-103,Claire Vance,TERR-02,2,4,1,3,18,22.0,12254.97,-1.36,-0.013129291441792645,21.7,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Jardiance,REP-104,Derek Sterling,TERR-02,2,4,5,7,40,54.0,32328.42,1.11,0.010850016024065212,54.6,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Lantus Solostar,REP-105,Elena Rostova,TERR-03,1,8,7,18,30,58.6,3709.56,5.8,0.055479152320228486,62.0,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Levothyroxine Sodium,REP-106,Fiona Gallagher,TERR-03,1,8,6,19,246,572.3,1850.16,2.55,0.025147725493871675,586.9,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Lisinopril,REP-107,Garrett Vance,TERR-04,2,4,3,3,337,787.2,1615.83,2.91,0.028639486315395146,810.1,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Lisinopril-Hydrochlorothiazide,REP-108,Hannah Abbott,TERR-04,2,4,5,15,59,177.0,361.43,2.94,0.028794901947945206,182.2,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Lorazepam,REP-109,Ian Malcolm,TERR-05,2,4,2,3,54,54.0,319.24,4.07,0.039220713153280684,56.2,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Losartan Potassium,REP-110,Julia Roberts,TERR-05,2,4,4,12,124,322.9,1053.46,4.74,0.046155077740464456,338.2,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Losartan-Hydrochlorothiazide,REP-111,Kevin Bacon,TERR-06,2,4,5,13,25,75.0,226.51,1.73,0.0169606153070454,76.3,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Lovastatin,REP-112,Laura Croft,TERR-06,3,2,2,4,21,63.0,106.14,0.79,0.007782140442055052,63.5,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Meclizine Hcl,REP-101,Alex Morgan,TERR-01,1,8,10,27,25,25.0,88.18,4.8,0.04512043528046927,26.2,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Meloxicam,REP-102,Brandon Hayes,TERR-01,2,4,4,10,104,132.0,109.48,1.82,0.017884232256420773,134.4,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Metformin Hcl,REP-103,Claire Vance,TERR-02,3,2,1,1,210,469.0,705.15,-0.47,-0.004691840554025717,466.8,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Metformin Hcl Er,REP-104,Derek Sterling,TERR-02,3,2,1,2,13,31.0,87.09,-7.1,-0.07122750928836785,28.8,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Methocarbamol,REP-105,Elena Rostova,TERR-03,2,4,4,13,15,15.0,25.37,5.33,0.04879016416943216,15.8,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Methylprednisolone,REP-106,Fiona Gallagher,TERR-03,2,4,3,4,30,30.0,116.71,2.33,0.022329476398088577,30.7,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Metoclopramide Hcl,REP-107,Garrett Vance,TERR-04,2,4,3,3,15,27.0,60.44,4.44,0.04196419909903204,28.2,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Metoprolol Succinate,REP-108,Hannah Abbott,TERR-04,2,4,4,6,125,259.8,1244.4,1.39,0.013709277925032737,263.4,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Metoprolol Tartrate,REP-109,Ian Malcolm,TERR-05,3,2,0,0,146,304.6,637.23,0.26,0.002614380574070374,305.4,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Mirtazapine,REP-110,Julia Roberts,TERR-05,3,2,3,4,45,47.0,271.9,-1.28,-0.01257878220686015,46.4,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Montelukast Sodium,REP-111,Kevin Bacon,TERR-06,2,4,6,20,116,271.2,444.63,2.03,0.020004304095388115,276.7,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Morphine Sulfate,REP-112,Laura Croft,TERR-06,2,4,3,8,18,18.0,267.34,4.44,0.04124295853404947,18.8,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Myrbetriq,REP-101,Alex Morgan,TERR-01,1,8,9,17,12,12.0,5400.01,5.0,0.04512043528046972,12.6,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Nitrofurantoin Mono-Macro,REP-102,Brandon Hayes,TERR-01,1,8,10,30,34,34.0,293.52,-0.59,-0.0057306747089849175,33.8,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Olmesartan Medoxomil,REP-103,Claire Vance,TERR-02,2,4,2,6,12,36.0,210.13,3.33,0.03191760296830504,37.2,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Omeprazole,REP-104,Derek Sterling,TERR-02,2,4,1,2,245,513.0,1175.2,0.47,0.0046583935173218904,515.4,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Ondansetron Hcl,REP-105,Elena Rostova,TERR-03,1,8,10,31,27,27.0,164.12,10.37,0.09531017980432521,29.8,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Ondansetron Odt,REP-106,Fiona Gallagher,TERR-03,2,4,4,13,43,43.0,995.12,6.28,0.05955453075659056,45.7,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Ozempic,REP-107,Garrett Vance,TERR-04,2,4,2,4,35,42.3,37646.44,-3.31,-0.03286680808035225,40.9,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Pantoprazole Sodium,REP-108,Hannah Abbott,TERR-04,1,8,6,18,161,320.8,1376.29,0.69,0.006813281234046009,323.0,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Paroxetine Hcl,REP-109,Ian Malcolm,TERR-05,3,2,1,1,37,95.0,311.31,2.84,0.027736754971599886,97.7,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Potassium Chloride,REP-110,Julia Roberts,TERR-05,2,4,5,14,127,239.1,1427.0,3.18,0.031162833268106205,246.7,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Pramipexole Dihydrochloride,REP-111,Kevin Bacon,TERR-06,3,2,2,5,16,26.0,290.39,1.54,0.014706147389695445,26.4,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Pravastatin Sodium,REP-112,Laura Croft,TERR-06,3,2,1,2,99,239.0,685.65,-0.71,-0.007108539237294487,237.3,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Prednisone,REP-101,Alex Morgan,TERR-01,1,8,9,15,49,57.0,36.84,7.02,0.06669137449867257,61.0,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Pregabalin,REP-102,Brandon Hayes,TERR-01,2,4,4,7,20,30.0,321.53,4.0,0.03797924806521635,31.2,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Propranolol Hcl,REP-103,Claire Vance,TERR-02,2,4,4,10,15,21.4,146.7,1.87,0.017699577099401065,21.8,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Quetiapine Fumarate,REP-104,Derek Sterling,TERR-02,2,4,1,2,36,67.0,340.98,-0.15,-0.001471670611456588,66.9,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Ropinirole Hcl,REP-105,Elena Rostova,TERR-03,2,4,3,8,23,38.0,87.57,3.42,0.03278982282299081,39.3,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Rosuvastatin Calcium,REP-106,Fiona Gallagher,TERR-03,1,8,10,14,63,171.0,602.27,4.56,0.04435064522406762,178.8,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Sertraline Hcl,REP-107,Garrett Vance,TERR-04,2,4,2,6,99,245.0,243.31,3.06,0.03003228709887562,252.5,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Simvastatin,REP-108,Hannah Abbott,TERR-04,1,8,5,16,100,274.0,500.63,4.49,0.043755868318672064,286.3,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Spironolactone,REP-109,Ian Malcolm,TERR-05,2,4,3,4,16,36.0,59.54,-0.56,-0.005420067469338985,35.8,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Sulfamethoxazole-Trimethoprim,REP-110,Julia Roberts,TERR-05,2,4,5,10,11,11.0,18.05,2.73,0.0246926125903717,11.3,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Symbicort,REP-111,Kevin Bacon,TERR-06,3,2,1,3,22,36.0,7626.7,3.33,0.03191760296830504,37.2,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Synthroid,REP-112,Laura Croft,TERR-06,3,2,1,1,38,98.0,2669.76,-0.41,-0.0040485885260004295,97.6,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Tamsulosin Hcl,REP-101,Alex Morgan,TERR-01,1,8,7,22,54,104.5,258.49,3.92,0.03812642159779411,108.6,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Tizanidine Hcl,REP-102,Brandon Hayes,TERR-01,2,4,4,11,43,47.0,349.79,4.04,0.038819991849581736,48.9,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Topiramate,REP-103,Claire Vance,TERR-02,3,2,1,2,14,16.0,110.86,-4.38,-0.04204823624349929,15.3,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Tramadol Hcl,REP-104,Derek Sterling,TERR-02,2,4,1,1,29,29.0,116.63,2.76,0.026317308317373556,29.8,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Trazodone Hcl,REP-105,Elena Rostova,TERR-03,1,8,9,19,74,121.0,257.91,4.71,0.045662718305236716,126.7,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Trelegy Ellipta,REP-106,Fiona Gallagher,TERR-03,1,8,9,12,54,54.0,33973.79,5.56,0.05310982531394792,57.0,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Triamterene-Hydrochlorothiazid,REP-107,Garrett Vance,TERR-04,2,4,3,6,22,66.0,141.38,2.42,0.023599915340874134,67.6,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Trintellix,REP-108,Hannah Abbott,TERR-04,2,4,5,6,12,12.0,5780.28,10.0,0.08829260714567821,13.2,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Valacyclovir,REP-109,Ian Malcolm,TERR-05,2,4,1,3,12,26.0,706.44,2.69,0.025595547188963508,26.7,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Valsartan,REP-110,Julia Roberts,TERR-05,2,4,5,13,13,39.0,21.44,4.1,0.03922071315328157,40.6,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Valsartan-Hydrochlorothiazide,REP-111,Kevin Bacon,TERR-06,3,2,2,4,16,22.0,159.58,0.91,0.008658062743114758,22.2,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Venlafaxine Hcl Er,REP-112,Laura Croft,TERR-06,3,2,1,3,43,84.0,284.06,-2.86,-0.028641575963384014,81.6,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Ventolin Hfa,REP-101,Alex Morgan,TERR-01,1,8,5,6,20,20.2,1056.63,2.48,0.023311078868446966,20.7,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Verapamil Er,REP-102,Brandon Hayes,TERR-01,1,8,11,20,27,81.0,522.45,5.19,0.049950930405394445,85.2,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Xarelto,REP-103,Claire Vance,TERR-02,2,4,2,5,21,39.0,21707.94,5.13,0.04879016416943216,41.0,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Zolpidem Tartrate,REP-104,Derek Sterling,TERR-02,3,2,1,1,82,90.0,329.66,0.56,0.005479465764626212,90.5,hybrid
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,Zonisamide,REP-105,Elena Rostova,TERR-03,1,8,9,22,12,12.0,276.08,5.0,0.04512043528046972,12.6,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Acetazolamide,REP-106,Fiona Gallagher,TERR-03,2,4,5,10,11,15.0,582.93,1.33,0.012422519998557036,15.2,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Amiodarone Hcl,REP-107,Garrett Vance,TERR-04,2,4,2,2,19,33.0,262.01,0.61,0.005865119452398204,33.2,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Amlodipine Besylate,REP-108,Hannah Abbott,TERR-04,1,8,9,30,164,284.0,598.83,5.56,0.053956411807034144,299.8,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Atorvastatin Calcium,REP-109,Ian Malcolm,TERR-05,2,4,2,5,25,66.0,258.71,-0.3,-0.0029895388483653917,65.8,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Brilinta,REP-110,Julia Roberts,TERR-05,2,4,5,9,11,11.0,5168.69,6.36,0.056695343676545384,11.7,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Bumetanide,REP-111,Kevin Bacon,TERR-06,3,2,2,4,11,13.0,121.55,2.31,0.0212022076506031,13.3,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Carvedilol,REP-112,Laura Croft,TERR-06,2,4,1,2,48,80.0,259.39,2.0,0.019560525854493527,81.6,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Chlorthalidone,REP-101,Alex Morgan,TERR-01,1,8,10,17,74,149.0,988.75,3.42,0.03343477608623768,154.1,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Diltiazem 24hr Er (Cd),REP-102,Brandon Hayes,TERR-01,2,4,3,10,12,16.0,213.44,-1.25,-0.01183445764700286,15.8,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Eliquis,REP-103,Claire Vance,TERR-02,3,2,2,5,84,117.5,65098.88,11.06,0.10409389104263322,130.5,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Entresto,REP-104,Derek Sterling,TERR-02,1,8,5,14,42,48.0,31700.29,0.83,0.008130126083250477,48.4,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Ezetimibe,REP-105,Elena Rostova,TERR-03,1,8,9,21,232,316.0,2443.19,8.89,0.08493245622667711,344.1,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Furosemide,REP-106,Fiona Gallagher,TERR-03,2,4,6,17,16,28.0,43.01,3.93,0.037229341768355795,29.1,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Isosorbide Mononitrate Er,REP-107,Garrett Vance,TERR-04,2,4,3,5,47,73.0,234.5,5.89,0.05648250979258762,77.3,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Jardiance,REP-108,Hannah Abbott,TERR-04,2,4,5,12,14,18.0,10566.1,-2.78,-0.02666824708216131,17.5,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Lisinopril,REP-109,Ian Malcolm,TERR-05,2,4,2,4,21,39.0,92.17,-0.51,-0.005012541823544492,38.8,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Losartan Potassium,REP-110,Julia Roberts,TERR-05,2,4,3,10,59,161.0,676.02,6.52,0.06280090123903115,171.5,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Metoprolol Succinate,REP-111,Kevin Bacon,TERR-06,2,4,4,9,57,79.0,539.53,2.41,0.02347235618514265,80.9,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Metoprolol Tartrate,REP-112,Laura Croft,TERR-06,2,4,2,3,44,82.0,117.86,-0.98,-0.00968530573446369,81.2,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Nebivolol Hcl,REP-101,Alex Morgan,TERR-01,1,8,10,24,53,70.0,2044.74,7.29,0.0693683878263247,75.1,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Nexlizet,REP-102,Brandon Hayes,TERR-01,2,4,3,4,11,15.0,5951.72,1.33,0.012422519998557036,15.2,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Potassium Chloride,REP-103,Claire Vance,TERR-02,3,2,1,2,13,21.0,150.25,3.33,0.03132247112904096,21.7,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Pravastatin Sodium,REP-104,Derek Sterling,TERR-02,2,4,2,3,22,42.0,279.12,2.86,0.027524673390090015,43.2,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Repatha Syringe,REP-105,Elena Rostova,TERR-03,2,4,4,7,14,14.0,3868.38,0.71,0.006644542718668767,14.1,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Rosuvastatin Calcium,REP-106,Fiona Gallagher,TERR-03,2,4,4,13,90,246.8,1153.82,0.53,0.005232453073093168,248.1,hybrid
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,Spironolactone,REP-107,Garrett Vance,TERR-04,2,4,4,8,53,101.0,259.07,6.04,0.05808391136089153,107.1,hybrid
+1003001207,Dr. Niloo Gorji,Dentist,Tolland,CT,Amoxicillin,REP-108,Hannah Abbott,TERR-04,1,8,7,14,32,32.0,73.29,4.06,0.03863779270541379,33.3,hybrid
+1003001207,Dr. Niloo Gorji,Dentist,Tolland,CT,Pilocarpine Hcl,REP-109,Ian Malcolm,TERR-05,2,4,1,2,12,24.0,539.12,2.5,0.02371652661731627,24.6,hybrid
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,Alendronate Sodium,REP-110,Julia Roberts,TERR-05,3,2,2,5,11,30.8,135.15,1.62,0.01560094044247995,31.3,hybrid
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,Amlodipine Besylate,REP-111,Kevin Bacon,TERR-06,3,2,3,5,27,77.0,179.69,1.17,0.011472401162237134,77.9,hybrid
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,Atorvastatin Calcium,REP-112,Laura Croft,TERR-06,2,4,3,8,47,115.0,360.65,1.83,0.017941532096951818,117.1,hybrid
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,Fluticasone Propionate,REP-101,Alex Morgan,TERR-01,2,4,3,10,19,19.0,332.94,2.63,0.0246926125903717,19.5,hybrid
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,Gabapentin,REP-102,Brandon Hayes,TERR-01,2,4,4,13,14,36.0,203.6,5.56,0.05264373348542195,38.0,hybrid
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,Hydroxyzine Hcl,REP-103,Claire Vance,TERR-02,2,4,1,1,16,16.0,110.85,3.12,0.028987536873252395,16.5,hybrid
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,Jardiance,REP-104,Derek Sterling,TERR-02,3,2,1,3,13,20.0,12463.6,0.0,0.0,20.0,hybrid
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,Levothyroxine Sodium,REP-105,Elena Rostova,TERR-03,2,4,5,12,23,44.0,94.32,4.77,0.04561051125205262,46.1,hybrid
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,Lisinopril,REP-106,Fiona Gallagher,TERR-03,2,4,5,14,34,94.7,190.54,2.22,0.02170627858186336,96.8,hybrid
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,Losartan Potassium,REP-107,Garrett Vance,TERR-04,1,8,5,6,14,36.0,88.08,7.22,0.06791120561621034,38.6,hybrid
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,Metformin Hcl,REP-108,Hannah Abbott,TERR-04,2,4,5,8,22,36.0,117.56,7.78,0.07294899964616741,38.8,hybrid
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,Myrbetriq,REP-109,Ian Malcolm,TERR-05,2,4,1,2,12,12.0,5529.82,-1.67,-0.015504186535965303,11.8,hybrid
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,Omeprazole,REP-110,Julia Roberts,TERR-05,3,2,2,6,11,34.3,205.0,2.62,0.02517615489247449,35.2,hybrid
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,Oxybutynin Chloride Er,REP-111,Kevin Bacon,TERR-06,3,2,2,5,15,21.0,88.44,3.81,0.03571808260207909,21.8,hybrid
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,Oxycodone Hcl,REP-112,Laura Croft,TERR-06,3,2,1,2,19,19.0,639.16,4.21,0.03922071315328157,19.8,hybrid
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,Pantoprazole Sodium,REP-101,Alex Morgan,TERR-01,1,8,10,15,22,42.0,288.96,4.76,0.04546237407675724,44.0,hybrid
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,Venlafaxine Hcl Er,REP-102,Brandon Hayes,TERR-01,2,4,5,15,15,24.3,1264.89,1.65,0.01568659616769974,24.7,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Acetaminophen-Codeine,REP-103,Claire Vance,TERR-02,2,4,2,6,123,123.0,2901.36,1.63,0.016000341346440905,125.0,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Amitriptyline Hcl,REP-104,Derek Sterling,TERR-02,2,4,1,1,93,107.0,2369.41,5.14,0.049671609797237615,112.5,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Baclofen,REP-105,Elena Rostova,TERR-03,2,4,3,4,515,565.1,7542.06,6.76,0.06530002232489895,603.3,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Belsomra,REP-106,Fiona Gallagher,TERR-03,1,8,11,18,17,17.0,7281.52,5.88,0.054067221270275745,18.0,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Buprenorphine,REP-107,Garrett Vance,TERR-04,2,4,3,9,30,30.0,8844.58,4.33,0.0410800257434647,31.3,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Buprenorphine-Naloxone,REP-108,Hannah Abbott,TERR-04,2,4,4,5,12,12.0,654.74,3.33,0.030305349495328926,12.4,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Celecoxib,REP-109,Ian Malcolm,TERR-05,2,4,2,3,67,73.0,1346.92,0.55,0.005390848634876377,73.4,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Cyclobenzaprine Hcl,REP-110,Julia Roberts,TERR-05,2,4,5,7,354,367.4,3359.89,3.65,0.0357276069104957,380.8,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Diclofenac Epolamine,REP-111,Kevin Bacon,TERR-06,2,4,5,7,20,20.0,12462.34,4.0,0.03738753207162038,20.8,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Diclofenac Sodium,REP-112,Laura Croft,TERR-06,3,2,1,3,194,216.8,10872.42,-0.97,-0.009688657103748888,214.7,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Duloxetine Hcl,REP-101,Alex Morgan,TERR-01,1,8,4,5,133,154.0,1780.25,3.7,0.03611415582421973,159.7,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Emgality Pen,REP-102,Brandon Hayes,TERR-01,1,8,7,18,12,12.0,7790.04,5.0,0.04512043528046972,12.6,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Eszopiclone,REP-103,Claire Vance,TERR-02,2,4,2,3,42,42.0,287.05,5.24,0.049896971144623326,44.2,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Famotidine,REP-104,Derek Sterling,TERR-02,2,4,2,3,15,19.0,117.9,1.05,0.009950330853168321,19.2,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Fentanyl,REP-105,Elena Rostova,TERR-03,2,4,5,7,76,76.0,10969.16,3.42,0.033208670996653034,78.6,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Gabapentin,REP-106,Fiona Gallagher,TERR-03,2,4,6,20,1301,1422.0,15198.99,1.21,0.012014673724913827,1439.2,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Hydrocodone-Acetaminophen,REP-107,Garrett Vance,TERR-04,2,4,3,6,1711,1713.0,52745.88,-1.86,-0.01872735962938865,1681.2,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Hydromorphone Hcl,REP-108,Hannah Abbott,TERR-04,1,8,8,27,51,51.0,874.63,2.75,0.02656702738472161,52.4,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Ibu,REP-109,Ian Malcolm,TERR-05,2,4,2,4,17,17.0,113.56,5.88,0.054067221270275745,18.0,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Ibuprofen,REP-110,Julia Roberts,TERR-05,2,4,4,13,306,319.0,1942.56,4.98,0.04849250082447476,334.9,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Lidocaine,REP-111,Kevin Bacon,TERR-06,3,2,2,6,167,197.2,18983.92,-0.35,-0.0035380375547111598,196.5,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Linzess,REP-112,Laura Croft,TERR-06,3,2,2,3,41,41.0,21384.12,8.29,0.07784248676393402,44.4,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Lubiprostone,REP-101,Alex Morgan,TERR-01,1,8,9,27,43,49.0,6567.86,7.14,0.06765864847381486,52.5,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Meloxicam,REP-102,Brandon Hayes,TERR-01,2,4,3,7,330,358.0,999.15,1.79,0.01767025545562806,364.4,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Metaxalone,REP-103,Claire Vance,TERR-02,1,8,4,4,16,16.0,1551.69,8.12,0.07368771579115929,17.3,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Methadone Hcl,REP-104,Derek Sterling,TERR-02,1,8,2,4,30,30.0,417.11,4.67,0.044171218313137306,31.4,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Methocarbamol,REP-105,Elena Rostova,TERR-03,1,8,9,16,96,100.0,1167.39,8.5,0.08080403241529588,108.5,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Morphine Sulfate,REP-106,Fiona Gallagher,TERR-03,1,8,9,27,71,71.0,2165.08,1.83,0.017894489876550068,72.3,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Morphine Sulfate Er,REP-107,Garrett Vance,TERR-04,1,8,4,11,486,487.0,13050.79,1.99,0.019682080011360625,496.7,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Movantik,REP-108,Hannah Abbott,TERR-04,2,4,5,7,102,112.0,43867.81,3.57,0.034786116085415486,116.0,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Nabumetone,REP-109,Ian Malcolm,TERR-05,2,4,1,2,18,18.0,187.14,3.33,0.03109058707003154,18.6,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Naloxone Hcl,REP-110,Julia Roberts,TERR-05,2,4,3,5,288,290.0,18768.14,2.76,0.027120306219194035,298.0,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Naproxen,REP-111,Kevin Bacon,TERR-06,2,4,6,13,62,66.0,1040.68,-0.3,-0.0029895388483653917,65.8,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Omeprazole,REP-112,Laura Croft,TERR-06,3,2,2,4,79,115.0,637.92,0.43,0.004301081899391157,115.5,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Ondansetron Odt,REP-101,Alex Morgan,TERR-01,1,8,9,22,50,50.0,1077.1,3.2,0.030890487019338497,51.6,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Oxycodone Hcl,REP-102,Brandon Hayes,TERR-01,2,4,4,13,730,730.0,15603.12,1.34,0.013317223582191673,739.8,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Oxycodone-Acetaminophen,REP-103,Claire Vance,TERR-02,3,2,1,2,944,944.0,31940.07,-3.23,-0.0328074596628225,913.5,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Oxycontin,REP-104,Derek Sterling,TERR-02,2,4,3,4,57,57.0,42031.44,1.05,0.010291686036548064,57.6,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Pantoprazole Sodium,REP-105,Elena Rostova,TERR-03,1,8,9,27,28,30.0,180.53,8.0,0.07456869549750822,32.4,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Pregabalin,REP-106,Fiona Gallagher,TERR-03,2,4,4,6,547,564.0,14763.75,-0.62,-0.006213956967943801,560.5,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Relistor,REP-107,Garrett Vance,TERR-04,2,4,4,5,91,91.0,217087.92,8.9,0.08438110927213405,99.1,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Sumatriptan Succinate,REP-108,Hannah Abbott,TERR-04,2,4,3,9,21,21.0,403.45,5.24,0.048790164169431716,22.1,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Tizanidine Hcl,REP-109,Ian Malcolm,TERR-05,2,4,2,5,215,249.0,1857.18,1.93,0.019018005835762075,253.8,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Topiramate,REP-110,Julia Roberts,TERR-05,2,4,4,7,12,14.0,64.02,4.29,0.03922071315328113,14.6,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Tramadol Hcl,REP-111,Kevin Bacon,TERR-06,2,4,5,9,490,490.0,3910.5,4.33,0.04227104597090481,511.2,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Tramadol Hcl Er,REP-112,Laura Croft,TERR-06,3,2,1,1,29,29.0,1294.98,-1.38,-0.013423020332140823,28.6,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Trazodone Hcl,REP-101,Alex Morgan,TERR-01,1,8,9,25,280,312.0,3668.33,6.09,0.05893177837633523,331.0,hybrid
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,Xtampza Er,REP-102,Brandon Hayes,TERR-01,2,4,4,11,31,31.0,20092.91,-0.97,-0.009419221916491693,30.7,hybrid
+1003001371,Dr. David Kanter,Physical Medicine and Rehabilitation,Syracuse,NY,Baclofen,REP-103,Claire Vance,TERR-02,2,4,3,10,227,253.0,41124.68,5.61,0.05439870382904122,267.2,hybrid
+1003001371,Dr. David Kanter,Physical Medicine and Rehabilitation,Syracuse,NY,Clonazepam,REP-104,Derek Sterling,TERR-02,1,8,2,5,27,29.0,735.25,4.48,0.04242071588395202,30.3,hybrid

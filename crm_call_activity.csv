@@ -1,821 +1,401 @@
 Prscrbr_NPI,Physician_Name,Specialty,City,State,Sales_Rep,Sales_Rep_Name,Territory,HCP_Tier,Target_Calls,Actual_Calls,Samples_Dropped
-1001000001,Dr. Margaret Thomas,Pain Management,Portland,OR,REP-H148,Harvey Sterling,TERR-H12,2,10,6,4
-1001000002,Dr. Mary Rivera,Pain Management,Miami,FL,REP-H121,Helen Finch,TERR-H09,2,14,11,7
-1001000003,Dr. Richard Davis,Neurology,Denver,CO,REP-H331,Hugh Thornton,TERR-H03,1,16,10,1
-1001000004,Dr. Emily Wilson,Pain Management,Detroit,MI,REP-H167,Heather Hayes,TERR-H07,2,8,5,4
-1001000005,Dr. Emily Young,Oncology,Philadelphia,PA,REP-H360,Hattie Blackwood,TERR-H08,3,4,3,4
-1001000006,Dr. Richard Campbell,Oncology,Nashville,TN,REP-H210,Hope Bishop,TERR-H02,2,2,2,0
-1001000007,Dr. Rebecca Lopez,Psychiatry,Austin,TX,REP-H376,Hayden Whitman,TERR-H12,1,6,5,6
-1001000008,Dr. Sarah Nelson,Internal Medicine,Charlotte,NC,REP-H245,Henry Conway,TERR-H01,2,7,4,0
-1001000009,Dr. Dorothy Mitchell,Pain Management,Los Angeles,CA,REP-H169,Harrison Hayes,TERR-H09,2,13,11,6
-1001000010,Dr. Sarah Jackson,Internal Medicine,Columbus,OH,REP-H188,Harvey Monroe,TERR-H04,2,13,9,6
-1001000011,Dr. John King,Pain Management,Atlanta,GA,REP-H292,Hilary Gallagher,TERR-H12,3,5,2,3
-1001000012,Dr. Dorothy Campbell,Anesthesiology,Portland,OR,REP-H345,Henry Blackwood,TERR-H05,2,10,3,0
-1001000013,Dr. Barbara Johnson,Neurology,Jacksonville,FL,REP-H378,Hilda Whitman,TERR-H02,2,7,4,3
-1001000014,Dr. John Thompson,Anesthesiology,Miami,FL,REP-H333,Hector Thornton,TERR-H05,2,10,8,2
-1001000015,Dr. Sarah Torres,Orthopedics,Detroit,MI,REP-H128,Harvey Finch,TERR-H04,3,5,4,3
-1001000016,Dr. Richard Harris,Orthopedics,Baltimore,MD,REP-H294,Hazel Gallagher,TERR-H02,1,10,8,6
-1001000017,Dr. Karen Johnson,Pain Management,Charlotte,NC,REP-H204,Hannah Bishop,TERR-H08,3,5,4,5
-1001000018,Dr. Kathleen Williams,Neurology,Houston,TX,REP-H241,Helen Conway,TERR-H09,2,2,1,1
-1001000019,Dr. Jennifer Anderson,Pain Management,Jacksonville,FL,REP-H174,Hazel Hayes,TERR-H02,2,5,3,1
-1001000020,Dr. Nancy Moore,Pain Management,Austin,TX,REP-H183,Howard Monroe,TERR-H11,2,15,8,1
-1001000021,Dr. Barbara Torres,Anesthesiology,Los Angeles,CA,REP-H350,Hope Blackwood,TERR-H10,2,8,6,5
-1001000022,Dr. David Robinson,Emergency Medicine,Charlotte,NC,REP-H201,Helen Bishop,TERR-H05,1,7,6,3
-1001000023,Dr. Sharon Scott,Anesthesiology,Atlanta,GA,REP-H223,Howard Sinclair,TERR-H03,3,4,3,1
-1001000024,Dr. Laura Carter,Oncology,Las Vegas,NV,REP-H289,Harrison Gallagher,TERR-H09,2,8,6,1
-1001000025,Dr. Sarah Lewis,Palliative Care,Detroit,MI,REP-H325,Henry Thornton,TERR-H09,2,8,7,6
-1001000026,Dr. Barbara Lewis,Palliative Care,Charlotte,NC,REP-H224,Hannah Sinclair,TERR-H04,2,10,8,8
-1001000027,Dr. Richard Williams,Oncology,Atlanta,GA,REP-H125,Henry Finch,TERR-H01,2,8,6,1
-1001000028,Dr. Kathleen Garcia,Anesthesiology,Detroit,MI,REP-H383,Howard Carrington,TERR-H07,2,4,3,2
-1001000029,Dr. Elizabeth Gonzalez,Oncology,Chicago,IL,REP-H272,Hilary Mercer,TERR-H04,2,15,14,5
-1001000030,Dr. Sarah Lee,Oncology,Austin,TX,REP-H109,Harrison Vance,TERR-H09,2,11,10,5
-1001000031,Dr. Mary Anderson,Pain Management,Jacksonville,FL,REP-H352,Hilary Blackwood,TERR-H12,2,16,14,14
-1001000032,Dr. Donna Williams,Pain Management,Jacksonville,FL,REP-H255,Homer Conway,TERR-H11,2,9,6,0
-1001000033,Dr. Ashley Lee,Pain Management,Charlotte,NC,REP-H276,Hayden Mercer,TERR-H08,1,15,11,7
-1001000034,Dr. Sarah Anderson,Pain Management,Houston,TX,REP-H165,Henry Hayes,TERR-H05,2,3,1,0
-1001000035,Dr. Mary Campbell,Pain Management,Seattle,WA,REP-H286,Holly Gallagher,TERR-H06,2,10,8,7
-1001000036,Dr. Richard Robinson,Pain Management,New York,NY,REP-H253,Hector Conway,TERR-H09,2,5,5,0
-1001000037,Dr. Jessica Nguyen,Palliative Care,Miami,FL,REP-H320,Hattie Kensington,TERR-H04,1,11,8,9
-1001000038,Dr. Richard Campbell,Oncology,Los Angeles,CA,REP-H149,Harrison Sterling,TERR-H01,2,9,5,3
-1001000039,Dr. Charles Thomas,Palliative Care,Portland,OR,REP-H134,Hazel Finch,TERR-H10,3,6,3,0
-1001000040,Dr. Patricia Carter,Oncology,Portland,OR,REP-H273,Hector Mercer,TERR-H05,2,12,10,7
-1001000041,Dr. Barbara Williams,Pain Management,New York,NY,REP-H228,Harvey Sinclair,TERR-H08,2,10,8,8
-1001000042,Dr. Jessica Lee,Internal Medicine,Austin,TX,REP-H278,Hilda Mercer,TERR-H10,2,4,3,2
-1001000043,Dr. Kimberly Green,Neurology,New York,NY,REP-H259,Holden Conway,TERR-H03,2,5,3,3
-1001000044,Dr. Kathleen Walker,Pain Management,Jacksonville,FL,REP-H138,Hilda Finch,TERR-H02,2,11,9,4
-1001000045,Dr. Kathleen Rivera,Pain Management,Denver,CO,REP-H288,Harvey Gallagher,TERR-H08,2,14,12,12
-1001000046,Dr. Stephanie Davis,Pain Management,Chicago,IL,REP-H225,Henry Sinclair,TERR-H05,1,13,8,5
-1001000047,Dr. Carol White,Pain Management,Las Vegas,NV,REP-H159,Holden Sterling,TERR-H11,3,6,5,1
-1001000048,Dr. Charles Jackson,Pain Management,Chicago,IL,REP-H388,Harvey Carrington,TERR-H12,2,6,6,2
-1001000049,Dr. Donna Lewis,Internal Medicine,Phoenix,AZ,REP-H185,Henry Monroe,TERR-H01,2,7,6,4
-1001000050,Dr. Sharon Green,Neurology,Seattle,WA,REP-H322,Harold Thornton,TERR-H06,2,5,3,2
-1001000051,Dr. Emily Brown,Neurology,Portland,OR,REP-H157,Hunter Sterling,TERR-H09,2,4,3,0
-1001000052,Dr. James White,Internal Medicine,Portland,OR,REP-H353,Hector Blackwood,TERR-H01,2,2,2,3
-1001000053,Dr. Mary Hall,Pain Management,Denver,CO,REP-H107,Heather Vance,TERR-H07,3,2,1,1
-1001000054,Dr. Barbara Carter,Pain Management,New York,NY,REP-H172,Hilary Hayes,TERR-H12,2,8,6,4
-1001000055,Dr. Sharon Perez,Oncology,Denver,CO,REP-H295,Homer Gallagher,TERR-H03,3,2,1,2
-1001000056,Dr. Sharon Lee,Pain Management,Las Vegas,NV,REP-H277,Hunter Mercer,TERR-H09,2,10,7,0
-1001000057,Dr. Michelle Miller,Palliative Care,Los Angeles,CA,REP-H276,Hayden Mercer,TERR-H08,2,8,5,4
-1001000058,Dr. Carol King,Oncology,Atlanta,GA,REP-H125,Henry Finch,TERR-H01,2,4,3,2
-1001000059,Dr. Susan Scott,Oncology,Denver,CO,REP-H269,Harrison Mercer,TERR-H01,1,12,10,8
-1001000060,Dr. David Wilson,Neurology,Phoenix,AZ,REP-H162,Harold Hayes,TERR-H02,2,5,2,0
-1001000061,Dr. Margaret Walker,Neurology,Detroit,MI,REP-H186,Holly Monroe,TERR-H02,1,7,5,2
-1001000062,Dr. Melissa Brown,Oncology,New York,NY,REP-H359,Holden Blackwood,TERR-H07,2,13,12,0
-1001000063,Dr. Sharon Harris,Orthopedics,New York,NY,REP-H170,Hope Hayes,TERR-H10,2,4,2,1
-1001000064,Dr. Kimberly Walker,Internal Medicine,Charlotte,NC,REP-H131,Hugh Finch,TERR-H07,3,2,1,0
-1001000065,Dr. Joseph White,Emergency Medicine,Portland,OR,REP-H250,Hope Conway,TERR-H06,1,4,0,1
-1001000066,Dr. Nancy Allen,Neurology,Denver,CO,REP-H147,Heather Sterling,TERR-H11,1,13,10,6
-1001000067,Dr. Charles Lewis,Oncology,Chicago,IL,REP-H255,Homer Conway,TERR-H11,2,15,10,2
-1001000068,Dr. Emily Martin,Pain Management,Chicago,IL,REP-H149,Harrison Sterling,TERR-H01,3,5,4,2
-1001000069,Dr. Amanda Adams,Pain Management,New York,NY,REP-H293,Hector Gallagher,TERR-H01,2,7,4,1
-1001000070,Dr. Ashley Green,Palliative Care,Detroit,MI,REP-H171,Hugh Hayes,TERR-H11,2,15,10,5
-1001000071,Dr. Mary Campbell,Internal Medicine,New York,NY,REP-H138,Hilda Finch,TERR-H02,2,4,3,0
-1001000072,Dr. Amanda King,Internal Medicine,Phoenix,AZ,REP-H176,Hayden Hayes,TERR-H04,2,2,1,0
-1001000073,Dr. Thomas Torres,Oncology,Austin,TX,REP-H143,Howard Sterling,TERR-H07,1,8,6,5
-1001000074,Dr. Thomas Carter,Neurology,Phoenix,AZ,REP-H274,Hazel Mercer,TERR-H06,1,5,3,3
-1001000075,Dr. Lisa Campbell,Pain Management,Atlanta,GA,REP-H118,Hilda Vance,TERR-H06,3,2,1,1
-1001000076,Dr. Margaret Adams,Pain Management,Portland,OR,REP-H176,Hayden Hayes,TERR-H04,2,11,8,8
-1001000077,Dr. Rebecca Harris,Oncology,Phoenix,AZ,REP-H301,Helen Kensington,TERR-H09,2,6,5,3
-1001000078,Dr. Sharon Lopez,Palliative Care,Las Vegas,NV,REP-H304,Hannah Kensington,TERR-H12,2,6,5,4
-1001000079,Dr. Patricia Jones,Pain Management,New York,NY,REP-H222,Harold Sinclair,TERR-H02,1,16,10,2
-1001000080,Dr. John Miller,Palliative Care,Phoenix,AZ,REP-H328,Harvey Thornton,TERR-H12,1,14,12,9
-1001000081,Dr. Donna Martin,Pain Management,Austin,TX,REP-H227,Heather Sinclair,TERR-H07,1,14,13,7
-1001000082,Dr. Nancy King,Palliative Care,Philadelphia,PA,REP-H171,Hugh Hayes,TERR-H11,2,15,12,0
-1001000083,Dr. Betty Nguyen,Orthopedics,Nashville,TN,REP-H319,Holden Kensington,TERR-H03,2,7,5,4
-1001000084,Dr. Barbara Allen,Emergency Medicine,Detroit,MI,REP-H189,Harrison Monroe,TERR-H05,2,5,4,0
-1001000085,Dr. Betty King,Anesthesiology,Houston,TX,REP-H332,Hilary Thornton,TERR-H04,1,14,12,11
-1001000086,Dr. Michael Ramirez,Neurology,Miami,FL,REP-H338,Hilda Thornton,TERR-H10,2,8,7,8
-1001000087,Dr. Kimberly Young,Oncology,Los Angeles,CA,REP-H243,Howard Conway,TERR-H11,2,9,5,2
-1001000088,Dr. Nancy Jackson,Family Practice,Miami,FL,REP-H292,Hilary Gallagher,TERR-H12,2,2,1,1
-1001000089,Dr. Sarah Miller,Oncology,Miami,FL,REP-H202,Harold Bishop,TERR-H06,2,10,8,0
-1001000090,Dr. Deborah Wilson,Pain Management,Charlotte,NC,REP-H343,Howard Blackwood,TERR-H03,1,16,11,4
-1001000091,Dr. Michelle Perez,Oncology,Charlotte,NC,REP-H364,Hannah Whitman,TERR-H12,2,7,7,4
-1001000092,Dr. Laura Baker,Oncology,Philadelphia,PA,REP-H109,Harrison Vance,TERR-H09,2,7,4,5
-1001000093,Dr. Donna Carter,Palliative Care,Charlotte,NC,REP-H317,Hunter Kensington,TERR-H01,2,14,12,4
-1001000094,Dr. Lisa Anderson,Family Practice,New York,NY,REP-H277,Hunter Mercer,TERR-H09,2,5,4,0
-1001000095,Dr. Linda Sanchez,Pain Management,Seattle,WA,REP-H302,Harold Kensington,TERR-H10,3,6,4,0
-1001000096,Dr. Betty Perez,Pain Management,Charlotte,NC,REP-H309,Harrison Kensington,TERR-H05,2,11,10,3
-1001000097,Dr. Linda Jackson,Pain Management,Los Angeles,CA,REP-H319,Holden Kensington,TERR-H03,3,5,3,2
-1001000098,Dr. Lisa Taylor,Palliative Care,Columbus,OH,REP-H122,Harold Finch,TERR-H10,2,6,4,3
-1001000099,Dr. Michelle Clark,Palliative Care,Houston,TX,REP-H250,Hope Conway,TERR-H06,1,16,14,4
-1001000100,Dr. Melissa Wright,Family Practice,Denver,CO,REP-H352,Hilary Blackwood,TERR-H12,2,5,4,1
-1001000101,Dr. Susan Scott,Internal Medicine,Phoenix,AZ,REP-H109,Harrison Vance,TERR-H09,2,8,6,4
-1001000102,Dr. Richard Nguyen,Pain Management,Boston,MA,REP-H146,Holly Sterling,TERR-H10,2,7,4,2
-1001000103,Dr. Elizabeth Wilson,Orthopedics,New York,NY,REP-H111,Hugh Vance,TERR-H11,2,4,2,3
-1001000104,Dr. Patricia Nelson,Anesthesiology,Las Vegas,NV,REP-H367,Heather Whitman,TERR-H03,3,2,1,0
-1001000105,Dr. Laura Torres,Pain Management,Seattle,WA,REP-H368,Harvey Whitman,TERR-H04,2,8,6,1
-1001000106,Dr. Thomas Wilson,Pain Management,Las Vegas,NV,REP-H213,Hector Bishop,TERR-H05,2,6,5,6
-1001000107,Dr. Sharon Sanchez,Pain Management,Las Vegas,NV,REP-H132,Hilary Finch,TERR-H08,1,16,11,12
-1001000108,Dr. Carol Hernandez,Family Practice,Nashville,TN,REP-H375,Homer Whitman,TERR-H11,2,8,7,2
-1001000109,Dr. Kimberly Lopez,Oncology,Seattle,WA,REP-H257,Hunter Conway,TERR-H01,3,5,4,2
-1001000110,Dr. Elizabeth Miller,Anesthesiology,Detroit,MI,REP-H151,Hugh Sterling,TERR-H03,2,6,5,0
-1001000111,Dr. William Ramirez,Pain Management,Portland,OR,REP-H178,Hilda Hayes,TERR-H06,2,11,10,5
-1001000112,Dr. Charles Wilson,Orthopedics,Jacksonville,FL,REP-H127,Heather Finch,TERR-H03,2,12,10,4
-1001000113,Dr. Patricia Brown,Pain Management,Charlotte,NC,REP-H177,Hunter Hayes,TERR-H05,2,10,6,7
-1001000114,Dr. Susan Lewis,Anesthesiology,Las Vegas,NV,REP-H139,Holden Finch,TERR-H03,1,15,13,11
-1001000115,Dr. Laura Wright,Internal Medicine,Seattle,WA,REP-H133,Hector Finch,TERR-H09,2,4,3,0
-1001000116,Dr. Michelle Nelson,Oncology,Jacksonville,FL,REP-H202,Harold Bishop,TERR-H06,2,11,8,0
-1001000117,Dr. Robert Perez,Family Practice,Philadelphia,PA,REP-H206,Holly Bishop,TERR-H10,2,6,3,0
-1001000118,Dr. Joseph Torres,Anesthesiology,New York,NY,REP-H237,Hunter Sinclair,TERR-H05,2,11,6,7
-1001000119,Dr. James Lopez,Anesthesiology,Detroit,MI,REP-H329,Harrison Thornton,TERR-H01,1,15,13,9
-1001000120,Dr. Karen Allen,Pain Management,Los Angeles,CA,REP-H271,Hugh Mercer,TERR-H03,2,4,3,1
-1001000121,Dr. Stephanie Torres,Family Practice,Philadelphia,PA,REP-H342,Harold Blackwood,TERR-H02,2,8,6,5
-1001000122,Dr. Richard Carter,Internal Medicine,Chicago,IL,REP-H280,Hattie Mercer,TERR-H12,2,6,5,4
-1001000123,Dr. Laura Clark,Pain Management,Phoenix,AZ,REP-H296,Hayden Gallagher,TERR-H04,3,2,1,0
-1001000124,Dr. Stephanie Hill,Oncology,Portland,OR,REP-H264,Hannah Mercer,TERR-H08,1,14,11,8
-1001000125,Dr. Emily Harris,Palliative Care,Miami,FL,REP-H113,Hector Vance,TERR-H01,1,11,6,6
-1001000126,Dr. Laura Gonzalez,Pain Management,Boston,MA,REP-H197,Hunter Monroe,TERR-H01,2,3,3,0
-1001000127,Dr. Mary Rodriguez,Palliative Care,Denver,CO,REP-H269,Harrison Mercer,TERR-H01,3,5,4,5
-1001000128,Dr. Karen Baker,Pain Management,Philadelphia,PA,REP-H261,Helen Mercer,TERR-H05,1,16,13,12
-1001000129,Dr. Margaret Jones,Pain Management,Philadelphia,PA,REP-H370,Hope Whitman,TERR-H06,2,8,5,3
-1001000130,Dr. Nancy Wright,Internal Medicine,Austin,TX,REP-H104,Hannah Vance,TERR-H04,2,7,6,0
-1001000131,Dr. Sarah Walker,Pain Management,Detroit,MI,REP-H216,Hayden Bishop,TERR-H08,3,4,4,3
-1001000132,Dr. Stephanie Taylor,Anesthesiology,Las Vegas,NV,REP-H371,Hugh Whitman,TERR-H07,3,3,2,1
-1001000133,Dr. Sharon Torres,Palliative Care,Los Angeles,CA,REP-H130,Hope Finch,TERR-H06,3,3,2,1
-1001000134,Dr. Sandra Rodriguez,Emergency Medicine,Atlanta,GA,REP-H181,Helen Monroe,TERR-H09,2,2,1,2
-1001000135,Dr. Thomas Young,Internal Medicine,Austin,TX,REP-H215,Homer Bishop,TERR-H07,3,2,1,0
-1001000136,Dr. Karen Scott,Pain Management,Columbus,OH,REP-H354,Hazel Blackwood,TERR-H02,2,7,6,0
-1001000137,Dr. Joseph Rivera,Pain Management,Las Vegas,NV,REP-H351,Hugh Blackwood,TERR-H11,2,3,2,3
-1001000138,Dr. Nancy King,Oncology,Charlotte,NC,REP-H224,Hannah Sinclair,TERR-H04,2,6,4,0
-1001000139,Dr. Patricia Gonzalez,Anesthesiology,Miami,FL,REP-H101,Helen Vance,TERR-H01,2,9,6,0
-1001000140,Dr. Michelle Davis,Family Practice,Philadelphia,PA,REP-H358,Hilda Blackwood,TERR-H06,3,2,2,2
-1001000141,Dr. Donna Thomas,Family Practice,Boston,MA,REP-H170,Hope Hayes,TERR-H10,2,5,3,1
-1001000142,Dr. John Campbell,Pain Management,Charlotte,NC,REP-H185,Henry Monroe,TERR-H01,2,11,6,3
-1001000143,Dr. David Walker,Family Practice,Baltimore,MD,REP-H230,Hope Sinclair,TERR-H10,2,8,5,6
-1001000144,Dr. Melissa King,Internal Medicine,Boston,MA,REP-H388,Harvey Carrington,TERR-H12,2,11,7,8
-1001000145,Dr. Sandra Smith,Palliative Care,Seattle,WA,REP-H315,Homer Kensington,TERR-H11,3,4,3,0
-1001000146,Dr. Kathleen Allen,Anesthesiology,Miami,FL,REP-H116,Hayden Vance,TERR-H04,3,7,5,1
-1001000147,Dr. Jennifer Garcia,Palliative Care,Atlanta,GA,REP-H253,Hector Conway,TERR-H09,1,13,8,8
-1001000148,Dr. Susan Anderson,Oncology,Denver,CO,REP-H186,Holly Monroe,TERR-H02,2,4,3,4
-1001000149,Dr. Elizabeth Wilson,Neurology,Denver,CO,REP-H125,Henry Finch,TERR-H01,2,6,4,0
-1001000150,Dr. Joseph Young,Pain Management,Los Angeles,CA,REP-H207,Heather Bishop,TERR-H11,1,15,9,2
-1001000151,Dr. Patricia Flores,Pain Management,Columbus,OH,REP-H327,Heather Thornton,TERR-H11,1,13,10,10
-1001000152,Dr. Sarah Hill,Oncology,Las Vegas,NV,REP-H178,Hilda Hayes,TERR-H06,2,10,9,8
-1001000153,Dr. William Young,Anesthesiology,Nashville,TN,REP-H291,Hugh Gallagher,TERR-H11,3,10,7,3
-1001000154,Dr. David Nelson,Family Practice,Las Vegas,NV,REP-H174,Hazel Hayes,TERR-H02,2,8,5,2
-1001000155,Dr. James Lopez,Orthopedics,Boston,MA,REP-H233,Hector Sinclair,TERR-H01,3,2,1,1
-1001000156,Dr. Deborah Flores,Oncology,Seattle,WA,REP-H189,Harrison Monroe,TERR-H05,2,12,12,10
-1001000157,Dr. William Hall,Anesthesiology,Houston,TX,REP-H103,Howard Vance,TERR-H03,2,4,3,0
-1001000158,Dr. Jennifer Rodriguez,Internal Medicine,Boston,MA,REP-H110,Hope Vance,TERR-H10,2,7,1,0
-1001000159,Dr. Kimberly Ramirez,Anesthesiology,Las Vegas,NV,REP-H355,Homer Blackwood,TERR-H03,3,2,1,0
-1001000160,Dr. Linda Rodriguez,Internal Medicine,Houston,TX,REP-H124,Hannah Finch,TERR-H12,2,7,3,2
-1001000161,Dr. Donna Green,Pain Management,Los Angeles,CA,REP-H266,Holly Mercer,TERR-H10,3,2,2,2
-1001000162,Dr. Jessica Lewis,Oncology,Detroit,MI,REP-H115,Homer Vance,TERR-H03,2,7,5,1
-1001000163,Dr. Lisa Nguyen,Oncology,Jacksonville,FL,REP-H190,Hope Monroe,TERR-H06,1,15,10,9
-1001000164,Dr. Jennifer Baker,Anesthesiology,Houston,TX,REP-H289,Harrison Gallagher,TERR-H09,1,11,7,6
-1001000165,Dr. Lisa Clark,Oncology,Portland,OR,REP-H211,Hugh Bishop,TERR-H03,2,7,4,4
-1001000166,Dr. Kathleen Lewis,Oncology,Las Vegas,NV,REP-H282,Harold Gallagher,TERR-H02,2,9,7,1
-1001000167,Dr. Kimberly Robinson,Oncology,Los Angeles,CA,REP-H121,Helen Finch,TERR-H09,1,15,12,7
-1001000168,Dr. Ashley Lopez,Palliative Care,Chicago,IL,REP-H182,Harold Monroe,TERR-H10,2,5,5,1
-1001000169,Dr. Betty Smith,Family Practice,Denver,CO,REP-H315,Homer Kensington,TERR-H11,2,2,2,0
-1001000170,Dr. David Perez,Oncology,Boston,MA,REP-H132,Hilary Finch,TERR-H08,3,2,2,2
-1001000171,Dr. Susan Nelson,Pain Management,Phoenix,AZ,REP-H126,Holly Finch,TERR-H02,2,8,4,0
-1001000172,Dr. Mary Flores,Family Practice,Miami,FL,REP-H199,Holden Monroe,TERR-H03,3,3,2,3
-1001000173,Dr. Thomas Hernandez,Neurology,Portland,OR,REP-H106,Holly Vance,TERR-H06,3,4,3,3
-1001000174,Dr. Nancy Sanchez,Anesthesiology,Phoenix,AZ,REP-H112,Hilary Vance,TERR-H12,2,4,2,0
-1001000175,Dr. Elizabeth Harris,Pain Management,Seattle,WA,REP-H326,Holly Thornton,TERR-H10,2,8,5,1
-1001000176,Dr. Betty Lewis,Neurology,Miami,FL,REP-H228,Harvey Sinclair,TERR-H08,2,3,2,2
-1001000177,Dr. David Torres,Pain Management,Boston,MA,REP-H190,Hope Monroe,TERR-H06,2,13,10,5
-1001000178,Dr. Ashley Garcia,Internal Medicine,Chicago,IL,REP-H316,Hayden Kensington,TERR-H12,1,6,5,6
-1001000179,Dr. Emily Williams,Family Practice,Austin,TX,REP-H185,Henry Monroe,TERR-H01,2,2,1,2
-1001000180,Dr. Robert Thompson,Pain Management,Las Vegas,NV,REP-H115,Homer Vance,TERR-H03,2,7,6,3
-1001000181,Dr. Michael Nelson,Pain Management,Seattle,WA,REP-H299,Holden Gallagher,TERR-H07,2,4,3,3
-1001000182,Dr. Jessica Mitchell,Orthopedics,Detroit,MI,REP-H128,Harvey Finch,TERR-H04,2,3,2,0
-1001000183,Dr. Nancy Lopez,Palliative Care,Austin,TX,REP-H275,Homer Mercer,TERR-H07,3,5,4,2
-1001000184,Dr. Dorothy Johnson,Pain Management,Detroit,MI,REP-H259,Holden Conway,TERR-H03,2,8,6,3
-1001000185,Dr. Jennifer Carter,Neurology,Houston,TX,REP-H172,Hilary Hayes,TERR-H12,1,14,11,12
-1001000186,Dr. Margaret Martinez,Family Practice,Jacksonville,FL,REP-H273,Hector Mercer,TERR-H05,2,7,3,4
-1001000187,Dr. Ashley Moore,Palliative Care,Jacksonville,FL,REP-H156,Hayden Sterling,TERR-H08,2,5,3,3
-1001000188,Dr. Lisa Hall,Pain Management,Baltimore,MD,REP-H311,Hugh Kensington,TERR-H07,1,8,4,1
-1001000189,Dr. Nancy Torres,Anesthesiology,Miami,FL,REP-H230,Hope Sinclair,TERR-H10,2,2,1,0
-1001000190,Dr. Patricia Allen,Anesthesiology,Los Angeles,CA,REP-H173,Hector Hayes,TERR-H01,1,13,8,1
-1001000191,Dr. Karen Garcia,Family Practice,Miami,FL,REP-H308,Harvey Kensington,TERR-H04,2,8,6,2
-1001000192,Dr. Dorothy Nguyen,Neurology,Nashville,TN,REP-H200,Hattie Monroe,TERR-H04,2,5,4,5
-1001000193,Dr. Deborah Sanchez,Pain Management,Jacksonville,FL,REP-H252,Hilary Conway,TERR-H08,2,6,4,5
-1001000194,Dr. Jessica Martinez,Oncology,Philadelphia,PA,REP-H104,Hannah Vance,TERR-H04,2,14,10,6
-1001000195,Dr. Susan Wilson,Orthopedics,Charlotte,NC,REP-H246,Holly Conway,TERR-H02,2,6,5,1
-1001000196,Dr. John Harris,Oncology,Boston,MA,REP-H330,Hope Thornton,TERR-H02,3,4,3,1
-1001000197,Dr. Patricia Baker,Pain Management,Denver,CO,REP-H313,Hector Kensington,TERR-H09,1,6,5,6
-1001000198,Dr. Sharon Nelson,Oncology,Atlanta,GA,REP-H199,Holden Monroe,TERR-H03,2,4,2,3
-1001000199,Dr. Sandra Hernandez,Internal Medicine,Detroit,MI,REP-H190,Hope Monroe,TERR-H06,2,3,2,0
-1001000200,Dr. Lisa Lewis,Oncology,Las Vegas,NV,REP-H347,Heather Blackwood,TERR-H07,3,4,2,0
-1001000201,Dr. David Thomas,Palliative Care,Miami,FL,REP-H377,Hunter Whitman,TERR-H01,2,9,6,7
-1001000202,Dr. Sharon Hill,Palliative Care,Columbus,OH,REP-H307,Heather Kensington,TERR-H03,2,7,4,3
-1001000203,Dr. Jessica Clark,Internal Medicine,Las Vegas,NV,REP-H166,Holly Hayes,TERR-H06,1,9,3,1
-1001000204,Dr. Patricia Clark,Neurology,Portland,OR,REP-H288,Harvey Gallagher,TERR-H08,2,14,10,0
-1001000205,Dr. Jessica Nelson,Palliative Care,Atlanta,GA,REP-H287,Heather Gallagher,TERR-H07,2,15,7,5
-1001000206,Dr. James Mitchell,Pain Management,Miami,FL,REP-H228,Harvey Sinclair,TERR-H08,2,13,11,9
-1001000207,Dr. Sarah Allen,Family Practice,Boston,MA,REP-H239,Holden Sinclair,TERR-H07,3,3,2,2
-1001000208,Dr. Donna Hernandez,Neurology,Los Angeles,CA,REP-H245,Henry Conway,TERR-H01,3,2,1,0
-1001000209,Dr. Stephanie Jones,Pain Management,Phoenix,AZ,REP-H148,Harvey Sterling,TERR-H12,2,11,8,4
-1001000210,Dr. Stephanie King,Anesthesiology,Phoenix,AZ,REP-H160,Hattie Sterling,TERR-H12,2,6,4,3
-1001000211,Dr. Jessica Taylor,Orthopedics,Phoenix,AZ,REP-H299,Holden Gallagher,TERR-H07,3,5,3,1
-1001000212,Dr. Amanda Gonzalez,Anesthesiology,Los Angeles,CA,REP-H283,Howard Gallagher,TERR-H03,2,10,9,7
-1001000213,Dr. Melissa Anderson,Anesthesiology,Detroit,MI,REP-H342,Harold Blackwood,TERR-H02,2,7,6,5
-1001000214,Dr. Elizabeth Nguyen,Palliative Care,Miami,FL,REP-H366,Holly Whitman,TERR-H02,2,13,7,7
-1001000215,Dr. Sarah Jones,Family Practice,Baltimore,MD,REP-H156,Hayden Sterling,TERR-H08,2,6,5,1
-1001000216,Dr. Carol Martin,Neurology,Detroit,MI,REP-H302,Harold Kensington,TERR-H10,2,9,6,0
-1001000217,Dr. Linda Hill,Palliative Care,New York,NY,REP-H219,Holden Bishop,TERR-H11,1,14,11,11
-1001000218,Dr. Michelle Campbell,Pain Management,Boston,MA,REP-H220,Hattie Bishop,TERR-H12,2,8,6,0
-1001000219,Dr. Michael Lopez,Pain Management,Jacksonville,FL,REP-H378,Hilda Whitman,TERR-H02,2,8,6,2
-1001000220,Dr. Melissa Lee,Neurology,Las Vegas,NV,REP-H236,Hayden Sinclair,TERR-H04,2,5,3,0
-1001000221,Dr. Richard Green,Anesthesiology,Seattle,WA,REP-H144,Hannah Sterling,TERR-H08,2,16,12,4
-1001000222,Dr. Carol Green,Internal Medicine,Atlanta,GA,REP-H349,Harrison Blackwood,TERR-H09,2,10,8,9
-1001000223,Dr. David Lee,Anesthesiology,Denver,CO,REP-H360,Hattie Blackwood,TERR-H08,2,6,3,0
-1001000224,Dr. Barbara Nelson,Internal Medicine,Baltimore,MD,REP-H137,Hunter Finch,TERR-H01,2,6,5,5
-1001000225,Dr. Richard Nelson,Anesthesiology,Baltimore,MD,REP-H370,Hope Whitman,TERR-H06,1,16,11,1
-1001000226,Dr. Sarah Thompson,Neurology,Los Angeles,CA,REP-H154,Hazel Sterling,TERR-H06,2,4,2,0
-1001000227,Dr. Barbara Johnson,Oncology,Philadelphia,PA,REP-H382,Harold Carrington,TERR-H06,2,5,2,2
-1001000228,Dr. Lisa Mitchell,Neurology,Charlotte,NC,REP-H207,Heather Bishop,TERR-H11,2,9,3,2
-1001000229,Dr. Thomas Hall,Pain Management,Columbus,OH,REP-H225,Henry Sinclair,TERR-H05,2,2,2,2
-1001000230,Dr. William Jackson,Pain Management,New York,NY,REP-H285,Henry Gallagher,TERR-H05,2,16,10,4
-1001000231,Dr. Elizabeth Hall,Oncology,Denver,CO,REP-H312,Hilary Kensington,TERR-H08,3,6,4,2
-1001000232,Dr. Sarah Campbell,Orthopedics,Atlanta,GA,REP-H231,Hugh Sinclair,TERR-H11,3,2,1,1
-1001000233,Dr. Deborah Perez,Pain Management,Denver,CO,REP-H363,Howard Whitman,TERR-H11,2,7,5,1
-1001000234,Dr. Linda Ramirez,Anesthesiology,Houston,TX,REP-H296,Hayden Gallagher,TERR-H04,2,5,2,1
-1001000235,Dr. Richard Miller,Oncology,Denver,CO,REP-H303,Howard Kensington,TERR-H11,1,16,7,1
-1001000236,Dr. Stephanie Rivera,Family Practice,Seattle,WA,REP-H305,Henry Kensington,TERR-H01,2,4,3,2
-1001000237,Dr. Jessica Lewis,Oncology,Philadelphia,PA,REP-H386,Holly Carrington,TERR-H10,2,12,8,8
-1001000238,Dr. Barbara Brown,Pain Management,Atlanta,GA,REP-H101,Helen Vance,TERR-H01,2,7,5,3
-1001000239,Dr. Kathleen Campbell,Oncology,Miami,FL,REP-H334,Hazel Thornton,TERR-H06,1,14,12,7
-1001000240,Dr. Robert White,Family Practice,Portland,OR,REP-H196,Hayden Monroe,TERR-H12,2,5,4,1
-1001000241,Dr. Jessica Lopez,Oncology,Miami,FL,REP-H197,Hunter Monroe,TERR-H01,2,9,5,6
-1001000242,Dr. Carol Flores,Neurology,Chicago,IL,REP-H112,Hilary Vance,TERR-H12,2,5,3,4
-1001000243,Dr. Robert Thompson,Family Practice,New York,NY,REP-H238,Hilda Sinclair,TERR-H06,3,6,4,4
-1001000244,Dr. Rebecca Harris,Oncology,New York,NY,REP-H339,Holden Thornton,TERR-H11,2,8,6,5
-1001000245,Dr. Michelle Brown,Oncology,Chicago,IL,REP-H314,Hazel Kensington,TERR-H10,2,10,6,0
-1001000246,Dr. Betty Mitchell,Palliative Care,Columbus,OH,REP-H232,Hilary Sinclair,TERR-H12,3,2,2,1
-1001000247,Dr. Sandra Baker,Neurology,Austin,TX,REP-H119,Holden Vance,TERR-H07,2,3,3,1
-1001000248,Dr. Joseph Martin,Pain Management,Chicago,IL,REP-H111,Hugh Vance,TERR-H11,2,9,5,5
-1001000249,Dr. Margaret Rivera,Pain Management,Houston,TX,REP-H227,Heather Sinclair,TERR-H07,2,12,10,4
-1001000250,Dr. Elizabeth Moore,Anesthesiology,Atlanta,GA,REP-H243,Howard Conway,TERR-H11,1,14,7,4
-1001000251,Dr. Linda Perez,Pain Management,Seattle,WA,REP-H136,Hayden Finch,TERR-H12,2,5,2,1
-1001000252,Dr. Karen Young,Pain Management,Austin,TX,REP-H226,Holly Sinclair,TERR-H06,2,9,6,0
-1001000253,Dr. Michelle Rivera,Anesthesiology,Las Vegas,NV,REP-H271,Hugh Mercer,TERR-H03,2,6,4,5
-1001000254,Dr. Linda Jackson,Palliative Care,Las Vegas,NV,REP-H152,Hilary Sterling,TERR-H04,3,3,2,1
-1001000255,Dr. Emily Young,Anesthesiology,Phoenix,AZ,REP-H105,Henry Vance,TERR-H05,2,6,5,0
-1001000256,Dr. Donna Baker,Family Practice,Jacksonville,FL,REP-H201,Helen Bishop,TERR-H05,2,7,3,3
-1001000257,Dr. Joseph Anderson,Anesthesiology,Charlotte,NC,REP-H278,Hilda Mercer,TERR-H10,2,6,5,2
-1001000258,Dr. James Mitchell,Family Practice,Baltimore,MD,REP-H227,Heather Sinclair,TERR-H07,2,8,4,1
-1001000259,Dr. Thomas Torres,Neurology,Las Vegas,NV,REP-H362,Harold Whitman,TERR-H10,2,6,4,2
-1001000260,Dr. Betty Martinez,Pain Management,Detroit,MI,REP-H195,Homer Monroe,TERR-H11,2,9,5,0
-1001000261,Dr. Robert Mitchell,Orthopedics,Columbus,OH,REP-H253,Hector Conway,TERR-H09,2,6,3,0
-1001000262,Dr. Elizabeth Moore,Family Practice,New York,NY,REP-H322,Harold Thornton,TERR-H06,2,11,8,0
-1001000263,Dr. Sandra Lewis,Pain Management,Miami,FL,REP-H193,Hector Monroe,TERR-H09,1,16,14,6
-1001000264,Dr. John Walker,Pain Management,Miami,FL,REP-H237,Hunter Sinclair,TERR-H05,3,2,2,1
-1001000265,Dr. Richard Young,Palliative Care,Las Vegas,NV,REP-H101,Helen Vance,TERR-H01,2,16,13,8
-1001000266,Dr. Nancy Rivera,Palliative Care,Baltimore,MD,REP-H251,Hugh Conway,TERR-H07,2,11,6,1
-1001000267,Dr. Elizabeth Sanchez,Anesthesiology,Philadelphia,PA,REP-H164,Hannah Hayes,TERR-H04,1,16,12,4
-1001000268,Dr. William Walker,Pain Management,Baltimore,MD,REP-H128,Harvey Finch,TERR-H04,1,14,11,11
-1001000269,Dr. Laura Brown,Internal Medicine,Columbus,OH,REP-H154,Hazel Sterling,TERR-H06,1,12,8,3
-1001000270,Dr. Lisa Rodriguez,Neurology,Las Vegas,NV,REP-H129,Harrison Finch,TERR-H05,2,6,4,2
-1001000271,Dr. Melissa Williams,Pain Management,Las Vegas,NV,REP-H183,Howard Monroe,TERR-H11,2,9,5,6
-1001000272,Dr. Kathleen Jackson,Pain Management,Denver,CO,REP-H162,Harold Hayes,TERR-H02,3,2,2,2
-1001000273,Dr. Dorothy Harris,Anesthesiology,Jacksonville,FL,REP-H151,Hugh Sterling,TERR-H03,3,6,5,3
-1001000274,Dr. Barbara Hill,Palliative Care,Las Vegas,NV,REP-H384,Hannah Carrington,TERR-H08,2,5,3,1
-1001000275,Dr. Margaret Gonzalez,Palliative Care,Baltimore,MD,REP-H368,Harvey Whitman,TERR-H04,2,7,5,2
-1001000276,Dr. Michelle Martinez,Pain Management,Las Vegas,NV,REP-H106,Holly Vance,TERR-H06,2,9,5,4
-1001000277,Dr. Michael Hernandez,Neurology,Miami,FL,REP-H110,Hope Vance,TERR-H10,2,4,3,0
-1001000278,Dr. Thomas Brown,Pain Management,New York,NY,REP-H239,Holden Sinclair,TERR-H07,2,14,10,1
-1001000279,Dr. Elizabeth Jackson,Anesthesiology,Denver,CO,REP-H143,Howard Sterling,TERR-H07,2,3,2,2
-1001000280,Dr. Elizabeth Moore,Emergency Medicine,Chicago,IL,REP-H117,Hunter Vance,TERR-H05,1,11,9,8
-1001000281,Dr. Rebecca Thomas,Neurology,Detroit,MI,REP-H102,Harold Vance,TERR-H02,1,11,9,2
-1001000282,Dr. Donna Davis,Pain Management,Atlanta,GA,REP-H337,Hunter Thornton,TERR-H09,3,3,1,1
-1001000283,Dr. Nancy Wilson,Oncology,Detroit,MI,REP-H373,Hector Whitman,TERR-H09,2,11,9,3
-1001000284,Dr. Carol Hall,Pain Management,Las Vegas,NV,REP-H284,Hannah Gallagher,TERR-H04,2,13,7,6
-1001000285,Dr. Joseph Flores,Oncology,Austin,TX,REP-H213,Hector Bishop,TERR-H05,2,11,8,7
-1001000286,Dr. Mary Smith,Anesthesiology,Denver,CO,REP-H184,Hannah Monroe,TERR-H12,2,7,6,1
-1001000287,Dr. John Thompson,Pain Management,Las Vegas,NV,REP-H160,Hattie Sterling,TERR-H12,2,3,2,1
-1001000288,Dr. Carol Hernandez,Palliative Care,Detroit,MI,REP-H276,Hayden Mercer,TERR-H08,2,8,4,5
-1001000289,Dr. Jessica Hall,Neurology,Philadelphia,PA,REP-H264,Hannah Mercer,TERR-H08,2,3,2,1
-1001000290,Dr. Nancy King,Oncology,Baltimore,MD,REP-H293,Hector Gallagher,TERR-H01,3,3,2,0
-1001000291,Dr. James Smith,Pain Management,Los Angeles,CA,REP-H118,Hilda Vance,TERR-H06,3,3,3,1
-1001000292,Dr. Elizabeth Allen,Oncology,Jacksonville,FL,REP-H129,Harrison Finch,TERR-H05,2,8,7,2
-1001000293,Dr. Rebecca Hill,Pain Management,Jacksonville,FL,REP-H381,Helen Carrington,TERR-H05,2,2,2,1
-1001000294,Dr. David Moore,Palliative Care,Nashville,TN,REP-H279,Holden Mercer,TERR-H11,1,14,10,8
-1001000295,Dr. Mary Nguyen,Pain Management,Jacksonville,FL,REP-H348,Harvey Blackwood,TERR-H08,2,10,5,1
-1001000296,Dr. Sharon Nguyen,Anesthesiology,Austin,TX,REP-H356,Hayden Blackwood,TERR-H04,2,12,7,6
-1001000297,Dr. John Hernandez,Palliative Care,Boston,MA,REP-H166,Holly Hayes,TERR-H06,3,2,2,3
-1001000298,Dr. Jennifer Hernandez,Anesthesiology,Los Angeles,CA,REP-H209,Harrison Bishop,TERR-H01,2,11,7,7
-1001000299,Dr. John Young,Pain Management,Atlanta,GA,REP-H160,Hattie Sterling,TERR-H12,3,3,2,2
-1001000300,Dr. John Sanchez,Anesthesiology,Chicago,IL,REP-H294,Hazel Gallagher,TERR-H02,3,3,1,2
-1001000301,Dr. Charles Hernandez,Neurology,Philadelphia,PA,REP-H297,Hunter Gallagher,TERR-H05,2,7,5,3
-1001000302,Dr. Carol Thompson,Family Practice,Philadelphia,PA,REP-H299,Holden Gallagher,TERR-H07,2,9,7,0
-1001000303,Dr. Melissa Hill,Oncology,Baltimore,MD,REP-H310,Hope Kensington,TERR-H06,1,16,10,1
-1001000304,Dr. Nancy Taylor,Neurology,Austin,TX,REP-H194,Hazel Monroe,TERR-H10,1,13,11,6
-1001000305,Dr. Richard Lewis,Internal Medicine,Atlanta,GA,REP-H247,Heather Conway,TERR-H03,1,11,9,2
-1001000306,Dr. Charles Smith,Oncology,Las Vegas,NV,REP-H135,Homer Finch,TERR-H11,1,12,5,3
-1001000307,Dr. Deborah Miller,Pain Management,Boston,MA,REP-H260,Hattie Conway,TERR-H04,2,14,10,8
-1001000308,Dr. Lisa Baker,Pain Management,Los Angeles,CA,REP-H343,Howard Blackwood,TERR-H03,2,5,3,3
-1001000309,Dr. Amanda Perez,Pain Management,Denver,CO,REP-H111,Hugh Vance,TERR-H11,2,5,4,2
-1001000310,Dr. Deborah Jackson,Neurology,Nashville,TN,REP-H234,Hazel Sinclair,TERR-H02,2,4,3,0
-1001000311,Dr. Lisa Lopez,Family Practice,Phoenix,AZ,REP-H119,Holden Vance,TERR-H07,1,6,5,6
-1001000312,Dr. Sarah Nguyen,Pain Management,Portland,OR,REP-H287,Heather Gallagher,TERR-H07,2,2,2,1
-1001000313,Dr. Michael Sanchez,Pain Management,Los Angeles,CA,REP-H179,Holden Hayes,TERR-H07,3,3,2,2
-1001000314,Dr. Elizabeth Moore,Anesthesiology,Phoenix,AZ,REP-H209,Harrison Bishop,TERR-H01,2,5,3,0
-1001000315,Dr. Nancy Hill,Pain Management,Baltimore,MD,REP-H290,Hope Gallagher,TERR-H10,2,7,4,2
-1001000316,Dr. Kathleen Rodriguez,Neurology,Philadelphia,PA,REP-H363,Howard Whitman,TERR-H11,2,3,2,1
-1001000317,Dr. Jessica Taylor,Pain Management,Nashville,TN,REP-H249,Harrison Conway,TERR-H05,2,8,7,2
-1001000318,Dr. Sarah Miller,Palliative Care,Nashville,TN,REP-H321,Helen Thornton,TERR-H05,2,6,3,4
-1001000319,Dr. William Clark,Pain Management,Atlanta,GA,REP-H131,Hugh Finch,TERR-H07,2,13,5,0
-1001000320,Dr. Stephanie Allen,Oncology,Houston,TX,REP-H298,Hilda Gallagher,TERR-H06,2,9,7,4
-1001000321,Dr. Laura Wright,Family Practice,Houston,TX,REP-H217,Hunter Bishop,TERR-H09,2,9,7,7
-1001000322,Dr. Richard Nelson,Family Practice,Baltimore,MD,REP-H323,Howard Thornton,TERR-H07,2,5,3,4
-1001000323,Dr. Linda Lee,Pain Management,Jacksonville,FL,REP-H168,Harvey Hayes,TERR-H08,2,11,7,2
-1001000324,Dr. Robert Allen,Oncology,Seattle,WA,REP-H300,Hattie Gallagher,TERR-H08,2,7,6,2
-1001000325,Dr. Richard Flores,Oncology,Chicago,IL,REP-H239,Holden Sinclair,TERR-H07,2,9,7,6
-1001000326,Dr. Emily Lewis,Palliative Care,Nashville,TN,REP-H196,Hayden Monroe,TERR-H12,2,8,4,3
-1001000327,Dr. Sharon Jackson,Anesthesiology,Denver,CO,REP-H290,Hope Gallagher,TERR-H10,2,6,5,1
-1001000328,Dr. Dorothy White,Family Practice,Houston,TX,REP-H270,Hope Mercer,TERR-H02,2,5,4,0
-1001000329,Dr. Barbara Hill,Anesthesiology,Denver,CO,REP-H179,Holden Hayes,TERR-H07,2,14,10,0
-1001000330,Dr. Melissa Allen,Pain Management,Houston,TX,REP-H341,Helen Blackwood,TERR-H01,2,7,6,2
-1001000331,Dr. Ashley Torres,Oncology,Nashville,TN,REP-H188,Harvey Monroe,TERR-H04,2,13,7,5
-1001000332,Dr. Michael Perez,Oncology,Las Vegas,NV,REP-H312,Hilary Kensington,TERR-H08,2,5,3,1
-1001000333,Dr. Susan Williams,Palliative Care,Detroit,MI,REP-H234,Hazel Sinclair,TERR-H02,3,4,2,1
-1001000334,Dr. Patricia Harris,Palliative Care,Chicago,IL,REP-H130,Hope Finch,TERR-H06,2,5,3,3
-1001000335,Dr. Sharon Torres,Neurology,Columbus,OH,REP-H303,Howard Kensington,TERR-H11,2,9,5,2
-1001000336,Dr. Carol Robinson,Palliative Care,Denver,CO,REP-H221,Helen Sinclair,TERR-H01,2,11,7,4
-1001000337,Dr. Linda Lewis,Family Practice,Portland,OR,REP-H301,Helen Kensington,TERR-H09,2,8,6,4
-1001000338,Dr. Mary Jackson,Oncology,Miami,FL,REP-H285,Henry Gallagher,TERR-H05,2,10,8,6
-1001000339,Dr. Kathleen Carter,Pain Management,Phoenix,AZ,REP-H184,Hannah Monroe,TERR-H12,3,7,4,0
-1001000340,Dr. Sharon Hall,Anesthesiology,Columbus,OH,REP-H152,Hilary Sterling,TERR-H04,2,10,6,3
-1001000341,Dr. Margaret Wright,Pain Management,Jacksonville,FL,REP-H214,Hazel Bishop,TERR-H06,2,4,3,2
-1001000342,Dr. Kathleen Flores,Internal Medicine,Houston,TX,REP-H298,Hilda Gallagher,TERR-H06,2,2,1,2
-1001000343,Dr. Joseph Smith,Pain Management,Portland,OR,REP-H324,Hannah Thornton,TERR-H08,2,9,7,6
-1001000344,Dr. Rebecca Lopez,Family Practice,Nashville,TN,REP-H353,Hector Blackwood,TERR-H01,2,6,4,0
-1001000345,Dr. Jennifer Sanchez,Pain Management,Nashville,TN,REP-H235,Homer Sinclair,TERR-H03,2,8,5,4
-1001000346,Dr. Deborah Nelson,Neurology,Austin,TX,REP-H243,Howard Conway,TERR-H11,1,12,7,8
-1001000347,Dr. Deborah Martinez,Anesthesiology,Los Angeles,CA,REP-H206,Holly Bishop,TERR-H10,2,11,8,9
-1001000348,Dr. Ashley Wilson,Pain Management,Los Angeles,CA,REP-H229,Harrison Sinclair,TERR-H09,2,10,7,1
-1001000349,Dr. Dorothy Thompson,Internal Medicine,Denver,CO,REP-H262,Harold Mercer,TERR-H06,2,4,3,2
-1001000350,Dr. John Hernandez,Anesthesiology,Los Angeles,CA,REP-H201,Helen Bishop,TERR-H05,2,5,4,0
-1001000351,Dr. Elizabeth Miller,Oncology,Seattle,WA,REP-H262,Harold Mercer,TERR-H06,2,9,6,5
-1001000352,Dr. Sarah Rivera,Pain Management,Los Angeles,CA,REP-H350,Hope Blackwood,TERR-H10,2,6,5,6
-1001000353,Dr. Sandra Torres,Palliative Care,Nashville,TN,REP-H180,Hattie Hayes,TERR-H08,1,11,8,7
-1001000354,Dr. Stephanie Davis,Pain Management,Portland,OR,REP-H371,Hugh Whitman,TERR-H07,3,2,1,0
-1001000355,Dr. Margaret Thomas,Pain Management,Chicago,IL,REP-H321,Helen Thornton,TERR-H05,2,2,2,2
-1001000356,Dr. Jennifer White,Family Practice,Baltimore,MD,REP-H308,Harvey Kensington,TERR-H04,3,8,6,1
-1001000357,Dr. Margaret Miller,Pain Management,Las Vegas,NV,REP-H277,Hunter Mercer,TERR-H09,3,7,4,1
-1001000358,Dr. Barbara Walker,Internal Medicine,Baltimore,MD,REP-H261,Helen Mercer,TERR-H05,2,4,3,1
-1001000359,Dr. Sandra Wright,Palliative Care,Detroit,MI,REP-H179,Holden Hayes,TERR-H07,3,4,3,3
-1001000360,Dr. Margaret Scott,Neurology,Detroit,MI,REP-H218,Hilda Bishop,TERR-H10,2,2,1,2
-1001000361,Dr. Patricia Rivera,Palliative Care,New York,NY,REP-H317,Hunter Kensington,TERR-H01,3,5,3,1
-1001000362,Dr. Betty Walker,Neurology,Charlotte,NC,REP-H211,Hugh Bishop,TERR-H03,2,10,6,1
-1001000363,Dr. Thomas Walker,Internal Medicine,Phoenix,AZ,REP-H315,Homer Kensington,TERR-H11,2,4,2,3
-1001000364,Dr. Mary Sanchez,Oncology,Boston,MA,REP-H267,Heather Mercer,TERR-H11,2,5,2,3
-1001000365,Dr. Thomas Johnson,Palliative Care,Chicago,IL,REP-H247,Heather Conway,TERR-H03,1,14,12,10
-1001000366,Dr. Susan Sanchez,Pain Management,Las Vegas,NV,REP-H197,Hunter Monroe,TERR-H01,3,2,1,2
-1001000367,Dr. Linda Wright,Internal Medicine,Detroit,MI,REP-H313,Hector Kensington,TERR-H09,2,6,3,1
-1001000368,Dr. Jennifer Clark,Anesthesiology,Las Vegas,NV,REP-H323,Howard Thornton,TERR-H07,1,16,15,4
-1001000369,Dr. Linda Brown,Anesthesiology,Charlotte,NC,REP-H107,Heather Vance,TERR-H07,2,6,3,1
-1001000370,Dr. Nancy Robinson,Internal Medicine,Nashville,TN,REP-H309,Harrison Kensington,TERR-H05,2,7,2,2
-1001000371,Dr. Melissa Torres,Anesthesiology,New York,NY,REP-H328,Harvey Thornton,TERR-H12,2,7,6,6
-1001000372,Dr. Michelle Hill,Neurology,Chicago,IL,REP-H316,Hayden Kensington,TERR-H12,2,7,5,6
-1001000373,Dr. Melissa Flores,Palliative Care,Austin,TX,REP-H178,Hilda Hayes,TERR-H06,2,10,9,8
-1001000374,Dr. Jennifer Torres,Neurology,Chicago,IL,REP-H317,Hunter Kensington,TERR-H01,2,8,5,3
-1001000375,Dr. Dorothy Thomas,Orthopedics,Chicago,IL,REP-H345,Henry Blackwood,TERR-H05,3,2,2,3
-1001000376,Dr. Sarah Ramirez,Palliative Care,Portland,OR,REP-H379,Holden Whitman,TERR-H03,2,6,4,2
-1001000377,Dr. Donna Sanchez,Family Practice,Atlanta,GA,REP-H140,Hattie Finch,TERR-H04,2,5,3,1
-1001000378,Dr. Nancy Lopez,Family Practice,Atlanta,GA,REP-H159,Holden Sterling,TERR-H11,2,2,1,1
-1001000379,Dr. Lisa Gonzalez,Pain Management,Denver,CO,REP-H146,Holly Sterling,TERR-H10,2,10,6,6
-1001000380,Dr. Jessica Wright,Palliative Care,Charlotte,NC,REP-H113,Hector Vance,TERR-H01,2,7,5,2
-1001000381,Dr. Melissa Hernandez,Pain Management,Portland,OR,REP-H102,Harold Vance,TERR-H02,3,10,9,1
-1001000382,Dr. Lisa Campbell,Pain Management,Seattle,WA,REP-H172,Hilary Hayes,TERR-H12,2,15,7,2
-1001000383,Dr. Jessica Wilson,Anesthesiology,Jacksonville,FL,REP-H274,Hazel Mercer,TERR-H06,2,9,6,5
-1001000384,Dr. Joseph Thomas,Palliative Care,Miami,FL,REP-H331,Hugh Thornton,TERR-H03,3,3,2,1
-1001000385,Dr. William Clark,Anesthesiology,New York,NY,REP-H233,Hector Sinclair,TERR-H01,1,9,8,9
-1001000386,Dr. Joseph Young,Pain Management,Nashville,TN,REP-H191,Hugh Monroe,TERR-H07,2,8,7,2
-1001000387,Dr. Michael Torres,Oncology,New York,NY,REP-H267,Heather Mercer,TERR-H11,3,7,5,5
-1001000388,Dr. Kimberly King,Orthopedics,Portland,OR,REP-H365,Henry Whitman,TERR-H01,2,8,6,6
-1001000389,Dr. Sarah Walker,Pain Management,Portland,OR,REP-H237,Hunter Sinclair,TERR-H05,2,9,7,5
-1001000390,Dr. Sandra Gonzalez,Palliative Care,Detroit,MI,REP-H386,Holly Carrington,TERR-H10,2,7,5,6
-1001000391,Dr. Patricia Taylor,Oncology,Los Angeles,CA,REP-H374,Hazel Whitman,TERR-H10,2,4,4,4
-1001000392,Dr. Patricia Robinson,Palliative Care,Jacksonville,FL,REP-H209,Harrison Bishop,TERR-H01,2,3,3,0
-1001000393,Dr. Elizabeth Perez,Anesthesiology,Nashville,TN,REP-H257,Hunter Conway,TERR-H01,2,2,1,0
-1001000394,Dr. Amanda Wilson,Orthopedics,Philadelphia,PA,REP-H272,Hilary Mercer,TERR-H04,2,3,2,2
-1001000395,Dr. Susan Allen,Pain Management,Las Vegas,NV,REP-H270,Hope Mercer,TERR-H02,1,16,10,7
-1001000396,Dr. Linda Hill,Anesthesiology,Columbus,OH,REP-H261,Helen Mercer,TERR-H05,1,16,14,7
-1001000397,Dr. Jessica Davis,Palliative Care,Austin,TX,REP-H330,Hope Thornton,TERR-H02,2,8,5,6
-1001000398,Dr. Jessica Martin,Neurology,Phoenix,AZ,REP-H140,Hattie Finch,TERR-H04,2,8,6,0
-1001000399,Dr. William Martinez,Psychiatry,Seattle,WA,REP-H176,Hayden Hayes,TERR-H04,2,2,1,2
-1001000400,Dr. Charles Gonzalez,Oncology,Jacksonville,FL,REP-H310,Hope Kensington,TERR-H06,2,12,9,10
-1001000401,Dr. Richard White,Palliative Care,Portland,OR,REP-H198,Hilda Monroe,TERR-H02,1,8,5,0
-1001000402,Dr. Kathleen Brown,Pain Management,Miami,FL,REP-H251,Hugh Conway,TERR-H07,1,14,9,5
-1001000403,Dr. Kimberly Miller,Palliative Care,Houston,TX,REP-H193,Hector Monroe,TERR-H09,2,10,7,6
-1001000404,Dr. Linda Torres,Internal Medicine,Charlotte,NC,REP-H236,Hayden Sinclair,TERR-H04,2,2,1,1
-1001000405,Dr. Barbara King,Anesthesiology,Los Angeles,CA,REP-H300,Hattie Gallagher,TERR-H08,2,11,6,3
-1001000406,Dr. Lisa Perez,Internal Medicine,Miami,FL,REP-H326,Holly Thornton,TERR-H10,2,3,2,0
-1001000407,Dr. Dorothy Brown,Pain Management,Houston,TX,REP-H206,Holly Bishop,TERR-H10,3,7,5,2
-1001000408,Dr. Barbara Adams,Neurology,Miami,FL,REP-H369,Harrison Whitman,TERR-H05,2,11,8,1
-1001000409,Dr. Sharon Wright,Pain Management,Boston,MA,REP-H134,Hazel Finch,TERR-H10,2,3,2,0
-1001000410,Dr. Jennifer Green,Oncology,Atlanta,GA,REP-H320,Hattie Kensington,TERR-H04,3,3,3,3
-1001000411,Dr. Carol Jones,Psychiatry,Philadelphia,PA,REP-H282,Harold Gallagher,TERR-H02,2,4,2,1
-1001000412,Dr. Carol Jones,Palliative Care,Nashville,TN,REP-H122,Harold Finch,TERR-H10,3,2,2,0
-1001000413,Dr. Jennifer Torres,Anesthesiology,Boston,MA,REP-H222,Harold Sinclair,TERR-H02,2,8,6,7
-1001000414,Dr. Robert Johnson,Internal Medicine,Austin,TX,REP-H286,Holly Gallagher,TERR-H06,2,5,4,5
-1001000415,Dr. Charles Harris,Anesthesiology,New York,NY,REP-H318,Hilda Kensington,TERR-H02,1,12,10,0
-1001000416,Dr. Melissa Hall,Oncology,Miami,FL,REP-H304,Hannah Kensington,TERR-H12,1,10,5,1
-1001000417,Dr. Carol Lee,Anesthesiology,Columbus,OH,REP-H382,Harold Carrington,TERR-H06,2,8,5,2
-1001000418,Dr. Joseph Wilson,Oncology,Denver,CO,REP-H275,Homer Mercer,TERR-H07,2,9,7,8
-1001000419,Dr. Elizabeth Garcia,Palliative Care,Boston,MA,REP-H337,Hunter Thornton,TERR-H09,1,15,13,7
-1001000420,Dr. Amanda Miller,Oncology,Miami,FL,REP-H316,Hayden Kensington,TERR-H12,3,2,1,1
-1001000421,Dr. Carol Robinson,Neurology,Atlanta,GA,REP-H294,Hazel Gallagher,TERR-H02,2,8,5,0
-1001000422,Dr. Jennifer Scott,Palliative Care,Baltimore,MD,REP-H341,Helen Blackwood,TERR-H01,2,13,11,4
-1001000423,Dr. Jessica Jackson,Internal Medicine,Philadelphia,PA,REP-H335,Homer Thornton,TERR-H07,1,10,7,6
-1001000424,Dr. Lisa Baker,Family Practice,New York,NY,REP-H174,Hazel Hayes,TERR-H02,3,2,1,2
-1001000425,Dr. Sandra Nguyen,Oncology,Las Vegas,NV,REP-H133,Hector Finch,TERR-H09,2,7,3,3
-1001000426,Dr. Charles Clark,Neurology,Portland,OR,REP-H379,Holden Whitman,TERR-H03,2,10,9,6
-1001000427,Dr. Laura Green,Pain Management,Charlotte,NC,REP-H181,Helen Monroe,TERR-H09,2,6,5,4
-1001000428,Dr. Joseph Taylor,Anesthesiology,Houston,TX,REP-H342,Harold Blackwood,TERR-H02,2,9,4,4
-1001000429,Dr. Amanda Torres,Pain Management,Chicago,IL,REP-H123,Howard Finch,TERR-H11,3,6,4,3
-1001000430,Dr. Joseph Scott,Pain Management,Seattle,WA,REP-H163,Howard Hayes,TERR-H03,2,3,1,2
-1001000431,Dr. Michelle Scott,Pain Management,Atlanta,GA,REP-H153,Hector Sterling,TERR-H05,2,16,9,3
-1001000432,Dr. Michelle Gonzalez,Family Practice,Miami,FL,REP-H376,Hayden Whitman,TERR-H12,2,6,4,3
-1001000433,Dr. Thomas Scott,Family Practice,Nashville,TN,REP-H366,Holly Whitman,TERR-H02,1,7,3,2
-1001000434,Dr. Sandra Mitchell,Pain Management,Denver,CO,REP-H136,Hayden Finch,TERR-H12,1,11,9,9
-1001000435,Dr. Jessica Martinez,Pain Management,Chicago,IL,REP-H245,Henry Conway,TERR-H01,1,13,10,1
-1001000436,Dr. John Smith,Neurology,Miami,FL,REP-H364,Hannah Whitman,TERR-H12,1,13,11,2
-1001000437,Dr. Thomas Wilson,Palliative Care,Charlotte,NC,REP-H252,Hilary Conway,TERR-H08,1,16,13,1
-1001000438,Dr. Melissa Martin,Psychiatry,Las Vegas,NV,REP-H140,Hattie Finch,TERR-H04,2,5,2,1
-1001000439,Dr. Stephanie Walker,Anesthesiology,Denver,CO,REP-H151,Hugh Sterling,TERR-H03,2,13,10,11
-1001000440,Dr. Patricia Thompson,Internal Medicine,New York,NY,REP-H263,Howard Mercer,TERR-H07,2,8,5,4
-1001000441,Dr. Dorothy Taylor,Palliative Care,Houston,TX,REP-H343,Howard Blackwood,TERR-H03,2,9,5,1
-1001000442,Dr. Barbara Miller,Orthopedics,Philadelphia,PA,REP-H336,Hayden Thornton,TERR-H08,2,3,2,0
-1001000443,Dr. Susan Williams,Pain Management,Chicago,IL,REP-H362,Harold Whitman,TERR-H10,3,3,2,0
-1001000444,Dr. Barbara Jackson,Oncology,Charlotte,NC,REP-H233,Hector Sinclair,TERR-H01,2,15,11,8
-1001000445,Dr. Michelle Smith,Oncology,Miami,FL,REP-H105,Henry Vance,TERR-H05,3,5,3,2
-1001000446,Dr. Melissa Moore,Family Practice,Los Angeles,CA,REP-H173,Hector Hayes,TERR-H01,2,4,2,3
-1001000447,Dr. Jennifer Moore,Pain Management,Nashville,TN,REP-H215,Homer Bishop,TERR-H07,2,8,6,5
-1001000448,Dr. Joseph Mitchell,Oncology,Detroit,MI,REP-H193,Hector Monroe,TERR-H09,2,11,8,1
-1001000449,Dr. Karen Hall,Oncology,Las Vegas,NV,REP-H212,Hilary Bishop,TERR-H04,1,16,12,13
-1001000450,Dr. Nancy Garcia,Palliative Care,Columbus,OH,REP-H385,Henry Carrington,TERR-H09,2,6,5,4
-1001000451,Dr. Dorothy Walker,Anesthesiology,Austin,TX,REP-H208,Harvey Bishop,TERR-H12,2,6,4,3
-1001000452,Dr. David Jones,Pain Management,New York,NY,REP-H258,Hilda Conway,TERR-H02,2,9,7,4
-1001000453,Dr. Linda Carter,Anesthesiology,Miami,FL,REP-H204,Hannah Bishop,TERR-H08,2,8,6,2
-1001000454,Dr. Linda Thompson,Internal Medicine,Boston,MA,REP-H305,Henry Kensington,TERR-H01,2,2,2,0
-1001000455,Dr. James Garcia,Pain Management,Jacksonville,FL,REP-H297,Hunter Gallagher,TERR-H05,2,4,3,0
-1001000456,Dr. Lisa Allen,Pain Management,Nashville,TN,REP-H314,Hazel Kensington,TERR-H10,1,16,12,11
-1001000457,Dr. Barbara Nguyen,Family Practice,Phoenix,AZ,REP-H377,Hunter Whitman,TERR-H01,3,5,3,1
-1001000458,Dr. Lisa Gonzalez,Pain Management,Columbus,OH,REP-H224,Hannah Sinclair,TERR-H04,2,4,3,0
-1001000459,Dr. Sandra Mitchell,Orthopedics,Nashville,TN,REP-H248,Harvey Conway,TERR-H04,2,8,5,1
-1001000460,Dr. Betty Sanchez,Internal Medicine,New York,NY,REP-H129,Harrison Finch,TERR-H05,2,2,1,2
-1001000461,Dr. Patricia Hill,Neurology,Seattle,WA,REP-H116,Hayden Vance,TERR-H04,2,9,7,3
-1001000462,Dr. Margaret Allen,Anesthesiology,Portland,OR,REP-H200,Hattie Monroe,TERR-H04,1,16,5,1
-1001000463,Dr. Stephanie Davis,Anesthesiology,Baltimore,MD,REP-H108,Harvey Vance,TERR-H08,1,16,12,8
-1001000464,Dr. Karen White,Oncology,Phoenix,AZ,REP-H215,Homer Bishop,TERR-H07,2,13,10,11
-1001000465,Dr. Deborah Moore,Pain Management,Boston,MA,REP-H194,Hazel Monroe,TERR-H10,2,5,2,3
-1001000466,Dr. Thomas Garcia,Neurology,Philadelphia,PA,REP-H103,Howard Vance,TERR-H03,2,9,6,2
-1001000467,Dr. Jessica Johnson,Oncology,Chicago,IL,REP-H361,Helen Whitman,TERR-H09,2,9,4,0
-1001000468,Dr. Linda Lopez,Pain Management,Las Vegas,NV,REP-H216,Hayden Bishop,TERR-H08,2,5,3,3
-1001000469,Dr. Sandra Wright,Oncology,Las Vegas,NV,REP-H236,Hayden Sinclair,TERR-H04,2,11,6,6
-1001000470,Dr. Linda Rodriguez,Pain Management,Nashville,TN,REP-H126,Holly Finch,TERR-H02,3,6,5,6
-1001000471,Dr. Laura Martin,Oncology,Baltimore,MD,REP-H301,Helen Kensington,TERR-H09,2,6,3,3
-1001000472,Dr. John Adams,Neurology,Houston,TX,REP-H298,Hilda Gallagher,TERR-H06,2,6,4,0
-1001000473,Dr. Linda Anderson,Oncology,Austin,TX,REP-H306,Holly Kensington,TERR-H02,2,9,7,8
-1001000474,Dr. Dorothy Allen,Neurology,Baltimore,MD,REP-H266,Holly Mercer,TERR-H10,2,7,5,0
-1001000475,Dr. Betty Sanchez,Oncology,Denver,CO,REP-H139,Holden Finch,TERR-H03,1,14,8,8
-1001000476,Dr. Margaret Hill,Palliative Care,Chicago,IL,REP-H192,Hilary Monroe,TERR-H08,1,7,4,4
-1001000477,Dr. Stephanie Martin,Neurology,Nashville,TN,REP-H221,Helen Sinclair,TERR-H01,2,8,6,2
-1001000478,Dr. Emily Taylor,Pain Management,Detroit,MI,REP-H252,Hilary Conway,TERR-H08,2,6,4,2
-1001000479,Dr. Robert Carter,Oncology,Denver,CO,REP-H384,Hannah Carrington,TERR-H08,2,10,9,3
-1001000480,Dr. Lisa Wright,Oncology,Jacksonville,FL,REP-H131,Hugh Finch,TERR-H07,2,6,3,1
-1001000481,Dr. James Jones,Oncology,Austin,TX,REP-H254,Hazel Conway,TERR-H10,2,4,4,2
-1001000482,Dr. Joseph Johnson,Oncology,Miami,FL,REP-H293,Hector Gallagher,TERR-H01,2,9,6,4
-1001000483,Dr. Donna Nelson,Pain Management,Chicago,IL,REP-H258,Hilda Conway,TERR-H02,2,11,6,4
-1001000484,Dr. Joseph Martin,Pain Management,Atlanta,GA,REP-H149,Harrison Sterling,TERR-H01,2,11,8,7
-1001000485,Dr. Dorothy Hernandez,Oncology,Miami,FL,REP-H267,Heather Mercer,TERR-H11,2,5,4,4
-1001000486,Dr. Joseph Nguyen,Anesthesiology,Los Angeles,CA,REP-H177,Hunter Hayes,TERR-H05,2,6,4,4
-1001000487,Dr. Rebecca Thomas,Internal Medicine,Charlotte,NC,REP-H337,Hunter Thornton,TERR-H09,1,10,5,5
-1001000488,Dr. Laura Campbell,Internal Medicine,Las Vegas,NV,REP-H171,Hugh Hayes,TERR-H11,3,3,1,1
-1001000489,Dr. Mary Lewis,Palliative Care,Detroit,MI,REP-H232,Hilary Sinclair,TERR-H12,2,7,4,3
-1001000490,Dr. Melissa Johnson,Oncology,Jacksonville,FL,REP-H120,Hattie Vance,TERR-H08,2,8,5,0
-1001000491,Dr. Nancy Clark,Pain Management,Los Angeles,CA,REP-H263,Howard Mercer,TERR-H07,2,8,4,3
-1001000492,Dr. Linda Martin,Palliative Care,Baltimore,MD,REP-H117,Hunter Vance,TERR-H05,2,7,5,3
-1001000493,Dr. Betty Green,Oncology,Nashville,TN,REP-H278,Hilda Mercer,TERR-H10,1,7,5,3
-1001000494,Dr. Betty Young,Pain Management,Charlotte,NC,REP-H387,Heather Carrington,TERR-H11,2,12,10,8
-1001000495,Dr. John Hill,Family Practice,New York,NY,REP-H135,Homer Finch,TERR-H11,2,4,1,0
-1001000496,Dr. Lisa Hernandez,Palliative Care,Denver,CO,REP-H147,Heather Sterling,TERR-H11,2,9,5,4
-1001000497,Dr. David Perez,Palliative Care,Jacksonville,FL,REP-H212,Hilary Bishop,TERR-H04,2,6,6,5
-1001000498,Dr. William Flores,Oncology,Baltimore,MD,REP-H192,Hilary Monroe,TERR-H08,2,5,4,0
-1001000499,Dr. David Hall,Anesthesiology,Nashville,TN,REP-H164,Hannah Hayes,TERR-H04,2,4,2,2
-1001000500,Dr. Karen Smith,Pain Management,Chicago,IL,REP-H308,Harvey Kensington,TERR-H04,3,3,3,1
-1001000501,Dr. Barbara Miller,Anesthesiology,Houston,TX,REP-H340,Hattie Thornton,TERR-H12,2,13,6,7
-1001000502,Dr. Margaret Baker,Orthopedics,Houston,TX,REP-H157,Hunter Sterling,TERR-H09,2,9,8,6
-1001000503,Dr. John Miller,Pain Management,Houston,TX,REP-H222,Harold Sinclair,TERR-H02,2,10,9,8
-1001000504,Dr. Thomas Smith,Anesthesiology,Houston,TX,REP-H280,Hattie Mercer,TERR-H12,2,9,6,3
-1001000505,Dr. Stephanie Adams,Neurology,Atlanta,GA,REP-H155,Homer Sterling,TERR-H07,2,4,3,3
-1001000506,Dr. Sarah Nguyen,Pain Management,Baltimore,MD,REP-H156,Hayden Sterling,TERR-H08,2,12,9,5
-1001000507,Dr. Betty Harris,Oncology,Atlanta,GA,REP-H246,Holly Conway,TERR-H02,1,16,10,9
-1001000508,Dr. Betty Smith,Neurology,Miami,FL,REP-H230,Hope Sinclair,TERR-H10,2,6,5,2
-1001000509,Dr. Michael Gonzalez,Internal Medicine,Columbus,OH,REP-H234,Hazel Sinclair,TERR-H02,1,10,8,0
-1001000510,Dr. Nancy Wilson,Oncology,Phoenix,AZ,REP-H124,Hannah Finch,TERR-H12,2,5,5,6
-1001000511,Dr. Patricia Anderson,Oncology,Charlotte,NC,REP-H313,Hector Kensington,TERR-H09,2,11,9,2
-1001000512,Dr. Dorothy Robinson,Emergency Medicine,Detroit,MI,REP-H143,Howard Sterling,TERR-H07,2,7,6,0
-1001000513,Dr. Charles Lopez,Palliative Care,Charlotte,NC,REP-H242,Harold Conway,TERR-H10,2,7,5,6
-1001000514,Dr. Donna Torres,Pain Management,Seattle,WA,REP-H103,Howard Vance,TERR-H03,2,13,9,3
-1001000515,Dr. Barbara Wilson,Internal Medicine,Phoenix,AZ,REP-H155,Homer Sterling,TERR-H07,2,7,3,4
-1001000516,Dr. Elizabeth Mitchell,Family Practice,New York,NY,REP-H188,Harvey Monroe,TERR-H04,1,7,6,5
-1001000517,Dr. Emily Brown,Orthopedics,Philadelphia,PA,REP-H369,Harrison Whitman,TERR-H05,3,2,2,2
-1001000518,Dr. Emily Martin,Pain Management,Denver,CO,REP-H135,Homer Finch,TERR-H11,2,7,5,0
-1001000519,Dr. Elizabeth Davis,Pain Management,Charlotte,NC,REP-H285,Henry Gallagher,TERR-H05,3,6,5,1
-1001000520,Dr. Sharon Hill,Emergency Medicine,Chicago,IL,REP-H270,Hope Mercer,TERR-H02,2,3,2,1
-1001000521,Dr. Susan Harris,Orthopedics,Nashville,TN,REP-H168,Harvey Hayes,TERR-H08,2,3,2,0
-1001000522,Dr. Carol Moore,Oncology,Las Vegas,NV,REP-H374,Hazel Whitman,TERR-H10,2,8,7,3
-1001000523,Dr. John Adams,Anesthesiology,Nashville,TN,REP-H335,Homer Thornton,TERR-H07,2,6,5,3
-1001000524,Dr. Richard Wright,Oncology,Charlotte,NC,REP-H169,Harrison Hayes,TERR-H09,2,12,8,5
-1001000525,Dr. William Wilson,Neurology,New York,NY,REP-H247,Heather Conway,TERR-H03,3,3,2,0
-1001000526,Dr. Jennifer Hill,Pain Management,Nashville,TN,REP-H347,Heather Blackwood,TERR-H07,1,12,7,7
-1001000527,Dr. Lisa Allen,Oncology,New York,NY,REP-H340,Hattie Thornton,TERR-H12,2,13,10,3
-1001000528,Dr. Elizabeth Young,Pain Management,Denver,CO,REP-H304,Hannah Kensington,TERR-H12,2,9,8,9
-1001000529,Dr. Lisa Scott,Oncology,Boston,MA,REP-H324,Hannah Thornton,TERR-H08,2,3,2,1
-1001000530,Dr. Lisa Moore,Oncology,Baltimore,MD,REP-H204,Hannah Bishop,TERR-H08,3,8,5,5
-1001000531,Dr. Sarah Green,Family Practice,Columbus,OH,REP-H164,Hannah Hayes,TERR-H04,2,7,5,0
-1001000532,Dr. Richard Rivera,Anesthesiology,Philadelphia,PA,REP-H223,Howard Sinclair,TERR-H03,2,10,9,7
-1001000533,Dr. Donna Ramirez,Orthopedics,Philadelphia,PA,REP-H286,Holly Gallagher,TERR-H06,2,5,3,3
-1001000534,Dr. Elizabeth Johnson,Oncology,Jacksonville,FL,REP-H375,Homer Whitman,TERR-H11,2,4,3,0
-1001000535,Dr. Patricia Anderson,Oncology,Phoenix,AZ,REP-H108,Harvey Vance,TERR-H08,3,3,2,1
-1001000536,Dr. Richard Martinez,Pain Management,Columbus,OH,REP-H155,Homer Sterling,TERR-H07,1,16,14,11
-1001000537,Dr. James Davis,Anesthesiology,Chicago,IL,REP-H312,Hilary Kensington,TERR-H08,2,7,6,5
-1001000538,Dr. Sarah Baker,Oncology,Los Angeles,CA,REP-H356,Hayden Blackwood,TERR-H04,2,4,3,4
-1001000539,Dr. Donna Davis,Pain Management,Las Vegas,NV,REP-H297,Hunter Gallagher,TERR-H05,1,16,12,4
-1001000540,Dr. Carol Martinez,Orthopedics,Houston,TX,REP-H300,Hattie Gallagher,TERR-H08,3,5,4,2
-1001000541,Dr. Stephanie Nelson,Pain Management,Denver,CO,REP-H161,Helen Hayes,TERR-H01,2,11,7,7
-1001000542,Dr. Betty Anderson,Anesthesiology,Miami,FL,REP-H167,Heather Hayes,TERR-H07,2,9,8,5
-1001000543,Dr. Emily Wilson,Anesthesiology,Phoenix,AZ,REP-H208,Harvey Bishop,TERR-H12,1,10,9,10
-1001000544,Dr. Emily Garcia,Pain Management,Nashville,TN,REP-H191,Hugh Monroe,TERR-H07,1,16,10,10
-1001000545,Dr. Joseph Lee,Neurology,Los Angeles,CA,REP-H311,Hugh Kensington,TERR-H07,2,4,4,2
-1001000546,Dr. Lisa Garcia,Oncology,Atlanta,GA,REP-H139,Holden Finch,TERR-H03,1,16,13,7
-1001000547,Dr. Robert Perez,Neurology,Denver,CO,REP-H220,Hattie Bishop,TERR-H12,2,5,2,2
-1001000548,Dr. Karen Wright,Pain Management,Portland,OR,REP-H136,Hayden Finch,TERR-H12,2,12,7,4
-1001000549,Dr. Jennifer Perez,Emergency Medicine,Portland,OR,REP-H306,Holly Kensington,TERR-H02,1,8,4,1
-1001000550,Dr. Robert Adams,Neurology,Miami,FL,REP-H344,Hannah Blackwood,TERR-H04,2,4,3,3
-1001000551,Dr. James Robinson,Pain Management,Austin,TX,REP-H124,Hannah Finch,TERR-H12,2,5,2,1
-1001000552,Dr. Richard Mitchell,Psychiatry,Austin,TX,REP-H372,Hilary Whitman,TERR-H08,2,2,1,0
-1001000553,Dr. Mary Thompson,Internal Medicine,Nashville,TN,REP-H365,Henry Whitman,TERR-H01,1,4,4,1
-1001000554,Dr. Sharon King,Pain Management,Denver,CO,REP-H203,Howard Bishop,TERR-H07,2,6,5,0
-1001000555,Dr. Rebecca White,Oncology,Philadelphia,PA,REP-H248,Harvey Conway,TERR-H04,2,11,8,5
-1001000556,Dr. Laura Mitchell,Pain Management,Austin,TX,REP-H169,Harrison Hayes,TERR-H09,2,9,7,6
-1001000557,Dr. Amanda Nguyen,Palliative Care,Austin,TX,REP-H145,Henry Sterling,TERR-H09,2,11,9,9
-1001000558,Dr. Kathleen Hernandez,Anesthesiology,Jacksonville,FL,REP-H122,Harold Finch,TERR-H10,2,8,6,0
-1001000559,Dr. Betty Taylor,Pain Management,Boston,MA,REP-H283,Howard Gallagher,TERR-H03,1,14,13,3
-1001000560,Dr. Sarah Hill,Pain Management,Miami,FL,REP-H328,Harvey Thornton,TERR-H12,2,16,11,7
-1001000561,Dr. Jessica Allen,Orthopedics,Philadelphia,PA,REP-H211,Hugh Bishop,TERR-H03,2,12,8,7
-1001000562,Dr. Lisa Carter,Palliative Care,Los Angeles,CA,REP-H175,Homer Hayes,TERR-H03,1,15,12,9
-1001000563,Dr. Kimberly Carter,Pain Management,Las Vegas,NV,REP-H255,Homer Conway,TERR-H11,2,6,4,3
-1001000564,Dr. Kimberly Carter,Family Practice,Portland,OR,REP-H226,Holly Sinclair,TERR-H06,2,3,1,1
-1001000565,Dr. Donna Jackson,Psychiatry,Boston,MA,REP-H161,Helen Hayes,TERR-H01,3,2,2,1
-1001000566,Dr. Laura Rivera,Anesthesiology,Detroit,MI,REP-H177,Hunter Hayes,TERR-H05,2,5,2,1
-1001000567,Dr. Elizabeth Hall,Pain Management,Denver,CO,REP-H319,Holden Kensington,TERR-H03,1,16,12,2
-1001000568,Dr. Kimberly Sanchez,Anesthesiology,Seattle,WA,REP-H269,Harrison Mercer,TERR-H01,3,2,2,0
-1001000569,Dr. Mary Ramirez,Oncology,New York,NY,REP-H150,Hope Sterling,TERR-H02,2,13,12,9
-1001000570,Dr. Susan Torres,Palliative Care,Boston,MA,REP-H281,Helen Gallagher,TERR-H01,2,11,8,1
-1001000571,Dr. Jessica Torres,Family Practice,Atlanta,GA,REP-H144,Hannah Sterling,TERR-H08,2,7,5,0
-1001000572,Dr. Donna Baker,Anesthesiology,Columbus,OH,REP-H235,Homer Sinclair,TERR-H03,2,9,5,6
-1001000573,Dr. Laura Brown,Pain Management,Philadelphia,PA,REP-H218,Hilda Bishop,TERR-H10,1,11,10,11
-1001000574,Dr. Margaret Clark,Internal Medicine,Philadelphia,PA,REP-H324,Hannah Thornton,TERR-H08,1,8,4,5
-1001000575,Dr. Joseph Hall,Internal Medicine,Boston,MA,REP-H358,Hilda Blackwood,TERR-H06,1,6,4,5
-1001000576,Dr. Melissa Hall,Pain Management,Atlanta,GA,REP-H116,Hayden Vance,TERR-H04,2,15,13,0
-1001000577,Dr. Susan Harris,Anesthesiology,Phoenix,AZ,REP-H133,Hector Finch,TERR-H09,2,13,8,1
-1001000578,Dr. Patricia Lewis,Pain Management,Seattle,WA,REP-H120,Hattie Vance,TERR-H08,2,12,10,0
-1001000579,Dr. Laura Lewis,Palliative Care,Philadelphia,PA,REP-H170,Hope Hayes,TERR-H10,2,11,7,5
-1001000580,Dr. Jessica Wilson,Oncology,Seattle,WA,REP-H291,Hugh Gallagher,TERR-H11,3,3,2,3
-1001000581,Dr. Michelle Rivera,Oncology,Detroit,MI,REP-H314,Hazel Kensington,TERR-H10,2,7,6,0
-1001000582,Dr. Laura Nguyen,Pain Management,Seattle,WA,REP-H291,Hugh Gallagher,TERR-H11,2,16,12,13
-1001000583,Dr. Charles Robinson,Oncology,Columbus,OH,REP-H123,Howard Finch,TERR-H11,1,14,6,3
-1001000584,Dr. Jessica Robinson,Pain Management,Philadelphia,PA,REP-H217,Hunter Bishop,TERR-H09,2,10,7,6
-1001000585,Dr. Kimberly Anderson,Internal Medicine,Phoenix,AZ,REP-H381,Helen Carrington,TERR-H05,3,2,2,0
-1001000586,Dr. Nancy Young,Oncology,Baltimore,MD,REP-H302,Harold Kensington,TERR-H10,3,2,1,2
-1001000587,Dr. James White,Pain Management,Boston,MA,REP-H152,Hilary Sterling,TERR-H04,1,16,10,1
-1001000588,Dr. John Young,Anesthesiology,Nashville,TN,REP-H113,Hector Vance,TERR-H01,3,7,5,0
-1001000589,Dr. Kimberly Hill,Pain Management,Nashville,TN,REP-H274,Hazel Mercer,TERR-H06,2,9,7,1
-1001000590,Dr. Linda Anderson,Pain Management,Houston,TX,REP-H107,Heather Vance,TERR-H07,2,9,6,7
-1001000591,Dr. Mary Lopez,Neurology,Miami,FL,REP-H231,Hugh Sinclair,TERR-H11,2,9,6,4
-1001000592,Dr. John Anderson,Anesthesiology,Boston,MA,REP-H275,Homer Mercer,TERR-H07,3,3,2,3
-1001000593,Dr. James Jones,Internal Medicine,Chicago,IL,REP-H372,Hilary Whitman,TERR-H08,2,3,2,1
-1001000594,Dr. Kimberly Anderson,Oncology,Austin,TX,REP-H335,Homer Thornton,TERR-H07,3,2,1,1
-1001000595,Dr. Melissa Clark,Oncology,Los Angeles,CA,REP-H108,Harvey Vance,TERR-H08,2,11,8,4
-1001000596,Dr. Barbara Johnson,Pain Management,Jacksonville,FL,REP-H281,Helen Gallagher,TERR-H01,3,5,2,2
-1001000597,Dr. Betty Perez,Internal Medicine,Charlotte,NC,REP-H238,Hilda Sinclair,TERR-H06,2,10,5,5
-1001000598,Dr. Kimberly Rivera,Anesthesiology,Houston,TX,REP-H195,Homer Monroe,TERR-H11,2,8,4,4
-1001000599,Dr. Michael Taylor,Palliative Care,Miami,FL,REP-H127,Heather Finch,TERR-H03,2,8,6,7
-1001000600,Dr. Karen Torres,Anesthesiology,Portland,OR,REP-H150,Hope Sterling,TERR-H02,2,8,6,1
-1001000601,Dr. Charles Davis,Pain Management,New York,NY,REP-H266,Holly Mercer,TERR-H10,2,11,6,3
-1001000602,Dr. Michael Taylor,Palliative Care,Las Vegas,NV,REP-H295,Homer Gallagher,TERR-H03,2,7,5,1
-1001000603,Dr. Jessica Davis,Pain Management,Philadelphia,PA,REP-H306,Holly Kensington,TERR-H02,2,7,6,7
-1001000604,Dr. Ashley Rivera,Palliative Care,Denver,CO,REP-H295,Homer Gallagher,TERR-H03,1,12,10,3
-1001000605,Dr. Susan Smith,Pain Management,Chicago,IL,REP-H268,Harvey Mercer,TERR-H12,3,4,3,2
-1001000606,Dr. Linda Hill,Orthopedics,Austin,TX,REP-H338,Hilda Thornton,TERR-H10,1,13,12,10
-1001000607,Dr. Kimberly Campbell,Anesthesiology,Philadelphia,PA,REP-H260,Hattie Conway,TERR-H04,2,10,8,5
-1001000608,Dr. Jessica Rodriguez,Family Practice,Los Angeles,CA,REP-H329,Harrison Thornton,TERR-H01,2,3,2,3
-1001000609,Dr. Jennifer Garcia,Pain Management,Columbus,OH,REP-H142,Harold Sterling,TERR-H06,2,11,3,1
-1001000610,Dr. Carol Jones,Oncology,Seattle,WA,REP-H323,Howard Thornton,TERR-H07,2,10,7,2
-1001000611,Dr. Laura White,Neurology,Nashville,TN,REP-H117,Hunter Vance,TERR-H05,2,5,3,2
-1001000612,Dr. Nancy Rodriguez,Pain Management,Los Angeles,CA,REP-H157,Hunter Sterling,TERR-H09,2,12,9,6
-1001000613,Dr. Sarah Lewis,Internal Medicine,Portland,OR,REP-H119,Holden Vance,TERR-H07,2,10,8,2
-1001000614,Dr. William Martin,Oncology,Nashville,TN,REP-H114,Hazel Vance,TERR-H02,1,16,12,0
-1001000615,Dr. Betty White,Oncology,Baltimore,MD,REP-H264,Hannah Mercer,TERR-H08,2,9,8,2
-1001000616,Dr. Michelle Green,Anesthesiology,Philadelphia,PA,REP-H322,Harold Thornton,TERR-H06,2,12,9,2
-1001000617,Dr. John Smith,Palliative Care,Nashville,TN,REP-H351,Hugh Blackwood,TERR-H11,2,10,8,8
-1001000618,Dr. Melissa Thompson,Neurology,Chicago,IL,REP-H199,Holden Monroe,TERR-H03,2,6,3,3
-1001000619,Dr. Kimberly Taylor,Pain Management,Baltimore,MD,REP-H380,Hattie Whitman,TERR-H04,2,5,3,0
-1001000620,Dr. Nancy Mitchell,Pain Management,Baltimore,MD,REP-H279,Holden Mercer,TERR-H11,2,6,5,2
-1001000621,Dr. Dorothy Wright,Neurology,Seattle,WA,REP-H320,Hattie Kensington,TERR-H04,2,4,2,3
-1001000622,Dr. Barbara Lee,Palliative Care,Los Angeles,CA,REP-H242,Harold Conway,TERR-H10,2,5,3,2
-1001000623,Dr. Sandra Perez,Internal Medicine,Los Angeles,CA,REP-H383,Howard Carrington,TERR-H07,2,6,4,2
-1001000624,Dr. William Martin,Palliative Care,Austin,TX,REP-H339,Holden Thornton,TERR-H11,3,6,3,4
-1001000625,Dr. Kathleen Flores,Pain Management,Jacksonville,FL,REP-H229,Harrison Sinclair,TERR-H09,2,11,10,7
-1001000626,Dr. Amanda Thompson,Pain Management,Seattle,WA,REP-H192,Hilary Monroe,TERR-H08,2,12,5,2
-1001000627,Dr. Donna Allen,Anesthesiology,Las Vegas,NV,REP-H207,Heather Bishop,TERR-H11,2,12,8,8
-1001000628,Dr. Sandra Nguyen,Internal Medicine,Los Angeles,CA,REP-H221,Helen Sinclair,TERR-H01,3,2,1,1
-1001000629,Dr. Joseph Rodriguez,Pain Management,Miami,FL,REP-H105,Henry Vance,TERR-H05,3,6,3,2
-1001000630,Dr. Margaret Johnson,Pain Management,Philadelphia,PA,REP-H180,Hattie Hayes,TERR-H08,2,7,6,7
-1001000631,Dr. Robert White,Internal Medicine,Charlotte,NC,REP-H279,Holden Mercer,TERR-H11,2,2,1,0
-1001000632,Dr. Robert White,Palliative Care,Charlotte,NC,REP-H311,Hugh Kensington,TERR-H07,2,7,4,1
-1001000633,Dr. Nancy White,Pain Management,Denver,CO,REP-H327,Heather Thornton,TERR-H11,2,13,7,1
-1001000634,Dr. Amanda Lee,Internal Medicine,Columbus,OH,REP-H220,Hattie Bishop,TERR-H12,2,7,5,1
-1001000635,Dr. Charles Johnson,Orthopedics,Philadelphia,PA,REP-H246,Holly Conway,TERR-H02,3,7,6,4
-1001000636,Dr. Rebecca Carter,Oncology,Baltimore,MD,REP-H318,Hilda Kensington,TERR-H02,2,7,6,6
-1001000637,Dr. Karen Lewis,Internal Medicine,Atlanta,GA,REP-H191,Hugh Monroe,TERR-H07,2,10,7,1
-1001000638,Dr. Nancy Thomas,Pain Management,Boston,MA,REP-H341,Helen Blackwood,TERR-H01,3,6,5,4
-1001000639,Dr. Margaret Lopez,Internal Medicine,Detroit,MI,REP-H329,Harrison Thornton,TERR-H01,1,15,12,6
-1001000640,Dr. Robert Perez,Internal Medicine,Denver,CO,REP-H141,Helen Sterling,TERR-H05,2,5,3,4
-1001000641,Dr. Robert Torres,Pain Management,Seattle,WA,REP-H240,Hattie Sinclair,TERR-H08,3,7,6,7
-1001000642,Dr. Margaret Allen,Palliative Care,Portland,OR,REP-H250,Hope Conway,TERR-H06,1,14,10,3
-1001000643,Dr. Amanda Sanchez,Palliative Care,Philadelphia,PA,REP-H325,Henry Thornton,TERR-H09,2,6,3,3
-1001000644,Dr. Betty Miller,Anesthesiology,Nashville,TN,REP-H260,Hattie Conway,TERR-H04,1,16,13,8
-1001000645,Dr. Barbara Thomas,Pain Management,Chicago,IL,REP-H168,Harvey Hayes,TERR-H08,2,15,8,7
-1001000646,Dr. Margaret Taylor,Family Practice,Las Vegas,NV,REP-H182,Harold Monroe,TERR-H10,3,2,1,0
-1001000647,Dr. Donna Jones,Family Practice,Denver,CO,REP-H307,Heather Kensington,TERR-H03,2,5,3,2
-1001000648,Dr. Charles Ramirez,Neurology,Seattle,WA,REP-H205,Henry Bishop,TERR-H09,2,6,5,3
-1001000649,Dr. William Allen,Neurology,Portland,OR,REP-H161,Helen Hayes,TERR-H01,2,7,6,6
-1001000650,Dr. Kimberly Hall,Pain Management,Phoenix,AZ,REP-H183,Howard Monroe,TERR-H11,2,8,7,4
-1001000651,Dr. Donna Sanchez,Pain Management,Baltimore,MD,REP-H210,Hope Bishop,TERR-H02,2,11,6,5
-1001000652,Dr. Thomas Rodriguez,Neurology,Denver,CO,REP-H258,Hilda Conway,TERR-H02,2,8,7,7
-1001000653,Dr. Margaret Garcia,Pain Management,Miami,FL,REP-H115,Homer Vance,TERR-H03,2,3,2,0
-1001000654,Dr. Donna Carter,Family Practice,Denver,CO,REP-H165,Henry Hayes,TERR-H05,2,2,1,0
-1001000655,Dr. Susan Green,Pain Management,Las Vegas,NV,REP-H167,Heather Hayes,TERR-H07,2,9,5,4
-1001000656,Dr. Ashley Jackson,Anesthesiology,Denver,CO,REP-H159,Holden Sterling,TERR-H11,2,10,9,9
-1001000657,Dr. Robert Jackson,Anesthesiology,New York,NY,REP-H114,Hazel Vance,TERR-H02,2,10,7,8
-1001000658,Dr. Susan Adams,Palliative Care,Portland,OR,REP-H137,Hunter Finch,TERR-H01,3,4,4,2
-1001000659,Dr. Ashley Jones,Emergency Medicine,New York,NY,REP-H218,Hilda Bishop,TERR-H10,2,4,3,2
-1001000660,Dr. Kathleen Green,Orthopedics,Jacksonville,FL,REP-H281,Helen Gallagher,TERR-H01,2,3,2,3
-1001000661,Dr. Richard Taylor,Oncology,Austin,TX,REP-H326,Holly Thornton,TERR-H10,3,5,4,4
-1001000662,Dr. Sandra Lee,Oncology,Chicago,IL,REP-H251,Hugh Conway,TERR-H07,2,10,9,6
-1001000663,Dr. Donna Lee,Palliative Care,Las Vegas,NV,REP-H142,Harold Sterling,TERR-H06,2,12,11,7
-1001000664,Dr. Deborah Brown,Family Practice,Nashville,TN,REP-H102,Harold Vance,TERR-H02,2,2,1,0
-1001000665,Dr. Michelle Lopez,Orthopedics,New York,NY,REP-H110,Hope Vance,TERR-H10,2,6,3,4
-1001000666,Dr. Carol Allen,Oncology,Austin,TX,REP-H361,Helen Whitman,TERR-H09,1,15,13,4
-1001000667,Dr. Linda Lewis,Oncology,Charlotte,NC,REP-H244,Hannah Conway,TERR-H12,2,11,8,4
-1001000668,Dr. Jennifer Taylor,Internal Medicine,Columbus,OH,REP-H290,Hope Gallagher,TERR-H10,2,4,3,3
-1001000669,Dr. Laura Jones,Family Practice,Nashville,TN,REP-H194,Hazel Monroe,TERR-H10,1,5,4,4
-1001000670,Dr. Amanda Wright,Internal Medicine,Philadelphia,PA,REP-H195,Homer Monroe,TERR-H11,1,11,8,0
-1001000671,Dr. Carol Ramirez,Pain Management,Las Vegas,NV,REP-H284,Hannah Gallagher,TERR-H04,2,5,4,4
-1001000672,Dr. Joseph Nelson,Pain Management,Miami,FL,REP-H241,Helen Conway,TERR-H09,3,2,1,2
-1001000673,Dr. Susan Wilson,Oncology,Philadelphia,PA,REP-H141,Helen Sterling,TERR-H05,2,10,6,7
-1001000674,Dr. Ashley Hill,Palliative Care,Charlotte,NC,REP-H144,Hannah Sterling,TERR-H08,2,4,3,2
-1001000675,Dr. Donna Rodriguez,Internal Medicine,Miami,FL,REP-H145,Henry Sterling,TERR-H09,2,3,2,0
-1001000676,Dr. Rebecca Johnson,Neurology,Atlanta,GA,REP-H162,Harold Hayes,TERR-H02,1,13,9,2
-1001000677,Dr. Joseph Thompson,Oncology,Los Angeles,CA,REP-H268,Harvey Mercer,TERR-H12,2,11,5,3
-1001000678,Dr. William Young,Oncology,Jacksonville,FL,REP-H138,Hilda Finch,TERR-H02,2,7,5,1
-1001000679,Dr. Betty Carter,Anesthesiology,Miami,FL,REP-H153,Hector Sterling,TERR-H05,1,15,6,4
-1001000680,Dr. Sandra King,Family Practice,Charlotte,NC,REP-H289,Harrison Gallagher,TERR-H09,2,4,3,0
-1001000681,Dr. Amanda Green,Pain Management,Nashville,TN,REP-H242,Harold Conway,TERR-H10,2,13,9,8
-1001000682,Dr. Michelle Moore,Oncology,Houston,TX,REP-H256,Hayden Conway,TERR-H12,2,6,5,4
-1001000683,Dr. Linda Miller,Anesthesiology,Seattle,WA,REP-H357,Hunter Blackwood,TERR-H05,3,9,7,8
-1001000684,Dr. Thomas Jackson,Pain Management,Baltimore,MD,REP-H137,Hunter Finch,TERR-H01,2,7,6,2
-1001000685,Dr. Mary Smith,Neurology,Columbus,OH,REP-H348,Harvey Blackwood,TERR-H08,2,2,1,1
-1001000686,Dr. Barbara Baker,Family Practice,Baltimore,MD,REP-H226,Holly Sinclair,TERR-H06,2,7,4,3
-1001000687,Dr. Susan Robinson,Orthopedics,New York,NY,REP-H214,Hazel Bishop,TERR-H06,1,9,5,1
-1001000688,Dr. Emily Carter,Oncology,Denver,CO,REP-H150,Hope Sterling,TERR-H02,2,9,6,1
-1001000689,Dr. Sarah Green,Pain Management,Jacksonville,FL,REP-H200,Hattie Monroe,TERR-H04,2,13,11,11
-1001000690,Dr. Ashley Nelson,Anesthesiology,Los Angeles,CA,REP-H367,Heather Whitman,TERR-H03,1,12,8,1
-1001000691,Dr. Sarah Robinson,Palliative Care,Denver,CO,REP-H318,Hilda Kensington,TERR-H02,1,16,10,4
-1001000692,Dr. Betty Harris,Internal Medicine,Charlotte,NC,REP-H288,Harvey Gallagher,TERR-H08,1,15,13,8
-1001000693,Dr. Carol Nguyen,Neurology,Portland,OR,REP-H263,Howard Mercer,TERR-H07,2,5,4,5
-1001000694,Dr. Betty Torres,Pain Management,Houston,TX,REP-H132,Hilary Finch,TERR-H08,1,11,7,6
-1001000695,Dr. Elizabeth Martin,Family Practice,Jacksonville,FL,REP-H203,Howard Bishop,TERR-H07,2,7,5,4
-1001000696,Dr. David Hall,Pain Management,Chicago,IL,REP-H146,Holly Sterling,TERR-H10,2,8,6,3
-1001000697,Dr. Linda Rivera,Anesthesiology,Columbus,OH,REP-H244,Hannah Conway,TERR-H12,2,5,2,2
-1001000698,Dr. Richard Wilson,Orthopedics,Atlanta,GA,REP-H165,Henry Hayes,TERR-H05,1,7,6,0
-1001000699,Dr. John Thompson,Neurology,Los Angeles,CA,REP-H145,Henry Sterling,TERR-H09,2,9,5,3
-1001000700,Dr. Elizabeth Hall,Palliative Care,Denver,CO,REP-H223,Howard Sinclair,TERR-H03,2,4,3,2
-1001000701,Dr. Patricia Mitchell,Pain Management,Los Angeles,CA,REP-H287,Heather Gallagher,TERR-H07,2,13,9,3
-1001000702,Dr. Charles Davis,Internal Medicine,Houston,TX,REP-H340,Hattie Thornton,TERR-H12,2,6,5,0
-1001000703,Dr. Richard Sanchez,Pain Management,Houston,TX,REP-H272,Hilary Mercer,TERR-H04,2,12,8,4
-1001000704,Dr. Kimberly Allen,Orthopedics,Phoenix,AZ,REP-H334,Hazel Thornton,TERR-H06,1,6,5,6
-1001000705,Dr. Ashley Clark,Pain Management,Phoenix,AZ,REP-H120,Hattie Vance,TERR-H08,2,14,9,0
-1001000706,Dr. Barbara Hill,Internal Medicine,Phoenix,AZ,REP-H141,Helen Sterling,TERR-H05,2,4,3,3
-1001000707,Dr. William Martin,Palliative Care,Charlotte,NC,REP-H214,Hazel Bishop,TERR-H06,3,3,2,0
-1001000708,Dr. Sharon Robinson,Pain Management,Nashville,TN,REP-H333,Hector Thornton,TERR-H05,2,8,6,3
-1001000709,Dr. Sarah Brown,Family Practice,New York,NY,REP-H173,Hector Hayes,TERR-H01,2,3,2,3
-1001000710,Dr. Kimberly Hernandez,Anesthesiology,Nashville,TN,REP-H181,Helen Monroe,TERR-H09,2,7,6,1
-1001000711,Dr. Linda Young,Pain Management,Detroit,MI,REP-H187,Heather Monroe,TERR-H03,2,4,3,3
-1001000712,Dr. Jessica Williams,Neurology,Charlotte,NC,REP-H332,Hilary Thornton,TERR-H04,3,3,2,1
-1001000713,Dr. Dorothy Ramirez,Neurology,Atlanta,GA,REP-H354,Hazel Blackwood,TERR-H02,1,11,8,7
-1001000714,Dr. Linda Lewis,Palliative Care,Miami,FL,REP-H385,Henry Carrington,TERR-H09,2,6,3,2
-1001000715,Dr. Sarah Flores,Emergency Medicine,New York,NY,REP-H254,Hazel Conway,TERR-H10,2,7,5,4
-1001000716,Dr. Joseph Nguyen,Internal Medicine,Boston,MA,REP-H282,Harold Gallagher,TERR-H02,2,6,5,1
-1001000717,Dr. Michael Gonzalez,Palliative Care,Los Angeles,CA,REP-H112,Hilary Vance,TERR-H12,2,5,4,5
-1001000718,Dr. Ashley Hernandez,Orthopedics,Las Vegas,NV,REP-H126,Holly Finch,TERR-H02,3,2,1,2
-1001000719,Dr. Laura Robinson,Pain Management,New York,NY,REP-H205,Henry Bishop,TERR-H09,2,10,7,7
-1001000720,Dr. Amanda Gonzalez,Oncology,Baltimore,MD,REP-H182,Harold Monroe,TERR-H10,2,3,2,3
-1001000721,Dr. Jennifer Thompson,Pain Management,Boston,MA,REP-H357,Hunter Blackwood,TERR-H05,2,6,5,5
-1001000722,Dr. Sandra Garcia,Pain Management,Las Vegas,NV,REP-H158,Hilda Sterling,TERR-H10,1,9,4,1
-1001000723,Dr. Barbara Green,Neurology,Miami,FL,REP-H296,Hayden Gallagher,TERR-H04,1,16,10,7
-1001000724,Dr. Jessica Hill,Neurology,Los Angeles,CA,REP-H280,Hattie Mercer,TERR-H12,3,2,1,1
-1001000725,Dr. Sarah Brown,Emergency Medicine,Miami,FL,REP-H325,Henry Thornton,TERR-H09,2,12,9,4
-1001000726,Dr. Donna Nelson,Neurology,Boston,MA,REP-H240,Hattie Sinclair,TERR-H08,2,4,2,1
-1001000727,Dr. Michelle Williams,Oncology,Boston,MA,REP-H265,Henry Mercer,TERR-H09,2,9,6,7
-1001000728,Dr. Lisa Lopez,Palliative Care,New York,NY,REP-H163,Howard Hayes,TERR-H03,2,8,6,4
-1001000729,Dr. Nancy Torres,Orthopedics,New York,NY,REP-H198,Hilda Monroe,TERR-H02,1,12,7,3
-1001000730,Dr. Michael Thompson,Palliative Care,Austin,TX,REP-H189,Harrison Monroe,TERR-H05,3,2,1,0
-1001000731,Dr. Richard Baker,Orthopedics,Nashville,TN,REP-H309,Harrison Kensington,TERR-H05,2,7,5,5
-1001000732,Dr. Betty Lopez,Neurology,Phoenix,AZ,REP-H248,Harvey Conway,TERR-H04,1,10,7,4
-1001000733,Dr. Joseph Hernandez,Neurology,Phoenix,AZ,REP-H349,Harrison Blackwood,TERR-H09,2,6,2,3
-1001000734,Dr. Joseph Rodriguez,Pain Management,Jacksonville,FL,REP-H249,Harrison Conway,TERR-H05,2,6,4,2
-1001000735,Dr. John Perez,Oncology,Jacksonville,FL,REP-H114,Hazel Vance,TERR-H02,2,4,3,1
-1001000736,Dr. Sandra Gonzalez,Palliative Care,Boston,MA,REP-H346,Holly Blackwood,TERR-H06,2,3,2,1
-1001000737,Dr. John Scott,Neurology,Portland,OR,REP-H205,Henry Bishop,TERR-H09,1,10,7,8
-1001000738,Dr. Sandra Johnson,Oncology,Austin,TX,REP-H321,Helen Thornton,TERR-H05,2,6,3,1
-1001000739,Dr. Rebecca White,Pain Management,Seattle,WA,REP-H187,Heather Monroe,TERR-H03,3,4,3,0
-1001000740,Dr. Dorothy King,Pain Management,Atlanta,GA,REP-H327,Heather Thornton,TERR-H11,2,11,6,7
-1001000741,Dr. Laura Nguyen,Anesthesiology,Denver,CO,REP-H333,Hector Thornton,TERR-H05,2,4,3,4
-1001000742,Dr. Emily Lee,Oncology,Baltimore,MD,REP-H153,Hector Sterling,TERR-H05,2,16,4,1
-1001000743,Dr. Thomas Jackson,Oncology,Jacksonville,FL,REP-H121,Helen Finch,TERR-H09,2,13,6,6
-1001000744,Dr. Laura Miller,Pain Management,Boston,MA,REP-H303,Howard Kensington,TERR-H11,2,13,11,3
-1001000745,Dr. Michelle Wilson,Anesthesiology,Austin,TX,REP-H216,Hayden Bishop,TERR-H08,1,9,7,4
-1001000746,Dr. Carol Baker,Pain Management,Los Angeles,CA,REP-H262,Harold Mercer,TERR-H06,3,2,1,0
-1001000747,Dr. John King,Pain Management,New York,NY,REP-H310,Hope Kensington,TERR-H06,2,11,7,0
-1001000748,Dr. Melissa Miller,Anesthesiology,New York,NY,REP-H283,Howard Gallagher,TERR-H03,3,4,3,3
-1001000749,Dr. Joseph Campbell,Oncology,Seattle,WA,REP-H259,Holden Conway,TERR-H03,2,12,9,0
-1001000750,Dr. Dorothy Sanchez,Orthopedics,Portland,OR,REP-H163,Howard Hayes,TERR-H03,2,5,1,1
-1001000751,Dr. Thomas Flores,Internal Medicine,Denver,CO,REP-H387,Heather Carrington,TERR-H11,1,12,11,3
-1001000752,Dr. Kimberly Rodriguez,Palliative Care,New York,NY,REP-H355,Homer Blackwood,TERR-H03,2,9,6,5
-1001000753,Dr. Sandra Davis,Oncology,Nashville,TN,REP-H338,Hilda Thornton,TERR-H10,2,11,8,1
-1001000754,Dr. Sarah Miller,Neurology,Austin,TX,REP-H118,Hilda Vance,TERR-H06,2,3,3,4
-1001000755,Dr. Dorothy Hill,Pain Management,New York,NY,REP-H187,Heather Monroe,TERR-H03,1,12,6,3
-1001000756,Dr. Karen Johnson,Family Practice,Miami,FL,REP-H123,Howard Finch,TERR-H11,1,7,4,5
-1001000757,Dr. Patricia Rodriguez,Pain Management,Las Vegas,NV,REP-H238,Hilda Sinclair,TERR-H06,2,15,11,7
-1001000758,Dr. Thomas Walker,Pain Management,Portland,OR,REP-H254,Hazel Conway,TERR-H10,1,12,9,10
-1001000759,Dr. Rebecca Ramirez,Pain Management,Detroit,MI,REP-H104,Hannah Vance,TERR-H04,2,9,4,1
-1001000760,Dr. Joseph Hall,Pain Management,Atlanta,GA,REP-H244,Hannah Conway,TERR-H12,2,5,4,5
-1001000761,Dr. Richard Walker,Pain Management,Chicago,IL,REP-H180,Hattie Hayes,TERR-H08,2,15,8,7
-1001000762,Dr. Sandra Wright,Pain Management,Columbus,OH,REP-H256,Hayden Conway,TERR-H12,2,6,4,0
-1001000763,Dr. James Carter,Orthopedics,Boston,MA,REP-H148,Harvey Sterling,TERR-H12,1,4,2,0
-1001000764,Dr. Barbara Sanchez,Internal Medicine,Philadelphia,PA,REP-H212,Hilary Bishop,TERR-H04,2,6,4,2
-1001000765,Dr. Michael Flores,Pain Management,Nashville,TN,REP-H210,Hope Bishop,TERR-H02,2,8,6,3
-1001000766,Dr. William Martinez,Anesthesiology,Chicago,IL,REP-H213,Hector Bishop,TERR-H05,2,6,4,4
-1001000767,Dr. Charles Lopez,Orthopedics,Philadelphia,PA,REP-H330,Hope Thornton,TERR-H02,2,6,5,0
-1001000768,Dr. Jennifer Green,Pain Management,Baltimore,MD,REP-H346,Holly Blackwood,TERR-H06,2,12,9,1
-1001000769,Dr. Jennifer Sanchez,Oncology,Detroit,MI,REP-H257,Hunter Conway,TERR-H01,1,9,4,0
-1001000770,Dr. Robert Williams,Internal Medicine,Atlanta,GA,REP-H373,Hector Whitman,TERR-H09,2,9,4,3
-1001000771,Dr. Linda Ramirez,Palliative Care,Baltimore,MD,REP-H235,Homer Sinclair,TERR-H03,1,15,7,7
-1001000772,Dr. Richard Hall,Oncology,Detroit,MI,REP-H158,Hilda Sterling,TERR-H10,2,10,8,7
-1001000773,Dr. Emily Green,Family Practice,Houston,TX,REP-H184,Hannah Monroe,TERR-H12,1,7,4,3
-1001000774,Dr. Lisa Carter,Pain Management,Jacksonville,FL,REP-H305,Henry Kensington,TERR-H01,2,15,12,7
-1001000775,Dr. Sharon Sanchez,Oncology,Miami,FL,REP-H154,Hazel Sterling,TERR-H06,2,14,9,1
-1001000776,Dr. Joseph Lee,Anesthesiology,Portland,OR,REP-H292,Hilary Gallagher,TERR-H12,2,2,1,1
-1001000777,Dr. Michael Hill,Palliative Care,Baltimore,MD,REP-H339,Holden Thornton,TERR-H11,2,5,3,2
-1001000778,Dr. Michael Wright,Neurology,Miami,FL,REP-H231,Hugh Sinclair,TERR-H11,3,4,2,1
-1001000779,Dr. Ashley Walker,Orthopedics,Seattle,WA,REP-H217,Hunter Bishop,TERR-H09,2,4,3,4
-1001000780,Dr. Charles Nguyen,Anesthesiology,New York,NY,REP-H265,Henry Mercer,TERR-H09,2,10,9,10
-1001000781,Dr. Melissa Anderson,Neurology,Philadelphia,PA,REP-H219,Holden Bishop,TERR-H11,2,12,6,2
-1001000782,Dr. Deborah Flores,Anesthesiology,New York,NY,REP-H134,Hazel Finch,TERR-H10,1,16,11,11
-1001000783,Dr. Sharon Robinson,Internal Medicine,Austin,TX,REP-H175,Homer Hayes,TERR-H03,2,2,1,0
-1001000784,Dr. Jessica Lopez,Neurology,Columbus,OH,REP-H229,Harrison Sinclair,TERR-H09,1,15,7,6
-1001000785,Dr. Linda Campbell,Anesthesiology,Houston,TX,REP-H196,Hayden Monroe,TERR-H12,2,9,8,7
-1001000786,Dr. John Adams,Palliative Care,Los Angeles,CA,REP-H130,Hope Finch,TERR-H06,2,11,11,8
-1001000787,Dr. John Flores,Palliative Care,Jacksonville,FL,REP-H332,Hilary Thornton,TERR-H04,3,5,3,0
-1001000788,Dr. Laura Martin,Oncology,Los Angeles,CA,REP-H284,Hannah Gallagher,TERR-H04,2,10,6,6
-1001000789,Dr. James King,Oncology,Austin,TX,REP-H331,Hugh Thornton,TERR-H03,3,5,2,1
-1001000790,Dr. Elizabeth Thompson,Pain Management,Baltimore,MD,REP-H166,Holly Hayes,TERR-H06,2,7,5,4
-1001000791,Dr. Deborah Lee,Neurology,Jacksonville,FL,REP-H265,Henry Mercer,TERR-H09,2,11,9,9
-1001000792,Dr. Jennifer Thompson,Pain Management,New York,NY,REP-H256,Hayden Conway,TERR-H12,3,9,8,2
-1001000793,Dr. John Garcia,Family Practice,Columbus,OH,REP-H336,Hayden Thornton,TERR-H08,2,4,2,0
-1001000794,Dr. Elizabeth Taylor,Internal Medicine,Houston,TX,REP-H106,Holly Vance,TERR-H06,2,6,4,2
-1001000795,Dr. Sandra Lee,Internal Medicine,Denver,CO,REP-H175,Homer Hayes,TERR-H03,3,7,4,0
-1001000796,Dr. Robert Green,Oncology,Austin,TX,REP-H142,Harold Sterling,TERR-H06,2,6,4,4
-1001000797,Dr. William Ramirez,Oncology,Charlotte,NC,REP-H219,Holden Bishop,TERR-H11,2,6,4,4
-1001000798,Dr. Kathleen Martinez,Pain Management,Seattle,WA,REP-H198,Hilda Monroe,TERR-H02,3,6,5,6
-1001000799,Dr. Elizabeth Martin,Anesthesiology,Denver,CO,REP-H307,Heather Kensington,TERR-H03,2,5,3,3
-1001000800,Dr. Sarah Wright,Pain Management,Chicago,IL,REP-H268,Harvey Mercer,TERR-H12,2,8,5,0
-1001000801,Dr. Betty Nelson,Family Practice,Austin,TX,REP-H232,Hilary Sinclair,TERR-H12,2,3,2,0
-1001000802,Dr. Amanda Young,Pain Management,Nashville,TN,REP-H158,Hilda Sterling,TERR-H10,2,10,8,1
-1001000803,Dr. Mary Robinson,Internal Medicine,Los Angeles,CA,REP-H203,Howard Bishop,TERR-H07,2,4,2,3
-1001000804,Dr. Joseph Rodriguez,Internal Medicine,Nashville,TN,REP-H208,Harvey Bishop,TERR-H12,2,5,5,1
-1001000805,Dr. Jennifer White,Anesthesiology,Los Angeles,CA,REP-H249,Harrison Conway,TERR-H05,3,4,2,2
-1001000806,Dr. Michael Nguyen,Anesthesiology,New York,NY,REP-H127,Heather Finch,TERR-H03,2,14,11,3
-1001000807,Dr. Linda Allen,Internal Medicine,Denver,CO,REP-H334,Hazel Thornton,TERR-H06,2,6,4,5
-1001000808,Dr. James Carter,Pain Management,New York,NY,REP-H147,Heather Sterling,TERR-H11,2,7,5,1
-1001000809,Dr. Karen Moore,Palliative Care,Nashville,TN,REP-H240,Hattie Sinclair,TERR-H08,2,13,8,2
-1001000810,Dr. Michael Martin,Orthopedics,Charlotte,NC,REP-H225,Henry Sinclair,TERR-H05,1,13,10,4
-1001000811,Dr. Michelle Anderson,Oncology,Miami,FL,REP-H359,Holden Blackwood,TERR-H07,2,10,5,6
-1001000812,Dr. Michael Robinson,Palliative Care,Atlanta,GA,REP-H202,Harold Bishop,TERR-H06,2,8,7,2
-1001000813,Dr. Joseph King,Anesthesiology,Austin,TX,REP-H273,Hector Mercer,TERR-H05,2,5,3,3
-1001000814,Dr. Ashley Ramirez,Anesthesiology,New York,NY,REP-H344,Hannah Blackwood,TERR-H04,3,7,5,2
-1001000815,Dr. Donna Smith,Anesthesiology,Houston,TX,REP-H271,Hugh Mercer,TERR-H03,1,11,8,9
-1001000816,Dr. Michelle Harris,Family Practice,Nashville,TN,REP-H336,Hayden Thornton,TERR-H08,2,9,6,2
-1001000817,Dr. David Nelson,Palliative Care,Boston,MA,REP-H186,Holly Monroe,TERR-H02,1,12,10,3
-1001000818,Dr. Charles Jackson,Palliative Care,Philadelphia,PA,REP-H344,Hannah Blackwood,TERR-H04,2,5,3,1
-1001000819,Dr. William Wright,Oncology,Boston,MA,REP-H380,Hattie Whitman,TERR-H04,3,11,10,0
-1001000820,Dr. James Rodriguez,Oncology,Columbus,OH,REP-H241,Helen Conway,TERR-H09,2,9,8,2
+1003000126,Dr. Ardalan Enkeshafi,Internal Medicine,Bethesda,MD,REP-101,Alex Morgan,TERR-01,1,8,7,11
+1003000126,Dr. Ardalan Enkeshafi,Internal Medicine,Bethesda,MD,REP-102,Brandon Hayes,TERR-01,2,4,4,6
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-103,Claire Vance,TERR-02,1,8,5,10
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-104,Derek Sterling,TERR-02,2,4,2,2
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-105,Elena Rostova,TERR-03,1,8,9,24
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-106,Fiona Gallagher,TERR-03,1,8,10,22
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-107,Garrett Vance,TERR-04,2,4,3,4
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-108,Hannah Abbott,TERR-04,1,8,11,23
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-109,Ian Malcolm,TERR-05,3,2,1,2
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-110,Julia Roberts,TERR-05,2,4,4,7
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-111,Kevin Bacon,TERR-06,3,2,3,9
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-112,Laura Croft,TERR-06,2,4,2,6
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-101,Alex Morgan,TERR-01,1,8,6,11
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-102,Brandon Hayes,TERR-01,1,8,10,19
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-103,Claire Vance,TERR-02,2,4,2,4
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-104,Derek Sterling,TERR-02,2,4,4,11
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-105,Elena Rostova,TERR-03,1,8,6,12
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-106,Fiona Gallagher,TERR-03,2,4,4,10
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-107,Garrett Vance,TERR-04,2,4,2,3
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-108,Hannah Abbott,TERR-04,2,4,4,13
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-109,Ian Malcolm,TERR-05,3,2,1,3
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-110,Julia Roberts,TERR-05,2,4,4,6
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-111,Kevin Bacon,TERR-06,3,2,2,3
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-112,Laura Croft,TERR-06,3,2,1,1
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-101,Alex Morgan,TERR-01,2,4,3,6
+1003000142,Dr. Rashid Khalil,Anesthesiology,Toledo,OH,REP-102,Brandon Hayes,TERR-01,1,8,9,11
+1003000167,Dr. Julio Escobar,Dentist,Dayton,NV,REP-103,Claire Vance,TERR-02,1,8,7,17
+1003000167,Dr. Julio Escobar,Dentist,Dayton,NV,REP-104,Derek Sterling,TERR-02,3,2,1,2
+1003000423,Dr. Jennifer Velotta,Obstetrics & Gynecology,Mentor,OH,REP-105,Elena Rostova,TERR-03,2,4,4,5
+1003000423,Dr. Jennifer Velotta,Obstetrics & Gynecology,Mentor,OH,REP-106,Fiona Gallagher,TERR-03,2,4,5,14
+1003000423,Dr. Jennifer Velotta,Obstetrics & Gynecology,Mentor,OH,REP-107,Garrett Vance,TERR-04,2,4,4,10
+1003000480,Dr. Kevin Rothchild,General Surgery,Aurora,CO,REP-108,Hannah Abbott,TERR-04,2,4,3,7
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-109,Ian Malcolm,TERR-05,2,4,3,7
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-110,Julia Roberts,TERR-05,2,4,4,7
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-111,Kevin Bacon,TERR-06,3,2,2,6
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-112,Laura Croft,TERR-06,3,2,0,0
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-101,Alex Morgan,TERR-01,2,4,3,5
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-102,Brandon Hayes,TERR-01,1,8,7,17
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-103,Claire Vance,TERR-02,2,4,1,2
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-104,Derek Sterling,TERR-02,2,4,1,1
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-105,Elena Rostova,TERR-03,1,8,10,23
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-106,Fiona Gallagher,TERR-03,2,4,5,12
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-107,Garrett Vance,TERR-04,1,8,4,10
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-108,Hannah Abbott,TERR-04,2,4,5,16
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-109,Ian Malcolm,TERR-05,2,4,3,6
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-110,Julia Roberts,TERR-05,2,4,5,11
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-111,Kevin Bacon,TERR-06,2,4,4,13
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-112,Laura Croft,TERR-06,3,2,2,4
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-101,Alex Morgan,TERR-01,1,8,7,12
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-102,Brandon Hayes,TERR-01,1,8,8,24
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-103,Claire Vance,TERR-02,2,4,3,6
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-104,Derek Sterling,TERR-02,2,4,1,1
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-105,Elena Rostova,TERR-03,2,4,4,10
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-106,Fiona Gallagher,TERR-03,1,8,11,32
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-107,Garrett Vance,TERR-04,2,4,2,4
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-108,Hannah Abbott,TERR-04,2,4,4,8
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-109,Ian Malcolm,TERR-05,3,2,2,6
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-110,Julia Roberts,TERR-05,2,4,3,9
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-111,Kevin Bacon,TERR-06,2,4,5,16
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-112,Laura Croft,TERR-06,2,4,3,10
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-101,Alex Morgan,TERR-01,1,8,9,20
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-102,Brandon Hayes,TERR-01,2,4,4,5
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-103,Claire Vance,TERR-02,2,4,2,4
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-104,Derek Sterling,TERR-02,1,8,7,20
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-105,Elena Rostova,TERR-03,1,8,8,17
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-106,Fiona Gallagher,TERR-03,2,4,4,9
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-107,Garrett Vance,TERR-04,2,4,1,2
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-108,Hannah Abbott,TERR-04,1,8,8,26
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-109,Ian Malcolm,TERR-05,2,4,2,2
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-110,Julia Roberts,TERR-05,2,4,3,4
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-111,Kevin Bacon,TERR-06,2,4,6,9
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-112,Laura Croft,TERR-06,2,4,3,6
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-101,Alex Morgan,TERR-01,2,4,3,6
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-102,Brandon Hayes,TERR-01,1,8,7,12
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-103,Claire Vance,TERR-02,2,4,1,1
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-104,Derek Sterling,TERR-02,2,4,1,3
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-105,Elena Rostova,TERR-03,2,4,5,7
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-106,Fiona Gallagher,TERR-03,2,4,4,11
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-107,Garrett Vance,TERR-04,2,4,2,5
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-108,Hannah Abbott,TERR-04,2,4,4,10
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-109,Ian Malcolm,TERR-05,2,4,1,1
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-110,Julia Roberts,TERR-05,2,4,4,13
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-111,Kevin Bacon,TERR-06,3,2,2,5
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-112,Laura Croft,TERR-06,2,4,4,9
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-101,Alex Morgan,TERR-01,1,8,10,34
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-102,Brandon Hayes,TERR-01,1,8,9,28
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-103,Claire Vance,TERR-02,2,4,3,5
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-104,Derek Sterling,TERR-02,2,4,2,6
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-105,Elena Rostova,TERR-03,1,8,10,14
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-106,Fiona Gallagher,TERR-03,2,4,4,4
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-107,Garrett Vance,TERR-04,2,4,2,4
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-108,Hannah Abbott,TERR-04,2,4,3,5
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-109,Ian Malcolm,TERR-05,2,4,4,10
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-110,Julia Roberts,TERR-05,2,4,4,10
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-111,Kevin Bacon,TERR-06,2,4,2,4
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-112,Laura Croft,TERR-06,3,2,1,1
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-101,Alex Morgan,TERR-01,1,8,9,25
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-102,Brandon Hayes,TERR-01,1,8,9,22
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-103,Claire Vance,TERR-02,3,2,1,3
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-104,Derek Sterling,TERR-02,2,4,2,2
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-105,Elena Rostova,TERR-03,2,4,3,5
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-106,Fiona Gallagher,TERR-03,1,8,9,24
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-107,Garrett Vance,TERR-04,2,4,3,6
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-108,Hannah Abbott,TERR-04,2,4,3,4
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-109,Ian Malcolm,TERR-05,3,2,1,2
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-110,Julia Roberts,TERR-05,2,4,5,11
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-111,Kevin Bacon,TERR-06,3,2,2,6
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-112,Laura Croft,TERR-06,2,4,2,5
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-101,Alex Morgan,TERR-01,2,4,5,16
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-102,Brandon Hayes,TERR-01,1,8,10,14
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-103,Claire Vance,TERR-02,2,4,2,6
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-104,Derek Sterling,TERR-02,1,8,2,6
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-105,Elena Rostova,TERR-03,1,8,7,10
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-106,Fiona Gallagher,TERR-03,2,4,6,17
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-107,Garrett Vance,TERR-04,2,4,1,2
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-108,Hannah Abbott,TERR-04,1,8,5,11
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-109,Ian Malcolm,TERR-05,3,2,1,1
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-110,Julia Roberts,TERR-05,3,2,2,6
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-111,Kevin Bacon,TERR-06,2,4,4,10
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-112,Laura Croft,TERR-06,3,2,1,2
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-101,Alex Morgan,TERR-01,1,8,11,36
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-102,Brandon Hayes,TERR-01,1,8,10,19
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-103,Claire Vance,TERR-02,2,4,4,7
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-104,Derek Sterling,TERR-02,3,2,1,2
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-105,Elena Rostova,TERR-03,1,8,8,9
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-106,Fiona Gallagher,TERR-03,2,4,4,13
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-107,Garrett Vance,TERR-04,1,8,2,5
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-108,Hannah Abbott,TERR-04,1,8,5,11
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-109,Ian Malcolm,TERR-05,3,2,2,6
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-110,Julia Roberts,TERR-05,2,4,4,13
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-111,Kevin Bacon,TERR-06,2,4,3,9
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-112,Laura Croft,TERR-06,3,2,2,6
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-101,Alex Morgan,TERR-01,1,8,8,24
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-102,Brandon Hayes,TERR-01,2,4,4,12
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-103,Claire Vance,TERR-02,2,4,3,4
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-104,Derek Sterling,TERR-02,2,4,1,1
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-105,Elena Rostova,TERR-03,2,4,3,6
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-106,Fiona Gallagher,TERR-03,2,4,4,5
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-107,Garrett Vance,TERR-04,1,8,8,25
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-108,Hannah Abbott,TERR-04,2,4,4,8
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-109,Ian Malcolm,TERR-05,3,2,1,2
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-110,Julia Roberts,TERR-05,2,4,4,12
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-111,Kevin Bacon,TERR-06,3,2,2,3
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-112,Laura Croft,TERR-06,2,4,3,8
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-101,Alex Morgan,TERR-01,1,8,6,9
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-102,Brandon Hayes,TERR-01,1,8,6,15
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-103,Claire Vance,TERR-02,2,4,4,8
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-104,Derek Sterling,TERR-02,1,8,3,7
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-105,Elena Rostova,TERR-03,1,8,9,15
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-106,Fiona Gallagher,TERR-03,1,8,8,18
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-107,Garrett Vance,TERR-04,2,4,3,10
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-108,Hannah Abbott,TERR-04,2,4,4,9
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-109,Ian Malcolm,TERR-05,2,4,2,6
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-110,Julia Roberts,TERR-05,3,2,2,4
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-111,Kevin Bacon,TERR-06,2,4,5,15
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-112,Laura Croft,TERR-06,2,4,3,6
+1003000530,Dr. Amanda Semonche,Internal Medicine,Quakertown,PA,REP-101,Alex Morgan,TERR-01,1,8,11,30
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,REP-102,Brandon Hayes,TERR-01,1,8,9,28
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,REP-103,Claire Vance,TERR-02,3,2,1,2
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,REP-104,Derek Sterling,TERR-02,2,4,2,6
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,REP-105,Elena Rostova,TERR-03,2,4,4,13
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,REP-106,Fiona Gallagher,TERR-03,2,4,4,6
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,REP-107,Garrett Vance,TERR-04,2,4,2,6
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,REP-108,Hannah Abbott,TERR-04,2,4,5,7
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,REP-109,Ian Malcolm,TERR-05,3,2,1,3
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,REP-110,Julia Roberts,TERR-05,2,4,4,12
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,REP-111,Kevin Bacon,TERR-06,3,2,2,3
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,REP-112,Laura Croft,TERR-06,2,4,3,10
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,REP-101,Alex Morgan,TERR-01,2,4,4,13
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,REP-102,Brandon Hayes,TERR-01,1,8,9,14
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,REP-103,Claire Vance,TERR-02,2,4,1,3
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,REP-104,Derek Sterling,TERR-02,2,4,2,4
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,REP-105,Elena Rostova,TERR-03,2,4,2,5
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,REP-106,Fiona Gallagher,TERR-03,1,8,6,17
+1003000597,Dr. Dae Kim,Urology,Tulsa,OK,REP-107,Garrett Vance,TERR-04,2,4,3,3
+1003000720,Dr. Otniel Hernandez,Nurse Practitioner,Fort Myers,FL,REP-108,Hannah Abbott,TERR-04,2,4,3,7
+1003000720,Dr. Otniel Hernandez,Nurse Practitioner,Fort Myers,FL,REP-109,Ian Malcolm,TERR-05,2,4,3,4
+1003000738,Dr. Juliette Zumwalt,Physician Assistant,Houston,TX,REP-110,Julia Roberts,TERR-05,2,4,4,10
+1003000746,Dr. Mike Gallegos,Pharmacist,Placitas,NM,REP-111,Kevin Bacon,TERR-06,2,4,4,5
+1003000746,Dr. Mike Gallegos,Pharmacist,Placitas,NM,REP-112,Laura Croft,TERR-06,3,2,2,2
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-101,Alex Morgan,TERR-01,1,8,10,12
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-102,Brandon Hayes,TERR-01,2,4,3,9
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-103,Claire Vance,TERR-02,1,8,2,4
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-104,Derek Sterling,TERR-02,1,8,2,4
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-105,Elena Rostova,TERR-03,2,4,5,15
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-106,Fiona Gallagher,TERR-03,2,4,7,24
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-107,Garrett Vance,TERR-04,1,8,5,6
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-108,Hannah Abbott,TERR-04,2,4,2,4
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-109,Ian Malcolm,TERR-05,2,4,2,6
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-110,Julia Roberts,TERR-05,2,4,3,7
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-111,Kevin Bacon,TERR-06,3,2,3,4
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-112,Laura Croft,TERR-06,3,2,1,2
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-101,Alex Morgan,TERR-01,1,8,10,16
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-102,Brandon Hayes,TERR-01,1,8,10,23
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-103,Claire Vance,TERR-02,1,8,6,19
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-104,Derek Sterling,TERR-02,2,4,3,7
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-105,Elena Rostova,TERR-03,2,4,4,13
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-106,Fiona Gallagher,TERR-03,1,8,10,32
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-107,Garrett Vance,TERR-04,2,4,3,5
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-108,Hannah Abbott,TERR-04,2,4,4,10
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-109,Ian Malcolm,TERR-05,2,4,1,2
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-110,Julia Roberts,TERR-05,3,2,2,3
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-111,Kevin Bacon,TERR-06,2,4,5,10
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-112,Laura Croft,TERR-06,3,2,1,1
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-101,Alex Morgan,TERR-01,1,8,5,13
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-102,Brandon Hayes,TERR-01,1,8,8,16
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-103,Claire Vance,TERR-02,2,4,3,8
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-104,Derek Sterling,TERR-02,3,2,1,3
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-105,Elena Rostova,TERR-03,1,8,8,10
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-106,Fiona Gallagher,TERR-03,1,8,7,8
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-107,Garrett Vance,TERR-04,1,8,5,13
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-108,Hannah Abbott,TERR-04,2,4,3,4
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-109,Ian Malcolm,TERR-05,2,4,4,4
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-110,Julia Roberts,TERR-05,3,2,2,4
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-111,Kevin Bacon,TERR-06,2,4,4,7
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-112,Laura Croft,TERR-06,3,2,1,2
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-101,Alex Morgan,TERR-01,1,8,10,20
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-102,Brandon Hayes,TERR-01,2,4,4,8
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-103,Claire Vance,TERR-02,2,4,2,5
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-104,Derek Sterling,TERR-02,1,8,5,12
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-105,Elena Rostova,TERR-03,1,8,11,17
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-106,Fiona Gallagher,TERR-03,2,4,5,6
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-107,Garrett Vance,TERR-04,2,4,2,2
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-108,Hannah Abbott,TERR-04,2,4,3,10
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-109,Ian Malcolm,TERR-05,2,4,4,5
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-110,Julia Roberts,TERR-05,2,4,4,9
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-111,Kevin Bacon,TERR-06,2,4,4,8
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-112,Laura Croft,TERR-06,3,2,1,1
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-101,Alex Morgan,TERR-01,2,4,3,10
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-102,Brandon Hayes,TERR-01,2,4,6,8
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-103,Claire Vance,TERR-02,2,4,3,7
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-104,Derek Sterling,TERR-02,3,2,1,1
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-105,Elena Rostova,TERR-03,2,4,5,9
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-106,Fiona Gallagher,TERR-03,1,8,10,29
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-107,Garrett Vance,TERR-04,1,8,2,3
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-108,Hannah Abbott,TERR-04,2,4,3,9
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-109,Ian Malcolm,TERR-05,2,4,2,5
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-110,Julia Roberts,TERR-05,3,2,3,6
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-111,Kevin Bacon,TERR-06,2,4,5,15
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-112,Laura Croft,TERR-06,2,4,3,4
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-101,Alex Morgan,TERR-01,2,4,3,8
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-102,Brandon Hayes,TERR-01,1,8,10,33
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-103,Claire Vance,TERR-02,2,4,1,3
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-104,Derek Sterling,TERR-02,2,4,5,7
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-105,Elena Rostova,TERR-03,1,8,7,18
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-106,Fiona Gallagher,TERR-03,1,8,6,19
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-107,Garrett Vance,TERR-04,2,4,3,3
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-108,Hannah Abbott,TERR-04,2,4,5,15
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-109,Ian Malcolm,TERR-05,2,4,2,3
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-110,Julia Roberts,TERR-05,2,4,4,12
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-111,Kevin Bacon,TERR-06,2,4,5,13
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-112,Laura Croft,TERR-06,3,2,2,4
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-101,Alex Morgan,TERR-01,1,8,10,27
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-102,Brandon Hayes,TERR-01,2,4,4,10
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-103,Claire Vance,TERR-02,3,2,1,1
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-104,Derek Sterling,TERR-02,3,2,1,2
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-105,Elena Rostova,TERR-03,2,4,4,13
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-106,Fiona Gallagher,TERR-03,2,4,3,4
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-107,Garrett Vance,TERR-04,2,4,3,3
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-108,Hannah Abbott,TERR-04,2,4,4,6
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-109,Ian Malcolm,TERR-05,3,2,0,0
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-110,Julia Roberts,TERR-05,3,2,3,4
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-111,Kevin Bacon,TERR-06,2,4,6,20
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-112,Laura Croft,TERR-06,2,4,3,8
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-101,Alex Morgan,TERR-01,1,8,9,17
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-102,Brandon Hayes,TERR-01,1,8,10,30
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-103,Claire Vance,TERR-02,2,4,2,6
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-104,Derek Sterling,TERR-02,2,4,1,2
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-105,Elena Rostova,TERR-03,1,8,10,31
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-106,Fiona Gallagher,TERR-03,2,4,4,13
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-107,Garrett Vance,TERR-04,2,4,2,4
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-108,Hannah Abbott,TERR-04,1,8,6,18
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-109,Ian Malcolm,TERR-05,3,2,1,1
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-110,Julia Roberts,TERR-05,2,4,5,14
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-111,Kevin Bacon,TERR-06,3,2,2,5
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-112,Laura Croft,TERR-06,3,2,1,2
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-101,Alex Morgan,TERR-01,1,8,9,15
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-102,Brandon Hayes,TERR-01,2,4,4,7
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-103,Claire Vance,TERR-02,2,4,4,10
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-104,Derek Sterling,TERR-02,2,4,1,2
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-105,Elena Rostova,TERR-03,2,4,3,8
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-106,Fiona Gallagher,TERR-03,1,8,10,14
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-107,Garrett Vance,TERR-04,2,4,2,6
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-108,Hannah Abbott,TERR-04,1,8,5,16
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-109,Ian Malcolm,TERR-05,2,4,3,4
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-110,Julia Roberts,TERR-05,2,4,5,10
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-111,Kevin Bacon,TERR-06,3,2,1,3
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-112,Laura Croft,TERR-06,3,2,1,1
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-101,Alex Morgan,TERR-01,1,8,7,22
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-102,Brandon Hayes,TERR-01,2,4,4,11
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-103,Claire Vance,TERR-02,3,2,1,2
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-104,Derek Sterling,TERR-02,2,4,1,1
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-105,Elena Rostova,TERR-03,1,8,9,19
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-106,Fiona Gallagher,TERR-03,1,8,9,12
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-107,Garrett Vance,TERR-04,2,4,3,6
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-108,Hannah Abbott,TERR-04,2,4,5,6
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-109,Ian Malcolm,TERR-05,2,4,1,3
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-110,Julia Roberts,TERR-05,2,4,5,13
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-111,Kevin Bacon,TERR-06,3,2,2,4
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-112,Laura Croft,TERR-06,3,2,1,3
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-101,Alex Morgan,TERR-01,1,8,5,6
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-102,Brandon Hayes,TERR-01,1,8,11,20
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-103,Claire Vance,TERR-02,2,4,2,5
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-104,Derek Sterling,TERR-02,3,2,1,1
+1003000902,Dr. Jaivanti Lohano,Family Practice,Louisville,KY,REP-105,Elena Rostova,TERR-03,1,8,9,22
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-106,Fiona Gallagher,TERR-03,2,4,5,10
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-107,Garrett Vance,TERR-04,2,4,2,2
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-108,Hannah Abbott,TERR-04,1,8,9,30
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-109,Ian Malcolm,TERR-05,2,4,2,5
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-110,Julia Roberts,TERR-05,2,4,5,9
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-111,Kevin Bacon,TERR-06,3,2,2,4
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-112,Laura Croft,TERR-06,2,4,1,2
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-101,Alex Morgan,TERR-01,1,8,10,17
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-102,Brandon Hayes,TERR-01,2,4,3,10
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-103,Claire Vance,TERR-02,3,2,2,5
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-104,Derek Sterling,TERR-02,1,8,5,14
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-105,Elena Rostova,TERR-03,1,8,9,21
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-106,Fiona Gallagher,TERR-03,2,4,6,17
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-107,Garrett Vance,TERR-04,2,4,3,5
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-108,Hannah Abbott,TERR-04,2,4,5,12
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-109,Ian Malcolm,TERR-05,2,4,2,4
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-110,Julia Roberts,TERR-05,2,4,3,10
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-111,Kevin Bacon,TERR-06,2,4,4,9
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-112,Laura Croft,TERR-06,2,4,2,3
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-101,Alex Morgan,TERR-01,1,8,10,24
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-102,Brandon Hayes,TERR-01,2,4,3,4
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-103,Claire Vance,TERR-02,3,2,1,2
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-104,Derek Sterling,TERR-02,2,4,2,3
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-105,Elena Rostova,TERR-03,2,4,4,7
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-106,Fiona Gallagher,TERR-03,2,4,4,13
+1003000936,Dr. Mark Stellingworth,Cardiology,Hartsville,SC,REP-107,Garrett Vance,TERR-04,2,4,4,8
+1003001207,Dr. Niloo Gorji,Dentist,Tolland,CT,REP-108,Hannah Abbott,TERR-04,1,8,7,14
+1003001207,Dr. Niloo Gorji,Dentist,Tolland,CT,REP-109,Ian Malcolm,TERR-05,2,4,1,2
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,REP-110,Julia Roberts,TERR-05,3,2,2,5
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,REP-111,Kevin Bacon,TERR-06,3,2,3,5
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,REP-112,Laura Croft,TERR-06,2,4,3,8
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,REP-101,Alex Morgan,TERR-01,2,4,3,10
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,REP-102,Brandon Hayes,TERR-01,2,4,4,13
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,REP-103,Claire Vance,TERR-02,2,4,1,1
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,REP-104,Derek Sterling,TERR-02,3,2,1,3
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,REP-105,Elena Rostova,TERR-03,2,4,5,12
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,REP-106,Fiona Gallagher,TERR-03,2,4,5,14
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,REP-107,Garrett Vance,TERR-04,1,8,5,6
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,REP-108,Hannah Abbott,TERR-04,2,4,5,8
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,REP-109,Ian Malcolm,TERR-05,2,4,1,2
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,REP-110,Julia Roberts,TERR-05,3,2,2,6
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,REP-111,Kevin Bacon,TERR-06,3,2,2,5
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,REP-112,Laura Croft,TERR-06,3,2,1,2
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,REP-101,Alex Morgan,TERR-01,1,8,10,15
+1003001256,Dr. Jennifer Caragol,Family Practice,Evans,CO,REP-102,Brandon Hayes,TERR-01,2,4,5,15
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-103,Claire Vance,TERR-02,2,4,2,6
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-104,Derek Sterling,TERR-02,2,4,1,1
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-105,Elena Rostova,TERR-03,2,4,3,4
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-106,Fiona Gallagher,TERR-03,1,8,11,18
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-107,Garrett Vance,TERR-04,2,4,3,9
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-108,Hannah Abbott,TERR-04,2,4,4,5
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-109,Ian Malcolm,TERR-05,2,4,2,3
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-110,Julia Roberts,TERR-05,2,4,5,7
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-111,Kevin Bacon,TERR-06,2,4,5,7
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-112,Laura Croft,TERR-06,3,2,1,3
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-101,Alex Morgan,TERR-01,1,8,4,5
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-102,Brandon Hayes,TERR-01,1,8,7,18
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-103,Claire Vance,TERR-02,2,4,2,3
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-104,Derek Sterling,TERR-02,2,4,2,3
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-105,Elena Rostova,TERR-03,2,4,5,7
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-106,Fiona Gallagher,TERR-03,2,4,6,20
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-107,Garrett Vance,TERR-04,2,4,3,6
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-108,Hannah Abbott,TERR-04,1,8,8,27
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-109,Ian Malcolm,TERR-05,2,4,2,4
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-110,Julia Roberts,TERR-05,2,4,4,13
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-111,Kevin Bacon,TERR-06,3,2,2,6
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-112,Laura Croft,TERR-06,3,2,2,3
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-101,Alex Morgan,TERR-01,1,8,9,27
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-102,Brandon Hayes,TERR-01,2,4,3,7
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-103,Claire Vance,TERR-02,1,8,4,4
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-104,Derek Sterling,TERR-02,1,8,2,4
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-105,Elena Rostova,TERR-03,1,8,9,16
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-106,Fiona Gallagher,TERR-03,1,8,9,27
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-107,Garrett Vance,TERR-04,1,8,4,11
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-108,Hannah Abbott,TERR-04,2,4,5,7
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-109,Ian Malcolm,TERR-05,2,4,1,2
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-110,Julia Roberts,TERR-05,2,4,3,5
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-111,Kevin Bacon,TERR-06,2,4,6,13
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-112,Laura Croft,TERR-06,3,2,2,4
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-101,Alex Morgan,TERR-01,1,8,9,22
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-102,Brandon Hayes,TERR-01,2,4,4,13
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-103,Claire Vance,TERR-02,3,2,1,2
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-104,Derek Sterling,TERR-02,2,4,3,4
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-105,Elena Rostova,TERR-03,1,8,9,27
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-106,Fiona Gallagher,TERR-03,2,4,4,6
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-107,Garrett Vance,TERR-04,2,4,4,5
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-108,Hannah Abbott,TERR-04,2,4,3,9
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-109,Ian Malcolm,TERR-05,2,4,2,5
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-110,Julia Roberts,TERR-05,2,4,4,7
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-111,Kevin Bacon,TERR-06,2,4,5,9
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-112,Laura Croft,TERR-06,3,2,1,1
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-101,Alex Morgan,TERR-01,1,8,9,25
+1003001363,Dr. Charles Stevens,Anesthesiology,El Centro,CA,REP-102,Brandon Hayes,TERR-01,2,4,4,11
+1003001371,Dr. David Kanter,Physical Medicine and Rehabilitation,Syracuse,NY,REP-103,Claire Vance,TERR-02,2,4,3,10
+1003001371,Dr. David Kanter,Physical Medicine and Rehabilitation,Syracuse,NY,REP-104,Derek Sterling,TERR-02,1,8,2,5

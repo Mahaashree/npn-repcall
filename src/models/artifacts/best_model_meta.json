@@ -1,6 +1,6 @@
 {
   "hybrid": {
-    "model_label": "Random Forest Regressor",
+    "model_label": "OLS Linear Regression",
     "target_col": "Rx_Lift_Pct",
     "feature_names": [
       "Compliance_Pct_raw",
@@ -11,14 +11,14 @@
       "Log_Baseline_Fills_raw",
       "HCP_Tier"
     ],
-    "test_r2": 0.621537,
-    "test_mae": 1.412974,
-    "test_rmse": 1.78769,
-    "overfitting_gap": 0.048668,
-    "bootstrap_ci": "[0.5220, 0.6979]",
+    "test_r2": 0.097635,
+    "test_mae": 2.200284,
+    "test_rmse": 2.825056,
+    "overfitting_gap": 0.07952,
+    "bootstrap_ci": "[0.0205, 0.1578]",
     "status": "Healthy generalisation",
-    "model_path": "/Users/mahaashreeanburaj/Downloads/cts(3 modes)/src/models/artifacts/best_hybrid.joblib",
-    "saved_at_utc": "2026-08-20T09:50:30+00:00"
+    "model_path": "/Users/mahaashreeanburaj/Downloads/cts-final-final/src/models/artifacts/best_hybrid.joblib",
+    "saved_at_utc": "2026-08-20T19:25:38+00:00"
   },
   "synthetic": {
     "model_label": "Random Forest Regressor",
@@ -32,13 +32,13 @@
       "Log_Baseline_Fills_raw",
       "HCP_Tier"
     ],
-    "test_r2": 0.604384,
-    "test_mae": 1.306759,
-    "test_rmse": 1.637553,
-    "overfitting_gap": 0.102923,
-    "bootstrap_ci": "[0.5069, 0.6727]",
+    "test_r2": 0.672005,
+    "test_mae": 1.213482,
+    "test_rmse": 1.57412,
+    "overfitting_gap": 0.005372,
+    "bootstrap_ci": "[0.6018, 0.7327]",
     "status": "Healthy generalisation",
-    "model_path": "/Users/mahaashreeanburaj/Downloads/cts(3 modes)/src/models/artifacts/best_synthetic.joblib",
-    "saved_at_utc": "2026-08-20T09:50:33+00:00"
+    "model_path": "/Users/mahaashreeanburaj/Downloads/cts-final-final/src/models/artifacts/best_synthetic.joblib",
+    "saved_at_utc": "2026-08-20T19:25:40+00:00"
   }
 }

@@ -27,6 +27,8 @@ try:
 except ImportError:  # imported as a package (tests), not run directly
     from src.models.ml_models_suite import build_feature_matrix
 
+from sklearn.ensemble import GradientBoostingRegressor
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s | %(levelname)-8s | %(message)s',
@@ -39,6 +41,32 @@ ARTIFACTS_DIR = pathlib.Path(__file__).resolve().parent / 'artifacts'
 PROCESSED_DIR = BASE_DIR / 'data' / 'generated' / 'processed'
 PREDICTIONS_DIR = BASE_DIR / 'data' / 'generated' / 'predictions'
 META_PATH = ARTIFACTS_DIR / 'best_model_meta.json'
+
+
+# If a persisted best model is an XGBoost object on a machine without libomp,
+# joblib.load()/predict() walk back into XGBoost's C extension and fail with a
+# dlopen error. Only that specific failure pattern is handled here (mirroring
+# ml_models_suite.py:21-25) — every other error is re-raised untouched.
+_LIBOMP_FAILURE_TOKENS = ('libomp', 'dlopen', 'libxgboost', 'Library not loaded')
+
+
+def _is_libomp_failure(exc: BaseException) -> bool:
+    msg = str(exc)
+    return any(token in msg for token in _LIBOMP_FAILURE_TOKENS)
+
+
+def _fit_xgboost_fallback(df: pd.DataFrame) -> GradientBoostingRegressor:
+    """Fit the GradientBoostingRegressor substitution used by ml_models_suite
+    when XGBoost cannot load on this machine (same hyper-parameters as
+    ml_models_suite.py:317)."""
+    log.warning(
+        'Persisted XGBoost model could not load on this machine; '
+        'substituting GradientBoostingRegressor on the same feature matrix.')
+    X_fb, _, df_fb = build_feature_matrix(df)
+    y_fb = df_fb['Rx_Lift_Pct'].to_numpy()
+    model = GradientBoostingRegressor(n_estimators=200, max_depth=3, learning_rate=0.05)
+    model.fit(X_fb, y_fb)
+    return model
 
 
 def predict_mode(mode: str) -> None:
@@ -56,9 +84,15 @@ def predict_mode(mode: str) -> None:
     log.info('Predictive scoring [%s]...', mode)
     df = pd.read_parquet(parquet_path)
     X, feature_names, df = build_feature_matrix(df)
-    model = joblib.load(model_path)
 
-    preds = model.predict(X)
+    try:
+        model = joblib.load(model_path)
+        preds = model.predict(X)
+    except Exception as exc:
+        if not _is_libomp_failure(exc):
+            raise
+        model = _fit_xgboost_fallback(df)
+        preds = model.predict(X)
 
     npi_col = 'Prscrbr_NPI' if 'Prscrbr_NPI' in df.columns else df.columns[0]
     records = []

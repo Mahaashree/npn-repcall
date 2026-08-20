@@ -113,7 +113,12 @@ def assign_tier(specialty: str, territory: str, terr_volume: dict[str, int]) -> 
         return 3
 
 
-def generate(mode: str = 'hybrid') -> pd.DataFrame:
+def generate(mode: str = 'synthetic') -> pd.DataFrame:
+    if mode == 'hybrid':
+        raise ValueError(
+            'generate(%r) no longer synthesizes hybrid-mode data. Hybrid mode is '
+            'loaded exclusively from data/raw_hybrid/cms_crm_dataset.csv via '
+            'load_hybrid_source.build() — see src/pipeline/load_hybrid_source.py.' % mode)
     t0 = time.perf_counter()
     n_hcp = 820 if mode == 'hybrid' else 1350
     reps_pool = REPS_HYBRID if mode == 'hybrid' else REPS_SYNTH
@@ -203,9 +208,21 @@ def generate(mode: str = 'hybrid') -> pd.DataFrame:
     return df
 
 
+def _import_load_hybrid():
+    """Import load_hybrid_source.build() whether run as a script or as a package."""
+    if __package__:
+        from .load_hybrid_source import build
+    else:
+        import sys
+        sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+        from load_hybrid_source import build
+    return build
+
+
 def main() -> None:
-    df_hybrid = generate('hybrid')
-    df_synth  = generate('synthetic')
+    build_hybrid = _import_load_hybrid()
+    df_hybrid, hybrid_rep_master = build_hybrid()
+    df_synth = generate('synthetic')
 
     RAW_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -224,19 +241,10 @@ def main() -> None:
     df_hybrid.to_parquet(OUT_PARQUET, index=False)
     df_hybrid.to_csv(RAW_DIR / 'raw_crm_cms_dataset.csv', index=False)
 
-    # Master rep registry
-    rep_master_rows = []
-    for r in REPS_HYBRID:
-        rep_master_rows.append({
-            'rep_id': r,
-            'sales_rep_name': REP_NAMES_HYBRID[r],
-            'territory_id': REP_TO_TERR_HYBRID[r],
-            'is_active': True,
-            'hire_date': '2021-01-15',
-            'dataset_mode': 'hybrid',
-        })
+    # Master rep registry: real hybrid reps from the source file + synthetic reps.
+    synth_rep_rows = []
     for r in REPS_SYNTH:
-        rep_master_rows.append({
+        synth_rep_rows.append({
             'rep_id': r,
             'sales_rep_name': REP_NAMES_SYNTH[r],
             'territory_id': REP_TO_TERR_SYNTH[r],
@@ -244,9 +252,20 @@ def main() -> None:
             'hire_date': '2021-06-01',
             'dataset_mode': 'synthetic',
         })
-    pd.DataFrame(rep_master_rows).to_csv(REP_MASTER_PATH, index=False)
+    pd.concat([hybrid_rep_master, pd.DataFrame(synth_rep_rows)], ignore_index=True).to_csv(
+        REP_MASTER_PATH, index=False)
 
-    log.info('✅ Exported %s, %s, rep_master.csv and CSV versions.', out_hybrid, out_synth)
+    # Master doctor registry: real CMS prescribers behind hybrid mode.
+    doc_master = (
+        df_hybrid[['Prscrbr_NPI', 'Physician_Name', 'Specialty', 'City', 'State', 'Brand_Name']]
+        .rename(columns={'Prscrbr_NPI': 'npi', 'Physician_Name': 'physician_name'})
+        .assign(is_active=True)
+        .drop_duplicates('npi')
+        .sort_values('npi')
+    )
+    doc_master.to_csv(BASE_DIR / 'data' / 'doctor_master.csv', index=False)
+
+    log.info('✅ Exported real-hybrid %s, synthetic %s, rep_master.csv, doctor_master.csv and CSV versions.', out_hybrid, out_synth)
 
 
 if __name__ == '__main__':

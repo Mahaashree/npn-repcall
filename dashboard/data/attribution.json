@@ -1,41 +1,41 @@
 {
-  "data_version": "4b1bd71ac576c3fd",
-  "generated_at": "2026-08-20T09:50:40Z",
+  "data_version": "52ce04e2b02fa307",
+  "generated_at": "2026-08-20T19:25:58Z",
   "global_importance": [
     {
       "description": "Monthly Call Cadence (Visits/Month)",
       "feature": "Monthly Call Frequency",
-      "importance_pct": 62.61
-    },
-    {
-      "description": "Sample Drop Ratio (Samples/Visit)",
-      "feature": "Sample Call Ratio",
-      "importance_pct": 31.54
+      "importance_pct": 29.46
     },
     {
       "description": "Call Plan Compliance %",
       "feature": "Compliance Pct",
-      "importance_pct": 1.99
+      "importance_pct": 20.25
+    },
+    {
+      "description": "Sample Drop Ratio (Samples/Visit)",
+      "feature": "Sample Call Ratio",
+      "importance_pct": 14.56
     },
     {
       "description": "Volume Interaction",
       "feature": "Tier Compliance Interaction",
-      "importance_pct": 1.52
+      "importance_pct": 12.19
     },
     {
       "description": "Feature Contribution",
       "feature": "Baseline Volume Saturation",
-      "importance_pct": 1.15
+      "importance_pct": 11.23
     },
     {
       "description": "Feature Contribution",
       "feature": "Log Baseline Fills",
-      "importance_pct": 1.13
+      "importance_pct": 10.69
     },
     {
       "description": "Physician Priority Tier",
       "feature": "HCP Tier",
-      "importance_pct": 0.05
+      "importance_pct": 1.62
     }
   ],
   "hybrid": {
@@ -43,98 +43,98 @@
       {
         "description": "Monthly Call Cadence (Visits/Month)",
         "feature": "Monthly Call Frequency",
-        "importance_pct": 62.61
-      },
-      {
-        "description": "Sample Drop Ratio (Samples/Visit)",
-        "feature": "Sample Call Ratio",
-        "importance_pct": 31.54
+        "importance_pct": 29.46
       },
       {
         "description": "Call Plan Compliance %",
         "feature": "Compliance Pct",
-        "importance_pct": 1.99
+        "importance_pct": 20.25
+      },
+      {
+        "description": "Sample Drop Ratio (Samples/Visit)",
+        "feature": "Sample Call Ratio",
+        "importance_pct": 14.56
       },
       {
         "description": "Volume Interaction",
         "feature": "Tier Compliance Interaction",
-        "importance_pct": 1.52
+        "importance_pct": 12.19
       },
       {
         "description": "Feature Contribution",
         "feature": "Baseline Volume Saturation",
-        "importance_pct": 1.15
+        "importance_pct": 11.23
       },
       {
         "description": "Feature Contribution",
         "feature": "Log Baseline Fills",
-        "importance_pct": 1.13
+        "importance_pct": 10.69
       },
       {
         "description": "Physician Priority Tier",
         "feature": "HCP Tier",
-        "importance_pct": 0.05
+        "importance_pct": 1.62
       }
     ],
     "shap_contributions": [
       {
         "feature": "Monthly Call Frequency",
-        "shap_importance_pct": 58.33
-      },
-      {
-        "feature": "Sample Call Ratio",
-        "shap_importance_pct": 37.01
+        "shap_importance_pct": 35.38
       },
       {
         "feature": "Compliance Pct",
-        "shap_importance_pct": 1.97
+        "shap_importance_pct": 27.52
       },
       {
-        "feature": "Tier Compliance Interaction",
-        "shap_importance_pct": 1.03
-      },
-      {
-        "feature": "Log Baseline Fills",
-        "shap_importance_pct": 0.79
+        "feature": "Sample Call Ratio",
+        "shap_importance_pct": 11.9
       },
       {
         "feature": "Baseline Volume Saturation",
-        "shap_importance_pct": 0.77
+        "shap_importance_pct": 8.58
+      },
+      {
+        "feature": "Log Baseline Fills",
+        "shap_importance_pct": 8.32
+      },
+      {
+        "feature": "Tier Compliance Interaction",
+        "shap_importance_pct": 7.04
       },
       {
         "feature": "HCP Tier",
-        "shap_importance_pct": 0.1
+        "shap_importance_pct": 1.27
       }
     ]
   },
   "shap_contributions": [
     {
       "feature": "Monthly Call Frequency",
-      "shap_importance_pct": 58.33
-    },
-    {
-      "feature": "Sample Call Ratio",
-      "shap_importance_pct": 37.01
+      "shap_importance_pct": 35.38
     },
     {
       "feature": "Compliance Pct",
-      "shap_importance_pct": 1.97
+      "shap_importance_pct": 27.52
     },
     {
-      "feature": "Tier Compliance Interaction",
-      "shap_importance_pct": 1.03
-    },
-    {
-      "feature": "Log Baseline Fills",
-      "shap_importance_pct": 0.79
+      "feature": "Sample Call Ratio",
+      "shap_importance_pct": 11.9
     },
     {
       "feature": "Baseline Volume Saturation",
-      "shap_importance_pct": 0.77
+      "shap_importance_pct": 8.58
+    },
+    {
+      "feature": "Log Baseline Fills",
+      "shap_importance_pct": 8.32
+    },
+    {
+      "feature": "Tier Compliance Interaction",
+      "shap_importance_pct": 7.04
     },
     {
       "feature": "HCP Tier",
-      "shap_importance_pct": 0.1
+      "shap_importance_pct": 1.27
     }
   ],
   "synthetic": {
@@ -142,67 +142,67 @@
       {
         "description": "Monthly Call Cadence (Visits/Month)",
         "feature": "Monthly Call Frequency",
-        "importance_pct": 66.13
+        "importance_pct": 59.73
       },
       {
         "description": "Sample Drop Ratio (Samples/Visit)",
         "feature": "Sample Call Ratio",
-        "importance_pct": 27.26
+        "importance_pct": 29.15
       },
       {
         "description": "Physician Priority Tier",
         "feature": "HCP Tier",
-        "importance_pct": 4.43
-      },
-      {
-        "description": "Feature Contribution",
-        "feature": "Baseline Volume Saturation",
-        "importance_pct": 0.59
-      },
-      {
-        "description": "Feature Contribution",
-        "feature": "Log Baseline Fills",
-        "importance_pct": 0.55
-      },
-      {
-        "description": "Call Plan Compliance %",
-        "feature": "Compliance Pct",
-        "importance_pct": 0.54
+        "importance_pct": 7.79
       },
       {
         "description": "Volume Interaction",
         "feature": "Tier Compliance Interaction",
-        "importance_pct": 0.51
+        "importance_pct": 1.08
+      },
+      {
+        "description": "Feature Contribution",
+        "feature": "Baseline Volume Saturation",
+        "importance_pct": 0.84
+      },
+      {
+        "description": "Call Plan Compliance %",
+        "feature": "Compliance Pct",
+        "importance_pct": 0.72
+      },
+      {
+        "description": "Feature Contribution",
+        "feature": "Log Baseline Fills",
+        "importance_pct": 0.69
       }
     ],
     "shap_contributions": [
       {
         "feature": "Monthly Call Frequency",
-        "shap_importance_pct": 55.96
+        "shap_importance_pct": 52.59
       },
       {
         "feature": "Sample Call Ratio",
-        "shap_importance_pct": 35.91
+        "shap_importance_pct": 34.36
       },
       {
         "feature": "HCP Tier",
-        "shap_importance_pct": 5.81
-      },
-      {
-        "feature": "Compliance Pct",
-        "shap_importance_pct": 0.8
-      },
-      {
-        "feature": "Log Baseline Fills",
-        "shap_importance_pct": 0.55
-      },
-      {
-        "feature": "Baseline Volume Saturation",
-        "shap_importance_pct": 0.5
+        "shap_importance_pct": 9.84
       },
       {
         "feature": "Tier Compliance Interaction",
-        "shap_importance_pct": 0.46
+        "shap_importance_pct": 1.19
+      },
+      {
+        "feature": "Compliance Pct",
+        "shap_importance_pct": 0.7
+      },
+      {
+        "feature": "Log Baseline Fills",
+        "shap_importance_pct": 0.68
+      },
+      {
+        "feature": "Baseline Volume Saturation",
+        "shap_importance_pct": 0.64
       }
     ]
   }
