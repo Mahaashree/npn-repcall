@@ -1,0 +1,44 @@
+{
+  "hybrid": {
+    "model_label": "Random Forest Regressor",
+    "target_col": "Rx_Lift_Pct",
+    "feature_names": [
+      "Compliance_Pct_raw",
+      "Monthly_Call_Frequency_raw",
+      "Tier_Compliance_Interaction_raw",
+      "Sample_Call_Ratio_raw",
+      "Baseline_Volume_Saturation_raw",
+      "Log_Baseline_Fills_raw",
+      "HCP_Tier"
+    ],
+    "test_r2": 0.621537,
+    "test_mae": 1.412974,
+    "test_rmse": 1.78769,
+    "overfitting_gap": 0.048668,
+    "bootstrap_ci": "[0.5220, 0.6979]",
+    "status": "Healthy generalisation",
+    "model_path": "/Users/mahaashreeanburaj/Downloads/cts(3 modes)/src/models/artifacts/best_hybrid.joblib",
+    "saved_at_utc": "2026-08-20T05:25:48+00:00"
+  },
+  "synthetic": {
+    "model_label": "Random Forest Regressor",
+    "target_col": "Rx_Lift_Pct",
+    "feature_names": [
+      "Compliance_Pct_raw",
+      "Monthly_Call_Frequency_raw",
+      "Tier_Compliance_Interaction_raw",
+      "Sample_Call_Ratio_raw",
+      "Baseline_Volume_Saturation_raw",
+      "Log_Baseline_Fills_raw",
+      "HCP_Tier"
+    ],
+    "test_r2": 0.604384,
+    "test_mae": 1.306759,
+    "test_rmse": 1.637553,
+    "overfitting_gap": 0.102923,
+    "bootstrap_ci": "[0.5069, 0.6727]",
+    "status": "Healthy generalisation",
+    "model_path": "/Users/mahaashreeanburaj/Downloads/cts(3 modes)/src/models/artifacts/best_synthetic.joblib",
+    "saved_at_utc": "2026-08-20T05:25:50+00:00"
+  }
+}

@@ -14,4 +14,10 @@ module.exports = defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
   ],
+  webServer: {
+    command: 'python -m http.server 8085',
+    port: 8085,
+    reuseExistingServer: true,
+  },
 });
+

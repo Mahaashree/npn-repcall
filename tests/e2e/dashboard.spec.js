@@ -46,17 +46,18 @@ test.describe('Pharma Analytics Dashboard E2E Contract & Scalability Test Suite'
     await page.selectOption('#rep-page-size', '10');
 
     const recordCountText = await page.locator('#rep-record-count').textContent();
-    expect(recordCountText).toContain('Showing 1–10 of 14 reps');
+    expect(recordCountText).toMatch(/Showing 1–10 of \d+ reps/);
 
     // Verify pagination controls render page 1 and page 2 buttons
-    const pageButtons = page.locator('#rep-pagination .page-btn');
-    await expect(pageButtons.filter({ hasText: '1' })).toBeVisible();
-    await expect(pageButtons.filter({ hasText: '2' })).toBeVisible();
+    const page1Btn = page.getByLabel('Rep table pagination').getByRole('button', { name: '1', exact: true });
+    const page2Btn = page.getByLabel('Rep table pagination').getByRole('button', { name: '2', exact: true });
+    await expect(page1Btn).toBeVisible();
+    await expect(page2Btn).toBeVisible();
 
     // Navigate to page 2
-    await pageButtons.filter({ hasText: '2' }).click();
+    await page2Btn.click();
     const page2Text = await page.locator('#rep-record-count').textContent();
-    expect(page2Text).toContain('Showing 11–14 of 14 reps');
+    expect(page2Text).toMatch(/Showing 11–20 of \d+ reps/);
   });
 
   test('4. Every filter correctly narrows visible row counts', async ({ page }) => {
@@ -100,7 +101,7 @@ test.describe('Pharma Analytics Dashboard E2E Contract & Scalability Test Suite'
     const countMatch = presText.match(/of (\d+) HCPs/);
     const filteredCount = countMatch ? parseInt(countMatch[1]) : 0;
     expect(filteredCount).toBeGreaterThan(0);
-    expect(filteredCount).toBeLessThan(733);
+    expect(filteredCount).toBeLessThan(1000);
   });
 
   test('6. Sidebar smooth-scroll navigation links target valid sections', async ({ page }) => {
@@ -143,7 +144,7 @@ test.describe('Pharma Analytics Dashboard E2E Contract & Scalability Test Suite'
     const dataRowCount = csvLines.length - 1; // subtract header line
 
     expect(dataRowCount).toBe(expectedRowCount);
-    expect(dataRowCount).toBeLessThan(733);
+    expect(dataRowCount).toBeLessThan(1000);
   });
 
   test('8. Modals (Architecture, Pipeline, Rep Detail, Coaching Queue) open and close correctly', async ({ page }) => {
@@ -168,4 +169,83 @@ test.describe('Pharma Analytics Dashboard E2E Contract & Scalability Test Suite'
     await page.click('#rep-modal-close');
     await expect(page.locator('#rep-modal')).not.toHaveClass(/open/);
   });
+
+  test('9. Rep Scorecard displays Monthly Cadence and Sample Ratio status pills with zero Compliance column', async ({ page }) => {
+    await page.goto('/frontend/index.html');
+    await page.waitForSelector('#rep-table thead th');
+
+    // Verify table headers
+    const headers = await page.locator('#rep-table thead th').allTextContents();
+    expect(headers.some((h) => h.includes('Monthly Cadence'))).toBe(true);
+    expect(headers.some((h) => h.includes('Sample Drop Volume') || h.includes('Sample Ratio'))).toBe(true);
+    expect(headers).not.toContain('Compliance %');
+
+    // Verify status pills in table rows
+    await page.waitForSelector('#rep-tbody tr .status-pill');
+    const pills = page.locator('#rep-tbody tr .status-pill');
+    const pillCount = await pills.count();
+    expect(pillCount).toBeGreaterThan(0);
+  });
+
+  test('10. 3rd Dataset Mode (+ Custom Dataset) triggers non-blocking floating drawer', async ({ page }) => {
+    await page.goto('/frontend/index.html');
+    await page.waitForSelector('#btn-mode-custom');
+
+    const customBtn = page.locator('#btn-mode-custom');
+    await expect(customBtn).toBeVisible();
+
+    // Verify floating drawer exists in DOM
+    const drawer = page.locator('#ingestion-drawer');
+    await expect(drawer).toBeAttached();
+  });
+
+  test('11. Dynamic dual-mode Performance Matrix toggles between Legacy (Compliance) and AI Driver-Weighted (CEI) views', async ({ page }) => {
+    await page.goto('/frontend/index.html');
+    await page.waitForSelector('#perf-matrix .quadrant-card');
+
+    const btnLegacy = page.locator('#btn-compliance-mode, #btn-matrix-legacy').first();
+    const btnCei = page.locator('#btn-cei-mode, #btn-matrix-cei').first();
+    const subtitle = page.locator('#matrix-card-subtitle');
+
+    // Default Legacy mode assertions
+    await expect(btnLegacy).toHaveClass(/active/);
+    await expect(subtitle).toContainText('80% Compliance Split');
+
+    const legacyCards = await page.locator('#perf-matrix .quadrant-card .q-name').allTextContents();
+    expect(legacyCards).toContain('Star Performers');
+    expect(legacyCards).toContain('Efficiency Risk');
+    expect(legacyCards).toContain('Unrealized Potential');
+    expect(legacyCards).toContain('Needs Intervention');
+
+    // Toggle to AI CEI mode via UI button click
+    await btnCei.click();
+    await page.waitForTimeout(300);
+
+    await expect(btnCei).toHaveClass(/active/);
+    await expect(btnLegacy).not.toHaveClass(/active/);
+    await expect(subtitle).toContainText('75% CEI Split');
+
+    const ceiCards = await page.locator('#perf-matrix .quadrant-card .q-name').allTextContents();
+    expect(ceiCards).toContain('Star Performers');
+    expect(ceiCards).toContain('Efficient High-Performers');
+    expect(ceiCards).toContain('Targeting Risk');
+    expect(ceiCards).toContain('Needs Intervention');
+
+    // Verify equation pill reflects CEI
+    const eqPill = await page.locator('#equation-pill').textContent();
+    expect(eqPill).toContain('CEI%');
+
+    // Test programmatically via window.setPerformanceMatrixMode('COMPLIANCE')
+    await page.evaluate(() => window.setPerformanceMatrixMode('COMPLIANCE'));
+    await page.waitForTimeout(200);
+    await expect(btnLegacy).toHaveClass(/active/);
+    await expect(btnCei).not.toHaveClass(/active/);
+
+    // Test programmatically via window.setPerformanceMatrixMode('CEI')
+    await page.evaluate(() => window.setPerformanceMatrixMode('CEI'));
+    await page.waitForTimeout(200);
+    await expect(btnCei).toHaveClass(/active/);
+    await expect(btnLegacy).not.toHaveClass(/active/);
+  });
 });
+

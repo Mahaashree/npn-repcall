@@ -3,7 +3,7 @@
  * Orchestrates modular components across data loading, charts, tables, filters, modals, and sandbox.
  */
 
-import { State, loadAllData } from './data-loader.js';
+import { State, loadAllData, setDatasetMode, processCustomDataset } from './data-loader.js';
 import { renderScatter } from './charts.js';
 import {
   renderKPIs,
@@ -16,13 +16,14 @@ import {
   bindTabs,
   bindExports,
 } from './tables.js';
-import { populateFilters, renderPerformanceMatrix, bindFilters, initScrollspy } from './filters.js';
+import { populateFilters, renderPerformanceMatrix, setPerformanceMatrixMode, bindFilters, initScrollspy } from './filters.js';
 import { bindModals, renderPipelineInspector, openModal, closeModal } from './modals.js';
 
-// Expose modal functions on window for inline HTML onclick attributes
+// Expose modal and matrix mode functions on window for inline HTML onclick attributes
 window.openRepModal = openRepModal;
 window.openModal = openModal;
 window.closeModal = closeModal;
+window.setPerformanceMatrixMode = setPerformanceMatrixMode;
 
 function renderSkeletons() {
   const kpiGrid = document.getElementById('kpi-grid');
@@ -86,19 +87,191 @@ function updateHealthText() {
     year: 'numeric',
   });
 
+  const modeLabel =
+    State.activeDatasetMode === 'custom'
+      ? 'Custom Ingested'
+      : State.activeDatasetMode === 'synthetic'
+        ? 'Synthetic'
+        : 'Hybrid CMS';
+
   if (healthEl) {
-    healthEl.textContent = `🟢 Pipeline Active • ${n} Synthetic Prescribers • ${r} Sales Reps • Updated ${dateFormatted}`;
+    healthEl.textContent = `🟢 Pipeline Active • ${n} ${modeLabel} Prescribers • ${r} Sales Reps • Updated ${dateFormatted}`;
   }
 
   const dateOption = document.getElementById('manifest-date-option');
   if (dateOption) {
-    dateOption.textContent = `Live Pipeline Run (${dateFormatted})`;
+    dateOption.textContent = `${modeLabel} Run (${dateFormatted})`;
   }
 
   const driversBadge = document.getElementById('program-drivers-badge');
   if (driversBadge) {
     driversBadge.textContent = monthYearFormatted;
   }
+}
+
+function refreshAllViews() {
+  renderPipelineInspector();
+  populateFilters();
+  renderKPIs();
+  renderProgramDrivers();
+  renderCoachingQueuePanel();
+  renderScatter();
+  renderPerformanceMatrix();
+  renderRepTab();
+  renderManagerTab();
+  renderPrescribersTab();
+  updateHealthText();
+}
+
+function updateDrawerStep(stepId, status, detailText) {
+  const stepEl = document.getElementById(`step-${stepId}`);
+  const statusEl = document.getElementById(`step-${stepId}-status`);
+  const detailEl = document.getElementById(`step-${stepId}-detail`);
+
+  if (stepEl) {
+    stepEl.classList.remove('pending', 'active', 'completed');
+    stepEl.classList.add(status);
+  }
+  if (statusEl) {
+    statusEl.textContent = status === 'completed' ? '✓ Complete' : status === 'active' ? 'In Progress…' : 'Pending';
+  }
+  if (detailEl && detailText) {
+    detailEl.textContent = detailText;
+  }
+}
+
+function bindDatasetModeToggle() {
+  const btnHybrid = document.getElementById('btn-mode-hybrid');
+  const btnSynth  = document.getElementById('btn-mode-synthetic');
+  const btnCustom = document.getElementById('btn-mode-custom');
+  const fileInput = document.getElementById('custom-file-input');
+  const drawer = document.getElementById('ingestion-drawer');
+  const drawerClose = document.getElementById('ingestion-drawer-close');
+  const progressFill = document.getElementById('ingestion-progress-fill');
+  const drawerTitle = document.getElementById('ingestion-drawer-status-title');
+  const spinner = document.getElementById('ingestion-spinner');
+  const filenameBadge = document.getElementById('ingestion-filename');
+
+  if (drawerClose && drawer) {
+    drawerClose.addEventListener('click', () => drawer.classList.remove('open'));
+  }
+
+  const handleModeChange = (mode) => {
+    if (mode === 'custom' && !State.customData) {
+      // Trigger file selector if custom data hasn't been uploaded yet
+      fileInput?.click();
+      return;
+    }
+
+    if (State.activeDatasetMode === mode) return;
+
+    // 1. COMPLETE STATE PURGE
+    State.quadrantFilter = null;
+    State.sortKey = null;
+    State.sortDir = 'asc';
+    State.repPage = 1;
+    State.presPage = 1;
+    State.coachingPage = 1;
+
+    // Destroy active chart instances to prevent canvas memory leaks
+    if (State.scatterChart) {
+      try { State.scatterChart.destroy(); } catch (_) {}
+      State.scatterChart = null;
+    }
+    if (State.importanceChart) {
+      try { State.importanceChart.destroy(); } catch (_) {}
+      State.importanceChart = null;
+    }
+    if (State.shapChart) {
+      try { State.shapChart.destroy(); } catch (_) {}
+      State.shapChart = null;
+    }
+
+    // Reset UI filter form inputs
+    const filterIds = [
+      'filter-territory', 'filter-rep', 'filter-specialty',
+      'filter-tier', 'filter-search'
+    ];
+    filterIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) el.value = '';
+    });
+
+    btnHybrid?.classList.toggle('active', mode === 'hybrid');
+    btnSynth?.classList.toggle('active', mode === 'synthetic');
+    btnCustom?.classList.toggle('active', mode === 'custom');
+
+    // 2. SET ACTIVE MODE & REASSIGN STATE
+    setDatasetMode(mode);
+
+    // 3. TOP-TO-BOTTOM DOM RE-RENDER
+    refreshAllViews();
+  };
+
+  btnHybrid?.addEventListener('click', () => handleModeChange('hybrid'));
+  btnSynth?.addEventListener('click', () => handleModeChange('synthetic'));
+  btnCustom?.addEventListener('click', () => handleModeChange('custom'));
+
+  fileInput?.addEventListener('change', async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    // Reset file input for future uploads
+    fileInput.value = '';
+
+    // Show non-blocking drawer in bottom-right corner
+    if (drawer) {
+      drawer.classList.add('open');
+    }
+    if (filenameBadge) {
+      filenameBadge.textContent = file.name;
+    }
+    if (drawerTitle) {
+      drawerTitle.textContent = 'Dynamic Dataset Ingestion';
+    }
+    if (spinner) {
+      spinner.classList.remove('done');
+    }
+
+    // Reset steps to pending
+    ['inspect', 'synthesize', 'features', 'ml'].forEach((s) => updateDrawerStep(s, 'pending'));
+    if (progressFill) progressFill.style.width = '5%';
+
+    try {
+      await processCustomDataset(file, file.name, (event) => {
+        if (progressFill && event.progress) {
+          progressFill.style.width = `${event.progress}%`;
+        }
+        if (event.step) {
+          updateDrawerStep(event.step, event.status, event.detail);
+        }
+      });
+
+      // Ingestion complete!
+      if (spinner) spinner.classList.add('done');
+      if (drawerTitle) drawerTitle.textContent = 'Ingestion Complete (Active)';
+      if (progressFill) progressFill.style.width = '100%';
+
+      if (btnCustom) {
+        btnCustom.textContent = '📁 Custom Dataset (Active)';
+        btnCustom.classList.add('active');
+        btnHybrid?.classList.remove('active');
+        btnSynth?.classList.remove('active');
+      }
+
+      setDatasetMode('custom');
+      refreshAllViews();
+
+      // Auto-minimize after 5 seconds
+      setTimeout(() => {
+        if (drawer) drawer.classList.remove('open');
+      }, 5000);
+    } catch (err) {
+      console.error('Custom ingestion error:', err);
+      if (drawerTitle) drawerTitle.textContent = 'Ingestion Failed';
+      alert(`Error during dataset ingestion: ${err.message}`);
+    }
+  });
 }
 
 async function init() {
@@ -122,6 +295,7 @@ async function init() {
     bindModals();
     bindFilters();
     bindExports();
+    bindDatasetModeToggle();
     initScrollspy();
   } catch (err) {
     console.error('Dashboard initialisation error:', err);

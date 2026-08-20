@@ -1,23 +1,3 @@
-#!/usr/bin/env python3
-"""
-generate_dataset.py
-===================
-Synthesize a pharmaceutical CRM + HCP prescriber dataset inspired by the
-FDA TIRF REMS / Insys Authorized Prescriptions public archive structure.
-
-Data Provenance:
-  STRUCTURE  → FDA TIRF REMS / Insys Authorized Rx Public Archive
-               (JHU OIDA / UCSF Industry Documents: 1_sort_dedup_igcase.csv)
-               Column schema: Prscrbr_NPI, Physician_Name, Specialty, City,
-               State, Brand_Name, Tot_Clms, Tot_30day_Fills, Tot_Drug_Cst.
-  CONTENT    → 100% Fully Synthetic. No real patient or physician data used.
-  CRM LAYER  → 100% Exogenous synthetic. Target_Calls assigned from territory
-               volume deciles and specialty capacity ratings only.
-               ZERO circular dependence on baseline Rx volume.
-
-Output: raw_crm_cms_dataset.parquet
-"""
-
 from __future__ import annotations
 import logging
 import pathlib
@@ -26,16 +6,13 @@ import time
 import numpy as np
 import pandas as pd
 
-# ── Paths ─────────────────────────────────────────────────────────────────────
 BASE_DIR = pathlib.Path(__file__).resolve().parent.parent.parent
 REP_MASTER_PATH = BASE_DIR / 'data' / 'rep_master.csv'
 OUT_PARQUET = BASE_DIR / 'raw_crm_cms_dataset.parquet'
 
-# ── Reproducibility ───────────────────────────────────────────────────────────
 SEED = 2024
 rng  = np.random.default_rng(SEED)
 
-# ── Logging ───────────────────────────────────────────────────────────────────
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s | %(levelname)-8s | %(message)s',
@@ -43,12 +20,8 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# DOMAIN CONSTANTS
-# ═══════════════════════════════════════════════════════════════════════════════
-N_HCP_INITIAL = 820  # before suppression filter; ~650 expected after Tot_Clms ≥ 11
+N_HCP_INITIAL = 820
 
-# Specialties weighted toward TIRF-context high-prescribers
 SPECIALTIES: list[str] = [
     'Pain Management', 'Oncology', 'Palliative Care', 'Neurology',
     'Anesthesiology', 'Internal Medicine', 'Family Practice',
@@ -56,11 +29,9 @@ SPECIALTIES: list[str] = [
 ]
 SPEC_PROBS: list[float] = [0.26, 0.18, 0.14, 0.10, 0.10, 0.09, 0.06, 0.04, 0.02, 0.01]
 
-# TIRF brand portfolio
 BRAND_NAMES: list[str] = ['Subsys', 'Abstral', 'Actiq', 'Fentora', 'Lazanda']
 BRAND_PROBS: list[float] = [0.35, 0.25, 0.18, 0.14, 0.08]
 
-# Geographic locations (city, state) — synthetic assignments
 LOCATIONS: list[tuple[str, str]] = [
     ('Los Angeles', 'CA'), ('Houston', 'TX'),  ('Miami',        'FL'),
     ('New York',    'NY'), ('Chicago',  'IL'),  ('Philadelphia', 'PA'),
@@ -71,23 +42,28 @@ LOCATIONS: list[tuple[str, str]] = [
     ('Austin',      'TX'), ('Jacksonville','FL'),
 ]
 
-# Sales force: 12 reps across 6 territories (2 reps per territory)
-REPS: list[str]        = [f'REP-{i:03d}' for i in range(101, 113)]
-TERRITORIES: list[str] = [f'TERR-{i:02d}' for i in range(1, 7)]
-REP_TO_TERR: dict[str, str] = {REPS[i]: TERRITORIES[i // 2] for i in range(12)}
+REPS_HYBRID: list[str] = [f'REP-H{i:03d}' for i in range(101, 389)]
+TERRITORIES_HYBRID: list[str] = [f'TERR-H{i:02d}' for i in range(1, 13)]
+REP_TO_TERR_HYBRID: dict[str, str] = {REPS_HYBRID[i]: TERRITORIES_HYBRID[i % len(TERRITORIES_HYBRID)] for i in range(len(REPS_HYBRID))}
 
-# ── Exogenous latent variables (NOT derived from Rx baseline) ─────────────────
-# Rep quality: domain experts' subjective rating — uncorrelated with Rx volume
-REP_QUALITY: dict[str, float] = {
-    rep: float(rng.beta(4.0, 2.0)) for rep in REPS
+REPS_SYNTH: list[str] = [f'REP-S{i:03d}' for i in range(501, 851)]
+TERRITORIES_SYNTH: list[str] = [f'TERR-S{i:02d}' for i in range(1, 15)]
+REP_TO_TERR_SYNTH: dict[str, str] = {REPS_SYNTH[i]: TERRITORIES_SYNTH[i % len(TERRITORIES_SYNTH)] for i in range(len(REPS_SYNTH))}
+
+_FIRST_HYBRID = ['Helen', 'Harold', 'Howard', 'Hannah', 'Henry', 'Holly', 'Heather', 'Harvey', 'Harrison', 'Hope', 'Hugh', 'Hilary', 'Hector', 'Hazel', 'Homer', 'Hayden', 'Hunter', 'Hilda', 'Holden', 'Hattie']
+_LAST_HYBRID = ['Vance', 'Finch', 'Sterling', 'Hayes', 'Monroe', 'Bishop', 'Sinclair', 'Conway', 'Mercer', 'Gallagher', 'Kensington', 'Thornton', 'Blackwood', 'Whitman', 'Carrington', 'Preston', 'Vanderbilt', 'Ellington', 'Barrington', 'Montgomery']
+REP_NAMES_HYBRID: dict[str, str] = {
+    rep: f"{_FIRST_HYBRID[i % len(_FIRST_HYBRID)]} {_LAST_HYBRID[(i // len(_FIRST_HYBRID)) % len(_LAST_HYBRID)]}"
+    for i, rep in enumerate(REPS_HYBRID)
 }
 
-# Territory volume decile: administrative assignment (6–10 scale)
-TERR_VOLUME: dict[str, int] = {
-    t: int(rng.integers(6, 11)) for t in TERRITORIES
+_FIRST_SYNTH = ['Samuel', 'Sophia', 'Sean', 'Sarah', 'Simon', 'Stella', 'Scott', 'Serena', 'Seth', 'Sadie', 'Silas', 'Sienna', 'Spencer', 'Selena', 'Stephen', 'Sasha', 'Stanley', 'Summer', 'Solomon', 'Sloan']
+_LAST_SYNTH = ['Brooks', 'Patel', 'Chen', 'Kapoor', 'Nakamura', "O'Connor", 'Novak', 'Dubois', 'Kowalski', 'Larsson', 'Rossi', 'Santos', 'Tanaka', 'Muller', 'Gomez', 'Vargas', 'Alvarez', 'Kim', 'Zhang', 'Nielsen']
+REP_NAMES_SYNTH: dict[str, str] = {
+    rep: f"{_FIRST_SYNTH[i % len(_FIRST_SYNTH)]} {_LAST_SYNTH[(i // len(_FIRST_SYNTH)) % len(_LAST_SYNTH)]}"
+    for i, rep in enumerate(REPS_SYNTH)
 }
 
-# Specialty → target-call capacity multiplier (pure domain knowledge table)
 SPEC_CAPACITY: dict[str, float] = {
     'Pain Management': 1.40, 'Oncology': 1.30, 'Palliative Care': 1.25,
     'Neurology':       1.10, 'Anesthesiology':  1.20,
@@ -95,10 +71,8 @@ SPEC_CAPACITY: dict[str, float] = {
     'Orthopedics':     0.95, 'Emergency Medicine': 0.70, 'Psychiatry': 0.80,
 }
 
-# Target call ranges (low/high) by HCP Tier
 TIER_TARGET_RANGE: dict[int, tuple[int, int]] = {1: (9, 14), 2: (5, 9), 3: (2, 5)}
 
-# ── Name pools (synthetic, no real identities) ────────────────────────────────
 _FIRST = [
     'James','John','Robert','Michael','William','David','Richard','Joseph',
     'Thomas','Charles','Mary','Patricia','Jennifer','Linda','Barbara','Elizabeth',
@@ -116,30 +90,19 @@ _LAST = [
 ]
 
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# HELPER FUNCTIONS
-# ═══════════════════════════════════════════════════════════════════════════════
-def make_npi(idx: int) -> str:
-    """Generate a plausible 10-digit synthetic NPI (1001xxxxxx)."""
-    return str(1_001_000_001 + idx)
+def make_npi(idx: int, prefix: int = 1_001_000_001) -> str:
+    return str(prefix + idx)
 
 
 def make_physician_name() -> str:
-    """Synthesize 'Dr. FirstName LastName' — no real identity."""
     first = rng.choice(_FIRST)
     last  = rng.choice(_LAST)
     return f'Dr. {first} {last}'
 
 
-def assign_tier(specialty: str, territory: str) -> int:
-    """
-    Assign HCP Tier 1/2/3 purely from:
-      - Territory volume decile (exogenous administrative score)
-      - Specialty capacity multiplier (domain knowledge table)
-    Crucially: zero dependence on baseline Rx volume (Tot_30day_Fills / Tot_Clms).
-    """
-    vol_score = TERR_VOLUME[territory]           # 6–10, administrative
-    spec_cap  = SPEC_CAPACITY[specialty]         # domain constant
+def assign_tier(specialty: str, territory: str, terr_volume: dict[str, int]) -> int:
+    vol_score = terr_volume.get(territory, 8)
+    spec_cap  = SPEC_CAPACITY[specialty]
     raw       = vol_score * spec_cap + float(rng.normal(0.0, 0.8))
     if raw >= 13.0:
         return 1
@@ -149,71 +112,77 @@ def assign_tier(specialty: str, territory: str) -> int:
         return 3
 
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# MAIN GENERATION
-# ═══════════════════════════════════════════════════════════════════════════════
-def generate() -> pd.DataFrame:
+def generate(mode: str = 'hybrid') -> pd.DataFrame:
     t0 = time.perf_counter()
-    log.info('Generating %d synthetic HCP records (seed=%d)…', N_HCP_INITIAL, SEED)
+    n_hcp = 820 if mode == 'hybrid' else 1350
+    reps_pool = REPS_HYBRID if mode == 'hybrid' else REPS_SYNTH
+    terr_map = REP_TO_TERR_HYBRID if mode == 'hybrid' else REP_TO_TERR_SYNTH
+    terr_list = TERRITORIES_HYBRID if mode == 'hybrid' else TERRITORIES_SYNTH
+    rep_names_map = REP_NAMES_HYBRID if mode == 'hybrid' else REP_NAMES_SYNTH
+    npi_start = 1_001_000_001 if mode == 'hybrid' else 2_001_000_001
 
-    # Assign reps with equal load (~68 HCPs per rep)
-    hcp_reps = np.tile(REPS, N_HCP_INITIAL // len(REPS) + 1)[:N_HCP_INITIAL]
+    rep_quality = {rep: float(rng.beta(4.0, 2.0)) for rep in reps_pool}
+    terr_volume = {t: int(rng.integers(6, 11)) for t in terr_list}
+
+    log.info('Generating %d synthetic HCP records [mode=%s, seed=%d]…', n_hcp, mode, SEED)
+
+    hcp_reps = np.tile(reps_pool, n_hcp // len(reps_pool) + 1)[:n_hcp]
     rng.shuffle(hcp_reps)
 
     rows: list[dict] = []
-    for idx in range(N_HCP_INITIAL):
+    for idx in range(n_hcp):
         rep       = str(hcp_reps[idx])
-        territory = REP_TO_TERR[rep]
+        rep_name  = rep_names_map.get(rep, rep)
+        territory = terr_map[rep]
         specialty = str(rng.choice(SPECIALTIES, p=SPEC_PROBS))
         brand     = str(rng.choice(BRAND_NAMES, p=BRAND_PROBS))
         city, st  = LOCATIONS[int(rng.integers(len(LOCATIONS)))]
 
-        # ── Baseline Rx: INDEPENDENT of CRM layer ────────────────────────────
-        # Negative binomial with mean≈18, σ≈6 — realistic claim distribution
-        # Some records will have Tot_Clms < 11 (will be filtered by small-cell rule)
         tot_clms        = int(rng.negative_binomial(n=15, p=0.45))
         tot_30day_fills = float(max(0.0, rng.gamma(shape=6.0, scale=2.5)))
         tot_drug_cst    = float(max(0.0, tot_30day_fills * float(rng.uniform(850.0, 2600.0))))
 
-        # ── CRM Detailing Layer: EXOGENOUS allocation ─────────────────────────
-        hcp_tier     = assign_tier(specialty, territory)
-        lo, hi       = TIER_TARGET_RANGE[hcp_tier]
-        target_calls = int(rng.integers(lo, hi + 1))
+        cms_decile   = int(np.clip(np.ceil((tot_30day_fills / 30.0) * 10.0), 1, 10))
+        spec_cap     = SPEC_CAPACITY[specialty]
 
-        # Rep visit compliance (beta-distributed, not driven by Rx volume)
-        comp_factor  = float(rng.beta(7.0, 3.0))       # peak ~0.70–0.90
+        if mode == 'synthetic':
+            hcp_tier = assign_tier(specialty, territory, terr_volume)
+            lo, hi   = TIER_TARGET_RANGE[hcp_tier]
+            target_calls = int(rng.integers(lo, hi + 1))
+        else:
+            lam          = max(2.0, cms_decile * 1.2 * spec_cap)
+            target_calls = int(np.clip(rng.poisson(lam), 2, 16))
+            hcp_tier     = 1 if cms_decile >= 8 else (2 if cms_decile >= 4 else 3)
+
+        comp_factor  = float(rng.beta(7.0, 3.0))
         actual_calls = max(0, int(round(target_calls * comp_factor)))
 
-        # Samples dropped per campaign period (bounded above by actual calls + 2)
         samples_dropped = int(rng.integers(0, max(2, actual_calls + 2)))
         samples_dropped = min(samples_dropped, actual_calls + 2)
 
-        # ── Causal Rx Lift Model ──────────────────────────────────────────────
-        # Rx_Lift_Pct = 0.5 + 2.4·RepQuality·ln(1+ActualCalls)
-        #             + 1.2·√SamplesDropped + N(0, 0.8)
-        # Bounded strictly [-3.0, +18.0]
-        rq      = REP_QUALITY[rep]
-        noise   = float(rng.normal(0.0, 0.8))
-        rx_lift = (
-            0.5
-            + 2.4 * rq * float(np.log1p(actual_calls))
-            + 1.2 * float(np.sqrt(samples_dropped))
-            + noise
-        )
-        rx_lift = float(np.clip(rx_lift, -3.0, 18.0))
+        rq        = rep_quality[rep]
+        ec50      = 4.0
+        emax      = 6.5 * rq * spec_cap
+        call_eff  = (emax * (actual_calls ** 1.5)) / (ec50 ** 1.5 + actual_calls ** 1.5) if actual_calls > 0 else 0.0
+        samp_eff  = 1.2 * float(np.sqrt(samples_dropped)) * spec_cap
+        noise     = float(rng.normal(0.0, 1.2))
 
-        post_fills = float(max(0.0, tot_30day_fills * (1.0 + rx_lift / 100.0)))
+        rx_lift   = float(np.clip(0.5 + call_eff + samp_eff + noise, -3.0, 18.0))
+        post_fills      = float(max(0.0, tot_30day_fills * (1.0 + rx_lift / 100.0)))
+        delta_log_fills = float(np.log1p(post_fills) - np.log1p(tot_30day_fills))
 
         rows.append({
-            'Prscrbr_NPI':         make_npi(idx),
+            'Prscrbr_NPI':         make_npi(idx, npi_start),
             'Physician_Name':      make_physician_name(),
             'Specialty':           specialty,
             'City':                city,
             'State':               st,
             'Brand_Name':          brand,
             'Sales_Rep':           rep,
+            'Sales_Rep_Name':      rep_name,
             'Territory':           territory,
             'HCP_Tier':            hcp_tier,
+            'CMS_Volume_Decile':   cms_decile,
             'Target_Calls':        target_calls,
             'Actual_Calls':        actual_calls,
             'Samples_Dropped':     samples_dropped,
@@ -221,34 +190,60 @@ def generate() -> pd.DataFrame:
             'Tot_30day_Fills':     round(tot_30day_fills, 4),
             'Tot_Drug_Cst':        round(tot_drug_cst, 2),
             'Rx_Lift_Pct':         round(rx_lift, 4),
+            'Delta_Log_Fills':     round(delta_log_fills, 6),
             'Post_Campaign_Fills': round(post_fills, 4),
+            'dataset_mode':        mode,
         })
 
     df = pd.DataFrame(rows)
     elapsed = time.perf_counter() - t0
 
-    log.info('Generated %d raw HCP records in %.4fs.', len(df), elapsed)
-    log.info('Column dtypes:\n%s', df.dtypes.to_string())
-    log.info(
-        'Rx_Lift_Pct summary:\n%s',
-        df['Rx_Lift_Pct'].describe().round(4).to_string(),
-    )
-    log.info(
-        'HCP_Tier distribution:\n%s',
-        df['HCP_Tier'].value_counts().sort_index().to_string(),
-    )
-    log.info(
-        'Records with Tot_Clms < 11 (will be suppressed): %d (%.1f%%)',
-        (df['Tot_Clms'] < 11).sum(),
-        (df['Tot_Clms'] < 11).mean() * 100,
-    )
+    log.info('Generated %d raw HCP records [%s] in %.4fs.', len(df), mode, elapsed)
     return df
 
 
 def main() -> None:
-    df  = generate()
-    df.to_parquet(OUT_PARQUET, index=False)
-    log.info('✅ Exported %s  (%d rows × %d cols)', OUT_PARQUET, len(df), len(df.columns))
+    df_hybrid = generate('hybrid')
+    df_synth  = generate('synthetic')
+
+    out_hybrid = BASE_DIR / 'raw_crm_cms_dataset_hybrid.parquet'
+    out_synth  = BASE_DIR / 'raw_crm_cms_dataset_synthetic.parquet'
+
+    df_hybrid.to_parquet(out_hybrid, index=False)
+    df_synth.to_parquet(out_synth, index=False)
+
+    df_hybrid.to_csv(BASE_DIR / 'raw_crm_cms_dataset_hybrid.csv', index=False)
+    df_synth.to_csv(BASE_DIR / 'raw_crm_cms_dataset_synthetic.csv', index=False)
+
+    crm_cols = ['Prscrbr_NPI', 'Physician_Name', 'Specialty', 'City', 'State', 'Sales_Rep', 'Sales_Rep_Name', 'Territory', 'HCP_Tier', 'Target_Calls', 'Actual_Calls', 'Samples_Dropped']
+    df_hybrid[crm_cols].to_csv(BASE_DIR / 'crm_call_activity.csv', index=False)
+
+    df_hybrid.to_parquet(OUT_PARQUET, index=False)
+    df_hybrid.to_csv(BASE_DIR / 'raw_crm_cms_dataset.csv', index=False)
+
+    # Master rep registry
+    rep_master_rows = []
+    for r in REPS_HYBRID:
+        rep_master_rows.append({
+            'rep_id': r,
+            'sales_rep_name': REP_NAMES_HYBRID[r],
+            'territory_id': REP_TO_TERR_HYBRID[r],
+            'is_active': True,
+            'hire_date': '2021-01-15',
+            'dataset_mode': 'hybrid',
+        })
+    for r in REPS_SYNTH:
+        rep_master_rows.append({
+            'rep_id': r,
+            'sales_rep_name': REP_NAMES_SYNTH[r],
+            'territory_id': REP_TO_TERR_SYNTH[r],
+            'is_active': True,
+            'hire_date': '2021-06-01',
+            'dataset_mode': 'synthetic',
+        })
+    pd.DataFrame(rep_master_rows).to_csv(REP_MASTER_PATH, index=False)
+
+    log.info('✅ Exported %s, %s, rep_master.csv and CSV versions.', out_hybrid, out_synth)
 
 
 if __name__ == '__main__':

@@ -1,66 +1,194 @@
 {
   "best_model_summary": {
-    "bootstrap_ci": "[0.4443, 0.6691]",
+    "bootstrap_ci": "[0.5220, 0.6979]",
     "model_label": "Random Forest Regressor",
-    "overfitting_gap": 0.2032,
-    "test_mae": 0.8071,
-    "test_r2": 0.5726,
-    "test_rmse": 1.0055
+    "overfitting_gap": 0.0487,
+    "test_mae": 1.413,
+    "test_r2": 0.6215,
+    "test_rmse": 1.7877
   },
-  "data_version": "50d04f9bb2d2c294",
-  "generated_at": "2026-08-17T00:00:00Z",
+  "data_version": "e84a63670999b57a",
+  "generated_at": "2026-08-20T05:25:53Z",
+  "hybrid": {
+    "best_model_summary": {
+      "bootstrap_ci": "[0.5220, 0.6979]",
+      "model_label": "Random Forest Regressor",
+      "overfitting_gap": 0.0487,
+      "test_mae": 1.413,
+      "test_r2": 0.6215,
+      "test_rmse": 1.7877
+    },
+    "tournament_table": [
+      {
+        "cv_mean_r2": 0.5556,
+        "cv_std_r2": 0.0804,
+        "in_sample_train_r2": 0.6702,
+        "model_family": "Ensemble",
+        "model_label": "Random Forest Regressor",
+        "overfitting_gap": 0.0487,
+        "overfitting_status": "Healthy generalisation",
+        "rank": 1,
+        "test_mae": 1.413,
+        "test_r2": 0.6215,
+        "test_rmse": 1.7877
+      },
+      {
+        "cv_mean_r2": 0.5284,
+        "cv_std_r2": 0.0874,
+        "in_sample_train_r2": 0.8045,
+        "model_family": "Gradient Boosting",
+        "model_label": "Gradient Boosting Regressor",
+        "overfitting_gap": 0.2099,
+        "overfitting_status": "Moderate overfit",
+        "rank": 2,
+        "test_mae": 1.4572,
+        "test_r2": 0.5946,
+        "test_rmse": 1.8501
+      },
+      {
+        "cv_mean_r2": 0.549,
+        "cv_std_r2": 0.0797,
+        "in_sample_train_r2": 0.5793,
+        "model_family": "Linear",
+        "model_label": "OLS Linear Regression",
+        "overfitting_gap": 0.0336,
+        "overfitting_status": "Healthy generalisation",
+        "rank": 3,
+        "test_mae": 1.5381,
+        "test_r2": 0.5457,
+        "test_rmse": 1.9587
+      },
+      {
+        "cv_mean_r2": 0.5494,
+        "cv_std_r2": 0.0788,
+        "in_sample_train_r2": 0.5793,
+        "model_family": "Linear",
+        "model_label": "Ridge Regression (L2, a=1.0)",
+        "overfitting_gap": 0.0345,
+        "overfitting_status": "Healthy generalisation",
+        "rank": 4,
+        "test_mae": 1.54,
+        "test_r2": 0.5447,
+        "test_rmse": 1.9607
+      }
+    ]
+  },
+  "synthetic": {
+    "best_model_summary": {
+      "bootstrap_ci": "[0.5069, 0.6727]",
+      "model_label": "Random Forest Regressor",
+      "overfitting_gap": 0.1029,
+      "test_mae": 1.3068,
+      "test_r2": 0.6044,
+      "test_rmse": 1.6376
+    },
+    "tournament_table": [
+      {
+        "cv_mean_r2": 0.6505,
+        "cv_std_r2": 0.0459,
+        "in_sample_train_r2": 0.7073,
+        "model_family": "Ensemble",
+        "model_label": "Random Forest Regressor",
+        "overfitting_gap": 0.1029,
+        "overfitting_status": "Healthy generalisation",
+        "rank": 1,
+        "test_mae": 1.3068,
+        "test_r2": 0.6044,
+        "test_rmse": 1.6376
+      },
+      {
+        "cv_mean_r2": 0.6405,
+        "cv_std_r2": 0.0345,
+        "in_sample_train_r2": 0.804,
+        "model_family": "Gradient Boosting",
+        "model_label": "Gradient Boosting Regressor",
+        "overfitting_gap": 0.2122,
+        "overfitting_status": "Moderate overfit",
+        "rank": 2,
+        "test_mae": 1.3348,
+        "test_r2": 0.5918,
+        "test_rmse": 1.6633
+      },
+      {
+        "cv_mean_r2": 0.6128,
+        "cv_std_r2": 0.031,
+        "in_sample_train_r2": 0.6333,
+        "model_family": "Linear",
+        "model_label": "OLS Linear Regression",
+        "overfitting_gap": 0.0583,
+        "overfitting_status": "Healthy generalisation",
+        "rank": 3,
+        "test_mae": 1.3354,
+        "test_r2": 0.5749,
+        "test_rmse": 1.6974
+      },
+      {
+        "cv_mean_r2": 0.6129,
+        "cv_std_r2": 0.0309,
+        "in_sample_train_r2": 0.6333,
+        "model_family": "Linear",
+        "model_label": "Ridge Regression (L2, a=1.0)",
+        "overfitting_gap": 0.0584,
+        "overfitting_status": "Healthy generalisation",
+        "rank": 4,
+        "test_mae": 1.3356,
+        "test_r2": 0.5748,
+        "test_rmse": 1.6976
+      }
+    ]
+  },
   "tournament_table": [
     {
-      "cv_mean_r2": 0.5647,
-      "cv_std_r2": 0.0436,
-      "in_sample_train_r2": 0.7758,
+      "cv_mean_r2": 0.5556,
+      "cv_std_r2": 0.0804,
+      "in_sample_train_r2": 0.6702,
       "model_family": "Ensemble",
       "model_label": "Random Forest Regressor",
-      "overfitting_gap": 0.2032,
-      "overfitting_status": "Moderate overfit",
-      "rank": 1,
-      "test_mae": 0.8071,
-      "test_r2": 0.5726,
-      "test_rmse": 1.0055
-    },
-    {
-      "cv_mean_r2": 0.5855,
-      "cv_std_r2": 0.0561,
-      "in_sample_train_r2": 0.6063,
-      "model_family": "Linear",
-      "model_label": "Ridge Regression (L2, a=1.0)",
-      "overfitting_gap": 0.0873,
+      "overfitting_gap": 0.0487,
       "overfitting_status": "Healthy generalisation",
-      "rank": 2,
-      "test_mae": 0.8537,
-      "test_r2": 0.519,
-      "test_rmse": 1.0667
+      "rank": 1,
+      "test_mae": 1.413,
+      "test_r2": 0.6215,
+      "test_rmse": 1.7877
     },
     {
-      "cv_mean_r2": 0.5855,
-      "cv_std_r2": 0.0563,
-      "in_sample_train_r2": 0.6063,
+      "cv_mean_r2": 0.5284,
+      "cv_std_r2": 0.0874,
+      "in_sample_train_r2": 0.8045,
+      "model_family": "Gradient Boosting",
+      "model_label": "Gradient Boosting Regressor",
+      "overfitting_gap": 0.2099,
+      "overfitting_status": "Moderate overfit",
+      "rank": 2,
+      "test_mae": 1.4572,
+      "test_r2": 0.5946,
+      "test_rmse": 1.8501
+    },
+    {
+      "cv_mean_r2": 0.549,
+      "cv_std_r2": 0.0797,
+      "in_sample_train_r2": 0.5793,
       "model_family": "Linear",
       "model_label": "OLS Linear Regression",
-      "overfitting_gap": 0.0877,
+      "overfitting_gap": 0.0336,
       "overfitting_status": "Healthy generalisation",
       "rank": 3,
-      "test_mae": 0.854,
-      "test_r2": 0.5186,
-      "test_rmse": 1.0671
+      "test_mae": 1.5381,
+      "test_r2": 0.5457,
+      "test_rmse": 1.9587
     },
     {
-      "cv_mean_r2": 0.4712,
-      "cv_std_r2": 0.0623,
-      "in_sample_train_r2": 0.9521,
-      "model_family": "Gradient Boosting",
-      "model_label": "XGBoost Regressor",
-      "overfitting_gap": 0.4938,
-      "overfitting_status": "Severe overfit",
+      "cv_mean_r2": 0.5494,
+      "cv_std_r2": 0.0788,
+      "in_sample_train_r2": 0.5793,
+      "model_family": "Linear",
+      "model_label": "Ridge Regression (L2, a=1.0)",
+      "overfitting_gap": 0.0345,
+      "overfitting_status": "Healthy generalisation",
       "rank": 4,
-      "test_mae": 0.9141,
-      "test_r2": 0.4583,
-      "test_rmse": 1.132
+      "test_mae": 1.54,
+      "test_r2": 0.5447,
+      "test_rmse": 1.9607
     }
   ]
 }

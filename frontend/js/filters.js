@@ -3,7 +3,7 @@
  * Debounced search inputs, dropdown populators, 2x2 performance matrix quadrant toggles.
  */
 
-import { State, normQuadrant } from './data-loader.js';
+import { State, normQuadrant, setMatrixMode } from './data-loader.js';
 import { renderScatter } from './charts.js';
 import { renderPrescribersTab, renderRepTab, renderManagerTab } from './tables.js';
 
@@ -101,60 +101,85 @@ export function renderPerformanceMatrix() {
   });
 
   const total = baseHcps.length || 1;
-  const quadMap = { 'Star Performers': 0, 'Efficiency Risk': 0, 'Unrealized Potential': 0, 'Needs Intervention': 0 };
+  const isCei = State.matrixMode === 'cei';
+  const quadMap = isCei
+    ? { 'Star Performers': 0, 'Efficient High-Performers': 0, 'Targeting Risk': 0, 'Needs Intervention': 0 }
+    : { 'Star Performers': 0, 'Efficiency Risk': 0, 'Unrealized Potential': 0, 'Needs Intervention': 0 };
 
   baseHcps.forEach((h) => {
-    const nq = normQuadrant(h._quadrant);
+    const nq = normQuadrant(h._quadrant, State.matrixMode);
     if (quadMap[nq] !== undefined) quadMap[nq]++;
   });
 
-  const cfg = {
-    'Star Performers': {
-      cls: 'q-stars',
-      icon: '⭐',
-      color: 'var(--green)',
-      action: 'Maintain & Reward • Model Best Practices',
-    },
-    'Efficiency Risk': {
-      cls: 'q-ineffective',
-      icon: '🟡',
-      color: 'var(--amber)',
-      action: 'Clinical Detail Coaching • Messaging Quality',
-    },
-    'Unrealized Potential': {
-      cls: 'q-underserved',
-      icon: '🔵',
-      color: 'var(--cyan)',
-      action: 'Expand Target Capacity • Increase Visit Frequency',
-    },
-    'Needs Intervention': {
-      cls: 'q-at-risk',
-      icon: '🔴',
-      color: 'var(--red)',
-      action: 'Performance Management • Plan Realignment',
-    },
-  };
+  const cfg = isCei
+    ? {
+        'Star Performers': {
+          cls: 'q-stars',
+          icon: '⭐',
+          action: 'High Execution & High Return • Model Best Practices',
+        },
+        'Efficient High-Performers': {
+          cls: 'q-underserved',
+          icon: '⚡',
+          action: 'High Responsiveness Despite Deficits • Scale Detailing Capacity',
+        },
+        'Targeting Risk': {
+          cls: 'q-ineffective',
+          icon: '🟡',
+          action: 'High Effort, Low Return • Reallocate Doctor Tiers',
+        },
+        'Needs Intervention': {
+          cls: 'q-at-risk',
+          icon: '🔴',
+          action: 'Shortfalls Across Calls & Samples • Performance Realignment',
+        },
+      }
+    : {
+        'Star Performers': {
+          cls: 'q-stars',
+          icon: '⭐',
+          action: 'Maintain & Reward • Model Best Practices',
+        },
+        'Efficiency Risk': {
+          cls: 'q-ineffective',
+          icon: '🟡',
+          action: 'Clinical Detail Coaching • Messaging Quality',
+        },
+        'Unrealized Potential': {
+          cls: 'q-underserved',
+          icon: '🔵',
+          action: 'Expand Target Capacity • Increase Visit Frequency',
+        },
+        'Needs Intervention': {
+          cls: 'q-at-risk',
+          icon: '🔴',
+          action: 'Performance Management • Plan Realignment',
+        },
+      };
 
   grid.innerHTML = '';
-  const order = ['Star Performers', 'Efficiency Risk', 'Unrealized Potential', 'Needs Intervention'];
+  const order = isCei
+    ? ['Star Performers', 'Efficient High-Performers', 'Targeting Risk', 'Needs Intervention']
+    : ['Star Performers', 'Efficiency Risk', 'Unrealized Potential', 'Needs Intervention'];
+
   order.forEach((q) => {
     const c = cfg[q];
-    const n = quadMap[q];
+    const n = quadMap[q] || 0;
     const pct = ((n / total) * 100).toFixed(1);
     const div = document.createElement('div');
-    const isActive = normQuadrant(State.quadrantFilter) === q;
+    const isActive = normQuadrant(State.quadrantFilter, State.matrixMode) === q;
     div.className = `quadrant-card ${c.cls}${isActive ? ' q-active' : ''}`;
     div.setAttribute('role', 'button');
     div.setAttribute('tabindex', '0');
     div.setAttribute('aria-pressed', isActive ? 'true' : 'false');
     div.setAttribute('aria-label', `${q} quadrant: ${n} HCPs (${pct}%)`);
     div.innerHTML = `
-      <span class="q-filter-hint" aria-hidden="true">${isActive ? 'Active filter (Click to reset)' : 'Click to filter'}</span>
+      <span class="q-filter-hint" aria-hidden="true">${isActive ? '✓ Active filter' : 'Click to filter'}</span>
       <div class="q-icon">${c.icon}</div>
-      <div class="q-name" style="color:${c.color}">${q}</div>
-      <div class="q-count" style="color:${c.color}">${n}</div>
+      <div class="q-name">${q}</div>
+      <div class="q-count">${n}</div>
       <div class="q-pct">${pct}% of visible HCPs</div>
-      <div class="q-action" style="color:${c.color}">${c.action}</div>`;
+      <div class="q-action">${c.action}</div>`;
     div.addEventListener('click', () => toggleQuadrantFilter(q));
     div.addEventListener('keydown', (e) => (e.key === 'Enter' || e.key === ' ') && toggleQuadrantFilter(q));
     grid.appendChild(div);
@@ -165,6 +190,30 @@ export function toggleQuadrantFilter(q) {
   State.quadrantFilter = State.quadrantFilter === q ? null : q;
   applyFilters();
 }
+
+export function setPerformanceMatrixMode(mode) {
+  const normMode = (mode || '').toUpperCase() === 'CEI' || (mode || '').toLowerCase() === 'cei' ? 'cei' : 'legacy';
+  setMatrixMode(normMode);
+
+  // Update all toggle button active classes
+  const legacyButtons = document.querySelectorAll('#btn-compliance-mode, #btn-matrix-legacy, [data-matrix-mode="legacy"], [data-mode="COMPLIANCE"]');
+  const ceiButtons = document.querySelectorAll('#btn-cei-mode, #btn-matrix-cei, [data-matrix-mode="cei"], [data-mode="CEI"]');
+
+  legacyButtons.forEach((btn) => btn.classList.toggle('active', normMode === 'legacy'));
+  ceiButtons.forEach((btn) => btn.classList.toggle('active', normMode === 'cei'));
+
+  const matrixSubtitle = document.getElementById('matrix-card-subtitle');
+  if (matrixSubtitle) {
+    matrixSubtitle.textContent = normMode === 'cei'
+      ? 'AI Composite Execution (CEI) × Rx Lift Quadrants (75% CEI Split)'
+      : 'Compliance × Rx Lift Quadrants (80% Compliance Split)';
+  }
+
+  applyFilters();
+  renderRepTab();
+}
+
+window.setPerformanceMatrixMode = setPerformanceMatrixMode;
 
 export function bindFilters() {
   ['filter-specialty', 'filter-territory', 'filter-rep', 'filter-tier'].forEach((id) => {
@@ -180,6 +229,19 @@ export function bindFilters() {
     if (s) s.value = '';
     State.quadrantFilter = null;
     applyFilters();
+  });
+
+  // Explicit click listeners for Performance Matrix dual-mode switcher
+  document.getElementById('btn-cei-mode')?.addEventListener('click', () => setPerformanceMatrixMode('CEI'));
+  document.getElementById('btn-compliance-mode')?.addEventListener('click', () => setPerformanceMatrixMode('COMPLIANCE'));
+  document.getElementById('btn-matrix-cei')?.addEventListener('click', () => setPerformanceMatrixMode('CEI'));
+  document.getElementById('btn-matrix-legacy')?.addEventListener('click', () => setPerformanceMatrixMode('COMPLIANCE'));
+
+  document.querySelectorAll('.matrix-toggle-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetMode = btn.dataset.mode || btn.dataset.matrixMode || (btn.id.includes('cei') ? 'CEI' : 'COMPLIANCE');
+      setPerformanceMatrixMode(targetMode);
+    });
   });
 
   document.getElementById('rep-page-size')?.addEventListener('change', (e) => {

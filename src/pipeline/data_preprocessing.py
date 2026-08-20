@@ -1,17 +1,3 @@
-#!/usr/bin/env python3
-"""
-data_preprocessing.py
-=====================
-Ingest raw_crm_cms_dataset.parquet, apply CMS-style small-cell suppression
-and data validity filters, engineer features, z-score scale continuous
-regressors, and export processed outputs for the analytics and ML stages.
-
-Outputs:
-  processed_data.parquet   — full processed HCP records
-  processed_data.json      — same, for dashboard consumption
-  pipeline_telemetry.json  — execution telemetry for pipeline inspector
-"""
-
 from __future__ import annotations
 import json
 import logging
@@ -22,7 +8,6 @@ import numpy as np
 import pandas as pd
 from scipy.stats import zscore
 
-# ── Logging ───────────────────────────────────────────────────────────────────
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s | %(levelname)-8s | %(message)s',
@@ -30,34 +15,30 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-# ── Paths ─────────────────────────────────────────────────────────────────────
 BASE_DIR    = pathlib.Path(__file__).resolve().parent.parent.parent
 INPUT_PATH  = BASE_DIR / 'raw_crm_cms_dataset.parquet'
 OUT_PARQUET = BASE_DIR / 'processed_data.parquet'
 OUT_JSON    = BASE_DIR / 'processed_data.json'
 OUT_TEL     = BASE_DIR / 'pipeline_telemetry.json'
 
-# ── Columns to z-score scale (preserving _raw counterparts) ──────────────────
-# NOTE: Rx_Lift_Pct is the ML target — intentionally NOT scaled here.
 SCALE_COLS: list[str] = [
     'Compliance_Pct',
     'Monthly_Call_Frequency',
     'Sample_Velocity',
     'Log_Baseline_Fills',
+    'Diminishing_Call_Log',
+    'Tier_Compliance_Interaction',
+    'Sample_Call_Ratio',
     'Tot_30day_Fills',
     'Tot_Drug_Cst',
     'Tot_Clms',
 ]
 
-# ── Text imputation defaults ──────────────────────────────────────────────────
 SPEC_DEFAULT  = 'General Practice'
 CITY_DEFAULT  = 'Unknown'
 STATE_DEFAULT = 'Unknown'
 
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# PIPELINE STAGES
-# ═══════════════════════════════════════════════════════════════════════════════
 def load(path: pathlib.Path) -> pd.DataFrame:
     log.info('[Stage 1] Loading %s …', path)
     df = pd.read_parquet(path)
@@ -66,11 +47,6 @@ def load(path: pathlib.Path) -> pd.DataFrame:
 
 
 def privacy_filter(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Stage 2 — Small-Cell Suppression (mirrors CMS public dataset disclosure rules).
-    Rows with Tot_Clms < 11 represent prescribers with too few claims to be
-    reported publicly, protecting against individual re-identification.
-    """
     log.info('[Stage 2] Applying CMS small-cell suppression (Tot_Clms >= 11)…')
     before = len(df)
     df = df[df['Tot_Clms'] >= 11].copy()
@@ -79,7 +55,6 @@ def privacy_filter(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def validity_filter(df: pd.DataFrame) -> pd.DataFrame:
-    """Stage 3 — Data validity: remove records with zero fills or zero drug cost."""
     log.info('[Stage 3] Applying data validity filters…')
     before = len(df)
     df = df[(df['Tot_30day_Fills'] >= 1.0) & (df['Tot_Drug_Cst'] > 0.0)].copy()
@@ -88,7 +63,6 @@ def validity_filter(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def impute_text(df: pd.DataFrame) -> pd.DataFrame:
-    """Stage 4 — Impute missing text columns with domain defaults."""
     log.info('[Stage 4] Imputing missing text fields…')
     nulls_before = df[['Specialty', 'City', 'State']].isnull().sum().sum()
     df['Specialty'] = df['Specialty'].fillna(SPEC_DEFAULT)
@@ -100,19 +74,18 @@ def impute_text(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Stage 5 — Feature engineering.
-
-    Compliance_Pct         = Actual_Calls / max(1, Target_Calls) × 100
-    Monthly_Call_Frequency = Actual_Calls / 3.0
-    Sample_Velocity        = Samples_Dropped / max(1, Actual_Calls)
-    Log_Baseline_Fills     = ln(1 + Tot_30day_Fills)
-    """
-    log.info('[Stage 5] Engineering features…')
-    df['Compliance_Pct']        = df['Actual_Calls'] / df['Target_Calls'].clip(lower=1) * 100.0
-    df['Monthly_Call_Frequency']= df['Actual_Calls'] / 3.0
-    df['Sample_Velocity']       = df['Samples_Dropped'] / df['Actual_Calls'].clip(lower=1)
-    df['Log_Baseline_Fills']    = np.log1p(df['Tot_30day_Fills'])
+    log.info('[Stage 5] Engineering domain features for Hybrid Approach 2…')
+    df['CMS_Volume_Decile']            = pd.qcut(df['Tot_30day_Fills'], q=10, labels=False, duplicates='drop').astype(float) + 1.0
+    df['Compliance_Pct']               = df['Actual_Calls'] / df['Target_Calls'].clip(lower=1) * 100.0
+    df['Monthly_Call_Frequency']       = df['Actual_Calls'] / 3.0
+    df['Sample_Velocity']              = df['Samples_Dropped'] / df['Actual_Calls'].clip(lower=1)
+    df['Log_Baseline_Fills']           = np.log1p(df['Tot_30day_Fills'])
+    df['Diminishing_Call_Log']        = np.log1p(df['Actual_Calls'])
+    df['Tier_Compliance_Interaction'] = df['Compliance_Pct'] * df['CMS_Volume_Decile']
+    df['Sample_Call_Ratio']           = df['Samples_Dropped'] / df['Actual_Calls'].clip(lower=1)
+    spec_means                         = df.groupby('Specialty')['Tot_30day_Fills'].transform('mean').clip(lower=1.0)
+    df['Baseline_Volume_Saturation']  = df['Tot_30day_Fills'] / spec_means
+    df['Delta_Log_Fills']             = np.log1p(df['Post_Campaign_Fills']) - np.log1p(df['Tot_30day_Fills'])
     log.info('  Compliance_Pct  mean=%.2f  std=%.2f',
              df['Compliance_Pct'].mean(), df['Compliance_Pct'].std())
     log.info('  Rx_Lift_Pct     mean=%.4f  std=%.4f  min=%.4f  max=%.4f',
@@ -122,11 +95,6 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def scale_features(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Stage 6 — Z-score standardisation of continuous regressors.
-    Raw values are preserved in `<col>_raw` columns.
-    Rx_Lift_Pct (the ML target) is intentionally NOT scaled.
-    """
     log.info('[Stage 6] Z-score scaling %d continuous columns…', len(SCALE_COLS))
     for col in SCALE_COLS:
         if col not in df.columns:
@@ -141,7 +109,6 @@ def scale_features(df: pd.DataFrame) -> pd.DataFrame:
             df[col] = 0.0
         log.info('  %-26s  μ_raw=%.4f  σ_raw=%.4f', col, mu, sig)
 
-    # Enforce numeric dtypes
     for col in SCALE_COLS:
         df[col]             = pd.to_numeric(df[col], errors='coerce').astype('float64')
         raw_col = f'{col}_raw'
@@ -156,38 +123,10 @@ def scale_features(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def export_outputs(df: pd.DataFrame, telemetry: dict) -> None:
-    """Stage 7 — Export processed_data.parquet, .json, and pipeline_telemetry.json."""
-    log.info('[Stage 7] Exporting outputs…')
-
-    # Parquet
-    df.to_parquet(OUT_PARQUET, index=False)
-    log.info('  ✅ %s  (%d rows × %d cols)', OUT_PARQUET, len(df), len(df.columns))
-
-    # JSON — convert numpy types for JSON serialiser
-    records = df.to_dict(orient='records')
-    for rec in records:
-        for k, v in rec.items():
-            if isinstance(v, (np.integer,)):    rec[k] = int(v)
-            elif isinstance(v, (np.floating,)): rec[k] = float(v)
-            elif isinstance(v, float) and (np.isnan(v) or np.isinf(v)): rec[k] = None
-    with open(OUT_JSON, 'w', encoding='utf-8') as f:
-        json.dump(records, f, ensure_ascii=False, separators=(',', ':'))
-    log.info('  ✅ %s  (%.1f KB)', OUT_JSON, OUT_JSON.stat().st_size / 1024)
-
-    # Telemetry
-    with open(OUT_TEL, 'w', encoding='utf-8') as f:
-        json.dump(telemetry, f, indent=2)
-    log.info('  ✅ %s', OUT_TEL)
-
-
-# ═══════════════════════════════════════════════════════════════════════════════
-# MAIN
-# ═══════════════════════════════════════════════════════════════════════════════
-def main() -> None:
+def process_file(in_path: pathlib.Path, out_parquet: pathlib.Path, out_json: pathlib.Path, out_tel: pathlib.Path):
     t_global = time.perf_counter()
 
-    df = load(INPUT_PATH)
+    df = load(in_path)
     initial_rows = len(df)
 
     df = privacy_filter(df)
@@ -212,14 +151,47 @@ def main() -> None:
         'execution_time_sec':  elapsed,
         'scale_cols':          SCALE_COLS,
         'feature_cols':        ['Compliance_Pct', 'Monthly_Call_Frequency',
-                                'Sample_Velocity', 'Log_Baseline_Fills'],
+                                'Sample_Velocity', 'Log_Baseline_Fills', 'Diminishing_Call_Log', 'Tier_Compliance_Interaction'],
         'target_col':          'Rx_Lift_Pct',
     }
 
-    export_outputs(df, telemetry)
+    df.to_parquet(out_parquet, index=False)
+    df.to_csv(out_parquet.with_suffix('.csv'), index=False)
 
-    log.info('Pipeline completed in %.4fs — %d HCP records ready.', elapsed, retained_rows)
-    log.info('Final column set: %s', list(df.columns))
+    records = df.to_dict(orient='records')
+    for rec in records:
+        for k, v in rec.items():
+            if isinstance(v, (np.integer,)):    rec[k] = int(v)
+            elif isinstance(v, (np.floating,)): rec[k] = float(v)
+            elif isinstance(v, float) and (np.isnan(v) or np.isinf(v)): rec[k] = None
+    with open(out_json, 'w', encoding='utf-8') as f:
+        json.dump(records, f, ensure_ascii=False, separators=(',', ':'))
+
+    with open(out_tel, 'w', encoding='utf-8') as f:
+        json.dump(telemetry, f, indent=2)
+
+
+def main() -> None:
+    in_hybrid = BASE_DIR / 'raw_crm_cms_dataset_hybrid.parquet'
+    in_synth  = BASE_DIR / 'raw_crm_cms_dataset_synthetic.parquet'
+
+    out_hybrid_pq   = BASE_DIR / 'processed_data_hybrid.parquet'
+    out_hybrid_json = BASE_DIR / 'processed_data_hybrid.json'
+    out_hybrid_tel  = BASE_DIR / 'pipeline_telemetry_hybrid.json'
+
+    out_synth_pq   = BASE_DIR / 'processed_data_synthetic.parquet'
+    out_synth_json = BASE_DIR / 'processed_data_synthetic.json'
+    out_synth_tel  = BASE_DIR / 'pipeline_telemetry_synthetic.json'
+
+    if not in_hybrid.exists():
+        in_hybrid = INPUT_PATH
+    if not in_synth.exists():
+        in_synth = INPUT_PATH
+
+    process_file(in_hybrid, out_hybrid_pq, out_hybrid_json, out_hybrid_tel)
+    process_file(in_synth, out_synth_pq, out_synth_json, out_synth_tel)
+
+    log.info('Pipeline completed processing for hybrid and synthetic modes.')
 
 
 if __name__ == '__main__':

@@ -35,7 +35,7 @@ An enterprise-grade, data-driven pharma analytics platform for evaluating **Sale
 
 ## 📊 2. Dataset Specifications
 
-The platform processes synthetic datasets structured after FDA TIRF REMS prescribing archives and CMS Open Payments disclosures. **Zero real patient or physician data is used.**
+The platform processes hybrid datasets structured directly after the official [CMS Medicare Part D Prescribers by Provider and Drug Dataset](https://data.cms.gov/provider-summary-by-type-of-service/medicare-part-d-prescribers/medicare-part-d-prescribers-by-provider-and-drug/data) combined with exogenous synthetic CRM call detailing logs. **Zero real patient or physician private data is used.**
 
 ### A. Master Source Datasets (`/data/`)
 

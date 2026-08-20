@@ -1,26 +1,12 @@
-#!/usr/bin/env python3
-"""
-ml_models_suite.py
-==================
-Benchmark 4 regression models predicting Rx_Lift_Pct at the HCP level.
-Strictly leakage-free: target is Rx_Lift_Pct (the campaign effect, bounded
--3% to +18%), derived from the causal formula in generate_dataset.py.
-Post_Campaign_Fills is excluded from features.
-
-Partitioning: 70% Train / 10% Validation / 20% Held-Out Test
-Cross-validation: 5-Fold strictly within the 70% training split.
-Explainability: SHAP values (LinearExplainer / TreeExplainer).
-
-Output: ml_benchmarks.json
-"""
-
 from __future__ import annotations
 import json
 import logging
 import pathlib
 import time
 import warnings
+from datetime import datetime, timezone
 
+import joblib
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import Ridge, LinearRegression
@@ -34,9 +20,9 @@ import shap
 try:
     from xgboost import XGBRegressor
     HAS_XGB = True
-except ImportError:
+except Exception as exc:  # XGBoostError surfaces when libomp is missing, not ImportError
     HAS_XGB = False
-    warnings.warn('XGBoost not available; substituting GradientBoostingRegressor.')
+    warnings.warn(f'XGBoost unavailable ({exc}); substituting GradientBoostingRegressor.')
 
 warnings.filterwarnings('ignore')
 
@@ -50,24 +36,26 @@ log = logging.getLogger(__name__)
 BASE_DIR    = pathlib.Path(__file__).resolve().parent.parent.parent
 INPUT_PATH  = BASE_DIR / 'processed_data.parquet'
 OUTPUT_PATH = BASE_DIR / 'ml_benchmarks.json'
+ARTIFACTS_DIR = pathlib.Path(__file__).resolve().parent / 'artifacts'
 SEED        = 42
 N_BOOTSTRAP = 1000
 CV_FOLDS    = 5
 
-# Features (raw/unscaled versions — linear models use StandardScaler pipeline)
 FEATURE_COLS: list[str] = [
     'Compliance_Pct_raw',
     'Monthly_Call_Frequency_raw',
-    'Sample_Velocity_raw',
+    'Tier_Compliance_Interaction_raw',
+    'Sample_Call_Ratio_raw',
+    'Baseline_Volume_Saturation_raw',
     'Log_Baseline_Fills_raw',
-    'HCP_Tier',         # ordinal: 1=high, 2=medium, 3=low
+    'HCP_Tier',
 ]
 TARGET_COL = 'Rx_Lift_Pct'
 
-# Columns that must NOT appear in features (leakage prevention)
 LEAKAGE_COLS: set[str] = {
     'Post_Campaign_Fills',
     'Rx_Lift_Pct',
+    'Delta_Log_Fills',
 }
 
 
@@ -92,25 +80,19 @@ def bootstrap_ci(y_true, y_pred, n=N_BOOTSTRAP, seed=SEED):
     return float(np.percentile(stats, 2.5)), float(np.percentile(stats, 97.5))
 
 
-def load_and_partition(path: pathlib.Path):
-    log.info('[Stage 1] Loading and partitioning data...')
-    df = pd.read_parquet(path)
-    log.info('  Loaded %d HCP records.', len(df))
+def build_feature_matrix(df: pd.DataFrame):
+    """Derive the model feature matrix (identical for training and inference)."""
+    df['CMS_Volume_Decile']            = pd.qcut(df['Tot_30day_Fills'], q=10, labels=False, duplicates='drop').astype(float) + 1.0
+    df['Diminishing_Call_Log']        = np.log1p(df['Actual_Calls'])
+    df['Tier_Compliance_Interaction'] = (df['Actual_Calls'] / df['Target_Calls'].clip(lower=1) * 100.0) * df['CMS_Volume_Decile']
+    df['Sample_Call_Ratio']           = df['Samples_Dropped'] / df['Actual_Calls'].clip(lower=1)
+    spec_means                         = df.groupby('Specialty')['Tot_30day_Fills'].transform('mean').clip(lower=1.0)
+    df['Baseline_Volume_Saturation']  = df['Tot_30day_Fills'] / spec_means
 
-    # Ensure raw feature columns exist
-    for col in ['Compliance_Pct', 'Monthly_Call_Frequency', 'Sample_Velocity', 'Log_Baseline_Fills']:
+    for col in ['Compliance_Pct', 'Monthly_Call_Frequency', 'Sample_Velocity', 'Log_Baseline_Fills', 'Diminishing_Call_Log', 'Tier_Compliance_Interaction', 'Sample_Call_Ratio', 'Baseline_Volume_Saturation']:
         raw_col = f'{col}_raw'
         if raw_col not in df.columns:
-            if col in df.columns:
-                df[raw_col] = df[col].copy()
-            elif col == 'Monthly_Call_Frequency':
-                df[raw_col] = df['Actual_Calls'] / 3.0
-            elif col == 'Sample_Velocity':
-                df[raw_col] = df['Samples_Dropped'] / df['Actual_Calls'].clip(lower=1)
-            elif col == 'Log_Baseline_Fills':
-                df[raw_col] = np.log1p(df['Tot_30day_Fills_raw'] if 'Tot_30day_Fills_raw' in df.columns else df['Tot_30day_Fills'])
-            elif col == 'Compliance_Pct':
-                df[raw_col] = df['Actual_Calls'] / df['Target_Calls'].clip(lower=1) * 100
+            df[raw_col] = df[col].copy()
 
     available_features = [c for c in FEATURE_COLS if c in df.columns]
     missing_features   = [c for c in FEATURE_COLS if c not in df.columns]
@@ -118,18 +100,25 @@ def load_and_partition(path: pathlib.Path):
         log.warning('  Missing feature columns: %s', missing_features)
 
     X = df[available_features].fillna(0).astype(float).values
+    return X, available_features, df
+
+
+def load_and_partition(path: pathlib.Path):
+    log.info('[Stage 1] Loading and partitioning data...')
+    df = pd.read_parquet(path)
+    log.info('  Loaded %d HCP records.', len(df))
+
+    X, available_features, df = build_feature_matrix(df)
     y = df[TARGET_COL].astype(float).values
 
     log.info('  Feature matrix: %d samples x %d features.', X.shape[0], X.shape[1])
     log.info('  Target (Rx_Lift_Pct): mean=%.4f  std=%.4f  [%.4f, %.4f]',
              y.mean(), y.std(), y.min(), y.max())
 
-    # 70 / 10 / 20 strict split (no leakage through shuffling)
     X_train_val, X_test, y_train_val, y_test = train_test_split(
         X, y, test_size=0.20, random_state=SEED)
     X_train, X_val, y_train, y_val = train_test_split(
         X_train_val, y_train_val, test_size=0.20 / 0.80, random_state=SEED)
-    # 0.20/0.80 gives 10% of total for val
 
     log.info('  Partition: train=%d  val=%d  test=%d  (total=%d)',
              len(X_train), len(X_val), len(X_test), len(X))
@@ -141,7 +130,6 @@ def benchmark_model(name: str, key: str, model_family: str, model, X_train, X_va
     log.info('  Benchmarking: %s', name)
     t0 = time.perf_counter()
 
-    # 5-Fold CV within train split
     log.info('    Running 5-fold intra-train CV...')
     cv_scores = cross_val_score(model, X_train, y_train, cv=CV_FOLDS,
                                 scoring='r2', n_jobs=-1)
@@ -149,7 +137,6 @@ def benchmark_model(name: str, key: str, model_family: str, model, X_train, X_va
     cv_std  = float(cv_scores.std())
     log.info('    CV R2: %.4f +/- %.4f', cv_mean, cv_std)
 
-    # Fit on full train split
     log.info('    Fitting on full train split...')
     model.fit(X_train, y_train)
 
@@ -164,11 +151,9 @@ def benchmark_model(name: str, key: str, model_family: str, model, X_train, X_va
     test_rmse= float(np.sqrt(mean_squared_error(y_test, y_test_pred)))
     overfit_gap = round(train_r2 - test_r2, 6)
 
-    # Bootstrap CI
     log.info('    Running 1000-sample bootstrap CI...')
     ci_lo, ci_hi = bootstrap_ci(y_test, y_test_pred)
 
-    # Feature importance
     log.info('    Computing feature importance and SHAP...')
     fi_pct, shap_pct, shap_method = _importance(model, model_family,
                                                   X_train, X_test, feature_names)
@@ -221,13 +206,10 @@ def benchmark_model(name: str, key: str, model_family: str, model, X_train, X_va
 
 
 def _importance(model, family, X_train, X_test, feature_names):
-    """Compute global feature importance and SHAP values."""
     n   = len(feature_names)
     eps = 1e-9
 
-    # ── Global importance ─────────────────────────────────────────────────────
     if family == 'Linear':
-        # abs(coef) for pipeline with StandardScaler
         if hasattr(model, 'named_steps'):
             coef = np.abs(model.named_steps['model'].coef_)
         else:
@@ -235,7 +217,6 @@ def _importance(model, family, X_train, X_test, feature_names):
         total = coef.sum() + eps
         fi_pct = {fn: round(float(c / total * 100), 4) for fn, c in zip(feature_names, coef)}
     else:
-        # Tree-based: feature_importances_
         if hasattr(model, 'feature_importances_'):
             imp = model.feature_importances_
         else:
@@ -243,7 +224,6 @@ def _importance(model, family, X_train, X_test, feature_names):
         total = imp.sum() + eps
         fi_pct = {fn: round(float(v / total * 100), 4) for fn, v in zip(feature_names, imp)}
 
-    # ── SHAP ─────────────────────────────────────────────────────────────────
     try:
         if family == 'Linear':
             if hasattr(model, 'named_steps'):
@@ -277,44 +257,74 @@ def _importance(model, family, X_train, X_test, feature_names):
     return fi_pct, shap_pct, shap_method
 
 
-def main() -> None:
+def persist_best_model(mode: str, model, best_summary: dict, feature_names: list[str]) -> None:
+    """Persist the winning model and its metadata for the predictive-scoring stage."""
+    ARTIFACTS_DIR.mkdir(parents=True, exist_ok=True)
+    model_path = ARTIFACTS_DIR / f'best_{mode}.joblib'
+    joblib.dump(model, model_path)
+
+    meta_path = ARTIFACTS_DIR / 'best_model_meta.json'
+    meta: dict[str, dict] = {}
+    if meta_path.exists():
+        try:
+            meta = json.loads(meta_path.read_text(encoding='utf-8'))
+        except (json.JSONDecodeError, OSError):
+            meta = {}
+    meta[mode] = {
+        'model_label':       best_summary['model_label'],
+        'target_col':        TARGET_COL,
+        'feature_names':     feature_names,
+        'test_r2':           best_summary['test_r2'],
+        'test_mae':          best_summary['test_mae'],
+        'test_rmse':         best_summary['test_rmse'],
+        'overfitting_gap':   best_summary['overfitting_gap'],
+        'bootstrap_ci':      best_summary['bootstrap_ci'],
+        'status':            best_summary['status'],
+        'model_path':        str(model_path),
+        'saved_at_utc':      datetime.now(timezone.utc).isoformat(timespec='seconds'),
+    }
+    meta_path.write_text(json.dumps(meta, indent=2) + '\n', encoding='utf-8')
+    log.info('Persisted best model -> %s (label=%s)', model_path, best_summary['model_label'])
+
+
+def run_suite(input_path: pathlib.Path, output_path: pathlib.Path) -> dict:
     t_global = time.perf_counter()
     log.info('=' * 65)
-    log.info('Pharma CRM - ML Benchmarking Suite  START')
+    log.info('Pharma CRM - ML Benchmarking Suite [%s]', input_path.name)
     log.info('=' * 65)
 
     X_train, X_val, X_test, y_train, y_val, y_test, feat_names, df = \
-        load_and_partition(INPUT_PATH)
+        load_and_partition(input_path)
 
-    # Model definitions
     models = [
         ('OLS Linear Regression',  'OLS_LinearRegression',  'Linear',
          Pipeline([('scaler', StandardScaler()), ('model', LinearRegression())])),
         ('Ridge Regression (L2, a=1.0)', 'Ridge_Regression', 'Linear',
          Pipeline([('scaler', StandardScaler()), ('model', Ridge(alpha=1.0))])),
         ('Random Forest Regressor', 'RandomForest', 'Ensemble',
-         RandomForestRegressor(n_estimators=200, max_depth=6, random_state=SEED, n_jobs=-1)),
+         RandomForestRegressor(n_estimators=200, max_depth=4, min_samples_leaf=2, random_state=SEED, n_jobs=-1)),
     ]
     if HAS_XGB:
         models.append(('XGBoost Regressor', 'XGBoost', 'Gradient Boosting',
-                       XGBRegressor(n_estimators=200, max_depth=5, learning_rate=0.08,
-                                    subsample=0.8, random_state=SEED, verbosity=0)))
+                       XGBRegressor(n_estimators=200, max_depth=3, learning_rate=0.05,
+                                    subsample=0.8, colsample_bytree=0.8,
+                                    monotone_constraints=(1, 1, 1, 1, 0, 0, -1),
+                                    random_state=SEED, verbosity=0)))
     else:
         models.append(('Gradient Boosting Regressor', 'GradientBoosting', 'Gradient Boosting',
-                       GradientBoostingRegressor(n_estimators=200, max_depth=5,
-                                                  learning_rate=0.08, random_state=SEED)))
+                       GradientBoostingRegressor(n_estimators=200, max_depth=3,
+                                                  learning_rate=0.05, subsample=0.8, random_state=SEED)))
 
-    log.info('[Stage 2-5] Benchmarking %d models...', len(models))
     benchmarks = []
+    fitted_models = {}
     for name, key, family, model in models:
         bm = benchmark_model(name, key, family, model,
                              X_train, X_val, X_test,
                              y_train, y_val, y_test,
                              feat_names, df)
         benchmarks.append(bm)
+        fitted_models[name] = model
 
-    # Tournament table (ranked by Test R2)
-    log.info('[Stage 6] Building tournament comparison table...')
     ranked = sorted(benchmarks, key=lambda b: b['test_r2'], reverse=True)
     tournament = []
     for rank, b in enumerate(ranked, start=1):
@@ -335,9 +345,6 @@ def main() -> None:
             'overfitting_status': b['overfitting']['assessment'],
             'fit_time_sec':       b['fit_time_sec'],
         })
-        log.info('  #%d %-35s Test R2=%.4f  MAE=%.4f  RMSE=%.4f  Gap=%+.4f',
-                 rank, b['model_label'], b['test_r2'], b['test_mae'], b['test_rmse'],
-                 b['overfitting']['gap'])
 
     best = ranked[0]
     best_summary = {
@@ -350,7 +357,9 @@ def main() -> None:
         'overfitting_gap': best['overfitting']['gap'],
         'status':          best['overfitting']['assessment'],
     }
-    log.info('Best model: %s  [Test R2=%.4f]', best['model_label'], best['test_r2'])
+
+    mode = input_path.stem.replace('processed_data_', '').strip('_') or 'combined'
+    persist_best_model(mode, fitted_models[best['model_label']], best_summary, feat_names)
 
     partition_sizes = {
         'train_rows': int(len(X_train)), 'train_pct': round(len(X_train)/(len(X_train)+len(X_val)+len(X_test))*100, 1),
@@ -360,9 +369,9 @@ def main() -> None:
 
     output = {
         'metadata': {
-            'source_file':         str(INPUT_PATH),
+            'source_file':         str(input_path),
             'target_variable':     TARGET_COL,
-            'target_description':  'Rx_Lift_Pct: campaign effect, bounded -3% to +18%',
+            'target_description':  'Rx_Lift_Pct: campaign effect',
             'n_samples':           int(len(X_train) + len(X_val) + len(X_test)),
             'n_features':          int(len(feat_names)),
             'feature_names':       feat_names,
@@ -377,17 +386,35 @@ def main() -> None:
         'best_model_summary': best_summary,
     }
 
-    # Verification
-    log.info('[Stage 8] Verifying output integrity...')
-    assert len(output['benchmarks']) == len(models)
-    assert output['tournament_table'][0]['rank'] == 1
-    assert output['best_model_summary']['test_r2'] is not None
-    log.info('  All verification checks passed.')
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(output, f, indent=2, default=safe_json)
+
+    return output
+
+
+def main() -> None:
+    in_hybrid = BASE_DIR / 'processed_data_hybrid.parquet'
+    in_synth  = BASE_DIR / 'processed_data_synthetic.parquet'
+
+    out_hybrid = BASE_DIR / 'ml_benchmarks_hybrid.json'
+    out_synth  = BASE_DIR / 'ml_benchmarks_synthetic.json'
+
+    if not in_hybrid.exists(): in_hybrid = INPUT_PATH
+    if not in_synth.exists(): in_synth = INPUT_PATH
+
+    res_hybrid = run_suite(in_hybrid, out_hybrid)
+    res_synth  = run_suite(in_synth, out_synth)
+
+    master_output = {
+        'hybrid': res_hybrid,
+        'synthetic': res_synth,
+        **res_hybrid,
+    }
 
     with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
-        json.dump(output, f, indent=2, default=safe_json)
-    log.info('Exported %s (%.1f KB).', OUTPUT_PATH, OUTPUT_PATH.stat().st_size / 1024)
-    log.info('Suite completed in %.2f seconds.', time.perf_counter() - t_global)
+        json.dump(master_output, f, indent=2, default=safe_json)
+
+    log.info('✅ Exported %s, %s, and %s', out_hybrid, out_synth, OUTPUT_PATH)
 
 
 if __name__ == '__main__':

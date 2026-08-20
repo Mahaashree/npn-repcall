@@ -45,7 +45,7 @@
               <div class="arch-node-icon">🧪</div>
               <div class="arch-node-title">Synthetic Data Engine</div>
               <div class="arch-node-sub">
-                820 initial HCP records • FDA TIRF REMS structure • Causal Rx_Lift_Pct formula
+                <span id="arch-node-initial-records">820</span> initial HCP records • FDA TIRF REMS structure • Causal Rx_Lift_Pct formula
               </div>
             </div>
             <span class="arch-arrow">➔</span>
@@ -226,6 +226,15 @@
           </div>
 
           <div class="top-bar-right">
+            <div class="mode-switch-group">
+              <span class="mode-label">Dataset:</span>
+              <div class="mode-btn-toggle" role="group" aria-label="Dataset Mode Switcher">
+                <button class="mode-toggle-btn active" id="btn-mode-hybrid" data-mode="hybrid" title="Hybrid CMS Part D Rx Data + Conditioned CRM Calls">⚡ Hybrid CMS Mode</button>
+                <button class="mode-toggle-btn" id="btn-mode-synthetic" data-mode="synthetic" title="Full Synthetic CRM + Exogenous Rx Detailing Layer">🧪 Full Synthetic Mode</button>
+                <button class="mode-toggle-btn" id="btn-mode-custom" data-mode="custom" title="Upload Custom CSV, Parquet, or JSON Dataset">+ 📁 Custom Dataset</button>
+              </div>
+              <input type="file" id="custom-file-input" accept=".csv,.parquet,.json" style="display: none;" />
+            </div>
             <div class="date-selector">
               <span class="date-icon">📅</span>
               <select class="date-select" id="date-select" aria-label="Select date range">
@@ -265,7 +274,7 @@
             <div class="panel-header">
               <div>
                 <h3 class="panel-title">Program Drivers</h3>
-                <p class="panel-subtitle">Primary Driver Attribution (RF Importance %)</p>
+                <p class="panel-subtitle" id="program-drivers-subtitle">Primary Driver Attribution (Tree Models Feature Importance %)</p>
               </div>
               <span class="panel-badge" id="program-drivers-badge">Live Timestamp</span>
             </div>
@@ -302,12 +311,18 @@
 
           <!-- PERFORMANCE MATRIX CARD -->
           <div class="card" aria-label="2x2 Rep Performance Matrix">
-            <div class="matrix-card-header">
+            <div class="matrix-card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem">
               <div>
                 <h2 class="section-title">⊞ Performance Matrix</h2>
-                <p class="section-subtitle">Compliance × Rx Lift Quadrants</p>
+                <p class="section-subtitle" id="matrix-card-subtitle">Compliance × Rx Lift Quadrants (80% Compliance Split)</p>
               </div>
-              <span class="kpi-badge badge-cyan">🖱 Click Quadrant to Filter</span>
+              <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap">
+                <div class="matrix-toggle-group" role="group" aria-label="Performance Matrix View Switcher">
+                  <button class="matrix-toggle-btn active" id="btn-compliance-mode" data-matrix-mode="legacy" data-mode="COMPLIANCE" title="Standard Call Plan Compliance (80% Split) vs Rx Lift">📋 Call Plan Compliance vs Rx Lift</button>
+                  <button class="matrix-toggle-btn" id="btn-cei-mode" data-matrix-mode="cei" data-mode="CEI" title="AI Driver-Weighted Composite Execution Index (75% Split) vs Rx Lift">⚡ AI Composite Execution (CEI) vs Rx Lift</button>
+                </div>
+                <span class="kpi-badge badge-cyan">🖱 Click to Filter</span>
+              </div>
             </div>
             <div class="perf-matrix-grid" id="perf-matrix" role="group" aria-label="Performance quadrants"></div>
           </div>
@@ -351,9 +366,9 @@
                   <th data-sort="sales_rep">Rep</th>
                   <th data-sort="territory">Territory</th>
                   <th data-sort="prescriber_count" class="text-right">HCPs</th>
-                  <th data-sort="total_target_calls" class="text-right">Target Calls</th>
-                  <th data-sort="total_actual_calls" class="text-right">Actual Calls</th>
-                  <th data-sort="mean_compliance_pct" class="text-right">Compliance %</th>
+                  <th data-sort="total_actual_calls" class="text-right">Total Calls (Actual / Target)</th>
+                  <th data-sort="monthly_cadence" class="text-right">Monthly Cadence (Actual / Target)</th>
+                  <th data-sort="sample_ratio" class="text-right">Sample Drop Volume (Actual / Target)</th>
                   <th data-sort="mean_rx_lift_pct" class="text-right">Rx Lift %</th>
                   <th>Dominant Quadrant</th>
                   <th>Coaching Priority</th>
@@ -560,6 +575,57 @@
           <p class="pipeline-title">⚡ Data Engineering Pipeline — Click any node to inspect execution stats</p>
           <div class="pipeline-nodes" id="pipeline-nodes" role="list" aria-label="Pipeline stages"></div>
         </section>
+      </div>
+    </div>
+
+    <!-- NON-BLOCKING DYNAMIC INGESTION FLOATING DRAWER -->
+    <div id="ingestion-drawer" class="ingestion-drawer" aria-live="polite">
+      <div class="ingestion-drawer-header">
+        <div class="ingestion-drawer-title">
+          <span class="ingestion-spinner" id="ingestion-spinner"></span>
+          <span id="ingestion-drawer-status-title">Dynamic Ingestion</span>
+        </div>
+        <button class="ingestion-drawer-close" id="ingestion-drawer-close" aria-label="Close ingestion drawer">✕</button>
+      </div>
+      <div class="ingestion-drawer-body">
+        <div class="ingestion-filename-badge" id="ingestion-filename">Custom Dataset</div>
+        <div class="ingestion-steps" id="ingestion-steps">
+          <div class="ingestion-step pending" id="step-inspect">
+            <span class="step-icon">🔍</span>
+            <div class="step-info">
+              <div class="step-name">Column Inspection</div>
+              <div class="step-detail" id="step-inspect-detail">Scanning required vs missing columns</div>
+            </div>
+            <span class="step-status" id="step-inspect-status">Pending</span>
+          </div>
+          <div class="ingestion-step pending" id="step-synthesize">
+            <span class="step-icon">🧪</span>
+            <div class="step-info">
+              <div class="step-name">Auto-Synthesis</div>
+              <div class="step-detail" id="step-synthesize-detail">Gamma (fills), Poisson (samples), Normal (calls)</div>
+            </div>
+            <span class="step-status" id="step-synthesize-status">Pending</span>
+          </div>
+          <div class="ingestion-step pending" id="step-features">
+            <span class="step-icon">⚙️</span>
+            <div class="step-info">
+              <div class="step-name">Derived Features</div>
+              <div class="step-detail" id="step-features-detail">Cadence &amp; Sample Ratio calculations</div>
+            </div>
+            <span class="step-status" id="step-features-status">Pending</span>
+          </div>
+          <div class="ingestion-step pending" id="step-ml">
+            <span class="step-icon">🤖</span>
+            <div class="step-info">
+              <div class="step-name">ML Driver Attribution</div>
+              <div class="step-detail" id="step-ml-detail">RF &amp; XGBoost driver attribution &amp; lift</div>
+            </div>
+            <span class="step-status" id="step-ml-status">Pending</span>
+          </div>
+        </div>
+        <div class="ingestion-progress-bar">
+          <div class="ingestion-progress-fill" id="ingestion-progress-fill" style="width: 0%"></div>
+        </div>
       </div>
     </div>
 
