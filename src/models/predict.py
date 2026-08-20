@@ -36,13 +36,15 @@ log = logging.getLogger(__name__)
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent.parent.parent
 ARTIFACTS_DIR = pathlib.Path(__file__).resolve().parent / 'artifacts'
+PROCESSED_DIR = BASE_DIR / 'data' / 'generated' / 'processed'
+PREDICTIONS_DIR = BASE_DIR / 'data' / 'generated' / 'predictions'
 META_PATH = ARTIFACTS_DIR / 'best_model_meta.json'
 
 
 def predict_mode(mode: str) -> None:
     model_path = ARTIFACTS_DIR / f'best_{mode}.joblib'
-    parquet_path = BASE_DIR / f'processed_data_{mode}.parquet'
-    out_path = BASE_DIR / f'predicted_rx_lift_{mode}.json'
+    parquet_path = PROCESSED_DIR / f'processed_data_{mode}.parquet'
+    out_path = PREDICTIONS_DIR / f'predicted_rx_lift_{mode}.json'
 
     if not model_path.exists():
         log.warning('No persisted model for mode "%s" (%s) — skipping.', mode, model_path)
@@ -77,6 +79,7 @@ def predict_mode(mode: str) -> None:
         'data': records,
     }
 
+    PREDICTIONS_DIR.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(payload, indent=2) + '\n', encoding='utf-8')
     log.info('Wrote %s (%d HCP predictions).', out_path, len(records))
 

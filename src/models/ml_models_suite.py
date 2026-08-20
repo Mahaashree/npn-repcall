@@ -34,8 +34,10 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 BASE_DIR    = pathlib.Path(__file__).resolve().parent.parent.parent
-INPUT_PATH  = BASE_DIR / 'processed_data.parquet'
-OUTPUT_PATH = BASE_DIR / 'ml_benchmarks.json'
+PROCESSED_DIR = BASE_DIR / 'data' / 'generated' / 'processed'
+ANALYTICS_DIR = BASE_DIR / 'data' / 'generated' / 'analytics'
+INPUT_PATH  = PROCESSED_DIR / 'processed_data.parquet'
+OUTPUT_PATH = ANALYTICS_DIR / 'ml_benchmarks.json'
 ARTIFACTS_DIR = pathlib.Path(__file__).resolve().parent / 'artifacts'
 SEED        = 42
 N_BOOTSTRAP = 1000
@@ -393,11 +395,13 @@ def run_suite(input_path: pathlib.Path, output_path: pathlib.Path) -> dict:
 
 
 def main() -> None:
-    in_hybrid = BASE_DIR / 'processed_data_hybrid.parquet'
-    in_synth  = BASE_DIR / 'processed_data_synthetic.parquet'
+    in_hybrid = PROCESSED_DIR / 'processed_data_hybrid.parquet'
+    in_synth  = PROCESSED_DIR / 'processed_data_synthetic.parquet'
 
-    out_hybrid = BASE_DIR / 'ml_benchmarks_hybrid.json'
-    out_synth  = BASE_DIR / 'ml_benchmarks_synthetic.json'
+    ANALYTICS_DIR.mkdir(parents=True, exist_ok=True)
+
+    out_hybrid = ANALYTICS_DIR / 'ml_benchmarks_hybrid.json'
+    out_synth  = ANALYTICS_DIR / 'ml_benchmarks_synthetic.json'
 
     if not in_hybrid.exists(): in_hybrid = INPUT_PATH
     if not in_synth.exists(): in_synth = INPUT_PATH

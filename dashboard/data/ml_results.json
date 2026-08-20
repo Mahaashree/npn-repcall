@@ -7,8 +7,8 @@
     "test_r2": 0.6215,
     "test_rmse": 1.7877
   },
-  "data_version": "e84a63670999b57a",
-  "generated_at": "2026-08-20T05:25:53Z",
+  "data_version": "9d45e94b8adde1eb",
+  "generated_at": "2026-08-20T05:55:36Z",
   "hybrid": {
     "best_model_summary": {
       "bootstrap_ci": "[0.5220, 0.6979]",

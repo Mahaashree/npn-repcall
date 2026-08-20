@@ -28,8 +28,10 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent.parent.parent
-INPUT_PATH = BASE_DIR / 'processed_data.parquet'
-OUTPUT_PATH = BASE_DIR / 'analytics_results.json'
+PROCESSED_DIR = BASE_DIR / 'data' / 'generated' / 'processed'
+ANALYTICS_DIR = BASE_DIR / 'data' / 'generated' / 'analytics'
+INPUT_PATH = PROCESSED_DIR / 'processed_data.parquet'
+OUTPUT_PATH = ANALYTICS_DIR / 'analytics_results.json'
 
 QUADRANT_ACTIONS = {
     'Stars':       'Maintain & Reward \u2022 Model for Best Practices',
@@ -474,8 +476,8 @@ def analyze_dataset(df_path: pathlib.Path) -> dict:
 
 def main() -> None:
     t0 = time.perf_counter()
-    pq_hybrid = BASE_DIR / 'processed_data_hybrid.parquet'
-    pq_synth  = BASE_DIR / 'processed_data_synthetic.parquet'
+    pq_hybrid = PROCESSED_DIR / 'processed_data_hybrid.parquet'
+    pq_synth  = PROCESSED_DIR / 'processed_data_synthetic.parquet'
 
     if not pq_hybrid.exists():
         pq_hybrid = INPUT_PATH

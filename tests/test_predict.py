@@ -5,6 +5,8 @@ import unittest
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent.parent
 ARTIFACTS_DIR = BASE_DIR / 'src' / 'models' / 'artifacts'
+PROCESSED_DIR = BASE_DIR / 'data' / 'generated' / 'processed'
+PREDICTIONS_DIR = BASE_DIR / 'data' / 'generated' / 'predictions'
 
 try:
     import sklearn  # noqa: F401  # ML stack only installed under system python3
@@ -33,7 +35,7 @@ class TestPredictiveScoring(unittest.TestCase):
     def test_predicted_lift_artifacts_written(self):
         for mode in ('hybrid', 'synthetic'):
             self.assertTrue(
-                (BASE_DIR / f'predicted_rx_lift_{mode}.json').exists(),
+                (PREDICTIONS_DIR / f'predicted_rx_lift_{mode}.json').exists(),
                 f'missing predicted_rx_lift_{mode}.json',
             )
 
@@ -41,11 +43,11 @@ class TestPredictiveScoring(unittest.TestCase):
         import pandas as pd
 
         for mode in ('hybrid', 'synthetic'):
-            pq = BASE_DIR / f'processed_data_{mode}.parquet'
+            pq = PROCESSED_DIR / f'processed_data_{mode}.parquet'
             if not pq.exists():
                 continue
             df = pd.read_parquet(pq)
-            with open(BASE_DIR / f'predicted_rx_lift_{mode}.json', 'r', encoding='utf-8') as f:
+            with open(PREDICTIONS_DIR / f'predicted_rx_lift_{mode}.json', 'r', encoding='utf-8') as f:
                 payload = json.load(f)
             self.assertEqual(len(payload['data']), len(df),
                              f'prediction count != processed row count for {mode}')

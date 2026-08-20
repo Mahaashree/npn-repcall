@@ -8,7 +8,8 @@ import pandas as pd
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent.parent.parent
 REP_MASTER_PATH = BASE_DIR / 'data' / 'rep_master.csv'
-OUT_PARQUET = BASE_DIR / 'raw_crm_cms_dataset.parquet'
+RAW_DIR = BASE_DIR / 'data' / 'generated' / 'raw'
+OUT_PARQUET = RAW_DIR / 'raw_crm_cms_dataset.parquet'
 
 SEED = 2024
 rng  = np.random.default_rng(SEED)
@@ -206,20 +207,22 @@ def main() -> None:
     df_hybrid = generate('hybrid')
     df_synth  = generate('synthetic')
 
-    out_hybrid = BASE_DIR / 'raw_crm_cms_dataset_hybrid.parquet'
-    out_synth  = BASE_DIR / 'raw_crm_cms_dataset_synthetic.parquet'
+    RAW_DIR.mkdir(parents=True, exist_ok=True)
+
+    out_hybrid = RAW_DIR / 'raw_crm_cms_dataset_hybrid.parquet'
+    out_synth  = RAW_DIR / 'raw_crm_cms_dataset_synthetic.parquet'
 
     df_hybrid.to_parquet(out_hybrid, index=False)
     df_synth.to_parquet(out_synth, index=False)
 
-    df_hybrid.to_csv(BASE_DIR / 'raw_crm_cms_dataset_hybrid.csv', index=False)
-    df_synth.to_csv(BASE_DIR / 'raw_crm_cms_dataset_synthetic.csv', index=False)
+    df_hybrid.to_csv(RAW_DIR / 'raw_crm_cms_dataset_hybrid.csv', index=False)
+    df_synth.to_csv(RAW_DIR / 'raw_crm_cms_dataset_synthetic.csv', index=False)
 
     crm_cols = ['Prscrbr_NPI', 'Physician_Name', 'Specialty', 'City', 'State', 'Sales_Rep', 'Sales_Rep_Name', 'Territory', 'HCP_Tier', 'Target_Calls', 'Actual_Calls', 'Samples_Dropped']
     df_hybrid[crm_cols].to_csv(BASE_DIR / 'crm_call_activity.csv', index=False)
 
     df_hybrid.to_parquet(OUT_PARQUET, index=False)
-    df_hybrid.to_csv(BASE_DIR / 'raw_crm_cms_dataset.csv', index=False)
+    df_hybrid.to_csv(RAW_DIR / 'raw_crm_cms_dataset.csv', index=False)
 
     # Master rep registry
     rep_master_rows = []

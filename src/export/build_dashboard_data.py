@@ -22,17 +22,22 @@ log: logging.Logger = logging.getLogger('build_dashboard_data')
 BASE_DIR: pathlib.Path = pathlib.Path(__file__).resolve().parent.parent.parent
 SCHEMA_PATH: pathlib.Path = BASE_DIR / 'schema' / 'dashboard_data_contract.json'
 DATA_DIR: pathlib.Path = BASE_DIR / 'data'
+GENERATED_DIR: pathlib.Path = DATA_DIR / 'generated'
+RAW_DIR: pathlib.Path = GENERATED_DIR / 'raw'
+PROCESSED_DIR: pathlib.Path = GENERATED_DIR / 'processed'
+ANALYTICS_DIR: pathlib.Path = GENERATED_DIR / 'analytics'
+PREDICTIONS_DIR: pathlib.Path = GENERATED_DIR / 'predictions'
 REP_MASTER_PATH: pathlib.Path = DATA_DIR / 'rep_master.csv'
 DOCTOR_MASTER_PATH: pathlib.Path = DATA_DIR / 'doctor_master.csv'
 
-ANALYTICS_RESULTS_PATH: pathlib.Path = BASE_DIR / 'analytics_results.json'
-ML_BENCHMARKS_PATH: pathlib.Path = BASE_DIR / 'ml_benchmarks.json'
-TELEMETRY_PATH: pathlib.Path = BASE_DIR / 'pipeline_telemetry.json'
-TELEMETRY_HYBRID_PATH: pathlib.Path = BASE_DIR / 'pipeline_telemetry_hybrid.json'
-TELEMETRY_SYNTHETIC_PATH: pathlib.Path = BASE_DIR / 'pipeline_telemetry_synthetic.json'
-PROCESSED_PARQUET_PATH: pathlib.Path = BASE_DIR / 'processed_data.parquet'
-PREDICTED_HYBRID_PATH: pathlib.Path = BASE_DIR / 'predicted_rx_lift_hybrid.json'
-PREDICTED_SYNTHETIC_PATH: pathlib.Path = BASE_DIR / 'predicted_rx_lift_synthetic.json'
+ANALYTICS_RESULTS_PATH: pathlib.Path = ANALYTICS_DIR / 'analytics_results.json'
+ML_BENCHMARKS_PATH: pathlib.Path = ANALYTICS_DIR / 'ml_benchmarks.json'
+TELEMETRY_PATH: pathlib.Path = ANALYTICS_DIR / 'pipeline_telemetry.json'
+TELEMETRY_HYBRID_PATH: pathlib.Path = ANALYTICS_DIR / 'pipeline_telemetry_hybrid.json'
+TELEMETRY_SYNTHETIC_PATH: pathlib.Path = ANALYTICS_DIR / 'pipeline_telemetry_synthetic.json'
+PROCESSED_PARQUET_PATH: pathlib.Path = PROCESSED_DIR / 'processed_data.parquet'
+PREDICTED_HYBRID_PATH: pathlib.Path = PREDICTIONS_DIR / 'predicted_rx_lift_hybrid.json'
+PREDICTED_SYNTHETIC_PATH: pathlib.Path = PREDICTIONS_DIR / 'predicted_rx_lift_synthetic.json'
 
 OUTPUT_DIR: pathlib.Path = BASE_DIR / 'dashboard' / 'data'
 
@@ -523,8 +528,8 @@ def run_export(dry_run: bool = False) -> None:
     lifts = processed_df['Rx_Lift_Pct'].dropna().tolist()
     median_lift = float(np.median(lifts)) if len(lifts) else 3.89
 
-    pq_hybrid = BASE_DIR / 'processed_data_hybrid.parquet'
-    pq_synth  = BASE_DIR / 'processed_data_synthetic.parquet'
+    pq_hybrid = PROCESSED_DIR / 'processed_data_hybrid.parquet'
+    pq_synth  = PROCESSED_DIR / 'processed_data_synthetic.parquet'
 
     df_hybrid = pd.read_parquet(pq_hybrid) if pq_hybrid.exists() else doctor_master_df
     df_synth  = pd.read_parquet(pq_synth) if pq_synth.exists() else doctor_master_df

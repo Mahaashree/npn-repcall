@@ -16,10 +16,13 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 BASE_DIR    = pathlib.Path(__file__).resolve().parent.parent.parent
-INPUT_PATH  = BASE_DIR / 'raw_crm_cms_dataset.parquet'
-OUT_PARQUET = BASE_DIR / 'processed_data.parquet'
-OUT_JSON    = BASE_DIR / 'processed_data.json'
-OUT_TEL     = BASE_DIR / 'pipeline_telemetry.json'
+RAW_DIR     = BASE_DIR / 'data' / 'generated' / 'raw'
+PROCESSED_DIR = BASE_DIR / 'data' / 'generated' / 'processed'
+ANALYTICS_DIR = BASE_DIR / 'data' / 'generated' / 'analytics'
+INPUT_PATH  = RAW_DIR / 'raw_crm_cms_dataset.parquet'
+OUT_PARQUET = PROCESSED_DIR / 'processed_data.parquet'
+OUT_JSON    = PROCESSED_DIR / 'processed_data.json'
+OUT_TEL     = ANALYTICS_DIR / 'pipeline_telemetry.json'
 
 SCALE_COLS: list[str] = [
     'Compliance_Pct',
@@ -172,16 +175,19 @@ def process_file(in_path: pathlib.Path, out_parquet: pathlib.Path, out_json: pat
 
 
 def main() -> None:
-    in_hybrid = BASE_DIR / 'raw_crm_cms_dataset_hybrid.parquet'
-    in_synth  = BASE_DIR / 'raw_crm_cms_dataset_synthetic.parquet'
+    in_hybrid = RAW_DIR / 'raw_crm_cms_dataset_hybrid.parquet'
+    in_synth  = RAW_DIR / 'raw_crm_cms_dataset_synthetic.parquet'
 
-    out_hybrid_pq   = BASE_DIR / 'processed_data_hybrid.parquet'
-    out_hybrid_json = BASE_DIR / 'processed_data_hybrid.json'
-    out_hybrid_tel  = BASE_DIR / 'pipeline_telemetry_hybrid.json'
+    PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
+    ANALYTICS_DIR.mkdir(parents=True, exist_ok=True)
 
-    out_synth_pq   = BASE_DIR / 'processed_data_synthetic.parquet'
-    out_synth_json = BASE_DIR / 'processed_data_synthetic.json'
-    out_synth_tel  = BASE_DIR / 'pipeline_telemetry_synthetic.json'
+    out_hybrid_pq   = PROCESSED_DIR / 'processed_data_hybrid.parquet'
+    out_hybrid_json = PROCESSED_DIR / 'processed_data_hybrid.json'
+    out_hybrid_tel  = ANALYTICS_DIR / 'pipeline_telemetry_hybrid.json'
+
+    out_synth_pq   = PROCESSED_DIR / 'processed_data_synthetic.parquet'
+    out_synth_json = PROCESSED_DIR / 'processed_data_synthetic.json'
+    out_synth_tel  = ANALYTICS_DIR / 'pipeline_telemetry_synthetic.json'
 
     if not in_hybrid.exists():
         in_hybrid = INPUT_PATH
