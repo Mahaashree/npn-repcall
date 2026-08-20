@@ -34,16 +34,53 @@ Top attribution drivers (both modes): **monthly call frequency (62.6%)** and **s
 
 All screenshots are freshly captured from the running dashboard against the files produced in the Phase 1 run above.
 
-| Screenshot | What it shows and why it matters |
-|---|---|
-| `docs/screenshots/overview.png` | Executive KPI cards (mean compliance 69.8%, 762 HCPs across 288 reps) plus the Program Drivers panel — the at-a-glance summary a sales ops lead reads first. |
-| `docs/screenshots/performance-matrix.png` | The compliance × Rx-lift scatter with the 2x2 quadrant cards (Star Performers / Efficiency Risk / Unrealized Potential / Needs Intervention). This is the core analytical view: it visually separates reps to keep vs. coach. |
-| `docs/screenshots/reps-scorecard.png` | The rep-by-rep scorecard table with compliance, cadence, sample ratio, lift, quadrant, and coaching flag — the actionable per-rep detail layer. |
-| `docs/screenshots/territory-engine.png` | The reallocation engine built for this project: recommendation-bucket summary cards, top-6 upside/capacity-release movers, and the 288-row filterable reallocation table with %-of-target units, search, bucket filter, and CSV export. |
-| `docs/screenshots/prescribers.png` | The prescriber directory with demography, baseline fill volume, post-campaign lift, and assigned rep — the ground-level data behind every summary. |
-| `docs/screenshots/coaching-queue.png` | Today's prioritized coaching tasks (urgent gaps, monitor candidates) — the operational hand-off from analytics to the field manager. |
-| `docs/screenshots/pipeline-inspector.png` | The data-engineering pipeline viewer showing stage-by-stage execution telemetry — for auditors verifying provenance. |
-| `docs/screenshots/architecture-modal.png` | The end-to-end architecture and ingestion telemetry overlay — documents the whole flow from raw HCP records through models to the dashboard. |
+### Overview
+
+![Overview](docs/screenshots/overview.png)
+
+Executive KPI cards (mean compliance 69.8%, 762 HCPs across 288 reps) plus the Program Drivers panel — the at-a-glance summary a sales ops lead reads first.
+
+### Performance Matrix
+
+![Performance Matrix](docs/screenshots/performance-matrix.png)
+
+The compliance × Rx-lift scatter with the 2x2 quadrant cards (Star Performers / Efficiency Risk / Unrealized Potential / Needs Intervention). This is the core analytical view: it visually separates reps to keep vs. coach.
+
+### Reps Scorecard
+
+![Reps Scorecard](docs/screenshots/reps-scorecard.png)
+
+The rep-by-rep scorecard table with compliance, cadence, sample ratio, lift, quadrant, and coaching flag — the actionable per-rep detail layer.
+
+### Territory Engine
+
+![Territory Engine](docs/screenshots/territory-engine.png)
+
+The reallocation engine built for this project: recommendation-bucket summary cards, top-6 upside/capacity-release movers, and the 288-row filterable reallocation table with %-of-target units, search, bucket filter, and CSV export.
+
+### Prescribers
+
+![Prescribers](docs/screenshots/prescribers.png)
+
+The prescriber directory with demography, baseline fill volume, post-campaign lift, and assigned rep — the ground-level data behind every summary.
+
+### Coaching Queue
+
+![Coaching Queue](docs/screenshots/coaching-queue.png)
+
+Today's prioritized coaching tasks (urgent gaps, monitor candidates) — the operational hand-off from analytics to the field manager.
+
+### Pipeline Inspector
+
+![Pipeline Inspector](docs/screenshots/pipeline-inspector.png)
+
+The data-engineering pipeline viewer showing stage-by-stage execution telemetry — for auditors verifying provenance.
+
+### Architecture Modal
+
+![Architecture Modal](docs/screenshots/architecture-modal.png)
+
+The end-to-end architecture and ingestion telemetry overlay — documents the whole flow from raw HCP records through models to the dashboard.
 
 ## Architecture
 
