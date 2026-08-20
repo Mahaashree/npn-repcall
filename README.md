@@ -48,19 +48,18 @@ The compliance × Rx-lift scatter with the 2x2 quadrant cards (Star Performers /
 
 ### Reps Scorecard
 
-![Reps Scorecard](docs/screenshots/reps-scorecard.png)
+
 
 The rep-by-rep scorecard table with compliance, cadence, sample ratio, lift, quadrant, and coaching flag — the actionable per-rep detail layer.
 
 ### Territory Engine
 
-![Territory Engine](docs/screenshots/territory-engine.png)
+
 
 The reallocation engine built for this project: recommendation-bucket summary cards, top-6 upside/capacity-release movers, and the 288-row filterable reallocation table with %-of-target units, search, bucket filter, and CSV export.
 
 ### Prescribers
 
-![Prescribers](docs/screenshots/prescribers.png)
 
 The prescriber directory with demography, baseline fill volume, post-campaign lift, and assigned rep — the ground-level data behind every summary.
 
@@ -71,8 +70,6 @@ The prescriber directory with demography, baseline fill volume, post-campaign li
 Today's prioritized coaching tasks (urgent gaps, monitor candidates) — the operational hand-off from analytics to the field manager.
 
 ### Pipeline Inspector
-
-![Pipeline Inspector](docs/screenshots/pipeline-inspector.png)
 
 The data-engineering pipeline viewer showing stage-by-stage execution telemetry — for auditors verifying provenance.
 
