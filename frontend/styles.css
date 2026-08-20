@@ -833,6 +833,31 @@ body {
   margin-bottom: 1.25rem;
 }
 
+/* ── SPA PAGE ROUTING ───────────────────────────────────────────────── */
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+  animation: pageIn 0.28s ease;
+}
+
+.chart-matrix-grid.page.active {
+  display: grid;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .scatter-section {
   margin-bottom: 0;
 }

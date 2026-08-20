@@ -257,28 +257,5 @@ export function bindFilters() {
 }
 
 export function initScrollspy() {
-  const sections = document.querySelectorAll('section[id]');
-  const navItems = document.querySelectorAll('.sidebar-nav .nav-item');
-
-  if (!sections.length || !navItems.length) return;
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute('id');
-          navItems.forEach((item) => {
-            if (item.getAttribute('href') === `#${id}`) {
-              item.classList.add('active');
-            } else {
-              item.classList.remove('active');
-            }
-          });
-        }
-      });
-    },
-    { rootMargin: '-20% 0px -60% 0px', threshold: 0.1 }
-  );
-
-  sections.forEach((sec) => observer.observe(sec));
+  // Deprecated: navigation now uses SPA hash routing (see app.js renderPage).
 }

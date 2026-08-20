@@ -751,5 +751,5 @@ export function bindExports() {
 }
 
 export function bindTabs() {
-  // Navigation converted to continuous scrollable single-page layout
+  // Navigation handled by SPA hash routing in app.js (renderPage)
 }

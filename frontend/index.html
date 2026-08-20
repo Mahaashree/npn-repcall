@@ -19,7 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2" />
   </head>
   <body>
     <!-- LOADING OVERLAY -->
@@ -175,29 +175,33 @@
         </div>
 
         <nav class="sidebar-nav">
-          <a href="#overview" class="nav-item active">
+          <a href="#/overview" class="nav-item active" data-page="overview">
             <span class="nav-icon">📊</span>
             <span class="nav-label">Overview</span>
           </a>
-          <a href="#matrix" class="nav-item">
+          <a href="#/matrix" class="nav-item" data-page="matrix">
             <span class="nav-icon">⊞</span>
             <span class="nav-label">Performance Matrix</span>
           </a>
-          <a href="#reps" class="nav-item">
+          <a href="#/reps" class="nav-item" data-page="reps">
             <span class="nav-icon">👤</span>
             <span class="nav-label">Reps Scorecard</span>
           </a>
-          <a href="#territories" class="nav-item">
+          <a href="#/territories" class="nav-item" data-page="territories">
             <span class="nav-icon">🗺️</span>
             <span class="nav-label">Territory Engine</span>
           </a>
-          <a href="#prescribers" class="nav-item">
+          <a href="#/prescribers" class="nav-item" data-page="prescribers">
             <span class="nav-icon">👥</span>
             <span class="nav-label">Prescribers</span>
           </a>
-          <a href="#coaching-queue" class="nav-item">
+          <a href="#/coaching-queue" class="nav-item" data-page="coaching-queue">
             <span class="nav-icon">📋</span>
             <span class="nav-label">Coaching Queue</span>
+          </a>
+          <a href="#/pipeline" class="nav-item" data-page="pipeline">
+            <span class="nav-icon">⚙️</span>
+            <span class="nav-label">Pipeline Inspector</span>
           </a>
         </nav>
 
@@ -262,7 +266,7 @@
         </div>
 
         <!-- 1. EXECUTIVE KPI HEADER -->
-        <section id="overview" class="card" aria-label="Executive KPI Summary">
+        <section id="overview" class="card page active" aria-label="Executive KPI Summary">
           <h2 class="section-title">📊 Executive KPI Summary &amp; Program Drivers</h2>
           <p class="section-subtitle">
             Overall compliance, campaign lift, statistical significance, and top attribution features
@@ -287,7 +291,7 @@
         </section>
 
         <!-- 2. 2x2 PERFORMANCE MATRIX & SCATTER -->
-        <section id="matrix" class="chart-matrix-grid" aria-label="2x2 Performance Matrix and Correlation">
+        <section id="matrix" class="chart-matrix-grid page" aria-label="2x2 Performance Matrix and Correlation">
           <!-- SCATTER PLOT CARD -->
           <div class="card scatter-section" aria-label="Call Plan Compliance vs Rx Lift Correlation">
             <div class="scatter-header">
@@ -329,7 +333,7 @@
         </section>
 
         <!-- 3. REP SCORECARD TABLE -->
-        <section id="reps" class="card" aria-label="Rep Performance Scorecard">
+        <section id="reps" class="card page" aria-label="Rep Performance Scorecard">
           <div class="table-toolbar">
             <div>
               <h2 class="section-title">👤 Sales Rep Performance Scorecard</h2>
@@ -386,7 +390,7 @@
         </section>
 
         <!-- 4. TERRITORY CALL PLAN RE-ALLOCATION ENGINE + ROLLUP SUMMARY -->
-        <section id="territories" class="card" aria-label="Territory Call Reallocation and Rollup Summary">
+        <section id="territories" class="card page" aria-label="Territory Call Reallocation and Rollup Summary">
           <h2 class="section-title">🗺️ Territory Call Plan Re-allocation Engine</h2>
           <p class="section-subtitle">
             Heuristic call shifts from over-serviced low-lift HCPs to high-growth prescribers.<br />
@@ -450,7 +454,7 @@
         </section>
 
         <!-- 5. PRESCRIBERS DIRECTORY -->
-        <section id="prescribers" class="card" aria-label="Synthesized Prescribers Directory">
+        <section id="prescribers" class="card page" aria-label="Synthesized Prescribers Directory">
           <div class="table-toolbar">
             <div>
               <h2 class="section-title">👥 Synthesized Prescribers Directory &amp; Monthly Rx</h2>
@@ -557,7 +561,7 @@
         </section>
 
         <!-- 6. COACHING QUEUE -->
-        <section id="coaching-queue" class="card" aria-label="Coaching Queue Priorities">
+        <section id="coaching-queue" class="card page" aria-label="Coaching Queue Priorities">
           <div class="panel-header">
             <div>
               <h2 class="section-title">📋 Today's Tasks — Coaching Queue Priorities</h2>
@@ -571,7 +575,7 @@
         </section>
 
         <!-- DATA PIPELINE INSPECTOR -->
-        <section class="card" aria-label="Data Engineering Pipeline Inspector">
+        <section id="pipeline" class="card page" aria-label="Data Engineering Pipeline Inspector">
           <p class="pipeline-title">⚡ Data Engineering Pipeline — Click any node to inspect execution stats</p>
           <div class="pipeline-nodes" id="pipeline-nodes" role="list" aria-label="Pipeline stages"></div>
         </section>
@@ -630,7 +634,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
-    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/app.js?v=2"></script>
     <script>
       // Sidebar mobile toggle handler
       const sidebar = document.getElementById('sidebar');

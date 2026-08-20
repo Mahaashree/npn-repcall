@@ -16,7 +16,7 @@ import {
   bindTabs,
   bindExports,
 } from './tables.js';
-import { populateFilters, renderPerformanceMatrix, setPerformanceMatrixMode, bindFilters, initScrollspy } from './filters.js';
+import { populateFilters, renderPerformanceMatrix, setPerformanceMatrixMode, bindFilters } from './filters.js';
 import { bindModals, renderPipelineInspector, openModal, closeModal } from './modals.js';
 
 // Expose modal and matrix mode functions on window for inline HTML onclick attributes
@@ -110,17 +110,87 @@ function updateHealthText() {
 }
 
 function refreshAllViews() {
-  renderPipelineInspector();
   populateFilters();
-  renderKPIs();
-  renderProgramDrivers();
-  renderCoachingQueuePanel();
-  renderScatter();
-  renderPerformanceMatrix();
-  renderRepTab();
-  renderManagerTab();
-  renderPrescribersTab();
   updateHealthText();
+  renderPage();
+}
+
+const PAGES = {
+  overview: {
+    section: 'overview',
+    title: 'Overview',
+    subtitle: 'Executive KPI Summary & Program Drivers',
+    render: () => {
+      renderKPIs();
+      renderProgramDrivers();
+    },
+  },
+  matrix: {
+    section: 'matrix',
+    title: 'Performance Matrix',
+    subtitle: 'Call Plan Compliance vs Rx Lift Correlation & 2x2 Quadrants',
+    render: () => {
+      renderPerformanceMatrix();
+      renderScatter();
+    },
+  },
+  reps: {
+    section: 'reps',
+    title: 'Reps Scorecard',
+    subtitle: 'Individual rep compliance rates, lift metrics, and coaching priorities',
+    render: () => renderRepTab(),
+  },
+  territories: {
+    section: 'territories',
+    title: 'Territory Engine',
+    subtitle: 'Call Plan Re-allocation Engine & Territory Rollup Summary',
+    render: () => renderManagerTab(),
+  },
+  prescribers: {
+    section: 'prescribers',
+    title: 'Prescribers',
+    subtitle: 'Synthesized Prescribers Directory & Monthly Rx',
+    render: () => renderPrescribersTab(),
+  },
+  'coaching-queue': {
+    section: 'coaching-queue',
+    title: 'Coaching Queue',
+    subtitle: "Today's Tasks — Prioritized Rep Coaching Queue",
+    render: () => renderCoachingQueuePanel(),
+  },
+  pipeline: {
+    section: 'pipeline',
+    title: 'Pipeline Inspector',
+    subtitle: 'Data Engineering Pipeline — Execution Telemetry',
+    render: () => renderPipelineInspector(),
+  },
+};
+
+function currentPage() {
+  const hash = (window.location.hash || '').replace(/^#\/?/, '');
+  return Object.prototype.hasOwnProperty.call(PAGES, hash) ? hash : 'overview';
+}
+
+function renderPage() {
+  const key = currentPage();
+  const page = PAGES[key];
+
+  document.querySelectorAll('.page').forEach((sec) => {
+    sec.classList.toggle('active', sec.id === page.section);
+  });
+
+  document.querySelectorAll('.sidebar-nav .nav-item').forEach((item) => {
+    item.classList.toggle('active', item.getAttribute('data-page') === page.section);
+  });
+
+  document.querySelector('.page-title').textContent = page.title;
+  document.querySelector('.page-subtitle').textContent = page.subtitle;
+
+  page.render();
+
+  if (typeof window.scrollTo === 'function') window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.getElementById('sidebar')?.classList.remove('open');
+  document.getElementById('sidebar-backdrop')?.classList.remove('open');
 }
 
 function updateDrawerStep(stepId, status, detailText) {
@@ -279,24 +349,21 @@ async function init() {
     const loaded = await loadAllData(renderSkeletons, renderErrorState);
     if (!loaded) return;
 
-    renderPipelineInspector();
     populateFilters();
-    renderKPIs();
-    renderProgramDrivers();
-    renderCoachingQueuePanel();
-    renderScatter();
-    renderPerformanceMatrix();
-    renderRepTab();
-    renderManagerTab();
-    renderPrescribersTab();
     updateHealthText();
+
+    renderPage();
 
     bindTabs();
     bindModals();
     bindFilters();
     bindExports();
     bindDatasetModeToggle();
-    initScrollspy();
+
+    if (!window.location.hash) {
+      window.history.replaceState(null, '', '#/overview');
+    }
+    window.addEventListener('hashchange', renderPage);
   } catch (err) {
     console.error('Dashboard initialisation error:', err);
     renderErrorState(err.message || 'Fatal initialization error');
