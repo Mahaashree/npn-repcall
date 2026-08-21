@@ -486,7 +486,7 @@ const API_BASE = window.location.hostname === 'localhost' || window.location.hos
 
 export async function predictViaApi(rawText, { model = 'hybrid' } = {}) {
   const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
-  const timer = controller ? window.setTimeout(() => controller.abort(), 30000) : null;
+  const timer = controller ? window.setTimeout(() => controller.abort(), 60000) : null;
   try {
     const form = new FormData();
     form.append('file', new Blob([rawText], { type: 'text/csv' }), 'dataset.csv');
