@@ -491,7 +491,7 @@ export async function predictViaApi(rawText, { model = 'hybrid' } = {}) {
     const form = new FormData();
     form.append('file', new Blob([rawText], { type: 'text/csv' }), 'dataset.csv');
     form.append('model', model);
-    const resp = await fetch('${API_BASE}/api/predict_custom', {
+    const resp = await fetch(`${API_BASE}/api/predict_custom`, {
       method: 'POST',
       body: form,
       signal: controller ? controller.signal : undefined,
